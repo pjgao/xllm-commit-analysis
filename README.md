@@ -2,6 +2,12 @@
 
 Static GitHub Pages report for the official [`jd-opensource/xllm`](https://github.com/jd-opensource/xllm) repository.
 
+## Live Site
+
+**View the report:** [https://pjgao.github.io/xllm-commit-analysis/](https://pjgao.github.io/xllm-commit-analysis/)
+
+![xLLM Official Engineering Insights preview](docs/assets/xllm-insights-preview.png)
+
 The site shows:
 
 - cumulative repository contribution metrics
@@ -58,10 +64,4 @@ $env:GITHUB_TOKEN = "<token>"
 $env:AI_SUMMARY_MAX_PER_RUN = "5"
 $env:AI_DAILY_SUMMARY_MAX_PER_RUN = "2"
 npm run build:data
-```
-
-Expected Pages URL:
-
-```text
-https://pjgao.github.io/xllm-commit-analysis/
 ```
