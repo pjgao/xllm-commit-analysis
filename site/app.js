@@ -515,7 +515,7 @@
       <div class="analysis-section">
         <div class="ai-comment">
           <div class="ai-label">${escapeHtml(t("aiAnalysis"))}</div>
-          ${escapeHtml(commitAiSummary(commit))}
+          ${commitAiSummaryHtml(commit)}
         </div>
         <div class="impact-card ${commit.needsTest ? "test-impact" : ""}">
           <div class="impact-label ${commit.needsTest ? "needs-test" : ""}">${escapeHtml(commit.needsTest ? t("testUpdateNeeded") : t("testImpact"))}</div>
@@ -603,30 +603,61 @@
     return state.repos.find((repo) => repo.id === state.currentRepo)?.label || "xllm";
   }
 
-  function commitAiSummary(commit) {
-    const generated = commit.aiSummary?.[state.lang] || commit.aiSummary?.zh || commit.aiSummary?.en;
-    if (generated) return generated;
-
-    const title = normalizeTitle(commit.message);
+  function commitAiSummaryHtml(commit) {
+    const title = cleanCommitTitle(commit.message);
     const type = typeLabel(commit.type);
     const module = moduleLabel(commit.moduleName);
     const files = commit.fileList || [];
-    const mainFiles = summarizeFiles(files);
-    const scale = changeScale(commit);
-    const testHint = commit.needsTest
-      ? (state.lang === "zh" ? "建议优先补充回归或目标模块验证。" : "Prioritize regression or targeted module validation.")
-      : (state.lang === "zh" ? "从变更规模看可按常规验证处理。" : "The change can follow normal validation based on its footprint.");
-    const ascendHint = commit.ascendAffected
-      ? (state.lang === "zh" ? "同时需要关注 Ascend/NPU 执行路径。" : "Also watch the Ascend/NPU execution path.")
-      : "";
+    const areas = summarizeImpactedAreas(files);
+    const scale = changeScaleV2(commit);
+    const purpose = commitPurpose(commit, title);
+    const moduleDetails = areas.length
+      ? areas.slice(0, 4).map((area) => areaSummaryHtml(area)).join("")
+      : `<li>${escapeHtml(state.lang === "zh" ? "未记录具体文件路径，无法进一步拆分模块。" : "No file paths were recorded, so module-level details are unavailable.")}</li>`;
+    const keyFiles = summarizeKeyFiles(files);
+    const validation = validationSummary(commit);
 
     if (state.lang === "en") {
-      return `${commit.author} made a ${scale} ${type.toLowerCase()} change in ${module}: ${title}. It touches ${commit.files} files with +${commit.additions}/-${commit.deletions} lines. Main files: ${mainFiles}. ${testHint} ${ascendHint}`.trim();
+      return `<div class="summary-block">
+        <div class="summary-row"><strong>Purpose</strong><span>${escapeHtml(purpose)}</span></div>
+        <div class="summary-row"><strong>Scope</strong><span>${escapeHtml(`${scale} ${type.toLowerCase()} change in ${module}; ${commit.files} files, +${commit.additions}/-${commit.deletions} lines.`)}</span></div>
+        <div class="summary-row"><strong>Changed modules</strong><ul>${moduleDetails}</ul></div>
+        <div class="summary-row"><strong>Key files</strong><span>${escapeHtml(keyFiles)}</span></div>
+        <div class="summary-row"><strong>Validation</strong><span>${escapeHtml(validation)}</span></div>
+      </div>`;
     }
-    return `${commit.author} 本次提交是一个${scale}的${type}变更，核心内容是：${title}。该变更归入 ${module}，涉及 ${commit.files} 个文件、+${commit.additions}/-${commit.deletions} 行；主要文件范围：${mainFiles}。${testHint}${ascendHint ? ` ${ascendHint}` : ""}`;
+
+    return `<div class="summary-block">
+      <div class="summary-row"><strong>解决问题</strong><span>${escapeHtml(purpose)}</span></div>
+      <div class="summary-row"><strong>影响范围</strong><span>${escapeHtml(`${scale}的${type}变更，归入 ${module}；涉及 ${commit.files} 个文件、+${commit.additions}/-${commit.deletions} 行。`)}</span></div>
+      <div class="summary-row"><strong>改动模块</strong><ul>${moduleDetails}</ul></div>
+      <div class="summary-row"><strong>关键文件</strong><span>${escapeHtml(keyFiles)}</span></div>
+      <div class="summary-row"><strong>验证建议</strong><span>${escapeHtml(validation)}</span></div>
+    </div>`;
   }
 
-  function normalizeTitle(title) {
+  function commitPurpose(commit, title) {
+    const pr = commit.body?.match(/PR #(\d+)/)?.[1] || "";
+    const prPrefix = pr ? `PR #${pr} ` : "";
+    if (state.lang === "en") {
+      return `${prPrefix}addresses: ${title}; authored by ${commit.author}.`;
+    }
+    return `${prPrefix}主要目标：${localizeTitle(title)}；提交者为 ${commit.author}。`;
+  }
+
+  function localizeTitle(title) {
+    if (state.lang === "en") return title;
+    return title
+      .replace(/^support\s+/i, "支持 ")
+      .replace(/^add\s+/i, "新增 ")
+      .replace(/^enable\s+/i, "启用 ")
+      .replace(/^implement\s+/i, "实现 ")
+      .replace(/^update\s+/i, "更新 ")
+      .replace(/^fix\s+/i, "修复 ")
+      .replace(/^optimi[sz]e\s+/i, "优化 ");
+  }
+
+  function cleanCommitTitle(title) {
     return String(title || "")
       .replace(/\s*\(#\d+\)\s*$/, "")
       .replace(/^(feat|fix|bugfix|perf|refactor|docs|test|chore|build|ci)\s*:\s*/i, "")
@@ -634,11 +665,41 @@
       .trim() || (state.lang === "zh" ? "未提供提交标题" : "no commit title provided");
   }
 
-  function summarizeFiles(files) {
-    const names = files
-      .map((file) => file.filename || "")
-      .filter(Boolean)
-      .slice(0, 3);
+  function summarizeImpactedAreas(files) {
+    const groups = new Map();
+    for (const file of files) {
+      const area = areaFromFile(file.filename || file.module || "Other");
+      const item = groups.get(area) || { area, files: 0, additions: 0, deletions: 0, examples: [] };
+      item.files += 1;
+      item.additions += file.additions || 0;
+      item.deletions += file.deletions || 0;
+      if (item.examples.length < 2 && file.filename) item.examples.push(file.filename);
+      groups.set(area, item);
+    }
+    return [...groups.values()].sort((a, b) => (b.additions + b.deletions) - (a.additions + a.deletions));
+  }
+
+  function areaFromFile(filename) {
+    const parts = String(filename).split("/").filter(Boolean);
+    if (parts.length >= 4 && parts[0] === "tests") return parts.slice(0, 4).join("/");
+    if (parts.length >= 3 && ["xllm", "tests", "csrc", "cmake"].includes(parts[0])) return parts.slice(0, 3).join("/");
+    if (parts.length >= 2) return parts.slice(0, 2).join("/");
+    return parts[0] || "Other";
+  }
+
+  function areaSummaryHtml(area) {
+    const churn = `+${area.additions}/-${area.deletions}`;
+    const examples = area.examples.length
+      ? (state.lang === "zh" ? `；代表文件：${area.examples.join(", ")}` : `; examples: ${area.examples.join(", ")}`)
+      : "";
+    if (state.lang === "en") {
+      return `<li><b>${escapeHtml(area.area)}</b>: ${escapeHtml(`${area.files} files, ${churn}${examples}`)}</li>`;
+    }
+    return `<li><b>${escapeHtml(area.area)}</b>：${escapeHtml(`${area.files} 个文件，${churn}${examples}`)}</li>`;
+  }
+
+  function summarizeKeyFiles(files) {
+    const names = files.map((file) => file.filename || "").filter(Boolean).slice(0, 4);
     if (!names.length) return state.lang === "zh" ? "未记录具体文件" : "no file paths recorded";
     const suffix = files.length > names.length
       ? (state.lang === "zh" ? ` 等 ${files.length} 个文件` : ` and ${files.length - names.length} more`)
@@ -646,7 +707,17 @@
     return `${names.join(", ")}${suffix}`;
   }
 
-  function changeScale(commit) {
+  function validationSummary(commit) {
+    const testHint = commit.needsTest
+      ? (state.lang === "zh" ? "建议优先补充回归测试、目标模块测试或端到端验证。" : "Prioritize regression, targeted module, or end-to-end validation.")
+      : (state.lang === "zh" ? "从变更规模看可按常规验证处理。" : "The change can follow normal validation based on its footprint.");
+    const ascendHint = commit.ascendAffected
+      ? (state.lang === "zh" ? "同时需要关注 Ascend/NPU 执行路径。" : "Also watch the Ascend/NPU execution path.")
+      : "";
+    return `${testHint}${ascendHint ? ` ${ascendHint}` : ""}`;
+  }
+
+  function changeScaleV2(commit) {
     const churn = commit.additions + commit.deletions;
     if (state.lang === "en") {
       if (commit.tags.includes("high-risk") || churn >= 1500 || commit.files >= 20) return "large-scope";
