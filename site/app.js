@@ -667,7 +667,9 @@
 
   function tagLabel(tag) {
     if (tag === "medium-risk") return t("mediumRisk");
-    if (tag === "npu-spec-decode") return moduleLabel("NPU / Spec Decode");
+    if (tag === "spec-decode") return moduleLabel("Spec Decode");
+    if (tag === "graph-runtime") return moduleLabel("Graph / Runtime");
+    if (tag === "npu-backend") return moduleLabel("NPU Backend");
     if (tag === "model-support") return moduleLabel("Model Support");
     if (tag === "inference-engine") return moduleLabel("Inference Engine");
     if (tag === "device-backend") return moduleLabel("Device Backend");
@@ -677,7 +679,9 @@
   function moduleLabel(module) {
     if (state.lang === "en") return module;
     return {
-      "NPU / Spec Decode": "NPU / 推测解码",
+      "Spec Decode": "推测解码",
+      "Graph / Runtime": "图编译 / 运行时",
+      "NPU Backend": "NPU 后端",
       "Model Support": "模型支持",
       "Inference Engine": "推理引擎",
       "Device Backend": "设备后端",

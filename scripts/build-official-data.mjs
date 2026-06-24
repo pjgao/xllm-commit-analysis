@@ -72,14 +72,18 @@ console.log(`Wrote ${commits.length} commits from ${data.repo.fullName} to ${out
 function syncRepository() {
   mkdirSync(dirname(repoGitDir), { recursive: true });
   if (existsSync(repoGitDir)) {
-    execFileSync("git", [
-      `--git-dir=${repoGitDir}`,
-      "fetch",
-      "--prune",
-      "origin",
-      "+refs/heads/*:refs/heads/*",
-      "+refs/tags/*:refs/tags/*"
-    ], { stdio: "inherit" });
+    try {
+      execFileSync("git", [
+        `--git-dir=${repoGitDir}`,
+        "fetch",
+        "--prune",
+        "origin",
+        "+refs/heads/*:refs/heads/*",
+        "+refs/tags/*:refs/tags/*"
+      ], { stdio: "inherit" });
+    } catch (error) {
+      console.warn(`Fetch failed, using existing cache at ${repoGitDir}.`);
+    }
     return;
   }
 
@@ -144,7 +148,9 @@ function classifyType(title) {
 
 function classifyModule(title, files) {
   const text = `${title} ${files.map((file) => file.filename).join(" ")}`.toLowerCase();
-  if (/\b(npu|acl|torch_npu|graph|decode|mtp|draft|spec)\b/.test(text)) return "NPU / Spec Decode";
+  if (/\b(mtp|draft|speculative|spec[-_\s]?decode|eagle|medusa)\b/.test(text)) return "Spec Decode";
+  if (/\b(graph|operator|kernel|op[-_\s]?plugin|runtime|execution)\b/.test(text)) return "Graph / Runtime";
+  if (/\b(npu|ascend|acl|aclnn|torch_npu|cann|atb)\b/.test(text)) return "NPU Backend";
   if (/\b(moe|expert|routing|dispatch|combine|gmm|ffn)\b/.test(text)) return "MoE";
   if (/\b(qwen|deepseek|glm|kimi|minimax|hunyuan|internvl|llama|vlm|model)\b/.test(text)) return "Model Support";
   if (/\b(scheduler|engine|worker|executor|runner|prefix|cache|block)\b/.test(text)) return "Inference Engine";
