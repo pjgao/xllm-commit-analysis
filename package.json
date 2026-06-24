@@ -1,0 +1,10 @@
+{
+  "name": "xllm-commit-analysis",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-official-data.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}

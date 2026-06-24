@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xLLM Official Engineering Insights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">x</span>
+        <span>xLLM Insights</span>
+      </div>
+      <div class="repo-tabs" id="repoTabs"></div>
+      <div class="controls">
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="export-group">
+          <span class="export-label" data-i18n="exportRange">导出范围</span>
+          <input type="date" id="rangeStart" class="date-input" title="Start date">
+          <span class="date-separator">~</span>
+          <input type="date" id="rangeEnd" class="date-input" title="End date">
+          <button id="exportBtn" class="export-btn" data-i18n="exportCsv">导出 CSV</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <div class="eyebrow" data-i18n="officialReport">官方研发洞察</div>
+        <h1 data-i18n="heroTitle">xLLM 代码贡献与特性演进洞察</h1>
+        <p data-i18n="heroLead">先看官方仓库累计贡献规模和长期技术重心，再进入日期维度查看每日提交、模块变化和测试风险。</p>
+      </div>
+      <div class="daily-summary global-summary">
+        <div class="label" data-i18n="globalSummary">累计总览</div>
+        <div class="text" id="globalSummaryText"></div>
+      </div>
+    </section>
+
+    <section class="stats-row global-stats" aria-label="Repository totals">
+      <div class="stat-card">
+        <div class="stat-value" id="globalTotalCommits">--</div>
+        <div class="stat-label" data-i18n="totalCommits">累计提交</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="globalContributors">--</div>
+        <div class="stat-label" data-i18n="totalContributors">贡献者</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="globalFiles">--</div>
+        <div class="stat-label" data-i18n="totalFiles">累计变更文件</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="globalDays">--</div>
+        <div class="stat-label" data-i18n="activeDays">活跃天数</div>
+      </div>
+    </section>
+
+    <section class="global-grid" aria-label="Repository cumulative insights">
+      <article class="insight-card">
+        <div class="section-title">
+          <span data-i18n="cumulativeModules">累计热点模块</span>
+          <small data-i18n="cumulativeModulesHint">按全仓库提交归类统计</small>
+        </div>
+        <div class="rank-list" id="globalModuleList"></div>
+      </article>
+      <article class="insight-card">
+        <div class="section-title">
+          <span data-i18n="cumulativeContributors">累计代码贡献</span>
+          <small data-i18n="cumulativeContributorsHint">按全仓库提交数统计</small>
+        </div>
+        <div class="rank-list" id="globalContributorList"></div>
+      </article>
+    </section>
+
+    <section class="daily-analysis">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow" data-i18n="dailyAnalysis">按日期分析</div>
+          <h2 data-i18n="dailyAnalysisTitle">选择活跃日期，查看当天变化</h2>
+        </div>
+        <div id="dailySummary" class="daily-summary compact-summary">
+          <div class="label" data-i18n="dailySummary">当日摘要</div>
+          <div class="text" id="summaryText"></div>
+        </div>
+      </div>
+
+      <section class="stats-row" aria-label="Daily metrics">
+        <div class="stat-card">
+          <div class="stat-value" id="statCommits">--</div>
+          <div class="stat-label" data-i18n="commits">提交</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statAdditions">--</div>
+          <div class="stat-label" data-i18n="additions">新增</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statDeletions">--</div>
+          <div class="stat-label" data-i18n="deletions">删除</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statFiles">--</div>
+          <div class="stat-label" data-i18n="filesChanged">变更文件</div>
+        </div>
+      </section>
+
+      <section class="insight-grid" aria-label="Daily insights">
+        <article class="insight-card date-lens">
+          <div class="section-title">
+            <span data-i18n="activityLens">活跃日期</span>
+            <small data-i18n="activityLensHint">选择一个日期查看当天提交</small>
+          </div>
+          <div class="date-card">
+            <div class="date-bar" id="dateBar"></div>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-label" data-i18n="analysisCoverage">分析覆盖率</div>
+            <div class="coverage-bar" id="coverageBar"></div>
+          </div>
+        </article>
+
+        <article class="insight-card">
+          <div class="section-title">
+            <span data-i18n="dailyContributors">当日贡献者</span>
+            <small data-i18n="dailyContributorsHint">当前日期提交分布</small>
+          </div>
+          <div class="rank-list" id="contributorList"></div>
+        </article>
+
+        <article class="insight-card">
+          <div class="section-title">
+            <span data-i18n="moduleDistribution">模块分布</span>
+            <small data-i18n="moduleDistributionHint">当天热点模块分布</small>
+          </div>
+          <div class="rank-list module-list" id="heatmapBar"></div>
+        </article>
+
+        <article class="insight-card">
+          <div class="section-title">
+            <span data-i18n="riskAndTest">风险与测试</span>
+            <small data-i18n="riskAndTestHint">测试与高风险提交线索</small>
+          </div>
+          <div class="risk-list" id="riskList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="workbench">
+      <div class="workbench-head">
+        <div>
+          <div class="eyebrow" data-i18n="commitWorkbench">提交工作台</div>
+          <h2 data-i18n="commitWorkbenchTitle">提交记录与影响分析</h2>
+        </div>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索提交...">
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <span class="filter-chip active" data-filter="all"></span>
+        <span class="filter-chip" data-filter="needs-test"></span>
+        <span class="filter-chip" data-filter="affects-ascend"></span>
+        <span class="filter-chip" data-filter="high-risk"></span>
+        <span class="filter-chip" data-filter="feature"></span>
+        <span class="filter-chip" data-filter="bugfix"></span>
+        <span class="filter-chip" data-filter="refactor"></span>
+        <span class="filter-chip" data-filter="performance"></span>
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <div class="icon">--</div>
+        <div class="title" data-i18n="emptyTitle">没有找到提交</div>
+        <div class="subtitle" data-i18n="emptySubtitle">请选择其他日期或调整筛选条件</div>
+      </div>
+
+      <div class="commit-list" id="commitList"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
