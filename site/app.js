@@ -63,7 +63,7 @@
       chore: "工程",
       other: "其他",
       mediumRisk: "中风险",
-      aiAnalysis: "变更解读",
+      aiAnalysis: "AI 总结",
       testImpact: "测试影响",
       testUpdateNeeded: "需要测试跟进",
       ascendImpact: "Ascend 影响",
@@ -134,7 +134,7 @@
       chore: "Chore",
       other: "Other",
       mediumRisk: "Medium Risk",
-      aiAnalysis: "Change Brief",
+      aiAnalysis: "AI Summary",
       testImpact: "Test Impact",
       testUpdateNeeded: "Test Follow-up Needed",
       ascendImpact: "Ascend Impact",
@@ -507,7 +507,7 @@
       <div class="analysis-section">
         <div class="ai-comment">
           <div class="ai-label">${escapeHtml(t("aiAnalysis"))}</div>
-          ${escapeHtml(analysisText(commit))}
+          ${escapeHtml(commitAiSummary(commit))}
         </div>
         <div class="impact-card ${commit.needsTest ? "test-impact" : ""}">
           <div class="impact-label ${commit.needsTest ? "needs-test" : ""}">${escapeHtml(commit.needsTest ? t("testUpdateNeeded") : t("testImpact"))}</div>
@@ -595,16 +595,56 @@
     return state.repos.find((repo) => repo.id === state.currentRepo)?.label || "xllm";
   }
 
-  function analysisText(commit) {
-    return t("analysisText")({
-      author: commit.author,
-      type: typeLabel(commit.type),
-      repo: commit.repoLabel,
-      module: moduleLabel(commit.moduleName),
-      additions: commit.additions,
-      deletions: commit.deletions,
-      files: commit.files
-    });
+  function commitAiSummary(commit) {
+    const title = normalizeTitle(commit.message);
+    const type = typeLabel(commit.type);
+    const module = moduleLabel(commit.moduleName);
+    const files = commit.fileList || [];
+    const mainFiles = summarizeFiles(files);
+    const scale = changeScale(commit);
+    const testHint = commit.needsTest
+      ? (state.lang === "zh" ? "建议优先补充回归或目标模块验证。" : "Prioritize regression or targeted module validation.")
+      : (state.lang === "zh" ? "从变更规模看可按常规验证处理。" : "The change can follow normal validation based on its footprint.");
+    const ascendHint = commit.ascendAffected
+      ? (state.lang === "zh" ? "同时需要关注 Ascend/NPU 执行路径。" : "Also watch the Ascend/NPU execution path.")
+      : "";
+
+    if (state.lang === "en") {
+      return `${commit.author} made a ${scale} ${type.toLowerCase()} change in ${module}: ${title}. It touches ${commit.files} files with +${commit.additions}/-${commit.deletions} lines. Main files: ${mainFiles}. ${testHint} ${ascendHint}`.trim();
+    }
+    return `${commit.author} 本次提交是一个${scale}的${type}变更，核心内容是：${title}。该变更归入 ${module}，涉及 ${commit.files} 个文件、+${commit.additions}/-${commit.deletions} 行；主要文件范围：${mainFiles}。${testHint}${ascendHint ? ` ${ascendHint}` : ""}`;
+  }
+
+  function normalizeTitle(title) {
+    return String(title || "")
+      .replace(/\s*\(#\d+\)\s*$/, "")
+      .replace(/^(feat|fix|bugfix|perf|refactor|docs|test|chore|build|ci)\s*:\s*/i, "")
+      .replace(/[.。]\s*$/, "")
+      .trim() || (state.lang === "zh" ? "未提供提交标题" : "no commit title provided");
+  }
+
+  function summarizeFiles(files) {
+    const names = files
+      .map((file) => file.filename || "")
+      .filter(Boolean)
+      .slice(0, 3);
+    if (!names.length) return state.lang === "zh" ? "未记录具体文件" : "no file paths recorded";
+    const suffix = files.length > names.length
+      ? (state.lang === "zh" ? ` 等 ${files.length} 个文件` : ` and ${files.length - names.length} more`)
+      : "";
+    return `${names.join(", ")}${suffix}`;
+  }
+
+  function changeScale(commit) {
+    const churn = commit.additions + commit.deletions;
+    if (state.lang === "en") {
+      if (commit.tags.includes("high-risk") || churn >= 1500 || commit.files >= 20) return "large-scope";
+      if (commit.tags.includes("medium-risk") || churn >= 300 || commit.files >= 8) return "medium-scope";
+      return "focused";
+    }
+    if (commit.tags.includes("high-risk") || churn >= 1500 || commit.files >= 20) return "大范围";
+    if (commit.tags.includes("medium-risk") || churn >= 300 || commit.files >= 8) return "中等范围";
+    return "聚焦";
   }
 
   function testImpactText(commit) {
