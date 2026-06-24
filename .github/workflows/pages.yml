@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  models: read
   pages: write
   id-token: write
 
@@ -32,6 +33,11 @@ jobs:
           node-version: "24"
 
       - name: Build official xLLM data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ENABLE_AI_SUMMARY: ${{ github.event_name != 'push' }}
+          AI_MODEL: ${{ vars.AI_MODEL || 'openai/gpt-4.1-mini' }}
+          AI_SUMMARY_MAX_PER_RUN: ${{ vars.AI_SUMMARY_MAX_PER_RUN || '20' }}
         run: npm run build:data
 
       - name: Commit data refresh

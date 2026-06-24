@@ -1,11 +1,17 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
 const repoUrl = process.env.XLLM_REPO_URL || "https://github.com/jd-opensource/xllm.git";
 const repoGitDir = resolve(process.env.XLLM_REPO_CACHE || ".cache/xllm.git");
 const outputPath = resolve("site/data/official-xllm.json");
 const ref = process.argv[2] || process.env.XLLM_REF || "main";
+const enableAiSummary = /^true$/i.test(process.env.ENABLE_AI_SUMMARY || "");
+const aiModel = process.env.AI_MODEL || "openai/gpt-4.1-mini";
+const aiEndpoint = process.env.AI_ENDPOINT || "https://models.github.ai/inference/chat/completions";
+const aiMaxPerRun = Math.max(0, Number(process.env.AI_SUMMARY_MAX_PER_RUN || 20));
+const aiToken = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
+const previousData = readPreviousData();
 
 syncRepository();
 
@@ -24,6 +30,9 @@ const commits = raw
   .filter(Boolean)
   .map(parseCommit)
   .filter(Boolean);
+
+restoreAiSummaries(commits, previousData);
+await generateMissingAiSummaries(commits);
 
 const byDate = groupBy(commits, (commit) => commit.dateKey);
 const byAuthor = [...groupBy(commits, (commit) => commit.author.name).entries()]
@@ -68,6 +77,137 @@ const data = {
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 console.log(`Wrote ${commits.length} commits from ${data.repo.fullName} to ${outputPath}`);
+
+function readPreviousData() {
+  if (!existsSync(outputPath)) return null;
+  try {
+    return JSON.parse(readFileSync(outputPath, "utf8"));
+  } catch (error) {
+    console.warn(`Unable to read previous data at ${outputPath}: ${error.message}`);
+    return null;
+  }
+}
+
+function restoreAiSummaries(commits, previous) {
+  const summaries = new Map((previous?.commits || [])
+    .filter((commit) => commit.sha && commit.aiSummary)
+    .map((commit) => [commit.sha, commit.aiSummary]));
+  for (const commit of commits) {
+    const aiSummary = summaries.get(commit.sha);
+    if (aiSummary) commit.aiSummary = aiSummary;
+  }
+}
+
+async function generateMissingAiSummaries(commits) {
+  if (!enableAiSummary) {
+    console.log("AI summaries disabled. Set ENABLE_AI_SUMMARY=true to generate them.");
+    return;
+  }
+  if (!aiToken) {
+    console.warn("AI summaries enabled, but GITHUB_TOKEN/GH_TOKEN is not available.");
+    return;
+  }
+  if (!aiMaxPerRun) {
+    console.log("AI_SUMMARY_MAX_PER_RUN is 0; skipping AI summary generation.");
+    return;
+  }
+
+  const targets = commits
+    .filter((commit) => !commit.aiSummary)
+    .slice(0, aiMaxPerRun);
+  if (!targets.length) {
+    console.log("No new commits need AI summaries.");
+    return;
+  }
+
+  console.log(`Generating AI summaries for ${targets.length} commits with ${aiModel}.`);
+  for (const commit of targets) {
+    try {
+      commit.aiSummary = await generateAiSummary(commit);
+      console.log(`Generated AI summary for ${commit.sha.slice(0, 8)}`);
+    } catch (error) {
+      console.warn(`AI summary failed for ${commit.sha.slice(0, 8)}: ${error.message}`);
+    }
+  }
+}
+
+async function generateAiSummary(commit) {
+  const payload = {
+    model: aiModel,
+    temperature: 0.2,
+    max_tokens: 500,
+    messages: [
+      {
+        role: "system",
+        content: [
+          "You summarize code commits for an official engineering report.",
+          "Return strict JSON only with keys zh and en.",
+          "Be concrete, concise, and do not invent facts not present in the commit metadata."
+        ].join(" ")
+      },
+      {
+        role: "user",
+        content: JSON.stringify({
+          repo: "jd-opensource/xllm",
+          sha: commit.sha,
+          title: commit.title,
+          type: commit.type,
+          module: commit.module,
+          additions: commit.additions,
+          deletions: commit.deletions,
+          filesChanged: commit.filesChanged,
+          tags: commit.tags,
+          files: commit.files.slice(0, 12).map((file) => ({
+            filename: file.filename,
+            additions: file.additions,
+            deletions: file.deletions
+          })),
+          instructions: {
+            zh: "用中文写 1-2 句话，说明本次提交做了什么、影响范围、测试关注点。",
+            en: "Write 1-2 English sentences covering what changed, impact scope, and test focus."
+          }
+        }, null, 2)
+      }
+    ]
+  };
+
+  const response = await fetch(aiEndpoint, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${aiToken}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`GitHub Models request failed: ${response.status} ${text.slice(0, 300)}`);
+  }
+
+  const result = await response.json();
+  const content = result.choices?.[0]?.message?.content || "";
+  const parsed = parseJsonObject(content);
+  if (!parsed.zh || !parsed.en) {
+    throw new Error(`Model response missing zh/en fields: ${content.slice(0, 200)}`);
+  }
+  return {
+    zh: String(parsed.zh).trim(),
+    en: String(parsed.en).trim(),
+    model: aiModel,
+    generatedAt: new Date().toISOString()
+  };
+}
+
+function parseJsonObject(content) {
+  const text = String(content || "").trim();
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error(`Model response is not JSON: ${text.slice(0, 200)}`);
+    return JSON.parse(match[0]);
+  }
+}
 
 function syncRepository() {
   mkdirSync(dirname(repoGitDir), { recursive: true });

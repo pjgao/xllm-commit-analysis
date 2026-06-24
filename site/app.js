@@ -596,6 +596,9 @@
   }
 
   function commitAiSummary(commit) {
+    const generated = commit.aiSummary?.[state.lang] || commit.aiSummary?.zh || commit.aiSummary?.en;
+    if (generated) return generated;
+
     const title = normalizeTitle(commit.message);
     const type = typeLabel(commit.type);
     const module = moduleLabel(commit.moduleName);
