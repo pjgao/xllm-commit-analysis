@@ -10,6 +10,7 @@ const enableAiSummary = /^true$/i.test(process.env.ENABLE_AI_SUMMARY || "");
 const aiModel = process.env.AI_MODEL || "openai/gpt-4.1-mini";
 const aiEndpoint = process.env.AI_ENDPOINT || "https://models.github.ai/inference/chat/completions";
 const aiMaxPerRun = Math.max(0, Number(process.env.AI_SUMMARY_MAX_PER_RUN || 20));
+const aiDailyMaxPerRun = Math.max(0, Number(process.env.AI_DAILY_SUMMARY_MAX_PER_RUN || 7));
 const aiToken = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 const previousData = readPreviousData();
 
@@ -35,6 +36,8 @@ restoreAiSummaries(commits, previousData);
 await generateMissingAiSummaries(commits);
 
 const byDate = groupBy(commits, (commit) => commit.dateKey);
+const dailySummaries = { ...(previousData?.dailySummaries || {}) };
+await generateMissingDailySummaries(byDate, dailySummaries);
 const byAuthor = [...groupBy(commits, (commit) => commit.author.name).entries()]
   .map(([name, items]) => ({
     name,
@@ -71,6 +74,7 @@ const data = {
     typeBreakdown: byType
   },
   dates: activeDates,
+  dailySummaries,
   commits
 };
 
@@ -196,6 +200,131 @@ async function generateAiSummary(commit) {
     model: aiModel,
     generatedAt: new Date().toISOString()
   };
+}
+
+async function generateMissingDailySummaries(byDate, dailySummaries) {
+  if (!enableAiSummary || !aiToken) return;
+  if (!aiDailyMaxPerRun) {
+    console.log("AI_DAILY_SUMMARY_MAX_PER_RUN is 0; skipping daily AI summary generation.");
+    return;
+  }
+
+  const targets = [...byDate.entries()]
+    .sort(([a], [b]) => b.localeCompare(a))
+    .filter(([date, items]) => shouldGenerateDailySummary(items, dailySummaries[date]))
+    .slice(0, aiDailyMaxPerRun);
+
+  if (!targets.length) {
+    console.log("No daily summaries need AI generation.");
+    return;
+  }
+
+  console.log(`Generating AI daily summaries for ${targets.length} dates with ${aiModel}.`);
+  for (const [date, items] of targets) {
+    try {
+      dailySummaries[date] = await generateDailySummary(date, items);
+      console.log(`Generated AI daily summary for ${date}`);
+    } catch (error) {
+      console.warn(`AI daily summary failed for ${date}: ${error.message}`);
+    }
+  }
+}
+
+function shouldGenerateDailySummary(items, existing) {
+  if (!existing) return true;
+  return existing.signature !== dailySignature(items);
+}
+
+function dailySignature(items) {
+  return items.map((commit) => commit.sha).sort().join(",");
+}
+
+async function generateDailySummary(date, items) {
+  const moduleBreakdown = countBy(items, (commit) => commit.module).slice(0, 6);
+  const typeBreakdown = countBy(items, (commit) => commit.type).slice(0, 6);
+  const highRisk = items.filter((commit) => commit.tags.includes("high-risk")).length;
+  const needsTest = items.filter(shouldNeedTestFromParsedCommit).length;
+  const payload = {
+    model: aiModel,
+    temperature: 0.2,
+    max_tokens: 700,
+    messages: [
+      {
+        role: "system",
+        content: [
+          "You write daily engineering summaries for an official code activity report.",
+          "Return strict JSON only with keys zh and en.",
+          "Summarize the day's direction, important modules, risk, and test focus.",
+          "Do not invent product claims beyond the supplied commit metadata."
+        ].join(" ")
+      },
+      {
+        role: "user",
+        content: JSON.stringify({
+          repo: "jd-opensource/xllm",
+          date,
+          commits: items.length,
+          additions: sum(items, "additions"),
+          deletions: sum(items, "deletions"),
+          filesChanged: sum(items, "filesChanged"),
+          highRisk,
+          needsTest,
+          moduleBreakdown,
+          typeBreakdown,
+          commitSamples: items.slice(0, 12).map((commit) => ({
+            sha: commit.sha.slice(0, 8),
+            title: commit.title,
+            author: commit.author.name,
+            type: commit.type,
+            module: commit.module,
+            additions: commit.additions,
+            deletions: commit.deletions,
+            filesChanged: commit.filesChanged,
+            tags: commit.tags,
+            aiSummary: commit.aiSummary ? { zh: commit.aiSummary.zh, en: commit.aiSummary.en } : undefined
+          })),
+          instructions: {
+            zh: "用中文写 2-3 句话，面向 xLLM 官方日报，说明当天主要研发方向、重要模块、风险和测试关注点。",
+            en: "Write 2-3 English sentences for an official xLLM daily report, covering direction, modules, risk, and test focus."
+          }
+        }, null, 2)
+      }
+    ]
+  };
+
+  const response = await fetch(aiEndpoint, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${aiToken}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`GitHub Models request failed: ${response.status} ${text.slice(0, 300)}`);
+  }
+
+  const result = await response.json();
+  const content = result.choices?.[0]?.message?.content || "";
+  const parsed = parseJsonObject(content);
+  if (!parsed.zh || !parsed.en) {
+    throw new Error(`Model response missing zh/en fields: ${content.slice(0, 200)}`);
+  }
+  return {
+    zh: String(parsed.zh).trim(),
+    en: String(parsed.en).trim(),
+    signature: dailySignature(items),
+    commitCount: items.length,
+    model: aiModel,
+    generatedAt: new Date().toISOString()
+  };
+}
+
+function shouldNeedTestFromParsedCommit(commit) {
+  if ((commit.tags || []).includes("high-risk")) return true;
+  if (["performance", "bugfix", "feature"].includes(commit.type) && ((commit.additions || 0) + (commit.deletions || 0) >= 300)) return true;
+  return /npu|graph|decode|moe|scheduler|cache|model/i.test(`${commit.title} ${commit.module}`) && (commit.filesChanged || 0) >= 5;
 }
 
 function parseJsonObject(content) {

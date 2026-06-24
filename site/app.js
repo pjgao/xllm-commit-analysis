@@ -438,6 +438,14 @@
   }
 
   function renderDailySummary(events) {
+    const generated = state.official.dailySummaries?.[state.currentDate]?.[state.lang] ||
+      state.official.dailySummaries?.[state.currentDate]?.zh ||
+      state.official.dailySummaries?.[state.currentDate]?.en;
+    if (generated) {
+      $("#summaryText").textContent = generated;
+      return;
+    }
+
     const topModule = countBy(events, (event) => event.moduleName)[0]?.key || "Other";
     const topFeature = countBy(events, (event) => event.type)[0]?.key || "other";
     const highRisk = events.filter((event) => event.tags.includes("high-risk")).length;

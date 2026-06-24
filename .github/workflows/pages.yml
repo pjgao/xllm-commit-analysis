@@ -38,6 +38,7 @@ jobs:
           ENABLE_AI_SUMMARY: ${{ github.event_name != 'push' }}
           AI_MODEL: ${{ vars.AI_MODEL || 'openai/gpt-4.1-mini' }}
           AI_SUMMARY_MAX_PER_RUN: ${{ vars.AI_SUMMARY_MAX_PER_RUN || '20' }}
+          AI_DAILY_SUMMARY_MAX_PER_RUN: ${{ vars.AI_DAILY_SUMMARY_MAX_PER_RUN || '7' }}
         run: npm run build:data
 
       - name: Commit data refresh

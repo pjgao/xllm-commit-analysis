@@ -37,9 +37,11 @@ AI summary behavior:
 
 - Browser-side code never calls AI APIs.
 - GitHub Actions uses `GITHUB_TOKEN` with `models: read`.
-- Existing commit summaries are reused from `site/data/official-xllm.json`.
+- Existing commit and daily summaries are reused from `site/data/official-xllm.json`.
 - Only new commits without `aiSummary` are sent to the model.
-- `AI_SUMMARY_MAX_PER_RUN` defaults to `20` to control free quota usage.
+- Daily summaries are generated into `dailySummaries[YYYY-MM-DD]` and regenerated only when that day's commit set changes.
+- `AI_SUMMARY_MAX_PER_RUN` defaults to `20` to control commit-summary usage.
+- `AI_DAILY_SUMMARY_MAX_PER_RUN` defaults to `7` to control daily-summary usage.
 - `AI_MODEL` defaults to `openai/gpt-4.1-mini`; configure repository variables to switch models.
 
 For local data builds without AI:
@@ -54,6 +56,7 @@ For local AI summary generation, provide a GitHub token with GitHub Models acces
 $env:ENABLE_AI_SUMMARY = "true"
 $env:GITHUB_TOKEN = "<token>"
 $env:AI_SUMMARY_MAX_PER_RUN = "5"
+$env:AI_DAILY_SUMMARY_MAX_PER_RUN = "2"
 npm run build:data
 ```
 
