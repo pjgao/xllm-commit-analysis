@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T19:27:42.381Z",
+  "generatedAt": "2026-06-25T19:46:30.416Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1102,
+    "commits": 1106,
     "contributors": 92,
-    "additions": 537174,
-    "deletions": 136217,
-    "filesChanged": 16168,
+    "additions": 537299,
+    "deletions": 136310,
+    "filesChanged": 16189,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-06-24",
+    "latestDate": "2026-06-25",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 96,
-        "additions": 31102,
-        "deletions": 15042,
-        "files": 1621
+        "commits": 97,
+        "additions": 31193,
+        "deletions": 15112,
+        "files": 1639
       },
       {
         "name": "Zhiwei Liang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 389
+        "count": 392
       },
       {
         "key": "NPU Backend",
@@ -140,7 +140,7 @@
       },
       {
         "key": "MoE",
-        "count": 20
+        "count": 21
       },
       {
         "key": "docs/en",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 170
+        "count": 173
       },
       {
         "key": "performance",
-        "count": 125
+        "count": 126
       },
       {
         "key": "other",
@@ -418,7 +418,8 @@
     "2026-06-21",
     "2026-06-22",
     "2026-06-23",
-    "2026-06-24"
+    "2026-06-24",
+    "2026-06-25"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -532,9 +533,323 @@
       "commitCount": 1,
       "model": "openai/gpt-4.1-mini",
       "generatedAt": "2026-06-24T19:27:42.379Z"
+    },
+    "2026-06-25": {
+      "zh": "当天研发主要聚焦于Graph / Runtime模块的重构和MoE模块的性能优化。重构涉及配置读取逻辑和代码重复删除，风险较低但需关注配置正确性及功能一致性。测试重点关注配置加载、Ascend设备兼容性、性能提升及通信正确性。",
+      "en": "Today's development focused on refactoring the Graph / Runtime modules and optimizing performance in the MoE module. The refactors involved config loading logic and code deduplication with low risk, but testing should verify correct config loading, functionality consistency, Ascend device compatibility, performance improvements, and communication correctness.",
+      "signature": "81e0c9e283892812e5748d34fb101fff9f883fb8,cf24f8705ea2e23dfa840c5cef7476bb1280c514,d83eb378007da8248e2e6579a9785a80f03e9e82,fe73f02e83135fa203b701027155448e0c7f3b3e",
+      "commitCount": 4,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:45:57.370Z"
+    },
+    "2026-06-05": {
+      "zh": "今日研发主要聚焦于测试模块的重构和设备后端的bug修复。重点解决了CUDA设备上pipeline_longcat_image_edit.h的编译问题，提升构建流程的稳定性。当前无高风险变更，测试关注点在构建前清理子模块未跟踪文件以保证CI构建环境的干净。",
+      "en": "Today's development focused on refactoring the testing module and fixing a bug in the device backend. The key fix addressed a compilation failure of pipeline_longcat_image_edit.h on CUDA devices, improving build stability. There are no high-risk changes, with testing emphasis on cleaning untracked submodule files before CI builds to ensure a clean environment.",
+      "signature": "0c1ea5dd676bffdfa62213cfe673e8ec74a92a5b,e445efb89910bdf2ff05151ae1ffb701e8a09365",
+      "commitCount": 2,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:03.065Z"
+    },
+    "2026-06-04": {
+      "zh": "今日研发重点聚焦于Graph / Runtime模块的重构与新特性开发，特别是多模态处理器和DCU后端支持的高风险改动。同时，xllm/core模块引入了流处理抽象和融合注意力机制以提升性能。需重点关注Graph / Runtime和Device Backend的高风险改动，确保相关测试覆盖和稳定性验证。",
+      "en": "Today's development focused on refactoring and feature additions in the Graph / Runtime module, including multimodal processor improvements and DCU backend support with high-risk changes. The xllm/core module introduced stream handling abstraction and fused attention for performance enhancement. Testing should prioritize high-risk areas in Graph / Runtime and Device Backend to ensure stability and coverage.",
+      "signature": "06a28eacc38ff69067aa2efbdb7e178b1a239f7b,18b896f49148f0f1afa9ee3815511b58caedbddb,361250cb1e7979ffd9e5807b038e0d8753aa3f70,40cfc7e6a847c2230fea239f0f2c9bced20764eb,757a63f73f942de87dd558e7c65000a481a6d099,d805eb4cca7fd0154732c2e24de19ceec776e360,ec7e5311210335c4d0ce2f471021ca4d15effa2f,f3356069f821b2545090ea78f116a6f7a8f66cfa",
+      "commitCount": 8,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:08.512Z"
+    },
+    "2026-06-03": {
+      "zh": "今日研发重点集中在Graph / Runtime模块，新增了异步RL的暂停与恢复功能，并支持在线性能分析。NPU Backend和xllm/api_service模块也进行了重构优化。鉴于多项高风险改动，特别是涉及Ascend平台，测试需重点关注性能稳定性和准确性。",
+      "en": "Today's development focused on the Graph / Runtime module with new features including pause and resume for fully async RL and online profiling support. Refactoring was also performed in the NPU Backend and xllm/api_service modules. Due to multiple high-risk changes, especially affecting the Ascend platform, testing should prioritize performance stability and accuracy.",
+      "signature": "18f928cae425de616e89ec81da648c7ac286d93e,3486ef16baf95639247464c4aa321f2167bae166,5af7acdb9d86140e0d493e5b9a6f1d308cc07159,9c290a191dcce0a094c65b48232324c731839723,acc25afdb7f5dd79d94e328a8d6a123ab69763f8,c62b78320f64656bb6e92a4d089e4888c34d1c5a,cc7b060d92f2d9f5007f703507506f8919736fd4,fcbc9e32739e5c0652bf46fb37fd3856dcf842ee",
+      "commitCount": 8,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:14.354Z"
+    },
+    "2026-06-02": {
+      "zh": "今日研发重点集中在Engineering、xllm/core、Inference Engine及Spec Decode模块，完成了功能新增、性能优化及若干bug修复。Spec Decode模块的重构存在较高风险，需重点关注对Ascend设备的影响。测试重点应覆盖新加的Python接口、性能优化改动及高风险重构部分，确保系统稳定性。",
+      "en": "Today's development focused on Engineering, xllm/core, Inference Engine, and Spec Decode modules, including feature additions, performance improvements, and bug fixes. The refactor in the Spec Decode module carries high risk, particularly affecting Ascend devices. Testing should prioritize the new Python interface, performance enhancements, and the high-risk refactor to ensure system stability.",
+      "signature": "3a0e01992b5ac33cde7224dd58e79693f116ee48,701c28d09b086e0ed60b7f5f157b3ff45852d347,8d337f1959246b5a8c666b4b366a72012cb83c4c,d4a51fd17da76504c3b6d961eee833631eeb78ed,e0207e30c212e47d84ee36a57d5e12f18e013c2c",
+      "commitCount": 5,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:20.289Z"
+    },
+    "2026-06-01": {
+      "zh": "今天的研发重点集中在NPU后端、Spec Decode和图/运行时模块，完成了多项性能优化和功能支持。Graph/Runtime模块的重构存在高风险，需重点关注。测试方面，NPU后端相关改动需加强验证，确保增量重建和并行测试的稳定性。",
+      "en": "Today's development focused on the NPU Backend, Spec Decode, and Graph/Runtime modules with multiple performance improvements and feature additions. The refactor in the Graph/Runtime module carries high risk and requires careful attention. Testing efforts should prioritize the NPU Backend changes to ensure stability in incremental rebuilds and adaptive test parallelism.",
+      "signature": "281e58fe0dd4516bbb37f2eb9144a6c15574acd4,6de89d8d94f98e6866be8635755cb37b3d32fb15,829555543161981affd6b695db2c1ea712b2125c,864abf876a784615e6cd075eae9501259132d0fa,8f44082b5ad8ebd1919c13d102075015d1c72409,afcc5a0828a66b631ff32f719970ca8272223e84,b2da9dd2dd94ce71618e6dc90a2455b52a4421f5,b3deafe24c5d0b9ccef3beaa82acd3afb9835eb1,f3111cef39bf349ae77923a0eb57d7daeecb16ea,f35d79699b9683b1e8ba80ffc118c083932793d9,feeeca59ad1475df221cec0dc35aebf5bf1a9c60",
+      "commitCount": 11,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:24.995Z"
+    },
+    "2026-05-30": {
+      "zh": "当天研发主要集中在NPU Backend模块，完成了对VIT前向链中未使用的ModelInputParams的重构，并修复了NPU多模态构建中的编译错误。此次重构涉及较大改动，存在较高风险，需重点关注Ascend平台的兼容性和稳定性，测试重点放在多模态构建和前向链功能的完整性验证上。",
+      "en": "The development focused on the NPU Backend module, including a refactor to remove unused ModelInputParams from the VIT forward chain and a bugfix for the NPU multimodal build break. The refactor is high-risk and affects the Ascend platform, so testing should emphasize compatibility and stability, particularly verifying multimodal build integrity and forward chain functionality.",
+      "signature": "193f870f6e84449b8fcb356e74b417031e3d845a,fc4ee14538ca95398f33f61e06813d1ca98fec91",
+      "commitCount": 2,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-06-25T19:46:30.414Z"
     }
   },
   "commits": [
+    {
+      "sha": "d83eb378007da8248e2e6579a9785a80f03e9e82",
+      "parents": [
+        "fe73f02e83135fa203b701027155448e0c7f3b3e"
+      ],
+      "pr": "1819",
+      "date": "2026-06-25T23:03:28+08:00",
+      "dateKey": "2026-06-25",
+      "author": {
+        "name": "Joey Gao",
+        "email": "gaopengju3@huawei.com"
+      },
+      "title": "perf: reduce qwen3.5 moe allreduce overhead. (#1819)",
+      "type": "performance",
+      "module": "MoE",
+      "additions": 29,
+      "deletions": 11,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/layers/npu_torch/fused_moe.cpp",
+          "additions": 29,
+          "deletions": 11,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "moe"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d83eb378007da8248e2e6579a9785a80f03e9e82",
+      "aiSummary": {
+        "zh": "本次提交优化了qwen3.5模型中MoE模块的allreduce操作，减少了通信开销。影响范围为xllm/core/layers/npu_torch/fused_moe.cpp文件，测试重点关注性能提升和通信正确性。",
+        "en": "This commit reduces the allreduce overhead in the MoE module of the qwen3.5 model, improving performance. The change affects the xllm/core/layers/npu_torch/fused_moe.cpp file, with testing focused on performance gains and communication correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:29.201Z"
+      }
+    },
+    {
+      "sha": "fe73f02e83135fa203b701027155448e0c7f3b3e",
+      "parents": [
+        "81e0c9e283892812e5748d34fb101fff9f883fb8"
+      ],
+      "pr": "1821",
+      "date": "2026-06-25T16:30:07+08:00",
+      "dateKey": "2026-06-25",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "refactor: init gflags when reading config from json file and update FLAGS to config struct. (#1821)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 91,
+      "deletions": 70,
+      "filesChanged": 18,
+      "files": [
+        {
+          "filename": ".agents/skills/code-review/references/custom-code-style.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": "xllm/core/framework/config/config_utils.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/hf_model_loader.cpp",
+          "additions": 7,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/collective_communicator.cpp",
+          "additions": 9,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/block_hasher.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_column_parallel_linear_impl.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_kimik25_vision_encoder_layer_impl.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/fused_moe.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dcu_graph_executor_impl.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/hash_util.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_wan_i2v.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_wan.h",
+          "additions": 32,
+          "deletions": 26,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/deepseek_v4.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/minimax_m2.h",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fe73f02e83135fa203b701027155448e0c7f3b3e",
+      "aiSummary": {
+        "zh": "本次提交重构了从 JSON 文件读取配置时初始化 gflags 的逻辑，并将 FLAGS 更新为配置结构体，影响图计算和运行时模块。测试需关注配置读取的正确性及对 Ascend 设备的影响。",
+        "en": "This refactor initializes gflags when reading config from a JSON file and updates FLAGS to a config struct, affecting the Graph and Runtime modules. Testing should focus on correct config loading and impact on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:33.562Z"
+      }
+    },
+    {
+      "sha": "81e0c9e283892812e5748d34fb101fff9f883fb8",
+      "parents": [
+        "cf24f8705ea2e23dfa840c5cef7476bb1280c514"
+      ],
+      "pr": "1763",
+      "date": "2026-06-25T13:57:47+08:00",
+      "dateKey": "2026-06-25",
+      "author": {
+        "name": "Raul Torres",
+        "email": "138264735+rauletorresc@users.noreply.github.com"
+      },
+      "title": "refactor: remove duplicated code at LLM worker. (#1763)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 3,
+      "deletions": 9,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/81e0c9e283892812e5748d34fb101fff9f883fb8",
+      "aiSummary": {
+        "zh": "本次提交重构了LLM worker中的代码，删除了重复代码，影响范围为Graph / Runtime模块。测试应关注功能是否保持一致且无新增错误。",
+        "en": "This commit refactors the LLM worker by removing duplicated code, affecting the Graph / Runtime module. Testing should focus on verifying consistent functionality and absence of new errors.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:36.954Z"
+      }
+    },
+    {
+      "sha": "cf24f8705ea2e23dfa840c5cef7476bb1280c514",
+      "parents": [
+        "4b836a7aab520ad517445d008235fb1ab0e29a6a"
+      ],
+      "pr": "1475",
+      "date": "2026-06-25T13:57:22+08:00",
+      "dateKey": "2026-06-25",
+      "author": {
+        "name": "Raul Torres",
+        "email": "138264735+rauletorresc@users.noreply.github.com"
+      },
+      "title": "refactor: remove negative condition when choosing decode or prefill. (#1475)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 2,
+      "deletions": 3,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cf24f8705ea2e23dfa840c5cef7476bb1280c514",
+      "aiSummary": {
+        "zh": "本次提交重构了 xllm/core/runtime/speculative_worker_impl.cpp 中选择 decode 或 prefill 的逻辑，去除了负向条件判断。影响范围为 Graph / Runtime 模块，测试时需关注相关逻辑的正确性和性能表现。",
+        "en": "This commit refactors the logic for choosing decode or prefill in xllm/core/runtime/speculative_worker_impl.cpp by removing the negative condition. The change affects the Graph / Runtime module, with testing focused on correctness and performance of the related logic.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:41.526Z"
+      }
+    },
     {
       "sha": "4b836a7aab520ad517445d008235fb1ab0e29a6a",
       "parents": [
@@ -21225,7 +21540,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8bbd3dbc29fd4445674d77f1c01456235b8796aa"
+      "url": "https://github.com/jd-opensource/xllm/commit/8bbd3dbc29fd4445674d77f1c01456235b8796aa",
+      "aiSummary": {
+        "zh": "本次提交新增了支持MLU设备的DP感知图预热功能，涉及图执行器和调度器模块，影响Ascend相关运行时。测试重点包括MLU图执行器和图预热的功能验证。",
+        "en": "This commit enables DP-aware graph warmup for MLU devices, affecting the graph executor and scheduler modules with impact on Ascend runtime. Tests focus on validating MLU graph executor and graph warmup functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:48.585Z"
+      }
     },
     {
       "sha": "d70f57e76cc53eca0cf0e6e23376e8a23912672c",
@@ -21263,7 +21584,13 @@
         "docs",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d70f57e76cc53eca0cf0e6e23376e8a23912672c"
+      "url": "https://github.com/jd-opensource/xllm/commit/d70f57e76cc53eca0cf0e6e23376e8a23912672c",
+      "aiSummary": {
+        "zh": "本次提交更新了README文档，增加了对MiniMax-M3 day0支持的说明，影响范围为文档内容，无需测试。",
+        "en": "This commit updates the README documentation to include support for MiniMax-M3 day0, affecting only documentation with no testing required.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:51.932Z"
+      }
     },
     {
       "sha": "a61bc6ab268f92c533b929e19ebd4c7075d17731",
@@ -21301,7 +21628,13 @@
         "bugfix",
         "xllm-models"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a61bc6ab268f92c533b929e19ebd4c7075d17731"
+      "url": "https://github.com/jd-opensource/xllm/commit/a61bc6ab268f92c533b929e19ebd4c7075d17731",
+      "aiSummary": {
+        "zh": "本次提交修复了wan22 tp的归一化逻辑和all reduce操作，涉及xllm/models模块中的两个文件。测试应关注归一化和并行线性层的正确性及性能表现。",
+        "en": "This commit fixes the normalization logic and all reduce operation of wan22 tp in the xllm/models module, modifying two files. Testing should focus on the correctness and performance of normalization and parallel linear layers.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:44:56.942Z"
+      }
     },
     {
       "sha": "54a51dfe7e479e90ad3553d069ecaecdba5ef298",
@@ -21333,7 +21666,13 @@
         "performance",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/54a51dfe7e479e90ad3553d069ecaecdba5ef298"
+      "url": "https://github.com/jd-opensource/xllm/commit/54a51dfe7e479e90ad3553d069ecaecdba5ef298",
+      "aiSummary": {
+        "zh": "本次提交更新了xllm_ops子模块以清理过期缓存，影响推理引擎性能相关部分。测试应关注缓存清理是否有效及性能提升情况。",
+        "en": "This commit updates the xllm_ops submodule to clean up stale cache, impacting the inference engine's performance. Testing should focus on the effectiveness of cache cleanup and any performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:00.563Z"
+      }
     },
     {
       "sha": "f3a2f106741b6d6cd5af35f8cdbc2df5186637cc",
@@ -21486,7 +21825,13 @@
         "inference-engine",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f3a2f106741b6d6cd5af35f8cdbc2df5186637cc"
+      "url": "https://github.com/jd-opensource/xllm/commit/f3a2f106741b6d6cd5af35f8cdbc2df5186637cc",
+      "aiSummary": {
+        "zh": "本次提交重构了推理引擎中序列块的哈希预计算逻辑，避免了重复计算，涉及多个块管理相关文件，测试重点验证了块管理功能的正确性和性能提升。",
+        "en": "This commit refactors the inference engine by precomputing per-sequence block hashes to avoid recomputation, affecting multiple block management components. Tests focus on verifying correctness and performance improvements of block management.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:06.126Z"
+      }
     },
     {
       "sha": "1ede8db2439a1d12882cc2a6089625dbc5b34805",
@@ -21519,7 +21864,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1ede8db2439a1d12882cc2a6089625dbc5b34805"
+      "url": "https://github.com/jd-opensource/xllm/commit/1ede8db2439a1d12882cc2a6089625dbc5b34805",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU设备上topK_topP操作的数据类型问题，影响NPU后端相关功能。测试应关注该操作在Ascend设备上的正确性和性能表现。",
+        "en": "This commit fixes the data type issue of the topK_topP operation on NPU devices, affecting the NPU backend. Testing should focus on correctness and performance of this operation on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:10.003Z"
+      }
     },
     {
       "sha": "c3b21c00f9f9770338157e7bf285c8c05b450c93",
@@ -21661,7 +22012,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c3b21c00f9f9770338157e7bf285c8c05b450c93"
+      "url": "https://github.com/jd-opensource/xllm/commit/c3b21c00f9f9770338157e7bf285c8c05b450c93",
+      "aiSummary": {
+        "zh": "本次提交新增支持禁用离线统计日志和tqdm进度条，涉及Graph和Runtime模块，影响Ascend平台。测试应关注日志输出和进度显示的正确性及禁用功能的有效性。",
+        "en": "This commit adds support to disable offline stats logs and tqdm progress, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing should focus on the correctness of log output, progress display, and the effectiveness of the disable feature.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:13.976Z"
+      }
     },
     {
       "sha": "260f2d52393dbcfb0f3149f4babc353b1a59a69b",
@@ -21712,7 +22069,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/260f2d52393dbcfb0f3149f4babc353b1a59a69b"
+      "url": "https://github.com/jd-opensource/xllm/commit/260f2d52393dbcfb0f3149f4babc353b1a59a69b",
+      "aiSummary": {
+        "zh": "本次提交修复了在embedding模式下跳过语言模型头部的bug，影响Graph和Runtime模块，重点测试embedding模式下模型行为是否正确。",
+        "en": "This commit fixes a bug to skip the language model head in embedding mode, affecting the Graph and Runtime modules; testing should focus on correct model behavior in embedding mode.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:19.263Z"
+      }
     },
     {
       "sha": "947d1d6389e170ab553c73987b92731fe3d2de2f",
@@ -21750,7 +22113,13 @@
         "feature",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/947d1d6389e170ab553c73987b92731fe3d2de2f"
+      "url": "https://github.com/jd-opensource/xllm/commit/947d1d6389e170ab553c73987b92731fe3d2de2f",
+      "aiSummary": {
+        "zh": "本次提交在推理引擎模块中新增了对Mooncake环境下DCU PD-OOC的支持，修改了调度器和配置相关代码。测试应关注新功能在Mooncake环境中的正确性和性能表现。",
+        "en": "This commit enables DCU PD-OOC support with Mooncake in the Inference Engine module, modifying scheduler and configuration files. Testing should focus on functionality correctness and performance in the Mooncake environment.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:23.227Z"
+      }
     },
     {
       "sha": "0be79334de58db76bfe369580eeba0f48c6dd1d2",
@@ -21782,7 +22151,13 @@
         "bugfix",
         "device-backend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/0be79334de58db76bfe369580eeba0f48c6dd1d2"
+      "url": "https://github.com/jd-opensource/xllm/commit/0be79334de58db76bfe369580eeba0f48c6dd1d2",
+      "aiSummary": {
+        "zh": "本次提交修复了在 CUDA 13 环境下的构建错误，修改集中在设备后端的 device_utils.cuh 文件。测试应关注 CUDA 13 版本的兼容性和构建成功情况。",
+        "en": "This commit fixes a build error for CUDA 13 in the device backend, specifically in the device_utils.cuh file. Testing should focus on compatibility and successful build under CUDA 13.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:27.193Z"
+      }
     },
     {
       "sha": "e125d65a01e4ed8120a89ede330ca4cdfff5d6bf",
@@ -21833,7 +22208,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/e125d65a01e4ed8120a89ede330ca4cdfff5d6bf"
+      "url": "https://github.com/jd-opensource/xllm/commit/e125d65a01e4ed8120a89ede330ca4cdfff5d6bf",
+      "aiSummary": {
+        "zh": "本次提交重构了Graph/Runtime模块，优先使用lambda替代bind，涉及4个文件，主要影响Ascend相关功能。测试应关注lambda替换后功能的正确性和性能表现。",
+        "en": "This commit refactors the Graph/Runtime module by preferring lambda expressions over bind, affecting 4 files and impacting Ascend-related functionality. Testing should focus on correctness and performance after the lambda replacement.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:30.839Z"
+      }
     },
     {
       "sha": "24d68e70e8bf0dc406ad6111626964656f759903",
@@ -21956,7 +22337,13 @@
         "moe",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/24d68e70e8bf0dc406ad6111626964656f759903"
+      "url": "https://github.com/jd-opensource/xllm/commit/24d68e70e8bf0dc406ad6111626964656f759903",
+      "aiSummary": {
+        "zh": "本次提交新增了对deepseek v4 MLU MoE的支持，涉及MoE模块，修改了16个文件，新增了大量测试代码以确保功能正确性。测试重点包括深度连接和融合MoE的功能验证。",
+        "en": "This commit adds support for deepseek v4 MLU MoE in the MoE module, modifying 16 files with significant additions including new tests. Testing focuses on verifying deep connection and fused MoE functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:35.514Z"
+      }
     },
     {
       "sha": "422d919c867c5b68180e0a5dff9db65f42c219d8",
@@ -22001,7 +22388,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/422d919c867c5b68180e0a5dff9db65f42c219d8"
+      "url": "https://github.com/jd-opensource/xllm/commit/422d919c867c5b68180e0a5dff9db65f42c219d8",
+      "aiSummary": {
+        "zh": "本次提交调整了xllm_ops标记路径，使其与Ascend OPP供应商路径保持一致，影响NPU后端相关构建流程。测试应关注构建是否正常且路径配置正确。",
+        "en": "This commit aligns the xllm_ops marker path with the Ascend OPP vendor path, affecting the NPU backend build process. Testing should focus on verifying successful builds and correct path configurations.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:40.158Z"
+      }
     },
     {
       "sha": "83750f39fe8f2c82b419276def4c1845291bcd1d",
@@ -22046,7 +22439,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/83750f39fe8f2c82b419276def4c1845291bcd1d"
+      "url": "https://github.com/jd-opensource/xllm/commit/83750f39fe8f2c82b419276def4c1845291bcd1d",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU后端中不必要的模态嵌入合并问题，涉及三个相关头文件。测试应关注Ascend平台上的模型推理正确性和性能影响。",
+        "en": "This bugfix removes unnecessary modality embedding merges in the NPU backend across three header files. Testing should focus on inference correctness and performance on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:43.628Z"
+      }
     },
     {
       "sha": "14295f216924fa3d7d0079e2e639986371126639",
@@ -22085,7 +22484,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/14295f216924fa3d7d0079e2e639986371126639"
+      "url": "https://github.com/jd-opensource/xllm/commit/14295f216924fa3d7d0079e2e639986371126639",
+      "aiSummary": {
+        "zh": "本次提交修复了Spec Decode模块中mtp dp相关的bug，并注释掉了不合适的严格检查，影响Ascend平台。测试应关注mtp功能的正确性和相关严格检查的调整效果。",
+        "en": "This commit fixes mtp dp bugs in the Spec Decode module and comments out improper strict checks, affecting the Ascend platform. Testing should focus on the correctness of mtp functionality and the impact of the adjusted strict checks.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:48.135Z"
+      }
     },
     {
       "sha": "071ba318d9ae9ec945dce07ef3e33f83ccef176e",
@@ -22117,7 +22522,13 @@
         "bugfix",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/071ba318d9ae9ec945dce07ef3e33f83ccef176e"
+      "url": "https://github.com/jd-opensource/xllm/commit/071ba318d9ae9ec945dce07ef3e33f83ccef176e",
+      "aiSummary": {
+        "zh": "本次提交修复了推理引擎中复合块管理器的回滚问题，修改集中在 composite_block_manager.cpp 文件。测试应关注回滚逻辑的正确性和稳定性。",
+        "en": "This commit fixes the rollback issue in the composite block manager within the inference engine, with changes in composite_block_manager.cpp. Testing should focus on the correctness and stability of the rollback logic.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-25T19:45:51.657Z"
+      }
     },
     {
       "sha": "b2407efc97883411900ed9699f837e540b42b06a",
