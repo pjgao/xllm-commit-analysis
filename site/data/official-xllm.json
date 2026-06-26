@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T19:46:30.416Z",
+  "generatedAt": "2026-06-26T19:27:13.188Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1106,
-    "contributors": 92,
-    "additions": 537299,
-    "deletions": 136310,
-    "filesChanged": 16189,
+    "commits": 1114,
+    "contributors": 95,
+    "additions": 544853,
+    "deletions": 137602,
+    "filesChanged": 16282,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-06-25",
+    "latestDate": "2026-06-26",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -46,10 +46,10 @@
       },
       {
         "name": "phantomlei",
-        "commits": 56,
-        "additions": 40198,
-        "deletions": 6294,
-        "files": 687
+        "commits": 57,
+        "additions": 43061,
+        "deletions": 6300,
+        "files": 706
       },
       {
         "name": "JinDonghe",
@@ -104,15 +104,15 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 392
+        "count": 393
       },
       {
         "key": "NPU Backend",
-        "count": 118
+        "count": 120
       },
       {
         "key": "Inference Engine",
-        "count": 91
+        "count": 93
       },
       {
         "key": "Model Support",
@@ -128,11 +128,11 @@
       },
       {
         "key": "Device Backend",
-        "count": 65
+        "count": 66
       },
       {
         "key": "Spec Decode",
-        "count": 59
+        "count": 60
       },
       {
         "key": "xllm/api_service",
@@ -147,26 +147,26 @@
         "count": 11
       },
       {
-        "key": "setup.py",
+        "key": "xllm/models",
         "count": 9
       }
     ],
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 411
+        "count": 414
       },
       {
         "key": "bugfix",
-        "count": 336
+        "count": 338
       },
       {
         "key": "refactor",
-        "count": 173
+        "count": 175
       },
       {
         "key": "performance",
-        "count": 126
+        "count": 127
       },
       {
         "key": "other",
@@ -419,7 +419,8 @@
     "2026-06-22",
     "2026-06-23",
     "2026-06-24",
-    "2026-06-25"
+    "2026-06-25",
+    "2026-06-26"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -592,6 +593,800 @@
     }
   },
   "commits": [
+    {
+      "sha": "ccbd53f4e3ee74b869147c3e02a7a13dfade7429",
+      "parents": [
+        "7f11ca3d07eef0f5e9ff87a32a4bf05bd0cc7b1a"
+      ],
+      "pr": "1818",
+      "date": "2026-06-26T19:06:52+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "Raymond",
+        "email": "kangmeng3@jd.com"
+      },
+      "title": "refactor: complete BlockManager composition - composite owns all leaves (3/n). (#1818)",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 1049,
+      "deletions": 753,
+      "filesChanged": 23,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/composite_block_manager_test.cpp",
+          "additions": 72,
+          "deletions": 38,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/concurrent_block_manager_test.cpp",
+          "additions": 6,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/single_block_manager_test.cpp",
+          "additions": 19,
+          "deletions": 24,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_kv_state_test.cpp",
+          "additions": 41,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager.cpp",
+          "additions": 19,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager.h",
+          "additions": 49,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.cpp",
+          "additions": 27,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.h",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 120,
+          "deletions": 276,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.cpp",
+          "additions": 284,
+          "deletions": 175,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.h",
+          "additions": 75,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.cpp",
+          "additions": 67,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.h",
+          "additions": 34,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.cpp",
+          "additions": 40,
+          "deletions": 140,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.h",
+          "additions": 25,
+          "deletions": 27,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.cpp",
+          "additions": 73,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.h",
+          "additions": 33,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.cpp",
+          "additions": 23,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.h",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ccbd53f4e3ee74b869147c3e02a7a13dfade7429",
+      "aiSummary": {
+        "zh": "本次提交重构了推理引擎中的BlockManager组合逻辑，使复合管理器完全拥有所有叶子节点，涉及多个核心文件和测试用例，测试重点在于验证组合管理器的正确性和稳定性。",
+        "en": "This commit refactors the BlockManager composition in the inference engine so that the composite manager fully owns all leaf nodes, affecting multiple core files and test cases with testing focused on verifying the correctness and stability of the composite manager.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-26T19:27:02.676Z"
+      }
+    },
+    {
+      "sha": "7f11ca3d07eef0f5e9ff87a32a4bf05bd0cc7b1a",
+      "parents": [
+        "5f9ec8f13d4f2af09236e810ff3553884a3931d3"
+      ],
+      "pr": "1826",
+      "date": "2026-06-26T18:56:08+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "feat: add qwen3.5 gated delta mlu kernels. (#1826)",
+      "type": "feature",
+      "module": "Device Backend",
+      "additions": 2863,
+      "deletions": 6,
+      "filesChanged": 19,
+      "files": [
+        {
+          "filename": ".github/workflows/build_x86_64_mlu.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/CMakeLists.txt",
+          "additions": 69,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/causal_conv1d_fn.cpp",
+          "additions": 144,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/causal_conv1d_update_decode.cpp",
+          "additions": 168,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/chunk_gated_delta_rule.cpp",
+          "additions": 464,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/chunk_gated_delta_rule.h",
+          "additions": 145,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_gdn_gating.cpp",
+          "additions": 112,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_recurrent_gated_delta_rule.cpp",
+          "additions": 173,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_recurrent_gated_delta_rule_packed_decode.cpp",
+          "additions": 111,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/mlu_ops_api.h",
+          "additions": 69,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/CMakeLists.txt",
+          "additions": 88,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/compile_kernel.py",
+          "additions": 331,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/kernel_config.py",
+          "additions": 323,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/triton_kernel/causal_conv1d_update_decode.py",
+          "additions": 335,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/triton_kernel/fused_gdn_gating.py",
+          "additions": 67,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/tmo_kernel/triton_kernel/fused_recurrent_gated_delta_rule_packed_decode.py",
+          "additions": 106,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_aot_stubs.cpp",
+          "additions": 108,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/utils.h",
+          "additions": 41,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "device-backend",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7f11ca3d07eef0f5e9ff87a32a4bf05bd0cc7b1a",
+      "aiSummary": {
+        "zh": "本次提交新增了适用于Qwen3.5的gated delta MLU内核，涉及设备后端模块，修改了19个文件，新增代码量较大。测试应重点关注新内核的功能正确性和性能表现。",
+        "en": "This commit adds gated delta MLU kernels for Qwen3.5 in the Device Backend module, modifying 19 files with significant additions. Testing should focus on verifying the functionality and performance of the new kernels.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-26T19:27:06.668Z"
+      }
+    },
+    {
+      "sha": "5f9ec8f13d4f2af09236e810ff3553884a3931d3",
+      "parents": [
+        "4881b9c7ced5171157662d391c5510eaceeedb33"
+      ],
+      "pr": "1668",
+      "date": "2026-06-26T18:14:01+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "WangHuanjun",
+        "email": "wanghuanjun2113@gmail.com"
+      },
+      "title": "perf: overlap acl graph decode prepare with replay via double buffer. (#1668)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 412,
+      "deletions": 53,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 22,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampler.cpp",
+          "additions": 22,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/replace_token.cpp",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_executor_impl.cpp",
+          "additions": 157,
+          "deletions": 28,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_executor_impl.h",
+          "additions": 28,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 33,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.h",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor_impl.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 14,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 51,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5f9ec8f13d4f2af09236e810ff3553884a3931d3",
+      "aiSummary": {
+        "zh": "本次提交通过双缓冲技术实现了ACL图解码准备与重放的重叠，提高了图运行时性能，影响范围涵盖Graph和Runtime模块。测试重点关注性能提升及功能正确性。",
+        "en": "This commit improves graph runtime performance by overlapping ACL graph decode preparation with replay using double buffering, affecting the Graph and Runtime modules. Testing focuses on performance gains and correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-26T19:27:10.102Z"
+      }
+    },
+    {
+      "sha": "4881b9c7ced5171157662d391c5510eaceeedb33",
+      "parents": [
+        "3b26ac05c603eedb4ae2a489e6474354dbf823d6"
+      ],
+      "pr": "1754",
+      "date": "2026-06-26T17:45:03+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "ethan686",
+        "email": "73508499+ethan686@users.noreply.github.com"
+      },
+      "title": "feat: add SP+TP parallel support and refactor DiTParallelLinear. (#1754)",
+      "type": "refactor",
+      "module": "xllm/models",
+      "additions": 417,
+      "deletions": 329,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/models/dit/transformers/transformer_qwen_image.h",
+          "additions": 65,
+          "deletions": 131,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_wan.h",
+          "additions": 202,
+          "deletions": 136,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_parallel_linear.h",
+          "additions": 150,
+          "deletions": 62,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-models",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4881b9c7ced5171157662d391c5510eaceeedb33"
+    },
+    {
+      "sha": "3b26ac05c603eedb4ae2a489e6474354dbf823d6",
+      "parents": [
+        "9ca9e5913658f8db364d6348d4302d0c47e83c09"
+      ],
+      "pr": "1822",
+      "date": "2026-06-26T14:44:05+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "happybob",
+        "email": "36993573+liujinguang0125@users.noreply.github.com"
+      },
+      "title": "bugfix: fix rec-engine metrics issue. (#1822)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 81,
+      "deletions": 48,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/api_service/rec_completion_service_impl.cpp",
+          "additions": 20,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/common/metrics.cpp",
+          "additions": 17,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/metrics.h",
+          "additions": 8,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.cpp",
+          "additions": 36,
+          "deletions": 30,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3b26ac05c603eedb4ae2a489e6474354dbf823d6"
+    },
+    {
+      "sha": "9ca9e5913658f8db364d6348d4302d0c47e83c09",
+      "parents": [
+        "7cea2eee0bb4b4155f7197b42603bc55f43bd6c8"
+      ],
+      "pr": "1815",
+      "date": "2026-06-26T11:22:42+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "Mxyzptlk",
+        "email": "140030863+LMxyzptlk@users.noreply.github.com"
+      },
+      "title": "bugfix: fix the bugets estimation under chunked prefill and mtp features. (#1815)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 22,
+      "deletions": 8,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/scheduler/prefill_only_scheduler.cpp",
+          "additions": 22,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9ca9e5913658f8db364d6348d4302d0c47e83c09"
+    },
+    {
+      "sha": "7cea2eee0bb4b4155f7197b42603bc55f43bd6c8",
+      "parents": [
+        "77abf12cfc7442fb03a6ec95f2d60e25014b6e22"
+      ],
+      "pr": "1762",
+      "date": "2026-06-26T10:33:44+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "BikingNow",
+        "email": "90537739+BikingNow@users.noreply.github.com"
+      },
+      "title": "feat: tilelang support conv1d decode. (#1762)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 2155,
+      "deletions": 52,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 0,
+          "deletions": 1,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/causal_conv1d_decode_wrapper_test.cpp",
+          "additions": 208,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/causal_conv1d.py",
+          "additions": 758,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/causal_conv1d_decode.py",
+          "additions": 356,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/utils.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/CMakeLists.txt",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/causal_conv1d_decode_wrapper.cpp",
+          "additions": 252,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/causal_conv1d_wrapper.cpp",
+          "additions": 287,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/tilelang_ops_api.h",
+          "additions": 53,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 143,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_gated_delta_net_base.cpp",
+          "additions": 73,
+          "deletions": 36,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7cea2eee0bb4b4155f7197b42603bc55f43bd6c8"
+    },
+    {
+      "sha": "77abf12cfc7442fb03a6ec95f2d60e25014b6e22",
+      "parents": [
+        "d83eb378007da8248e2e6579a9785a80f03e9e82"
+      ],
+      "pr": "1813",
+      "date": "2026-06-26T10:05:49+08:00",
+      "dateKey": "2026-06-26",
+      "author": {
+        "name": "ethan686",
+        "email": "73508499+ethan686@users.noreply.github.com"
+      },
+      "title": "feat: add Wan22 rolling weight load for single-NPU inference. (#1813)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 555,
+      "deletions": 43,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "xllm/models/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_wan_i2v.h",
+          "additions": 97,
+          "deletions": 36,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/schedulers/uni_pc_multi_step_scheduler.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_wan.h",
+          "additions": 71,
+          "deletions": 4,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_block_weight_manager.cpp",
+          "additions": 162,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_block_weight_manager.h",
+          "additions": 223,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/77abf12cfc7442fb03a6ec95f2d60e25014b6e22"
+    },
     {
       "sha": "d83eb378007da8248e2e6579a9785a80f03e9e82",
       "parents": [
