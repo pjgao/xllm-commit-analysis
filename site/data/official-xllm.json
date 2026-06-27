@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T19:27:13.188Z",
+  "generatedAt": "2026-06-27T19:02:35.974Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1114,
-    "contributors": 95,
-    "additions": 544853,
-    "deletions": 137602,
-    "filesChanged": 16282,
+    "commits": 1115,
+    "contributors": 96,
+    "additions": 545122,
+    "deletions": 137615,
+    "filesChanged": 16291,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-06-26",
+    "latestDate": "2026-06-27",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 393
+        "count": 394
       },
       {
         "key": "NPU Backend",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 414
+        "count": 415
       },
       {
         "key": "bugfix",
@@ -420,7 +420,8 @@
     "2026-06-23",
     "2026-06-24",
     "2026-06-25",
-    "2026-06-26"
+    "2026-06-26",
+    "2026-06-27"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -593,6 +594,94 @@
     }
   },
   "commits": [
+    {
+      "sha": "6f77d06f48c00c7c358431d7134b112b9010de4a",
+      "parents": [
+        "ccbd53f4e3ee74b869147c3e02a7a13dfade7429"
+      ],
+      "pr": "1699",
+      "date": "2026-06-27T18:43:57+08:00",
+      "dateKey": "2026-06-27",
+      "author": {
+        "name": "Sinle4Cat",
+        "email": "35651345+Sinle4Cat@users.noreply.github.com"
+      },
+      "title": "feat: add MegaChunkGDN fused operator for Qwen3.5 on npu device. (#1699)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 269,
+      "deletions": 13,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/hc_pre.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_chunk_gdn.cpp",
+          "additions": 191,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 18,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 31,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/dsa_metadata.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_gated_delta_net_base.cpp",
+          "additions": 11,
+          "deletions": 12,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6f77d06f48c00c7c358431d7134b112b9010de4a",
+      "aiSummary": {
+        "zh": "本次提交新增了针对Qwen3.5在NPU设备上的MegaChunkGDN融合算子，涉及图计算和运行时模块，需重点测试算子在Ascend设备上的性能和兼容性。",
+        "en": "This commit adds the MegaChunkGDN fused operator for Qwen3.5 on NPU devices, affecting the graph and runtime modules; testing should focus on performance and compatibility on Ascend hardware.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:01:56.199Z"
+      }
+    },
     {
       "sha": "ccbd53f4e3ee74b869147c3e02a7a13dfade7429",
       "parents": [
@@ -1132,7 +1221,13 @@
         "xllm-models",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/4881b9c7ced5171157662d391c5510eaceeedb33"
+      "url": "https://github.com/jd-opensource/xllm/commit/4881b9c7ced5171157662d391c5510eaceeedb33",
+      "aiSummary": {
+        "zh": "本次提交新增了SP+TP并行支持，并重构了DiTParallelLinear模块，涉及xllm/models目录下的三个文件。测试应关注并行功能的正确性及重构后模块的稳定性。",
+        "en": "This commit adds SP+TP parallel support and refactors the DiTParallelLinear module, affecting three files under xllm/models. Testing should focus on the correctness of parallel functionality and stability of the refactored module.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:01:58.499Z"
+      }
     },
     {
       "sha": "3b26ac05c603eedb4ae2a489e6474354dbf823d6",
@@ -1182,7 +1277,13 @@
         "bugfix",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/3b26ac05c603eedb4ae2a489e6474354dbf823d6"
+      "url": "https://github.com/jd-opensource/xllm/commit/3b26ac05c603eedb4ae2a489e6474354dbf823d6",
+      "aiSummary": {
+        "zh": "本次提交修复了推理引擎中rec-engine的指标统计问题，涉及多个核心模块文件，影响推理性能监控的准确性。测试需重点验证指标数据的正确采集与展示。",
+        "en": "This commit fixes the metrics issue in the rec-engine of the inference engine, affecting multiple core module files and improving the accuracy of inference performance monitoring. Testing should focus on verifying correct metrics collection and reporting.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:01.050Z"
+      }
     },
     {
       "sha": "9ca9e5913658f8db364d6348d4302d0c47e83c09",
@@ -1215,7 +1316,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/9ca9e5913658f8db364d6348d4302d0c47e83c09"
+      "url": "https://github.com/jd-opensource/xllm/commit/9ca9e5913658f8db364d6348d4302d0c47e83c09",
+      "aiSummary": {
+        "zh": "本次提交修复了在启用chunked prefill和mtp功能时预算估算的错误，影响Spec Decode模块，测试时需关注预算估算的准确性和相关功能的稳定性。",
+        "en": "This commit fixes budget estimation errors under chunked prefill and mtp features in the Spec Decode module. Testing should focus on the accuracy of budget estimation and stability of related features.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:03.831Z"
+      }
     },
     {
       "sha": "7cea2eee0bb4b4155f7197b42603bc55f43bd6c8",
@@ -1321,7 +1428,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7cea2eee0bb4b4155f7197b42603bc55f43bd6c8"
+      "url": "https://github.com/jd-opensource/xllm/commit/7cea2eee0bb4b4155f7197b42603bc55f43bd6c8",
+      "aiSummary": {
+        "zh": "本次提交为NPU后端新增了tilelang对conv1d解码的支持，涉及13个文件，新增代码量较大，属于高风险改动，重点测试Ascend平台上的功能正确性和性能表现。",
+        "en": "This commit adds tilelang support for conv1d decode in the NPU backend, affecting 13 files with substantial additions. Testing focuses on correctness and performance on the Ascend platform due to the high-risk nature of the change.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:06.413Z"
+      }
     },
     {
       "sha": "77abf12cfc7442fb03a6ec95f2d60e25014b6e22",
@@ -1385,7 +1498,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/77abf12cfc7442fb03a6ec95f2d60e25014b6e22"
+      "url": "https://github.com/jd-opensource/xllm/commit/77abf12cfc7442fb03a6ec95f2d60e25014b6e22",
+      "aiSummary": {
+        "zh": "本次提交在NPU后端新增了Wan22滚动权重加载功能，支持单NPU推理。影响范围主要涉及相关模型权重管理和调度模块，测试需关注单NPU推理的正确性和性能表现。",
+        "en": "This commit adds Wan22 rolling weight loading for single-NPU inference in the NPU backend. The changes affect model weight management and scheduling modules, with testing focused on correctness and performance of single-NPU inference.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:08.713Z"
+      }
     },
     {
       "sha": "d83eb378007da8248e2e6579a9785a80f03e9e82",
@@ -23483,7 +23602,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b2407efc97883411900ed9699f837e540b42b06a"
+      "url": "https://github.com/jd-opensource/xllm/commit/b2407efc97883411900ed9699f837e540b42b06a",
+      "aiSummary": {
+        "zh": "本次提交新增了对DCU Mooncake分散式PD的支持，涉及Graph和Runtime模块，影响Ascend相关功能。测试应重点关注分散式PD的正确性和性能表现。",
+        "en": "This commit adds support for DCU Mooncake disaggregated PD in the Graph and Runtime modules, affecting Ascend-related functionality. Testing should focus on the correctness and performance of the disaggregated PD implementation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:11.413Z"
+      }
     },
     {
       "sha": "18bada8684b4e01e536426de172efff596dcf837",
@@ -23515,7 +23640,13 @@
         "feature",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/18bada8684b4e01e536426de172efff596dcf837"
+      "url": "https://github.com/jd-opensource/xllm/commit/18bada8684b4e01e536426de172efff596dcf837",
+      "aiSummary": {
+        "zh": "本次提交在离线推理中启用了vlm嵌入支持，修改了xllm/pybind/llm.py文件，影响模型支持模块。测试应关注离线推理中vlm嵌入功能的正确性。",
+        "en": "This commit enables VLM embedding support in offline inference by modifying xllm/pybind/llm.py, affecting the model support module. Testing should focus on verifying the correctness of VLM embedding during offline inference.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:14.005Z"
+      }
     },
     {
       "sha": "d6f6b00a7c5a70241e25b5ec7f4782d93fa447c8",
@@ -23627,7 +23758,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d6f6b00a7c5a70241e25b5ec7f4782d93fa447c8"
+      "url": "https://github.com/jd-opensource/xllm/commit/d6f6b00a7c5a70241e25b5ec7f4782d93fa447c8",
+      "aiSummary": {
+        "zh": "本次提交修复了MoE模块中SwiGLU激活函数的clamp问题，涉及NPU后端相关代码，影响Ascend平台。测试需重点关注激活函数的数值稳定性及性能表现。",
+        "en": "This commit fixes the clamp issue in the SwiGLU activation function within the MoE module, affecting the NPU backend and Ascend platform. Testing should focus on numerical stability and performance of the activation function.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:16.871Z"
+      }
     },
     {
       "sha": "6e8cf28e5d77d39e2c6e6892373207c04bcb2d26",
@@ -23793,7 +23930,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/6e8cf28e5d77d39e2c6e6892373207c04bcb2d26"
+      "url": "https://github.com/jd-opensource/xllm/commit/6e8cf28e5d77d39e2c6e6892373207c04bcb2d26",
+      "aiSummary": {
+        "zh": "本次提交支持了wan22流水线，涉及Graph和Runtime模块，修改了23个文件，新增和删除代码量较大。测试需重点关注流水线功能的正确性及对Ascend平台的影响。",
+        "en": "This commit adds support for the wan22 pipeline, affecting the Graph and Runtime modules with significant code changes across 23 files. Testing should focus on pipeline functionality correctness and its impact on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:20.272Z"
+      }
     },
     {
       "sha": "6b458a32aefa72737ce87334116da63b4ca0897c",
@@ -23850,7 +23993,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/6b458a32aefa72737ce87334116da63b4ca0897c"
+      "url": "https://github.com/jd-opensource/xllm/commit/6b458a32aefa72737ce87334116da63b4ca0897c",
+      "aiSummary": {
+        "zh": "本次提交修复了分块预填充图对齐和DSV4 SWA重用的bug，影响图计算和运行时模块，测试需关注图对齐正确性及参数重用效果。",
+        "en": "This commit fixes bugs in chunked prefill graph alignment and DSV4 SWA reuse, affecting the graph and runtime modules; testing should focus on graph alignment accuracy and parameter reuse correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:22.748Z"
+      }
     },
     {
       "sha": "cdc074fb6862fecddcb0b0bd45696042365bd162",
@@ -23986,7 +24135,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/cdc074fb6862fecddcb0b0bd45696042365bd162"
+      "url": "https://github.com/jd-opensource/xllm/commit/cdc074fb6862fecddcb0b0bd45696042365bd162",
+      "aiSummary": {
+        "zh": "本次提交新增了对NPU设备上DSA topk共享的支持，涉及图计算和运行时模块，影响Ascend平台相关功能。测试重点应关注新功能的正确性及对现有NPU推理性能的影响。",
+        "en": "This commit adds support for DSA topk sharing on NPU devices, affecting graph and runtime modules related to the Ascend platform. Testing should focus on the correctness of the new feature and its impact on existing NPU inference performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:27.469Z"
+      }
     },
     {
       "sha": "100067f87ae49b12f1ba95a4468812f29765f20c",
@@ -24019,7 +24174,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/100067f87ae49b12f1ba95a4468812f29765f20c"
+      "url": "https://github.com/jd-opensource/xllm/commit/100067f87ae49b12f1ba95a4468812f29765f20c",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU后端批处理单元测试中张量比较的错误，影响Ascend平台相关功能，测试重点为确保张量比较的正确性。",
+        "en": "This commit fixes tensor comparison in the NPU backend batch unit test, affecting Ascend platform functionality. Testing focuses on verifying correct tensor comparison.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:29.444Z"
+      }
     },
     {
       "sha": "18dad57552e03a4e3a485ee77c8d4aa39079cd30",
@@ -24058,7 +24219,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/18dad57552e03a4e3a485ee77c8d4aa39079cd30"
+      "url": "https://github.com/jd-opensource/xllm/commit/18dad57552e03a4e3a485ee77c8d4aa39079cd30",
+      "aiSummary": {
+        "zh": "本次提交修复了Spec Decode模块中MTP解码时允许重叠伪令牌的问题，影响Ascend平台相关功能。测试需关注重叠伪令牌情况下的解码正确性和稳定性。",
+        "en": "This commit fixes the issue in the Spec Decode module allowing MTP decoding with overlapping fake tokens, affecting Ascend platform functionality. Testing should focus on decoding correctness and stability with overlapping fake tokens.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:32.404Z"
+      }
     },
     {
       "sha": "94503e2381543948eec65d16362baf7ac59ee046",
@@ -24199,7 +24366,13 @@
         "model-support",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/94503e2381543948eec65d16362baf7ac59ee046"
+      "url": "https://github.com/jd-opensource/xllm/commit/94503e2381543948eec65d16362baf7ac59ee046",
+      "aiSummary": {
+        "zh": "本次提交新增了Deepseek V4 MLU注意力层，涉及模型支持模块，影响范围较大。测试重点包括多个相关层的功能验证，确保新特性稳定可靠。",
+        "en": "This commit adds Deepseek V4 MLU attention layers within the model support module, representing a significant feature addition. Testing focuses on verifying the functionality of multiple related layers to ensure stability and reliability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-27T19:02:34.751Z"
+      }
     },
     {
       "sha": "de299abe2faf69dc3e1c52e9e626d50a22058d4b",
