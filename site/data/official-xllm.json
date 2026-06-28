@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T19:02:35.974Z",
+  "generatedAt": "2026-06-28T19:01:01.986Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -24411,7 +24411,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/de299abe2faf69dc3e1c52e9e626d50a22058d4b"
+      "url": "https://github.com/jd-opensource/xllm/commit/de299abe2faf69dc3e1c52e9e626d50a22058d4b",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU后端的编译问题，涉及hc_pre.cpp和dsa_metadata.h两个文件。测试应关注Ascend平台的编译和功能是否正常。",
+        "en": "This commit fixes compilation issues in the NPU backend, affecting hc_pre.cpp and dsa_metadata.h files. Testing should focus on successful compilation and functionality on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:23.665Z"
+      }
     },
     {
       "sha": "e3fd002b54817c6c78be930fe21d0499ea0b2f47",
@@ -24443,7 +24449,13 @@
         "feature",
         "docs-project"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/e3fd002b54817c6c78be930fe21d0499ea0b2f47"
+      "url": "https://github.com/jd-opensource/xllm/commit/e3fd002b54817c6c78be930fe21d0499ea0b2f47",
+      "aiSummary": {
+        "zh": "本次提交在 docs/project 模块中新增了 xllm 0.10.0 版本的发布说明，修改了 RELEASE.md 文件，主要影响文档内容，测试时需关注文档格式和内容准确性。",
+        "en": "This commit adds the xllm 0.10.0 release notes to the docs/project module by updating the RELEASE.md file, affecting documentation only. Testing should focus on verifying the correctness and formatting of the release notes.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:26.297Z"
+      }
     },
     {
       "sha": "68cf95704430830a74a69edffa22ca9045d22d93",
@@ -24500,7 +24512,13 @@
         "moe",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/68cf95704430830a74a69edffa22ca9045d22d93"
+      "url": "https://github.com/jd-opensource/xllm/commit/68cf95704430830a74a69edffa22ca9045d22d93",
+      "aiSummary": {
+        "zh": "本次提交实现并支持了dcu moe模块，涉及5个文件，新增代码较多，主要影响MoE相关功能。测试应重点关注新实现的dcu moe功能的正确性和性能表现。",
+        "en": "This commit implements and supports the dcu moe module, affecting 5 files with significant additions, primarily impacting MoE functionality. Testing should focus on the correctness and performance of the newly implemented dcu moe features.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:29.053Z"
+      }
     },
     {
       "sha": "f31cabc09bffaf41db21a70625bd7bfd551a199e",
@@ -24593,7 +24611,13 @@
         "device-backend",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f31cabc09bffaf41db21a70625bd7bfd551a199e"
+      "url": "https://github.com/jd-opensource/xllm/commit/f31cabc09bffaf41db21a70625bd7bfd551a199e",
+      "aiSummary": {
+        "zh": "本次提交实现并支持了dcu的int8-w8a8量化功能，涉及设备后端多个核心文件，新增了相关测试用例以确保功能正确性。测试重点关注量化实现的准确性和性能表现。",
+        "en": "This commit implements and supports dcu int8-w8a8 quantization, affecting multiple core files in the device backend. Tests focus on verifying the accuracy and performance of the quantization implementation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:31.749Z"
+      }
     },
     {
       "sha": "cc844731b4884de1ad9c6d794000e0298a5b5680",
@@ -24637,7 +24661,13 @@
         "feature",
         "xllm-api-service"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/cc844731b4884de1ad9c6d794000e0298a5b5680"
+      "url": "https://github.com/jd-opensource/xllm/commit/cc844731b4884de1ad9c6d794000e0298a5b5680",
+      "aiSummary": {
+        "zh": "本次提交新增了对xservice anthropic pd协议的支持，涉及xllm/api_service模块，修改了3个文件。测试应重点验证协议兼容性及接口正确性。",
+        "en": "This commit adds support for the xservice anthropic pd protocol in the xllm/api_service module, modifying three files. Testing should focus on protocol compatibility and interface correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:33.707Z"
+      }
     },
     {
       "sha": "c2a84fc5e31cc416ae46aba58c8a2b156bbc7641",
@@ -24688,7 +24718,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c2a84fc5e31cc416ae46aba58c8a2b156bbc7641"
+      "url": "https://github.com/jd-opensource/xllm/commit/c2a84fc5e31cc416ae46aba58c8a2b156bbc7641",
+      "aiSummary": {
+        "zh": "本次提交调整了xllm_ops的安装路径以适配custom_xllm_math，涉及图计算和运行时模块，影响Ascend平台相关构建流程。测试应关注安装路径的正确性及构建流程的完整性。",
+        "en": "This commit adapts the xllm_ops install path for custom_xllm_math, affecting the Graph and Runtime modules and impacting the Ascend platform build process. Testing should focus on verifying the correctness of the install path and the integrity of the build workflow.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:36.793Z"
+      }
     },
     {
       "sha": "89a48803f0feca2089891a6b717bc1fe45e57c7c",
@@ -24745,7 +24781,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/89a48803f0feca2089891a6b717bc1fe45e57c7c"
+      "url": "https://github.com/jd-opensource/xllm/commit/89a48803f0feca2089891a6b717bc1fe45e57c7c",
+      "aiSummary": {
+        "zh": "本次提交优化了DeepSeek V4在NPU上的解码元数据处理，涉及NPU后端相关模块，提升性能。测试应关注解码准确性及性能提升效果。",
+        "en": "This commit optimizes DeepSeek V4 NPU decode metadata processing, affecting the NPU backend modules to improve performance. Testing should focus on decode accuracy and performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:38.824Z"
+      }
     },
     {
       "sha": "69819af91b685c9995827c25a44e7a569806fb30",
@@ -24833,7 +24875,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/69819af91b685c9995827c25a44e7a569806fb30"
+      "url": "https://github.com/jd-opensource/xllm/commit/69819af91b685c9995827c25a44e7a569806fb30",
+      "aiSummary": {
+        "zh": "本次提交在Spec Decode模块中实现了通过pd handoff发送mtp bootstrap的功能，涉及多个调度和批处理相关文件，影响Ascend平台。测试重点在于验证新功能的正确性及调度逻辑的稳定性。",
+        "en": "This commit adds the feature to send mtp bootstrap over pd handoff in the Spec Decode module, affecting multiple scheduling and batch processing files and impacting the Ascend platform. Testing focuses on verifying the correctness of the new feature and stability of scheduling logic.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:41.038Z"
+      }
     },
     {
       "sha": "741aae7e2bcc9a135bb5c6202c7982212ed0bceb",
@@ -24877,7 +24925,13 @@
         "bugfix",
         "third-party-xllm-atb-layers"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/741aae7e2bcc9a135bb5c6202c7982212ed0bceb"
+      "url": "https://github.com/jd-opensource/xllm/commit/741aae7e2bcc9a135bb5c6202c7982212ed0bceb",
+      "aiSummary": {
+        "zh": "本次提交修复了KV拆分通信组的设置错误，涉及third_party/xllm_atb_layers模块及相关并行状态文件。测试应关注通信组配置的正确性及并行计算的稳定性。",
+        "en": "This commit fixes the setup of the KV split communication group, affecting the third_party/xllm_atb_layers module and related parallel state files. Testing should focus on verifying correct communication group configuration and parallel computation stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:43.900Z"
+      }
     },
     {
       "sha": "b357dfd9d9ccc9814d3a372839259db325f8269c",
@@ -25012,7 +25066,13 @@
         "tests-api-service",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b357dfd9d9ccc9814d3a372839259db325f8269c"
+      "url": "https://github.com/jd-opensource/xllm/commit/b357dfd9d9ccc9814d3a372839259db325f8269c",
+      "aiSummary": {
+        "zh": "本次提交修复了anthropic工具调用的兼容性和结束符（eos）相关问题，影响范围主要在api_service模块。测试重点覆盖了相关接口和工具的正确性，确保兼容性和功能正常。",
+        "en": "This commit fixes compatibility and end-of-sequence (eos) issues in the anthropic tool calls, primarily affecting the api_service module. Tests focus on verifying interface correctness and tool compatibility to ensure proper functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:46.114Z"
+      }
     },
     {
       "sha": "de7e3413c90a393f167b946ccbad1b88def4fbb5",
@@ -25118,7 +25178,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/de7e3413c90a393f167b946ccbad1b88def4fbb5"
+      "url": "https://github.com/jd-opensource/xllm/commit/de7e3413c90a393f167b946ccbad1b88def4fbb5",
+      "aiSummary": {
+        "zh": "本次提交在Spec Decode模块中新增了mtp引导嵌入上下文功能，涉及13个文件，包含核心框架和测试代码。测试重点在于验证批处理和嵌入缓存的正确性及引导序列的功能实现，影响Ascend平台。",
+        "en": "This commit adds mtp bootstrap embedding context to the Spec Decode module, affecting 13 files including core framework and tests. Testing focuses on verifying batch processing, embedding cache correctness, and bootstrap sequence functionality, impacting the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:49.055Z"
+      }
     },
     {
       "sha": "7cc45ba4c89bbd42083b1a0786f33aa3b332e50c",
@@ -25218,7 +25284,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7cc45ba4c89bbd42083b1a0786f33aa3b332e50c"
+      "url": "https://github.com/jd-opensource/xllm/commit/7cc45ba4c89bbd42083b1a0786f33aa3b332e50c",
+      "aiSummary": {
+        "zh": "本次提交支持了CANN 9.0.0工具包以适配NPU设备，涉及NPU后端相关模块，修改了多个构建脚本和文档。测试需关注Ascend设备的兼容性和功能稳定性。",
+        "en": "This commit adds support for the CANN 9.0.0 toolkit for NPU devices, affecting the NPU backend module and updating build scripts and documentation. Testing should focus on compatibility and stability on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:52.157Z"
+      }
     },
     {
       "sha": "1145640230add9e39bdbe795b1b3f843a3b92485",
@@ -25371,7 +25443,13 @@
         "model-support",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1145640230add9e39bdbe795b1b3f843a3b92485"
+      "url": "https://github.com/jd-opensource/xllm/commit/1145640230add9e39bdbe795b1b3f843a3b92485",
+      "aiSummary": {
+        "zh": "本次提交新增了对MLU DeepSeek V4 DSA元数据的支持，涉及模型支持模块，修改了21个文件，增加了大量代码。测试重点包括新增的DSA元数据构建和KV缓存相关功能的验证。",
+        "en": "This commit adds support for MLU DeepSeek V4 DSA metadata in the model support module, modifying 21 files with significant code additions. Testing focuses on validating the new DSA metadata builder and KV cache functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:55.320Z"
+      }
     },
     {
       "sha": "097e8ce40ce9b05b67d9dcd065cc613e6b3a7124",
@@ -25404,7 +25482,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/097e8ce40ce9b05b67d9dcd065cc613e6b3a7124"
+      "url": "https://github.com/jd-opensource/xllm/commit/097e8ce40ce9b05b67d9dcd065cc613e6b3a7124",
+      "aiSummary": {
+        "zh": "本次提交在NPU后端的构建脚本中添加了持久化的Triton NPU二进制缓存，优化了性能，影响Ascend平台。测试应关注缓存的有效性及构建流程的稳定性。",
+        "en": "This commit adds a persistent Triton NPU binary cache to the NPU backend build script, improving performance and affecting the Ascend platform. Testing should focus on cache effectiveness and build process stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:57.615Z"
+      }
     },
     {
       "sha": "e445efb89910bdf2ff05151ae1ffb701e8a09365",
@@ -25454,7 +25538,13 @@
         "refactor",
         "testing"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/e445efb89910bdf2ff05151ae1ffb701e8a09365"
+      "url": "https://github.com/jd-opensource/xllm/commit/e445efb89910bdf2ff05151ae1ffb701e8a09365",
+      "aiSummary": {
+        "zh": "本次提交在CI构建前清理了子模块中的未跟踪文件，涉及测试相关配置和脚本，确保构建环境干净。测试重点在于验证构建流程的稳定性和子模块文件状态的正确处理。",
+        "en": "This commit cleans untracked files in submodules before the CI build, affecting testing configurations and scripts to ensure a clean build environment. Testing focuses on verifying build stability and correct handling of submodule file states.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-06-28T19:00:59.949Z"
+      }
     },
     {
       "sha": "0c1ea5dd676bffdfa62213cfe673e8ec74a92a5b",
