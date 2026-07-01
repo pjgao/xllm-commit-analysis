@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T19:30:46.946Z",
+  "generatedAt": "2026-07-01T19:39:52.061Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1121,
-    "contributors": 96,
-    "additions": 548899,
-    "deletions": 138026,
-    "filesChanged": 16363,
+    "commits": 1125,
+    "contributors": 97,
+    "additions": 549865,
+    "deletions": 138118,
+    "filesChanged": 16378,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-06-29",
+    "latestDate": "2026-07-01",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -46,17 +46,17 @@
       },
       {
         "name": "phantomlei",
-        "commits": 58,
-        "additions": 44819,
-        "deletions": 6367,
-        "files": 725
+        "commits": 59,
+        "additions": 45618,
+        "deletions": 6447,
+        "files": 733
       },
       {
         "name": "JinDonghe",
-        "commits": 48,
-        "additions": 12362,
-        "deletions": 3372,
-        "files": 351
+        "commits": 49,
+        "additions": 12370,
+        "deletions": 3380,
+        "files": 355
       },
       {
         "name": "weizhehuang0827",
@@ -104,15 +104,15 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 396
+        "count": 397
       },
       {
         "key": "NPU Backend",
-        "count": 121
+        "count": 122
       },
       {
         "key": "Inference Engine",
-        "count": 94
+        "count": 95
       },
       {
         "key": "Model Support",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Device Backend",
-        "count": 66
+        "count": 67
       },
       {
         "key": "Spec Decode",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 338
+        "count": 341
       },
       {
         "key": "refactor",
@@ -177,11 +177,11 @@
         "count": 18
       },
       {
-        "key": "chore",
-        "count": 7
+        "key": "test",
+        "count": 8
       },
       {
-        "key": "test",
+        "key": "chore",
         "count": 7
       }
     ]
@@ -422,7 +422,8 @@
     "2026-06-25",
     "2026-06-26",
     "2026-06-27",
-    "2026-06-29"
+    "2026-06-29",
+    "2026-07-01"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -651,6 +652,227 @@
     }
   },
   "commits": [
+    {
+      "sha": "ef8379d1e942b0b96bfab5e8d3f644556d022b99",
+      "parents": [
+        "0e779c5a9420dbff2a272bf034ffe9cfd93b2006"
+      ],
+      "pr": "1857",
+      "date": "2026-07-01T16:06:08+08:00",
+      "dateKey": "2026-07-01",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: fix qwen3.5 w8a8 weight loading. (#1857)",
+      "type": "bugfix",
+      "module": "Device Backend",
+      "additions": 799,
+      "deletions": 80,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/layers/mlu/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/moe_weight_loader_helper_test.cpp",
+          "additions": 410,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.cpp",
+          "additions": 19,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.h",
+          "additions": 11,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/moe_weight_loader_helper.h",
+          "additions": 225,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_5_attention.cpp",
+          "additions": 79,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_5_attention.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_5_fused_moe.cpp",
+          "additions": 50,
+          "deletions": 42,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "device-backend",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ef8379d1e942b0b96bfab5e8d3f644556d022b99",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5模型中w8a8权重加载的bug，涉及设备后端相关模块。测试重点为权重加载的正确性和相关单元测试的覆盖。",
+        "en": "This commit fixes a bug in w8a8 weight loading for the qwen3.5 model within the device backend module. Testing focuses on verifying correct weight loading and coverage of related unit tests.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:38:56.901Z"
+      }
+    },
+    {
+      "sha": "0e779c5a9420dbff2a272bf034ffe9cfd93b2006",
+      "parents": [
+        "a90c05d45dd7bc843666fa54e13f4637b149364e"
+      ],
+      "pr": "1849",
+      "date": "2026-07-01T15:33:13+08:00",
+      "dateKey": "2026-07-01",
+      "author": {
+        "name": "Shuaikang Kong",
+        "email": "kangkang0014@gmail.com"
+      },
+      "title": "test: support npu a3 github ci workflow. (#1849)",
+      "type": "test",
+      "module": "NPU Backend",
+      "additions": 144,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": ".github/workflows/build_arm_64_npu.yaml",
+          "additions": 144,
+          "deletions": 0,
+          "module": ".github/workflows"
+        }
+      ],
+      "tags": [
+        "test",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0e779c5a9420dbff2a272bf034ffe9cfd93b2006",
+      "aiSummary": {
+        "zh": "本次提交新增了支持NPU A3的GitHub CI工作流，影响范围为NPU后端相关测试，测试重点是确保A3平台的构建和集成流程正常。",
+        "en": "This commit adds support for the NPU A3 GitHub CI workflow, impacting the NPU backend tests, with a focus on verifying the build and integration process on the A3 platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:01.048Z"
+      }
+    },
+    {
+      "sha": "a90c05d45dd7bc843666fa54e13f4637b149364e",
+      "parents": [
+        "5c1791a50b5b1a18d1472c918844b4fa65c9d951"
+      ],
+      "pr": "1852",
+      "date": "2026-07-01T14:51:46+08:00",
+      "dateKey": "2026-07-01",
+      "author": {
+        "name": "JinDonghe",
+        "email": "54488932+DongheJin@users.noreply.github.com"
+      },
+      "title": "cibuild: fix x86 self-hosted runner configuration. (#1852)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 8,
+      "deletions": 8,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": ".github/workflows/build_x86_64_cuda.yaml",
+          "additions": 3,
+          "deletions": 3,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/build_x86_64_ilu.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/build_x86_64_mlu.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/build_x86_64_npu.yaml",
+          "additions": 3,
+          "deletions": 3,
+          "module": ".github/workflows"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a90c05d45dd7bc843666fa54e13f4637b149364e",
+      "aiSummary": {
+        "zh": "本次提交修复了x86自托管Runner的配置问题，涉及推理引擎相关的CI构建流程。测试时需关注各x86架构的构建任务是否能正确执行。",
+        "en": "This commit fixes the configuration of the x86 self-hosted runner affecting the inference engine's CI build workflows. Testing should focus on verifying successful execution of build jobs across all x86 architectures.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:04.444Z"
+      }
+    },
+    {
+      "sha": "5c1791a50b5b1a18d1472c918844b4fa65c9d951",
+      "parents": [
+        "77b91c57a0f9b73cdd4d7084ddc8714c1a0665d8"
+      ],
+      "pr": "1855",
+      "date": "2026-07-01T11:44:14+08:00",
+      "dateKey": "2026-07-01",
+      "author": {
+        "name": "Joey Gao",
+        "email": "gaopengju3@huawei.com"
+      },
+      "title": "bugfix: guard graph prepare stream wait. (#1855)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 15,
+      "deletions": 4,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 13,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5c1791a50b5b1a18d1472c918844b4fa65c9d951",
+      "aiSummary": {
+        "zh": "本次提交修复了图计算准备阶段的流等待保护问题，涉及Graph和Runtime模块，重点测试Ascend设备上的流同步和执行正确性。",
+        "en": "This commit fixes the stream wait guard issue during graph preparation, affecting the Graph and Runtime modules, with testing focused on stream synchronization and execution correctness on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:08.358Z"
+      }
+    },
     {
       "sha": "77b91c57a0f9b73cdd4d7084ddc8714c1a0665d8",
       "parents": [
@@ -30203,7 +30425,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8f44082b5ad8ebd1919c13d102075015d1c72409"
+      "url": "https://github.com/jd-opensource/xllm/commit/8f44082b5ad8ebd1919c13d102075015d1c72409",
+      "aiSummary": {
+        "zh": "本次提交在单块管理器中保留了填充槽0，影响图运行时模块，重点测试了单块管理器相关功能的正确性和兼容性。",
+        "en": "This commit reserves padding slot 0 in the single block manager, impacting the Graph Runtime module, with tests focusing on the correctness and compatibility of the single block manager functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:11.772Z"
+      }
     },
     {
       "sha": "b3deafe24c5d0b9ccef3beaa82acd3afb9835eb1",
@@ -30248,7 +30476,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b3deafe24c5d0b9ccef3beaa82acd3afb9835eb1"
+      "url": "https://github.com/jd-opensource/xllm/commit/b3deafe24c5d0b9ccef3beaa82acd3afb9835eb1",
+      "aiSummary": {
+        "zh": "本次提交修复了在张量并行切分前对glm4门控进行拆分的bug，影响NPU后端的Ascend平台。测试应关注拆分逻辑的正确性及对性能的影响。",
+        "en": "This commit fixes a bug by splitting the glm4 gate before tensor parallel sharding, affecting the NPU backend on Ascend. Testing should focus on the correctness of the split logic and its impact on performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:16.275Z"
+      }
     },
     {
       "sha": "feeeca59ad1475df221cec0dc35aebf5bf1a9c60",
@@ -30281,7 +30515,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/feeeca59ad1475df221cec0dc35aebf5bf1a9c60"
+      "url": "https://github.com/jd-opensource/xllm/commit/feeeca59ad1475df221cec0dc35aebf5bf1a9c60",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5/3.6版本在Spec Decode模块中MTP验证时的形状不匹配问题，影响Ascend平台。测试需重点关注形状匹配的正确性。",
+        "en": "This commit fixes the shape mismatch issue during MTP verification for qwen3.5/3.6 in the Spec Decode module, affecting the Ascend platform. Testing should focus on verifying correct shape matching.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:20.039Z"
+      }
     },
     {
       "sha": "f35d79699b9683b1e8ba80ffc118c083932793d9",
@@ -30319,7 +30559,13 @@
         "feature",
         "device-backend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f35d79699b9683b1e8ba80ffc118c083932793d9"
+      "url": "https://github.com/jd-opensource/xllm/commit/f35d79699b9683b1e8ba80ffc118c083932793d9",
+      "aiSummary": {
+        "zh": "本次提交新增了对MiMo-7B-Base模型在CUDA设备上的支持，主要修改了设备后端相关代码。测试应关注模型在CUDA设备上的正确加载与运行性能。",
+        "en": "This commit adds support for the MiMo-7B-Base model on CUDA devices, modifying the device backend code. Testing should focus on correct loading and performance of the model on CUDA devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:23.584Z"
+      }
     },
     {
       "sha": "193f870f6e84449b8fcb356e74b417031e3d845a",
@@ -30491,7 +30737,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/193f870f6e84449b8fcb356e74b417031e3d845a"
+      "url": "https://github.com/jd-opensource/xllm/commit/193f870f6e84449b8fcb356e74b417031e3d845a",
+      "aiSummary": {
+        "zh": "本次提交重构了NPU后端，移除了VIT前向链中未使用的ModelInputParams，涉及24个文件，修改较多，测试需重点关注Ascend平台的功能正确性和性能表现。",
+        "en": "This refactor removes unused ModelInputParams from the VIT forward chain in the NPU backend, affecting 24 files. Testing should focus on correctness and performance on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:26.447Z"
+      }
     },
     {
       "sha": "fc4ee14538ca95398f33f61e06813d1ca98fec91",
@@ -30524,7 +30776,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/fc4ee14538ca95398f33f61e06813d1ca98fec91"
+      "url": "https://github.com/jd-opensource/xllm/commit/fc4ee14538ca95398f33f61e06813d1ca98fec91",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU多模态模块的构建错误，影响范围为NPU后端相关代码。测试应重点关注Ascend平台上的构建和功能是否正常。",
+        "en": "This commit fixes a build break in the NPU multimodal module, affecting the NPU backend. Testing should focus on successful build and functionality on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:29.178Z"
+      }
     },
     {
       "sha": "0ad8cf16df8f7f5870566c6efed33faa0a06196b",
@@ -30568,7 +30826,13 @@
         "bugfix",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/0ad8cf16df8f7f5870566c6efed33faa0a06196b"
+      "url": "https://github.com/jd-opensource/xllm/commit/0ad8cf16df8f7f5870566c6efed33faa0a06196b",
+      "aiSummary": {
+        "zh": "本次提交修复了MLU多模态模型构建中的错误，涉及模型支持模块的三个文件，主要修改了解码器层实现相关代码。测试应关注多模态模型在MLU平台上的构建和运行是否正常。",
+        "en": "This commit fixes a build break in the MLU multimodal model within the model support module, modifying three files related to the decoder layer implementation. Testing should focus on successful build and execution of multimodal models on the MLU platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:32.752Z"
+      }
     },
     {
       "sha": "988fa495ab8f0b5dfa45df5aaf4a5b565ad22a76",
@@ -30612,7 +30876,13 @@
         "bugfix",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/988fa495ab8f0b5dfa45df5aaf4a5b565ad22a76"
+      "url": "https://github.com/jd-opensource/xllm/commit/988fa495ab8f0b5dfa45df5aaf4a5b565ad22a76",
+      "aiSummary": {
+        "zh": "本次提交修正了多模态模块中头文件路径和encoder_cache的链接依赖，涉及模型支持相关代码。测试应关注多模态功能的编译和链接是否正常。",
+        "en": "This commit fixes header paths and encoder_cache link dependencies in the multimodal module, affecting model support code. Testing should focus on successful compilation and linking of multimodal features.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:36.315Z"
+      }
     },
     {
       "sha": "2f702744374d4fa39ec586e2dd2db8bfe7318129",
@@ -30656,7 +30926,13 @@
         "performance",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2f702744374d4fa39ec586e2dd2db8bfe7318129"
+      "url": "https://github.com/jd-opensource/xllm/commit/2f702744374d4fa39ec586e2dd2db8bfe7318129",
+      "aiSummary": {
+        "zh": "本次提交支持了xllm_ops的增量构建和CI构建缓存，优化了推理引擎的构建性能。测试应关注构建流程的正确性及缓存机制的有效性。",
+        "en": "This commit adds support for incremental build and CI build cache for xllm_ops, improving the build performance of the inference engine. Testing should focus on build correctness and cache effectiveness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:40.702Z"
+      }
     },
     {
       "sha": "de6ad81b8c5ef7b651c6b4b898a55c87a969f81d",
@@ -30743,7 +31019,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/de6ad81b8c5ef7b651c6b4b898a55c87a969f81d"
+      "url": "https://github.com/jd-opensource/xllm/commit/de6ad81b8c5ef7b651c6b4b898a55c87a969f81d",
+      "aiSummary": {
+        "zh": "本次提交新增了对DeepSeek V4聊天模板及其工具调用的支持，涉及模型支持模块，修改了10个文件。测试重点包括新增的聊天模板和工具调用相关功能的正确性验证。",
+        "en": "This commit adds support for DeepSeek V4 chat template and tool calls within the model support module, modifying 10 files. Testing focuses on verifying the correctness of the new chat template and tool call functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:45.330Z"
+      }
     },
     {
       "sha": "112353a837c6b68103659bcffd2dd6deb528e288",
@@ -30818,7 +31100,13 @@
         "inference-engine",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/112353a837c6b68103659bcffd2dd6deb528e288"
+      "url": "https://github.com/jd-opensource/xllm/commit/112353a837c6b68103659bcffd2dd6deb528e288",
+      "aiSummary": {
+        "zh": "本次提交修复了单块和线性状态分配中使用 max_concurrent_requests 的问题，影响推理引擎模块。测试重点关注相关缓存估计和块管理的正确性。",
+        "en": "This commit fixes the use of max_concurrent_requests for single block and linear state allocation in the inference engine module. Testing focuses on correctness of cache estimation and block management.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-01T19:39:49.635Z"
+      }
     },
     {
       "sha": "ff8c3a75c2fa880cdd017e123ad97276e8718b3f",
