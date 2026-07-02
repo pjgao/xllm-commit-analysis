@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T19:39:52.061Z",
+  "generatedAt": "2026-07-02T19:07:44.576Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1125,
-    "contributors": 97,
-    "additions": 549865,
-    "deletions": 138118,
-    "filesChanged": 16378,
+    "commits": 1128,
+    "contributors": 98,
+    "additions": 549992,
+    "deletions": 138344,
+    "filesChanged": 16395,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-01",
+    "latestDate": "2026-07-02",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -108,7 +108,7 @@
       },
       {
         "key": "NPU Backend",
-        "count": 122
+        "count": 123
       },
       {
         "key": "Inference Engine",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Device Backend",
-        "count": 67
+        "count": 68
       },
       {
         "key": "Spec Decode",
@@ -140,7 +140,7 @@
       },
       {
         "key": "MoE",
-        "count": 21
+        "count": 22
       },
       {
         "key": "docs/en",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 418
+        "count": 420
       },
       {
         "key": "bugfix",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 128
+        "count": 129
       },
       {
         "key": "other",
@@ -423,7 +423,8 @@
     "2026-06-26",
     "2026-06-27",
     "2026-06-29",
-    "2026-07-01"
+    "2026-07-01",
+    "2026-07-02"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -652,6 +653,206 @@
     }
   },
   "commits": [
+    {
+      "sha": "48969f684653f118dac75032703fda422e8668bd",
+      "parents": [
+        "87e8d6ed619bfbf96c467d2465392abe16b58576"
+      ],
+      "pr": "1868",
+      "date": "2026-07-02T19:42:45+08:00",
+      "dateKey": "2026-07-02",
+      "author": {
+        "name": "Joey Gao",
+        "email": "gaopengju3@huawei.com"
+      },
+      "title": "perf: disable qwen3 split rmsnorm rope in prefill, keep decode path. (#1868)",
+      "type": "performance",
+      "module": "NPU Backend",
+      "additions": 4,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/layers/npu/npu_qwen3_decoder_layer_impl.cpp",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/48969f684653f118dac75032703fda422e8668bd",
+      "aiSummary": {
+        "zh": "本次提交在NPU后端禁用了qwen3模型预填充阶段的split rmsnorm rope操作，但保留了解码路径中的该操作，主要影响Ascend平台，测试时需关注性能变化和功能正确性。",
+        "en": "This commit disables the split rmsnorm rope operation in the qwen3 model's prefill stage within the NPU backend while keeping it in the decode path, affecting the Ascend platform. Testing should focus on performance impact and functional correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:03.175Z"
+      }
+    },
+    {
+      "sha": "87e8d6ed619bfbf96c467d2465392abe16b58576",
+      "parents": [
+        "fefb840d08a78596b1585f08a65fc437ad0efd60"
+      ],
+      "pr": "1845",
+      "date": "2026-07-02T11:30:25+08:00",
+      "dateKey": "2026-07-02",
+      "author": {
+        "name": "xicui0927",
+        "email": "j6tmywwz9t@privaterelay.appleid.com"
+      },
+      "title": "feat: add maca support for xllm. (#1845)",
+      "type": "feature",
+      "module": "MoE",
+      "additions": 102,
+      "deletions": 17,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 17,
+          "deletions": 0,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "README.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "README.md"
+        },
+        {
+          "filename": "docs/project/README_zh.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docs/project"
+        },
+        {
+          "filename": "scripts/build_support/env.py",
+          "additions": 26,
+          "deletions": 0,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 22,
+          "deletions": 8,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/core/kernels/cuda/moe/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_topk.cuh",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_topk_sigmoid_kernels.cuh",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_topk_softmax_kernels.cuh",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/topk_last_dim.cuh",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/type_convert.cuh",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/utils.cpp",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/cuda/flashinfer_planinfo.cpp",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/vmm_torch_allocator.h",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "moe",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/87e8d6ed619bfbf96c467d2465392abe16b58576",
+      "aiSummary": {
+        "zh": "本次提交为xllm的MoE模块新增了maca支持，涉及14个文件，主要改动包括构建脚本、核心CUDA内核及类型转换等。测试应关注maca功能的正确集成及性能表现。",
+        "en": "This commit adds maca support to the xllm MoE module, affecting 14 files including build scripts, core CUDA kernels, and type conversions. Testing should focus on correct integration and performance of the maca feature.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:06.106Z"
+      }
+    },
+    {
+      "sha": "fefb840d08a78596b1585f08a65fc437ad0efd60",
+      "parents": [
+        "ef8379d1e942b0b96bfab5e8d3f644556d022b99"
+      ],
+      "pr": "1853",
+      "date": "2026-07-02T11:15:06+08:00",
+      "dateKey": "2026-07-02",
+      "author": {
+        "name": "ChrisD",
+        "email": "54457651+cding-nv@users.noreply.github.com"
+      },
+      "title": "feat: use grouped gemm in aiter lib. (#1853)",
+      "type": "feature",
+      "module": "Device Backend",
+      "additions": 21,
+      "deletions": 208,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/dcu/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/group_gemm.cpp",
+          "additions": 15,
+          "deletions": 202,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "device-backend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fefb840d08a78596b1585f08a65fc437ad0efd60",
+      "aiSummary": {
+        "zh": "本次提交在设备后端模块中使用了分组GEMM替代原有实现，主要修改了group_gemm.cpp文件，减少了代码量。测试应关注新实现的性能和正确性。",
+        "en": "This commit introduces grouped GEMM in the device backend by modifying group_gemm.cpp, significantly reducing code size. Testing should focus on performance and correctness of the new implementation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:09.478Z"
+      }
+    },
     {
       "sha": "ef8379d1e942b0b96bfab5e8d3f644556d022b99",
       "parents": [
@@ -31332,7 +31533,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ff8c3a75c2fa880cdd017e123ad97276e8718b3f"
+      "url": "https://github.com/jd-opensource/xllm/commit/ff8c3a75c2fa880cdd017e123ad97276e8718b3f",
+      "aiSummary": {
+        "zh": "本次提交为MLLM支持了编码器缓存功能，涉及Graph和Runtime模块，提升性能并影响Ascend平台。新增了相关测试用例以验证缓存功能的正确性和性能表现。",
+        "en": "This commit adds encoder cache support for MLLM, impacting the Graph and Runtime modules and affecting the Ascend platform. New tests were added to verify the correctness and performance of the caching feature.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:11.801Z"
+      }
     },
     {
       "sha": "554b2880f1834b155fec3b5c2e82a4ed950e36cc",
@@ -31377,7 +31584,13 @@
         "xllm-core",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/554b2880f1834b155fec3b5c2e82a4ed950e36cc"
+      "url": "https://github.com/jd-opensource/xllm/commit/554b2880f1834b155fec3b5c2e82a4ed950e36cc",
+      "aiSummary": {
+        "zh": "本次提交在请求传输中实现了多模态解码的并行化，主要影响xllm/core模块，特别是多模态处理相关代码。测试应关注并行解码的正确性和性能提升。",
+        "en": "This commit parallelizes multimodal decoding in request transfer, affecting the xllm/core module, especially multimodal handling code. Testing should focus on correctness and performance improvements of parallel decoding.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:14.354Z"
+      }
     },
     {
       "sha": "06c1da7beae7ec4accf577add27488cba51fbadf",
@@ -31639,7 +31852,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/06c1da7beae7ec4accf577add27488cba51fbadf"
+      "url": "https://github.com/jd-opensource/xllm/commit/06c1da7beae7ec4accf577add27488cba51fbadf",
+      "aiSummary": {
+        "zh": "本次提交新增了对NPU设备上多模态编码器的DP模式支持，涉及图计算和运行时模块，影响较大且风险较高。测试需重点关注多模态编码器在NPU设备上的并行计算正确性和性能表现。",
+        "en": "This commit adds DP mode support for the multimodal encoder on NPU devices, affecting the graph and runtime modules with high risk. Testing should focus on correctness and performance of parallel computation for the multimodal encoder on NPU.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:17.013Z"
+      }
     },
     {
       "sha": "ea2a5a61e41b31fdd6b47f840f1ba9a2c180039a",
@@ -31745,7 +31964,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ea2a5a61e41b31fdd6b47f840f1ba9a2c180039a"
+      "url": "https://github.com/jd-opensource/xllm/commit/ea2a5a61e41b31fdd6b47f840f1ba9a2c180039a",
+      "aiSummary": {
+        "zh": "本次提交将tilelang ascend的安装改为使用预编译的wheel包，涉及NPU后端相关模块，需重点测试Ascend平台的构建和运行是否正常。",
+        "en": "This commit changes the installation of tilelang ascend to use prebuilt wheels, affecting the NPU backend module. Testing should focus on build and runtime correctness on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:19.690Z"
+      }
     },
     {
       "sha": "a0fa95b0dfef4193ae52cfeeed0d0cab4d35cd39",
@@ -31881,7 +32106,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a0fa95b0dfef4193ae52cfeeed0d0cab4d35cd39"
+      "url": "https://github.com/jd-opensource/xllm/commit/a0fa95b0dfef4193ae52cfeeed0d0cab4d35cd39",
+      "aiSummary": {
+        "zh": "本次提交优化了生成推荐模块的批处理构建器，涉及图计算和运行时模块，影响Ascend平台。测试需关注性能提升及中风险改动的稳定性。",
+        "en": "This commit optimizes the batch builder for generative recommendation, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing should focus on performance improvements and stability given the medium-risk changes.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:22.248Z"
+      }
     },
     {
       "sha": "dc5c5ef68c1614932c5da9414b641bed102376e1",
@@ -31919,7 +32150,13 @@
         "feature",
         "moe"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/dc5c5ef68c1614932c5da9414b641bed102376e1"
+      "url": "https://github.com/jd-opensource/xllm/commit/dc5c5ef68c1614932c5da9414b641bed102376e1",
+      "aiSummary": {
+        "zh": "本次提交在cuda设备上为Qwen3 MoE模型启用了REC XAttention功能，涉及MoE模块的代码调整，重点测试REC XAttention在cuda环境下的正确性和性能表现。",
+        "en": "This commit enables REC XAttention for the Qwen3 MoE model on CUDA devices, modifying the MoE module code. Testing should focus on the correctness and performance of REC XAttention in the CUDA environment.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:24.933Z"
+      }
     },
     {
       "sha": "15f2b8537ef857aa6ae6cc965438e91dcc6bae46",
@@ -31957,7 +32194,13 @@
         "bugfix",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/15f2b8537ef857aa6ae6cc965438e91dcc6bae46"
+      "url": "https://github.com/jd-opensource/xllm/commit/15f2b8537ef857aa6ae6cc965438e91dcc6bae46",
+      "aiSummary": {
+        "zh": "修复了启用kv_split时缺失的转移操作，影响xllm/core模块中批处理输入构建和kv缓存转移相关代码，测试应关注转移逻辑的正确性和性能影响。",
+        "en": "Fixed missing transfer operation when kv_split is enabled, affecting batch input building and kv cache transfer in the xllm/core module; testing should focus on correctness of transfer logic and performance impact.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:27.698Z"
+      }
     },
     {
       "sha": "044f10f00428fbf91b663106d04996a1bfcc1e3b",
@@ -32104,7 +32347,13 @@
         "model-support",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/044f10f00428fbf91b663106d04996a1bfcc1e3b"
+      "url": "https://github.com/jd-opensource/xllm/commit/044f10f00428fbf91b663106d04996a1bfcc1e3b",
+      "aiSummary": {
+        "zh": "本次提交重构了DeepSeek V4 SWA块的分配和回滚逻辑，修复相关高风险bug，影响模型支持模块。测试重点覆盖块管理和索引器相关功能，确保分配与回滚的正确性。",
+        "en": "This commit refactors the allocation and rollback logic of DeepSeek V4 SWA blocks, fixing high-risk bugs in the model support module. Tests focus on block management and indexer functionalities to ensure correct allocation and rollback behavior.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:30.696Z"
+      }
     },
     {
       "sha": "ceb5834f2061f5b1baa333a2781b7b33062aaaac",
@@ -32142,7 +32391,13 @@
         "bugfix",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ceb5834f2061f5b1baa333a2781b7b33062aaaac"
+      "url": "https://github.com/jd-opensource/xllm/commit/ceb5834f2061f5b1baa333a2781b7b33062aaaac",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5聊天模型的停止符号，涉及模型支持模块，修改了两个相关头文件。测试应关注聊天停止逻辑是否正确触发。",
+        "en": "This commit fixes the stop token for the qwen3.5 chat model within the model support module, modifying two header files. Testing should focus on verifying the correct triggering of chat stop logic.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:33.750Z"
+      }
     },
     {
       "sha": "676187c2a944bfe373d8a92c66e82729f4a32b54",
@@ -32181,7 +32436,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/676187c2a944bfe373d8a92c66e82729f4a32b54"
+      "url": "https://github.com/jd-opensource/xllm/commit/676187c2a944bfe373d8a92c66e82729f4a32b54",
+      "aiSummary": {
+        "zh": "本次提交修复了递归轮次语义对齐问题，避免了 onerec 输入的多余拷贝，影响图计算和运行时模块，测试需关注递归处理的正确性和性能。",
+        "en": "This commit fixes alignment of recursive round semantics and avoids unnecessary copies of onerec inputs, affecting the Graph and Runtime modules; testing should focus on correctness and performance of recursive processing.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:36.306Z"
+      }
     },
     {
       "sha": "a5d82879652828de6bfdf914233c0677df9a7220",
@@ -32257,7 +32518,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a5d82879652828de6bfdf914233c0677df9a7220"
+      "url": "https://github.com/jd-opensource/xllm/commit/a5d82879652828de6bfdf914233c0677df9a7220",
+      "aiSummary": {
+        "zh": "本次提交在GPU和NPU上为rec qwen添加了num_return_sequences参数，涉及图计算和运行时模块，需重点测试多序列返回的正确性及对Ascend设备的影响。",
+        "en": "This commit adds the num_return_sequences parameter for rec qwen on GPU and NPU, affecting graph runtime modules; testing should focus on correctness of multiple sequence returns and impact on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:39.861Z"
+      }
     },
     {
       "sha": "749588be1f19248f58feef418c28c8e505b3b7ea",
@@ -32447,7 +32714,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/749588be1f19248f58feef418c28c8e505b3b7ea"
+      "url": "https://github.com/jd-opensource/xllm/commit/749588be1f19248f58feef418c28c8e505b3b7ea",
+      "aiSummary": {
+        "zh": "本次提交修复了DeepSeek V4 NPU DP图执行中的错误，涉及图执行和运行时模块，影响Ascend平台。测试重点包括相关单元测试和图执行的正确性验证。",
+        "en": "This commit fixes bugs in DeepSeek V4 NPU DP graph execution affecting the Graph and Runtime modules on Ascend platform. Testing focused on unit tests and verifying correct graph execution.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-02T19:07:42.398Z"
+      }
     },
     {
       "sha": "36664ed1fc06438b067b342d4f2f10900113a6a5",
