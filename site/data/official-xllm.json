@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T18:59:59.820Z",
+  "generatedAt": "2026-07-04T18:54:13.949Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -35189,7 +35189,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/cc17f71460edbef514a1ecec04d7fc206cea1eaa"
+      "url": "https://github.com/jd-opensource/xllm/commit/cc17f71460edbef514a1ecec04d7fc206cea1eaa",
+      "aiSummary": {
+        "zh": "本次提交优化了deepseek_v4模块，减少了aclgraph的拷贝操作，涉及Graph和Runtime模块，影响Ascend平台。测试重点关注深度索引器和元数据构建的正确性及性能提升。",
+        "en": "This commit optimizes the deepseek_v4 module by reducing aclgraph copy operations, affecting the Graph and Runtime modules on the Ascend platform. Testing focuses on correctness and performance improvements of the deepseek indexer and metadata builders.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:53:44.658Z"
+      }
     },
     {
       "sha": "93cd0486c5ecc479f27a86b87a7c4ffefed46587",
@@ -35595,7 +35601,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/93cd0486c5ecc479f27a86b87a7c4ffefed46587"
+      "url": "https://github.com/jd-opensource/xllm/commit/93cd0486c5ecc479f27a86b87a7c4ffefed46587",
+      "aiSummary": {
+        "zh": "本次提交重构了Graph/Runtime模块，移除了分布式调度中未使用的设备IP传播逻辑，涉及63个文件，删除大量冗余代码。测试应关注分布式调度功能及Ascend设备相关的运行时行为是否正常。",
+        "en": "This refactor removes unused device IP propagation logic in the disaggregated scheduler within the Graph/Runtime module, affecting 63 files with significant code deletions. Testing should focus on distributed scheduling functionality and runtime behavior on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:53:47.655Z"
+      }
     },
     {
       "sha": "ddcb539d9d62af702b22aa7988c5af9baa2a5ac2",
@@ -35803,7 +35815,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ddcb539d9d62af702b22aa7988c5af9baa2a5ac2"
+      "url": "https://github.com/jd-opensource/xllm/commit/ddcb539d9d62af702b22aa7988c5af9baa2a5ac2",
+      "aiSummary": {
+        "zh": "本次提交重构了图计算运行时相关模块，新增线程池初始化时的池名称，涉及多个分布式运行时文件，影响Ascend平台。测试需关注线程池命名正确性及分布式运行稳定性。",
+        "en": "This refactor adds pool names during thread pool initialization across multiple distributed runtime files in the graph runtime module, impacting the Ascend platform. Testing should focus on correct pool naming and distributed runtime stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:53:50.980Z"
+      }
     },
     {
       "sha": "75c15b16b37acbeed9eff6359c435e76f97474df",
@@ -35872,7 +35890,13 @@
         "tests-core",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/75c15b16b37acbeed9eff6359c435e76f97474df"
+      "url": "https://github.com/jd-opensource/xllm/commit/75c15b16b37acbeed9eff6359c435e76f97474df",
+      "aiSummary": {
+        "zh": "本次提交修复了通过游标驱动pd推送传输时可能遗漏传输的问题，涉及核心框架的批处理和请求模块，测试重点在相关单元测试的完善和覆盖。代码修改涵盖了7个文件，新增和删除代码量较大，风险中等。",
+        "en": "This commit fixes an issue where pd push transfer driven by cursor could miss transfers, affecting core framework batch and request modules. The focus is on enhancing and covering related unit tests across 7 files with moderate risk.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:53:55.802Z"
+      }
     },
     {
       "sha": "e31d169c34250f277608d52df4b841d2f7f2579c",
@@ -36007,7 +36031,13 @@
         "engineering",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/e31d169c34250f277608d52df4b841d2f7f2579c"
+      "url": "https://github.com/jd-opensource/xllm/commit/e31d169c34250f277608d52df4b841d2f7f2579c",
+      "aiSummary": {
+        "zh": "本次提交通过宏重构了读取标志的代码，涉及工程模块的多个配置文件，影响范围较广。测试时需关注配置读取的正确性和宏替换的稳定性。",
+        "en": "This commit refactors flag reading using macros across multiple configuration files in the engineering module, affecting a wide scope. Testing should focus on the correctness of configuration reading and stability of macro replacements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:53:59.341Z"
+      }
     },
     {
       "sha": "2a64d3a61c98e86430d79f91e5a0b093c79ca78d",
@@ -36052,7 +36082,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2a64d3a61c98e86430d79f91e5a0b093c79ca78d"
+      "url": "https://github.com/jd-opensource/xllm/commit/2a64d3a61c98e86430d79f91e5a0b093c79ca78d",
+      "aiSummary": {
+        "zh": "本次提交修复了deepseek v4在非NPU环境下的构建问题，涉及NPU后端相关配置文件。测试需关注非NPU环境下的构建是否成功及功能是否正常。",
+        "en": "This commit fixes the build wiring issue of deepseek v4 for non-NPU environments, affecting NPU backend configuration files. Testing should focus on successful builds and proper functionality in non-NPU setups.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:54:01.086Z"
+      }
     },
     {
       "sha": "2d8c5e3b88c42d345a843b1ebbb1bc5cd738afb9",
@@ -36248,7 +36284,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2d8c5e3b88c42d345a843b1ebbb1bc5cd738afb9"
+      "url": "https://github.com/jd-opensource/xllm/commit/2d8c5e3b88c42d345a843b1ebbb1bc5cd738afb9",
+      "aiSummary": {
+        "zh": "本次提交重构并优化了dit模块的目录结构，涉及NPU后端多个文件，影响范围较广且风险较高。测试需重点关注重构后功能完整性及性能表现，特别是Ascend平台相关部分。",
+        "en": "This commit refactors and optimizes the directory structure of the dit module, affecting multiple files in the NPU backend with high risk. Testing should focus on functionality integrity and performance, especially on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:54:03.117Z"
+      }
     },
     {
       "sha": "58a48e01dd8e25c767bde769e07172666dad430b",
@@ -36281,7 +36323,13 @@
         "xllm-core",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/58a48e01dd8e25c767bde769e07172666dad430b"
+      "url": "https://github.com/jd-opensource/xllm/commit/58a48e01dd8e25c767bde769e07172666dad430b",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5 gdn解码中因带填充批次导致的causal_conv1d分块失败问题，影响xllm/core模块，测试需关注Ascend平台上的解码正确性和性能。",
+        "en": "This commit fixes the causal_conv1d tiling failure in qwen3.5 GDN decoding with padded batches, affecting the xllm/core module. Testing should focus on decoding correctness and performance on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:54:06.159Z"
+      }
     },
     {
       "sha": "99232b795c1fe71352f442746fe360add1e061fe",
@@ -36537,7 +36585,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/99232b795c1fe71352f442746fe360add1e061fe"
+      "url": "https://github.com/jd-opensource/xllm/commit/99232b795c1fe71352f442746fe360add1e061fe",
+      "aiSummary": {
+        "zh": "本次提交新增支持DeepSeek V4 DP图执行，涉及图执行和运行时模块，影响Ascend平台。测试重点覆盖批处理、块管理和CUDA图执行相关功能，确保新特性稳定性。",
+        "en": "This commit adds support for DeepSeek V4 DP graph execution, impacting the Graph and Runtime modules and affecting the Ascend platform. Tests focus on batch processing, block management, and CUDA graph execution to ensure feature stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:54:09.282Z"
+      }
     },
     {
       "sha": "777806282fb4053fa684b21eadc2019f58132dbe",
@@ -36594,7 +36648,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/777806282fb4053fa684b21eadc2019f58132dbe"
+      "url": "https://github.com/jd-opensource/xllm/commit/777806282fb4053fa684b21eadc2019f58132dbe",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU后端中int4_moe和torch_comm的初始化问题，以及提示和上下文长度限制，影响Ascend设备相关功能。测试应重点关注初始化正确性及长度限制的生效情况。",
+        "en": "This commit fixes initialization issues in NPU backend for int4_moe and torch_comm, as well as prompt and context length limits, impacting Ascend device functionality. Testing should focus on correct initialization and enforcement of length limits.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-04T18:54:12.348Z"
+      }
     },
     {
       "sha": "63d5f4ff83a40a4e5aabf67f4a2a6deb1fbae1b5",
