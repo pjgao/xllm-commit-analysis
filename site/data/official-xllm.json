@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T18:54:13.949Z",
+  "generatedAt": "2026-07-05T18:59:54.852Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1130,
+    "commits": 1131,
     "contributors": 100,
-    "additions": 556679,
-    "deletions": 138465,
-    "filesChanged": 16420,
+    "additions": 556684,
+    "deletions": 138467,
+    "filesChanged": 16421,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-03",
+    "latestDate": "2026-07-05",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 97,
-        "additions": 31193,
-        "deletions": 15112,
-        "files": 1639
+        "commits": 98,
+        "additions": 31198,
+        "deletions": 15114,
+        "files": 1640
       },
       {
         "name": "Zhiwei Liang",
@@ -116,7 +116,7 @@
       },
       {
         "key": "Model Support",
-        "count": 91
+        "count": 92
       },
       {
         "key": "xllm/core",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 342
+        "count": 343
       },
       {
         "key": "refactor",
@@ -425,7 +425,8 @@
     "2026-06-29",
     "2026-07-01",
     "2026-07-02",
-    "2026-07-03"
+    "2026-07-03",
+    "2026-07-05"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -654,6 +655,44 @@
     }
   },
   "commits": [
+    {
+      "sha": "5980f9bc736c5e23c5704a2795f9d3b7cc9c71c1",
+      "parents": [
+        "044aede7b7aca7853ec9b4bc2150bd2aa1d0356d"
+      ],
+      "pr": "1881",
+      "date": "2026-07-05T21:14:41+08:00",
+      "dateKey": "2026-07-05",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "bugfix: update model version handling in list_model_versions function. (#1881)",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 5,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/api_service/models_service_impl.cpp",
+          "additions": 5,
+          "deletions": 2,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5980f9bc736c5e23c5704a2795f9d3b7cc9c71c1",
+      "aiSummary": {
+        "zh": "本次提交修复了 list_model_versions 函数中模型版本处理的错误，影响模型支持模块。测试应关注版本列表的正确性和边界情况处理。",
+        "en": "This commit fixes the model version handling in the list_model_versions function, affecting the Model Support module. Testing should focus on the correctness of version listing and edge case handling.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:20.450Z"
+      }
+    },
     {
       "sha": "044aede7b7aca7853ec9b4bc2150bd2aa1d0356d",
       "parents": [
@@ -37012,7 +37051,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/63d5f4ff83a40a4e5aabf67f4a2a6deb1fbae1b5"
+      "url": "https://github.com/jd-opensource/xllm/commit/63d5f4ff83a40a4e5aabf67f4a2a6deb1fbae1b5",
+      "aiSummary": {
+        "zh": "本次提交新增了DeepSeek V4的NPU算子及模型结构支持，涉及图计算和运行时模块，影响Ascend平台。测试重点包括新增算子的功能验证和性能测试。",
+        "en": "This commit adds DeepSeek V4 NPU operator and model structure support, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing focuses on functionality and performance validation of the new operator.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:23.185Z"
+      }
     },
     {
       "sha": "183a2267e4a75342803654616c8082faf77c1966",
@@ -37268,7 +37313,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/183a2267e4a75342803654616c8082faf77c1966"
+      "url": "https://github.com/jd-opensource/xllm/commit/183a2267e4a75342803654616c8082faf77c1966",
+      "aiSummary": {
+        "zh": "本次提交重构了Graph/Runtime模块，移除了分布式调度中未使用的缓存ID传播逻辑，涉及多个分布式运行时相关文件，提升性能。测试需关注分布式调度功能及缓存机制的正确性。",
+        "en": "This commit refactors the Graph/Runtime module by removing unused cache ID propagation in disaggregated process dispatch, affecting multiple distributed runtime files and improving performance. Testing should focus on distributed scheduling functionality and cache mechanism correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:25.305Z"
+      }
     },
     {
       "sha": "785329f779db6d0d892861a31d24a3ab46f18320",
@@ -37536,7 +37587,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/785329f779db6d0d892861a31d24a3ab46f18320"
+      "url": "https://github.com/jd-opensource/xllm/commit/785329f779db6d0d892861a31d24a3ab46f18320",
+      "aiSummary": {
+        "zh": "本次提交支持在NPU设备上使用llmdatadist进行qwen3.5的pd分解，涉及图计算和运行时模块，影响范围较大且风险较高。测试需重点关注分布式运行时的正确性和性能表现。",
+        "en": "This commit adds support for qwen3.5 pd disaggregation with llmdatadist on NPU devices, affecting the Graph and Runtime modules with high risk. Testing should focus on the correctness and performance of the distributed runtime.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:27.301Z"
+      }
     },
     {
       "sha": "67a1d1900f3d0d097cc78b88a655c83a341e9af0",
@@ -37576,7 +37633,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/67a1d1900f3d0d097cc78b88a655c83a341e9af0"
+      "url": "https://github.com/jd-opensource/xllm/commit/67a1d1900f3d0d097cc78b88a655c83a341e9af0",
+      "aiSummary": {
+        "zh": "本次提交在NPU后端支持了wan2.2版本的变分自编码器（VAE），涉及两个文件，新增代码较多，重点测试模型的正确性和性能表现。该功能对Ascend硬件有影响，属于高风险改动。",
+        "en": "This commit adds support for VAE in wan2.2 within the NPU backend, modifying two files with substantial additions. Testing should focus on model correctness and performance, as this high-risk change affects Ascend hardware.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:29.803Z"
+      }
     },
     {
       "sha": "6c0aee27f6e104effc1830463dbd19b5f6a9b2e1",
@@ -37766,7 +37829,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/6c0aee27f6e104effc1830463dbd19b5f6a9b2e1"
+      "url": "https://github.com/jd-opensource/xllm/commit/6c0aee27f6e104effc1830463dbd19b5f6a9b2e1",
+      "aiSummary": {
+        "zh": "本次提交新增了对wan2.2版本/v1/video/generation接口的支持，涉及Graph和Runtime模块，影响Ascend平台。测试需重点验证视频生成服务的功能和性能稳定性。",
+        "en": "This commit adds support for the /v1/video/generation endpoint for wan2.2, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing should focus on verifying the video generation service functionality and performance stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:32.178Z"
+      }
     },
     {
       "sha": "942b08266d15b6c71cd95c5fbae86f6e61e9cb94",
@@ -37818,7 +37887,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/942b08266d15b6c71cd95c5fbae86f6e61e9cb94"
+      "url": "https://github.com/jd-opensource/xllm/commit/942b08266d15b6c71cd95c5fbae86f6e61e9cb94",
+      "aiSummary": {
+        "zh": "本次提交新增对wan22的dit和tp并行支持，涉及NPU后端相关模块，修改文件较多且改动量大，测试需重点关注并行功能的正确性和性能表现。",
+        "en": "This commit adds support for wan22's dit and tp parallelism in the NPU backend, with significant changes across multiple files; testing should focus on the correctness and performance of the parallel features.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:34.297Z"
+      }
     },
     {
       "sha": "3ce678dcd01f9a27300899208853941427cd3174",
@@ -37864,7 +37939,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/3ce678dcd01f9a27300899208853941427cd3174"
+      "url": "https://github.com/jd-opensource/xllm/commit/3ce678dcd01f9a27300899208853941427cd3174",
+      "aiSummary": {
+        "zh": "本次提交新增了对wan22的text_encoder和scheduler的支持，主要影响NPU后端模块，涉及Ascend平台。测试应重点关注新编码器和调度器的功能正确性及性能表现。",
+        "en": "This commit adds support for wan22's text_encoder and scheduler, impacting the NPU backend module and Ascend platform. Testing should focus on verifying the functionality and performance of the new encoder and scheduler.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:36.645Z"
+      }
     },
     {
       "sha": "ad5057b14a50ab084b769fcc615819860ced2ff8",
@@ -37932,7 +38013,13 @@
         "feature",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ad5057b14a50ab084b769fcc615819860ced2ff8"
+      "url": "https://github.com/jd-opensource/xllm/commit/ad5057b14a50ab084b769fcc615819860ced2ff8",
+      "aiSummary": {
+        "zh": "本次提交在推理引擎中新增了对 best of n 功能的支持，涉及多个调度器和请求处理模块。测试应重点关注新功能的正确性及对现有调度流程的影响。",
+        "en": "This commit adds support for the best of n feature in the inference engine, affecting multiple schedulers and request handling modules. Testing should focus on the correctness of the new feature and its impact on existing scheduling workflows.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:38.507Z"
+      }
     },
     {
       "sha": "ff51fc3053588c3e9f7e80528fd93198c63ee644",
@@ -37964,7 +38051,13 @@
         "bugfix",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ff51fc3053588c3e9f7e80528fd93198c63ee644"
+      "url": "https://github.com/jd-opensource/xllm/commit/ff51fc3053588c3e9f7e80528fd93198c63ee644",
+      "aiSummary": {
+        "zh": "本次提交修复了 xllm/core 模块中 llm_engine.cpp 文件的链接集群排名映射错误，修改涉及 13 行新增和 23 行删除。测试应关注链接集群排名映射的正确性及相关功能的稳定性。",
+        "en": "This commit fixes the link cluster rank mapping issue in xllm/core's llm_engine.cpp file, with 13 additions and 23 deletions. Testing should focus on verifying the correctness of the link cluster rank mapping and related functionality stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:42.286Z"
+      }
     },
     {
       "sha": "cbc44cea23f8a379bc86c5039a643a3cf2dde6fb",
@@ -38220,7 +38313,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/cbc44cea23f8a379bc86c5039a643a3cf2dde6fb"
+      "url": "https://github.com/jd-opensource/xllm/commit/cbc44cea23f8a379bc86c5039a643a3cf2dde6fb",
+      "aiSummary": {
+        "zh": "本次提交新增对NPU设备上KIMI-K25模型的支持，涉及图计算和运行时模块，改动较大且风险较高。测试重点关注模型在NPU上的兼容性和性能表现。",
+        "en": "This commit adds support for the KIMI-K25 model on NPU devices, affecting the graph and runtime modules with significant and high-risk changes. Testing focuses on compatibility and performance of the model on NPU.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:44.532Z"
+      }
     },
     {
       "sha": "2bccd94b57481f6130b73277958d02c574332aaf",
@@ -38493,7 +38592,13 @@
         "engineering",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2bccd94b57481f6130b73277958d02c574332aaf"
+      "url": "https://github.com/jd-opensource/xllm/commit/2bccd94b57481f6130b73277958d02c574332aaf",
+      "aiSummary": {
+        "zh": "本次提交新增支持将xllm服务器的标志参数导出为JSON文件，涉及多个配置相关文件，影响配置管理模块。测试重点验证导出功能的正确性和配置文件的完整性。",
+        "en": "This commit adds support for dumping xllm server flags to a JSON file, affecting multiple configuration-related files and the configuration management module. Testing focuses on verifying the correctness of the export functionality and the integrity of the configuration files.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:46.535Z"
+      }
     },
     {
       "sha": "30f9a649f056512c4df2f6620e9858c84414ebdf",
@@ -38525,7 +38630,13 @@
         "feature",
         "github-pull-request-template-md"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/30f9a649f056512c4df2f6620e9858c84414ebdf"
+      "url": "https://github.com/jd-opensource/xllm/commit/30f9a649f056512c4df2f6620e9858c84414ebdf",
+      "aiSummary": {
+        "zh": "本次提交在仓库中添加了一个 GitHub 拉取请求模板，用于规范贡献流程。影响范围仅限于贡献者提交代码时的模板提示，测试重点为模板内容的完整性和适用性。",
+        "en": "This commit adds a GitHub pull request template to standardize contributions. The impact is limited to guiding contributors during code submissions, with testing focused on the completeness and applicability of the template.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:48.194Z"
+      }
     },
     {
       "sha": "5e0dc2be39024a0d8768276f06dfd06e8e05b236",
@@ -38667,7 +38778,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/5e0dc2be39024a0d8768276f06dfd06e8e05b236"
+      "url": "https://github.com/jd-opensource/xllm/commit/5e0dc2be39024a0d8768276f06dfd06e8e05b236",
+      "aiSummary": {
+        "zh": "本次提交支持了qwen3.5视觉语言模型（VLM）的图像和视频输入，涉及Graph和Runtime模块，影响Ascend平台。测试重点在于验证新输入类型的兼容性和功能正确性。",
+        "en": "This commit adds support for image and video inputs in the qwen3.5 vision-language model, affecting the Graph and Runtime modules and Ascend platform. Testing focuses on compatibility and correctness of the new input types.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:50.390Z"
+      }
     },
     {
       "sha": "75c65558b0990c4a026680d7f5e194eb75bbabbb",
@@ -38700,7 +38817,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/75c65558b0990c4a026680d7f5e194eb75bbabbb"
+      "url": "https://github.com/jd-opensource/xllm/commit/75c65558b0990c4a026680d7f5e194eb75bbabbb",
+      "aiSummary": {
+        "zh": "本次提交修复了 Graph / Runtime 模块中 use-default-stream-prepare 检查的恢复问题，影响 Ascend 相关功能。测试应关注该检查逻辑的正确性及对运行时行为的影响。",
+        "en": "This commit restores the use-default-stream-prepare check in the Graph / Runtime module, affecting Ascend-related functionality. Testing should focus on the correctness of this check and its impact on runtime behavior.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-05T18:59:52.565Z"
+      }
     },
     {
       "sha": "71f063df3544da94c39e305b1cc64485787dbc4c",
