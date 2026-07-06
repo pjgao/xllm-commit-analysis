@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:59:54.852Z",
+  "generatedAt": "2026-07-06T19:39:55.023Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1131,
-    "contributors": 100,
-    "additions": 556684,
-    "deletions": 138467,
-    "filesChanged": 16421,
+    "commits": 1135,
+    "contributors": 101,
+    "additions": 558972,
+    "deletions": 138628,
+    "filesChanged": 16438,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-05",
+    "latestDate": "2026-07-06",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 98,
-        "additions": 31198,
-        "deletions": 15114,
-        "files": 1640
+        "commits": 99,
+        "additions": 31211,
+        "deletions": 15209,
+        "files": 1642
       },
       {
         "name": "Zhiwei Liang",
@@ -38,18 +38,18 @@
         "files": 457
       },
       {
+        "name": "phantomlei",
+        "commits": 60,
+        "additions": 46287,
+        "deletions": 6470,
+        "files": 739
+      },
+      {
         "name": "yq33victor",
         "commits": 60,
         "additions": 11351,
         "deletions": 8847,
         "files": 669
-      },
-      {
-        "name": "phantomlei",
-        "commits": 59,
-        "additions": 45618,
-        "deletions": 6447,
-        "files": 733
       },
       {
         "name": "JinDonghe",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 397
+        "count": 398
       },
       {
         "key": "NPU Backend",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 95
+        "count": 96
       },
       {
         "key": "Model Support",
@@ -124,7 +124,7 @@
       },
       {
         "key": "Engineering",
-        "count": 70
+        "count": 71
       },
       {
         "key": "Device Backend",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 61
+        "count": 62
       },
       {
         "key": "xllm/api_service",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 421
+        "count": 422
       },
       {
         "key": "bugfix",
-        "count": 343
+        "count": 345
       },
       {
         "key": "refactor",
@@ -174,7 +174,7 @@
       },
       {
         "key": "docs",
-        "count": 18
+        "count": 19
       },
       {
         "key": "test",
@@ -426,7 +426,8 @@
     "2026-07-01",
     "2026-07-02",
     "2026-07-03",
-    "2026-07-05"
+    "2026-07-05",
+    "2026-07-06"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -652,9 +653,299 @@
       "commitCount": 14,
       "model": "openai/gpt-4.1-mini",
       "generatedAt": "2026-06-29T19:43:36.381Z"
+    },
+    "2026-07-06": {
+      "zh": "今日研发重点涵盖推理引擎、Spec Decode、工程和图计算/运行时四大模块，完成了4次提交。新增了针对NPU的TileLang FSGDR内核，属于高风险改动，需重点验证功能和性能；同时修复了推理引擎调度器竞态和Spec Decode中qwen3.5的mtp接受率问题，测试需关注并发稳定性及mtp恢复情况。文档优化提升了项目说明的准确性和完整性。",
+      "en": "Today's development focused on four key modules: Inference Engine, Spec Decode, Engineering, and Graph/Runtime, with four commits completed. A high-risk feature adding the TileLang FSGDR kernel for NPU was introduced, requiring thorough functional and performance testing. Bug fixes addressed a race condition in the inference engine scheduler and restored the mtp acceptance rate in Spec Decode for qwen3.5, with testing emphasis on concurrency stability and mtp recovery. Documentation refinements improved accuracy and completeness.",
+      "signature": "0b2a731506a1b804e06797225ede29064edbcbdd,2ffaaaa486a7457be0e7a81917a1d9ba9710e475,7bcd7ff9f6e1800826c9c4e3a2bf2c1ac17ce372,aabfdbc41d8765d0e656dcf2e2b05d73b1ae2d0b",
+      "commitCount": 4,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:27.470Z"
+    },
+    "2026-07-05": {
+      "zh": "今日主要研发方向为修复模型支持模块中 list_model_versions 函数的版本处理问题。此次提交未引入高风险变更，重点关注版本列表的正确性及边界情况的测试。确保模型版本管理功能的稳定性和准确性是测试重点。",
+      "en": "Today's development focused on fixing the model version handling issue in the list_model_versions function within the Model Support module. No high-risk changes were introduced, with testing emphasis on the correctness of version listings and edge case handling. Ensuring stability and accuracy in model version management is the key test focus.",
+      "signature": "5980f9bc736c5e23c5704a2795f9d3b7cc9c71c1",
+      "commitCount": 1,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:30.427Z"
+    },
+    "2026-07-03": {
+      "zh": "今日研发主要集中在Spec Decode和xllm/core两个模块，完成了推测解码相关的bug修复及为Qwen3.5稠密模型新增MUSA内核。新增内核改动较大且风险较高，测试需重点验证其功能正确性和性能表现，同时关注推测解码与图形双缓冲的兼容性。",
+      "en": "Today's development focused on the Spec Decode and xllm/core modules, including a bugfix for speculative decoding and the addition of MUSA kernels for Qwen3.5 dense models. The new kernels involve significant high-risk changes, so testing should emphasize correctness and performance, as well as compatibility between speculative decoding and graph double buffering.",
+      "signature": "044aede7b7aca7853ec9b4bc2150bd2aa1d0356d,cb4ed5be9db67eba926fe8314b45a9e6d3e99dc5",
+      "commitCount": 2,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:34.434Z"
+    },
+    "2026-07-02": {
+      "zh": "今日研发重点聚焦于NPU后端、MoE和设备后端三个模块，主要完成了qwen3模型预填充阶段性能优化、新增MoE模块的maca支持以及设备后端分组GEMM功能的实现。整体风险较低，但MoE模块新增功能存在中等风险，测试需重点关注maca功能的正确集成及性能表现，同时验证NPU后端和设备后端的新实现的性能和功能正确性。",
+      "en": "Today's development focused on the NPU backend, MoE, and device backend modules, implementing performance optimization for qwen3 prefill, adding maca support to the MoE module, and introducing grouped GEMM in the device backend. The overall risk is low, with medium risk in the new MoE feature. Testing should emphasize correct integration and performance of the maca feature, as well as performance and correctness of the NPU and device backend changes.",
+      "signature": "48969f684653f118dac75032703fda422e8668bd,87e8d6ed619bfbf96c467d2465392abe16b58576,fefb840d08a78596b1585f08a65fc437ad0efd60",
+      "commitCount": 3,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:39.327Z"
+    },
+    "2026-07-01": {
+      "zh": "今日研发主要聚焦于设备后端、NPU后端、推理引擎及图计算/运行时模块的若干bug修复和测试支持。重点修复了qwen3.5模型权重加载、x86自托管Runner配置及图计算流等待保护等问题，风险较低。测试重点关注权重加载正确性、NPU A3平台CI流程及Ascend设备上的流同步执行。",
+      "en": "Today's development focused on bug fixes and test support across Device Backend, NPU Backend, Inference Engine, and Graph/Runtime modules. Key fixes addressed weight loading for the qwen3.5 model, x86 self-hosted runner configuration, and stream wait guarding during graph preparation, with low risk. Testing efforts concentrated on verifying weight loading accuracy, NPU A3 CI workflow, and stream synchronization on Ascend devices.",
+      "signature": "0e779c5a9420dbff2a272bf034ffe9cfd93b2006,5c1791a50b5b1a18d1472c918844b4fa65c9d951,a90c05d45dd7bc843666fa54e13f4637b149364e,ef8379d1e942b0b96bfab5e8d3f644556d022b99",
+      "commitCount": 4,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:43.390Z"
+    },
+    "2026-05-25": {
+      "zh": "今日研发重点包括Graph/Runtime模块对qwen3.5视觉语言模型图像和视频输入的支持及NPU设备上KIMI-K25模型的适配，xllm/core模块的链接集群排名映射修复，以及工程模块中服务器标志参数导出功能的新增。涉及高风险改动主要集中在Graph/Runtime和工程模块。测试应重点关注新模型输入的兼容性、NPU设备上的性能表现、链接集群映射的正确性及配置导出功能的完整性。",
+      "en": "Today's development focused on supporting image and video inputs for the qwen3.5 vision-language model and adding KIMI-K25 model support on NPU devices within the Graph/Runtime modules, fixing link cluster rank mapping in xllm/core, and adding server flag export functionality in the engineering module. High-risk changes are mainly in Graph/Runtime and engineering. Testing should emphasize compatibility and performance on new inputs and NPU, correctness of link cluster mapping, and integrity of configuration export.",
+      "signature": "2bccd94b57481f6130b73277958d02c574332aaf,30f9a649f056512c4df2f6620e9858c84414ebdf,5e0dc2be39024a0d8768276f06dfd06e8e05b236,75c65558b0990c4a026680d7f5e194eb75bbabbb,ad5057b14a50ab084b769fcc615819860ced2ff8,cbc44cea23f8a379bc86c5039a643a3cf2dde6fb,ff51fc3053588c3e9f7e80528fd93198c63ee644",
+      "commitCount": 7,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:51.139Z"
+    },
+    "2026-05-23": {
+      "zh": "今日主要进行了Graph和Runtime模块的代码风格重构，涉及14个文件的clang-format格式修正。此次变更影响Ascend相关功能，风险中等。测试重点应放在代码格式一致性和功能稳定性验证上。",
+      "en": "Today's work focused on refactoring code style in the Graph and Runtime modules, with clang-format fixes applied across 14 files. The changes affect Ascend-related functionality and carry medium risk. Testing should concentrate on ensuring code style consistency and functional stability.",
+      "signature": "71f063df3544da94c39e305b1cc64485787dbc4c",
+      "commitCount": 1,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-06T19:39:55.021Z"
     }
   },
   "commits": [
+    {
+      "sha": "2ffaaaa486a7457be0e7a81917a1d9ba9710e475",
+      "parents": [
+        "7bcd7ff9f6e1800826c9c4e3a2bf2c1ac17ce372"
+      ],
+      "pr": "1841",
+      "date": "2026-07-06T17:07:15+08:00",
+      "dateKey": "2026-07-06",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: fix chunked scheduler race in pd prefill. (#1841)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 669,
+      "deletions": 23,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/concurrent_block_manager_test.cpp",
+          "additions": 175,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_chunked_prefill_scheduler_test.cpp",
+          "additions": 295,
+          "deletions": 9,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block.cpp",
+          "additions": 11,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block.h",
+          "additions": 10,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_chunked_prefill_scheduler.cpp",
+          "additions": 146,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_chunked_prefill_scheduler.h",
+          "additions": 32,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2ffaaaa486a7457be0e7a81917a1d9ba9710e475",
+      "aiSummary": {
+        "zh": "本次提交修复了推理引擎中分块调度器在预填充阶段的竞态条件问题，涉及调度器和块管理相关代码，重点增加了并发测试以验证修复效果。",
+        "en": "This commit fixes a race condition in the chunked scheduler during the prefill phase of the inference engine, affecting scheduler and block management code, with added concurrency tests to ensure the fix.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:33.540Z"
+      }
+    },
+    {
+      "sha": "7bcd7ff9f6e1800826c9c4e3a2bf2c1ac17ce372",
+      "parents": [
+        "aabfdbc41d8765d0e656dcf2e2b05d73b1ae2d0b"
+      ],
+      "pr": "1887",
+      "date": "2026-07-06T14:21:09+08:00",
+      "dateKey": "2026-07-06",
+      "author": {
+        "name": "Joey Gao",
+        "email": "gaopengju3@huawei.com"
+      },
+      "title": "bugfix: restore qwen3.5 mtp acceptance rate. (#1887)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 17,
+      "deletions": 43,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 9,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7bcd7ff9f6e1800826c9c4e3a2bf2c1ac17ce372",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5模型在Spec Decode模块中的mtp接受率问题，影响Ascend平台相关功能。测试应重点关注mtp接受率是否恢复正常及相关性能表现。",
+        "en": "This commit fixes the mtp acceptance rate issue for qwen3.5 in the Spec Decode module, affecting Ascend platform functionality. Testing should focus on verifying the restoration of mtp acceptance rate and related performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:37.291Z"
+      }
+    },
+    {
+      "sha": "aabfdbc41d8765d0e656dcf2e2b05d73b1ae2d0b",
+      "parents": [
+        "0b2a731506a1b804e06797225ede29064edbcbdd"
+      ],
+      "pr": "1888",
+      "date": "2026-07-06T11:05:37+08:00",
+      "dateKey": "2026-07-06",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "docs: refine readme content. (#1888)",
+      "type": "docs",
+      "module": "Engineering",
+      "additions": 13,
+      "deletions": 95,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "README.md",
+          "additions": 7,
+          "deletions": 50,
+          "module": "README.md"
+        },
+        {
+          "filename": "docs/project/README_zh.md",
+          "additions": 6,
+          "deletions": 45,
+          "module": "docs/project"
+        }
+      ],
+      "tags": [
+        "docs",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/aabfdbc41d8765d0e656dcf2e2b05d73b1ae2d0b",
+      "aiSummary": {
+        "zh": "本次提交优化了项目的 README 文档内容，涉及两个文件，主要是内容精简和调整。影响范围为文档展示，无需功能测试，关注文档准确性和完整性。",
+        "en": "This commit refines the README documentation content across two files, mainly involving content reduction and adjustments. The impact is limited to documentation, requiring no functional testing but attention to accuracy and completeness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:40.782Z"
+      }
+    },
+    {
+      "sha": "0b2a731506a1b804e06797225ede29064edbcbdd",
+      "parents": [
+        "5980f9bc736c5e23c5704a2795f9d3b7cc9c71c1"
+      ],
+      "pr": "1873",
+      "date": "2026-07-06T10:58:14+08:00",
+      "dateKey": "2026-07-06",
+      "author": {
+        "name": "Shareable",
+        "email": "1006032941@qq.com"
+      },
+      "title": "feat: add TileLang FSGDR kernel for NPU. (#1873)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1589,
+      "deletions": 0,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/kernels/npu/tilelang/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/fused_sigmoid_gating_delta_rule_wrapper_test.cpp",
+          "additions": 281,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/fused_sigmoid_gating_delta_rule.py",
+          "additions": 692,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/CMakeLists.txt",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/fused_sigmoid_gating_delta_rule_wrapper.cpp",
+          "additions": 577,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/tilelang_ops_api.h",
+          "additions": 21,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0b2a731506a1b804e06797225ede29064edbcbdd",
+      "aiSummary": {
+        "zh": "本次提交新增了针对NPU的TileLang FSGDR内核，涉及图计算和运行时模块，属于高风险改动且影响Ascend平台。测试重点为新增内核的功能正确性和性能表现。",
+        "en": "This commit adds the TileLang FSGDR kernel for NPU, impacting the Graph and Runtime modules with high-risk changes affecting the Ascend platform. Testing focuses on verifying the functionality and performance of the new kernel.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:44.047Z"
+      }
+    },
     {
       "sha": "5980f9bc736c5e23c5704a2795f9d3b7cc9c71c1",
       "parents": [
@@ -38935,7 +39226,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/71f063df3544da94c39e305b1cc64485787dbc4c"
+      "url": "https://github.com/jd-opensource/xllm/commit/71f063df3544da94c39e305b1cc64485787dbc4c",
+      "aiSummary": {
+        "zh": "本次提交对Graph和Runtime模块的14个文件进行了clang-format格式修正，涉及代码风格优化，影响Ascend相关功能。测试应关注代码格式一致性及功能稳定性。",
+        "en": "This commit applies clang-format style fixes across 14 files in the Graph and Runtime modules, affecting Ascend-related functionality. Testing should focus on code style consistency and functional stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:46.417Z"
+      }
     },
     {
       "sha": "8119ce22e1f3a5000a912179151b7765745adbee",
@@ -38980,7 +39277,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8119ce22e1f3a5000a912179151b7765745adbee"
+      "url": "https://github.com/jd-opensource/xllm/commit/8119ce22e1f3a5000a912179151b7765745adbee",
+      "aiSummary": {
+        "zh": "本次提交修复了CUDA设备上的构建错误，涉及图计算和运行时模块，影响Ascend平台。测试应关注相关模块的构建和运行是否正常。",
+        "en": "This commit fixes a build error on CUDA devices affecting the Graph and Runtime modules, with impact on the Ascend platform. Testing should focus on successful build and runtime stability of the related modules.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:48.965Z"
+      }
     },
     {
       "sha": "49ea6c6dd8e550dcf132583d33aeba14fa36673f",
@@ -39104,7 +39407,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/49ea6c6dd8e550dcf132583d33aeba14fa36673f"
+      "url": "https://github.com/jd-opensource/xllm/commit/49ea6c6dd8e550dcf132583d33aeba14fa36673f",
+      "aiSummary": {
+        "zh": "本次提交为dit模块新增了限流、监控、多图像支持及输入校验功能，涉及Graph/Runtime模块的多个文件，需重点测试限流效果及多图像处理的正确性。",
+        "en": "This commit adds rate limiting, monitoring, multiple image support, and input validation to the dit module, affecting multiple files in the Graph/Runtime module; testing should focus on rate limiting functionality and correct handling of multiple images.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:52.127Z"
+      }
     },
     {
       "sha": "da68f6178c76ca8640b7bb01bc7fb3808063579f",
@@ -39155,7 +39464,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/da68f6178c76ca8640b7bb01bc7fb3808063579f"
+      "url": "https://github.com/jd-opensource/xllm/commit/da68f6178c76ca8640b7bb01bc7fb3808063579f",
+      "aiSummary": {
+        "zh": "本次提交将 cp 单元测试移动到 tests 目录下，涉及 Graph / Runtime 模块，主要影响 Ascend 平台相关代码。测试重点是确保单元测试迁移后功能正常。",
+        "en": "This commit refactors by moving the cp unit test to the tests directory, affecting the Graph / Runtime module and Ascend platform-related code. Testing focuses on verifying the unit test functions correctly after relocation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:55.833Z"
+      }
     },
     {
       "sha": "2a97775ea814f5a4e08070e5ccb5b6739d98577d",
@@ -39187,7 +39502,13 @@
         "bugfix",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2a97775ea814f5a4e08070e5ccb5b6739d98577d"
+      "url": "https://github.com/jd-opensource/xllm/commit/2a97775ea814f5a4e08070e5ccb5b6739d98577d",
+      "aiSummary": {
+        "zh": "本次提交修复了chunkedprefill中配置使用错误导致测试失败的问题，影响推理引擎模块。测试重点是验证配置修正后相关测试用例是否通过。",
+        "en": "This commit fixes a configuration usage error in chunkedprefill that caused test failures, impacting the Inference Engine module. Testing focuses on verifying that the related tests pass after the configuration fix.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:38:59.810Z"
+      }
     },
     {
       "sha": "9e6d461dccd41059973f4483793397df3c3d1ef4",
@@ -39231,7 +39552,13 @@
         "performance",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/9e6d461dccd41059973f4483793397df3c3d1ef4"
+      "url": "https://github.com/jd-opensource/xllm/commit/9e6d461dccd41059973f4483793397df3c3d1ef4",
+      "aiSummary": {
+        "zh": "本次提交修复了并发前缀缓存匹配的性能问题，涉及推理引擎模块，重点测试了并发块管理器的正确性和性能表现。",
+        "en": "This commit fixes a performance issue in concurrent prefix cache matching within the Inference Engine module, with tests focusing on correctness and performance of the concurrent block manager.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:03.165Z"
+      }
     },
     {
       "sha": "d03aad9905d08b32238fc510c7a1a0f89ecb807c",
@@ -39427,7 +39754,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d03aad9905d08b32238fc510c7a1a0f89ecb807c"
+      "url": "https://github.com/jd-opensource/xllm/commit/d03aad9905d08b32238fc510c7a1a0f89ecb807c",
+      "aiSummary": {
+        "zh": "本次提交新增了对LongCat-AudioDiT在CUDA设备上的支持，涉及Graph和Runtime模块，修改了28个文件，增加了大量代码。测试应重点关注CUDA设备上的音频生成服务功能及其性能表现。",
+        "en": "This commit adds support for LongCat-AudioDiT on CUDA devices, affecting the Graph and Runtime modules with changes across 28 files and significant code additions. Testing should focus on audio generation service functionality and performance on CUDA devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:07.270Z"
+      }
     },
     {
       "sha": "9374dd811f3134730b132d7c669c5d1e6299de80",
@@ -39827,7 +40160,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/9374dd811f3134730b132d7c669c5d1e6299de80"
+      "url": "https://github.com/jd-opensource/xllm/commit/9374dd811f3134730b132d7c669c5d1e6299de80",
+      "aiSummary": {
+        "zh": "本次提交为Graph/Runtime模块引入了CP支持的前缀缓存、分块预填充和KV缓存分片，涉及大量代码修改，影响Ascend平台性能。测试重点需关注缓存机制的正确性和性能提升效果。",
+        "en": "This commit adds CP support for prefix cache, chunked prefill, and KV cache sharding in the Graph/Runtime module, significantly impacting Ascend platform performance. Testing should focus on cache correctness and performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:11.440Z"
+      }
     },
     {
       "sha": "1cccc2ef41db7a6f3cc8ac2cd7c9c8a23b436e4c",
@@ -39865,7 +40204,13 @@
         "bugfix",
         "testing"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1cccc2ef41db7a6f3cc8ac2cd7c9c8a23b436e4c"
+      "url": "https://github.com/jd-opensource/xllm/commit/1cccc2ef41db7a6f3cc8ac2cd7c9c8a23b436e4c",
+      "aiSummary": {
+        "zh": "本次提交修复了主单元测试失败的问题，涉及批处理输入构建和深度搜索缓存实现两个文件，确保测试能够通过。测试重点关注单元测试的正确执行。",
+        "en": "This commit fixes failures in the main unit tests by modifying batch input builder and deepseek cache implementation files, ensuring tests pass. The focus is on verifying successful unit test execution.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:14.430Z"
+      }
     },
     {
       "sha": "7a65e660a40dc2868e0d0a2a1a9f4b396d9f5eb7",
@@ -39959,7 +40304,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7a65e660a40dc2868e0d0a2a1a9f4b396d9f5eb7"
+      "url": "https://github.com/jd-opensource/xllm/commit/7a65e660a40dc2868e0d0a2a1a9f4b396d9f5eb7",
+      "aiSummary": {
+        "zh": "本次提交新增了对图预捕获阶段解码预热的支持，涉及图运行时和分布式运行时模块，影响Ascend平台。测试应关注预热功能的正确性及对图执行性能的影响。",
+        "en": "This commit adds support for decode warmup during graph pre-capture, affecting the Graph Runtime and distributed runtime modules, with impact on the Ascend platform. Testing should focus on the correctness of the warmup feature and its effect on graph execution performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:18.366Z"
+      }
     },
     {
       "sha": "402c7570f6a316027afd8b2e46ebc2d371792224",
@@ -39991,7 +40342,13 @@
         "bugfix",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/402c7570f6a316027afd8b2e46ebc2d371792224"
+      "url": "https://github.com/jd-opensource/xllm/commit/402c7570f6a316027afd8b2e46ebc2d371792224",
+      "aiSummary": {
+        "zh": "本次提交修复了 SetQueue 成员变量的初始化顺序，调整了 xllm/core/scheduler/request_priority_queue.h 文件，确保初始化依赖正确。影响推理引擎模块，测试应关注初始化顺序是否正确及相关功能是否正常。",
+        "en": "This commit fixes the initialization order of SetQueue members by reordering them in xllm/core/scheduler/request_priority_queue.h to match dependency requirements. It impacts the Inference Engine module, with testing focused on correct initialization and related functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-06T19:39:21.739Z"
+      }
     },
     {
       "sha": "6d14210c9ed3eaac6586781d2118329bbd75792e",
