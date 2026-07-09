@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T19:04:50.540Z",
+  "generatedAt": "2026-07-09T19:20:16.944Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1148,
+    "commits": 1149,
     "contributors": 101,
-    "additions": 569658,
-    "deletions": 140512,
-    "filesChanged": 16552,
+    "additions": 571172,
+    "deletions": 140737,
+    "filesChanged": 16590,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-08",
+    "latestDate": "2026-07-09",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 400
+        "count": 401
       },
       {
         "key": "NPU Backend",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 427
+        "count": 428
       },
       {
         "key": "bugfix",
@@ -429,7 +429,8 @@
     "2026-07-05",
     "2026-07-06",
     "2026-07-07",
-    "2026-07-08"
+    "2026-07-08",
+    "2026-07-09"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -770,6 +771,268 @@
     }
   },
   "commits": [
+    {
+      "sha": "56b6a6528a396547bd846505bac99e4270a366f4",
+      "parents": [
+        "8bc5a0d3358db3e816a591c6d19d471af96e2835"
+      ],
+      "pr": "1878",
+      "date": "2026-07-09T09:53:34+08:00",
+      "dateKey": "2026-07-09",
+      "author": {
+        "name": "WenQ7",
+        "email": "136597310+WenQ7@users.noreply.github.com"
+      },
+      "title": "feat: add qwen image edit dcu batch support. (#1878)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1514,
+      "deletions": 225,
+      "filesChanged": 38,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.cpp",
+          "additions": 17,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.h",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server_process.cpp",
+          "additions": 18,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 14,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/dit_batch.cpp",
+          "additions": 28,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/dit_model_loader.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/cuda_process_group.h",
+          "additions": 25,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/dit_collective_communicator.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/process_group.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/process_group.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/dit_request_state.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/attention_metadata.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/attention_metadata_builder.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/qwen2_vision_attention.cpp",
+          "additions": 18,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/flash_attention.cpp",
+          "additions": 183,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/flash_attention.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/torch_attention.cpp",
+          "additions": 51,
+          "deletions": 43,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/torch_attention.h",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dit_forward_params.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_manager.cpp",
+          "additions": 90,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/dit_scheduler.cpp",
+          "additions": 100,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/dit_scheduler.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/tensor_helper.h",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/dit/autoencoders/autoencoder_kl_qwenimage.h",
+          "additions": 28,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/autoencoders/autoencoder_kl_wan.h",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_longcat_image.h",
+          "additions": 19,
+          "deletions": 16,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_longcat_image_edit.h",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_qwenimage_edit_plus.h",
+          "additions": 626,
+          "deletions": 72,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_wan_i2v.h",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/processors/vae_image_processor.h",
+          "additions": 11,
+          "deletions": 6,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_qwen_image.h",
+          "additions": 133,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_wan.h",
+          "additions": 36,
+          "deletions": 4,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/sequence_parallel_pad_manager.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/models.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/vlm/qwen2_5_vl.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/processors/qwen2_vl_image_processor.cpp",
+          "additions": 9,
+          "deletions": 3,
+          "module": "xllm/processors"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/56b6a6528a396547bd846505bac99e4270a366f4",
+      "aiSummary": {
+        "zh": "本次提交新增了对qwen图像编辑DCU批处理的支持，涉及Graph和Runtime模块，修改了38个文件，增加了大量代码。测试重点应关注分布式运行时的稳定性和批处理功能的正确性，特别是在Ascend硬件上的表现。",
+        "en": "This commit adds batch support for qwen image edit DCU, affecting the Graph and Runtime modules with changes across 38 files and significant code additions. Testing should focus on the stability of the distributed runtime and correctness of batch processing, especially on Ascend hardware.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:41.932Z"
+      }
+    },
     {
       "sha": "8bc5a0d3358db3e816a591c6d19d471af96e2835",
       "parents": [
@@ -45260,7 +45523,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d1fdb47c5f625a162fdf99646d14df3992213ba0"
+      "url": "https://github.com/jd-opensource/xllm/commit/d1fdb47c5f625a162fdf99646d14df3992213ba0",
+      "aiSummary": {
+        "zh": "本次提交重构了图计算和运行时模块，移除了原始的前向输入传输路径，涉及多个分布式运行时相关文件，影响较大且风险较高。测试重点在批处理框架的相关测试用例，确保改动不会影响分布式通信和计算流程。",
+        "en": "This commit refactors the Graph and Runtime modules by removing the raw forward input transport path, affecting multiple distributed runtime files with high risk. Testing focuses on batch framework test cases to ensure distributed communication and computation remain stable.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:44.493Z"
+      }
     },
     {
       "sha": "c35e912c8f559273eb815fc62fb7556ae8637b89",
@@ -45912,7 +46181,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c35e912c8f559273eb815fc62fb7556ae8637b89"
+      "url": "https://github.com/jd-opensource/xllm/commit/c35e912c8f559273eb815fc62fb7556ae8637b89",
+      "aiSummary": {
+        "zh": "本次提交重构并优化了前向输入设备视图，涉及图计算和运行时模块，影响Ascend设备相关功能。测试重点覆盖了多种设备和执行环境的图执行器及输入构建，确保性能提升和功能稳定。",
+        "en": "This commit refactors and optimizes forward input device views within the Graph and Runtime modules, impacting Ascend device functionality. Tests focus on various device and execution environments' graph executors and input builders to ensure performance improvements and stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:46.813Z"
+      }
     },
     {
       "sha": "a65b49faae2bd116aecc1416c4b8db400bd4ba2e",
@@ -46024,7 +46299,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a65b49faae2bd116aecc1416c4b8db400bd4ba2e"
+      "url": "https://github.com/jd-opensource/xllm/commit/a65b49faae2bd116aecc1416c4b8db400bd4ba2e",
+      "aiSummary": {
+        "zh": "本次提交修复了QwenImageEdit模块中的精度问题，涉及NPU后端相关代码，影响Ascend平台。测试应重点关注图像编辑功能的精度和稳定性。",
+        "en": "This commit fixes a precision issue in the QwenImageEdit module within the NPU backend, affecting the Ascend platform. Testing should focus on the accuracy and stability of the image editing functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:48.599Z"
+      }
     },
     {
       "sha": "90e0f93da985dc196c03e59e6c26902a781af389",
@@ -46062,7 +46343,13 @@
         "refactor",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/90e0f93da985dc196c03e59e6c26902a781af389"
+      "url": "https://github.com/jd-opensource/xllm/commit/90e0f93da985dc196c03e59e6c26902a781af389",
+      "aiSummary": {
+        "zh": "本次提交在xllm/core模块的chat-template中，将抛出异常的方式改为使用LOG记录，涉及两个模板文件，测试时需关注日志输出和异常处理行为。",
+        "en": "This refactor replaces throw statements with LOG calls in chat-template files within the xllm/core module, affecting two template files; testing should focus on log outputs and exception handling behavior.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:50.900Z"
+      }
     },
     {
       "sha": "ac2ff328c379d98dc4e9537e87eec5b63fc70813",
@@ -46100,7 +46387,13 @@
         "bugfix",
         "device-backend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ac2ff328c379d98dc4e9537e87eec5b63fc70813"
+      "url": "https://github.com/jd-opensource/xllm/commit/ac2ff328c379d98dc4e9537e87eec5b63fc70813",
+      "aiSummary": {
+        "zh": "本次提交修复了MLU层的单元测试相关问题，涉及设备后端模块。重点测试了相关层的正确性，确保测试用例通过。",
+        "en": "This commit fixes unit test issues in the MLU layer within the device backend module. Testing focused on verifying the correctness of the affected layers to ensure test cases pass.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:53.056Z"
+      }
     },
     {
       "sha": "dbd1357ab287500a5671a4945d5f2b2fc9397e46",
@@ -46132,7 +46425,13 @@
         "bugfix",
         "device-backend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/dbd1357ab287500a5671a4945d5f2b2fc9397e46"
+      "url": "https://github.com/jd-opensource/xllm/commit/dbd1357ab287500a5671a4945d5f2b2fc9397e46",
+      "aiSummary": {
+        "zh": "本次提交修复了MLU设备后端构建中断的问题，修改集中在kv_cache_shape.cpp文件。测试应关注设备后端的构建和相关功能的正确性。",
+        "en": "This commit fixes a build break issue for the MLU device backend, with changes made in the kv_cache_shape.cpp file. Testing should focus on the device backend build process and related functionality correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:55.698Z"
+      }
     },
     {
       "sha": "30c0217728bcc019b8d2851600c549594c78ab65",
@@ -46207,7 +46506,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/30c0217728bcc019b8d2851600c549594c78ab65"
+      "url": "https://github.com/jd-opensource/xllm/commit/30c0217728bcc019b8d2851600c549594c78ab65",
+      "aiSummary": {
+        "zh": "本次提交新增了对 deepseek_v4 模型的 C++ 聊天模板支持，涉及模型支持模块，修改了多个相关源代码和测试文件。测试重点在于验证新模板的功能正确性和兼容性。",
+        "en": "This commit adds C++ chat template support for the deepseek_v4 model within the model support module, modifying multiple source and test files. Testing focuses on verifying the functionality and compatibility of the new template.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:19:58.408Z"
+      }
     },
     {
       "sha": "284e421b08659217f1e4b6198278eccafa08fb7d",
@@ -46312,7 +46617,13 @@
         "docs-en",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/284e421b08659217f1e4b6198278eccafa08fb7d"
+      "url": "https://github.com/jd-opensource/xllm/commit/284e421b08659217f1e4b6198278eccafa08fb7d",
+      "aiSummary": {
+        "zh": "本次提交新增了对 beam search 默认 top logprob 参数的支持，涉及文档、示例代码及核心请求参数模块，测试重点为请求参数的正确性和功能完整性。",
+        "en": "This commit adds support for beam search default top logprob parameters, affecting documentation, example scripts, and core request parameter modules, with tests focusing on parameter correctness and feature completeness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:00.169Z"
+      }
     },
     {
       "sha": "300e5e2a24e52647d0502ea60e9e15db8977ef9b",
@@ -46369,7 +46680,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/300e5e2a24e52647d0502ea60e9e15db8977ef9b"
+      "url": "https://github.com/jd-opensource/xllm/commit/300e5e2a24e52647d0502ea60e9e15db8977ef9b",
+      "aiSummary": {
+        "zh": "本次提交在离线推理模块中新增了对推测解码的支持，涉及分布式运行时的多个文件，重点测试推测解码功能的正确性及对Ascend平台的影响。",
+        "en": "This commit adds support for speculative decoding in offline inference, affecting multiple files in the distributed runtime module; testing should focus on the correctness of speculative decoding and its impact on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:02.135Z"
+      }
     },
     {
       "sha": "d56208c3534244de9972eac2fa75127ef057a9f8",
@@ -46438,7 +46755,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d56208c3534244de9972eac2fa75127ef057a9f8"
+      "url": "https://github.com/jd-opensource/xllm/commit/d56208c3534244de9972eac2fa75127ef057a9f8",
+      "aiSummary": {
+        "zh": "本次提交更新了针对Qwen3-Next和Qwen3.5型号NPU的conv1d_fn算子，涉及Graph和Runtime模块，修改了7个文件。测试重点应关注算子在NPU上的正确性和性能表现。",
+        "en": "This commit updates the conv1d_fn operator for Qwen3-Next and Qwen3.5 NPUs, affecting the Graph and Runtime modules across 7 files. Testing should focus on operator correctness and performance on the NPU.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:04.680Z"
+      }
     },
     {
       "sha": "2413a41965dd50133825c62e4d61235acc7f1629",
@@ -46488,7 +46811,13 @@
         "bugfix",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2413a41965dd50133825c62e4d61235acc7f1629"
+      "url": "https://github.com/jd-opensource/xllm/commit/2413a41965dd50133825c62e4d61235acc7f1629",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.6权重调整重复执行的问题，涉及xllm/core模块的多个文件。测试应关注权重调整的正确性及重复执行是否被有效防止。",
+        "en": "This commit fixes the issue of repeated weight adjustment in qwen3.6, affecting multiple files in the xllm/core module. Testing should focus on verifying correct weight adjustment and ensuring no repeated execution occurs.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:07.632Z"
+      }
     },
     {
       "sha": "32b7a1a4c51d3bf57632540b223beb99b7474282",
@@ -46564,7 +46893,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/32b7a1a4c51d3bf57632540b223beb99b7474282"
+      "url": "https://github.com/jd-opensource/xllm/commit/32b7a1a4c51d3bf57632540b223beb99b7474282",
+      "aiSummary": {
+        "zh": "本次提交重构了离线参数，使其与在线gflags保持一致，涉及Graph和Runtime模块，影响Ascend平台。测试应关注参数传递的正确性及兼容性。",
+        "en": "This refactor aligns offline arguments with online gflags, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing should focus on correct argument passing and compatibility.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:09.316Z"
+      }
     },
     {
       "sha": "2a45d69610bae59ae233690ead2d1cb5a979981f",
@@ -46682,7 +47017,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2a45d69610bae59ae233690ead2d1cb5a979981f"
+      "url": "https://github.com/jd-opensource/xllm/commit/2a45d69610bae59ae233690ead2d1cb5a979981f",
+      "aiSummary": {
+        "zh": "本次提交新增了对远程MTP引导以支持PD MLU解码的功能，涉及Spec Decode模块，影响Ascend平台。测试重点在于验证远程引导功能的正确性及相关缓存传输的稳定性。",
+        "en": "This commit adds support for remote MTP bootstrap for PD MLU decode in the Spec Decode module, affecting the Ascend platform. Testing focuses on verifying the correctness of remote bootstrap functionality and stability of related cache transfers.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:12.053Z"
+      }
     },
     {
       "sha": "c31d2300ad8a313306f8dbc74a27729eb0abd54a",
@@ -46740,7 +47081,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c31d2300ad8a313306f8dbc74a27729eb0abd54a"
+      "url": "https://github.com/jd-opensource/xllm/commit/c31d2300ad8a313306f8dbc74a27729eb0abd54a",
+      "aiSummary": {
+        "zh": "本次提交重构了NPU后端量化操作，使用已有的aclnn辅助函数替代了大量旧代码，影响Ascend平台相关功能，测试需关注量化操作的正确性和性能表现。",
+        "en": "This refactor replaces existing NPU quantization operations with the aclnn helper, significantly reducing code in the NPU backend and affecting Ascend platform functionality; testing should focus on correctness and performance of quantization operations.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-09T19:20:14.686Z"
+      }
     },
     {
       "sha": "118c8e4a0e0f4e176a29be249f64c0201500f309",
