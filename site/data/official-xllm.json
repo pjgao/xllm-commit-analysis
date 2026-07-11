@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T19:14:48.998Z",
+  "generatedAt": "2026-07-11T18:43:54.938Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -785,6 +785,62 @@
       "commitCount": 2,
       "model": "openai/gpt-4.1-mini",
       "generatedAt": "2026-07-10T19:14:48.995Z"
+    },
+    "2026-07-09": {
+      "zh": "今日主要研发方向是新增qwen图像编辑DCU批处理支持，涉及Graph和Runtime模块。此次改动风险较高，特别影响Ascend硬件平台。测试重点需关注分布式运行时的稳定性及批处理功能的正确性。",
+      "en": "Today's development focused on adding batch support for qwen image edit DCU, impacting the Graph and Runtime modules. The changes are high risk, especially affecting the Ascend hardware platform. Testing should emphasize the stability of the distributed runtime and the correctness of batch processing.",
+      "signature": "56b6a6528a396547bd846505bac99e4270a366f4",
+      "commitCount": 1,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:32.235Z"
+    },
+    "2026-07-08": {
+      "zh": "今日研发重点涵盖xllm/core、NPU后端、设备后端及推理引擎模块，新增VAE并行、RainFusion稀疏注意力及MLU设备Triton JIT编译支持。设备后端的MLU支持为高风险改动，测试需重点验证相关内核功能的正确性，同时关注NPU后端CI超时问题的修复及新功能的性能表现。",
+      "en": "Today's development focused on xllm/core, NPU backend, device backend, and inference engine modules, introducing VAE parallelism, RainFusion sparse attention, and Triton JIT compiling support for MLU devices. The MLU support in the device backend is a high-risk change, requiring thorough testing of kernel functionality correctness. Additionally, testing should verify the NPU backend CI timeout fix and the performance of new features.",
+      "signature": "16070829cc1f0735f96c2abf452c05556422d8c5,5910d663dbe655e567264218c592155a681ad167,8bc5a0d3358db3e816a591c6d19d471af96e2835,c2d50784a0bc2bae69cef607302e402d745fcbee,f57f35a28b5070ab758ef4c8f02f0bb6bdd84bcd",
+      "commitCount": 5,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:36.032Z"
+    },
+    "2026-05-14": {
+      "zh": "今日研发主要聚焦于Graph/Runtime、xllm/core及Spec Decode模块，完成了多项功能新增和问题修复。重点更新了针对Qwen3系列NPU的conv1d_fn算子，支持远程MTP引导以优化PD MLU解码，并修复了qwen3.6权重调整重复执行的问题。测试需重点关注算子性能与正确性、权重调整的准确性及远程引导功能的稳定性，整体风险较低。",
+      "en": "Today's development focused on the Graph/Runtime, xllm/core, and Spec Decode modules, delivering new features and bug fixes. Key updates include the conv1d_fn operator for Qwen3 NPUs, support for remote MTP bootstrap in PD MLU decode, and a fix for repeated weight adjustment in qwen3.6. Testing should emphasize operator correctness and performance, accurate weight adjustment, and stability of remote bootstrap functionality, with overall low risk.",
+      "signature": "2413a41965dd50133825c62e4d61235acc7f1629,2a45d69610bae59ae233690ead2d1cb5a979981f,32b7a1a4c51d3bf57632540b223beb99b7474282,d56208c3534244de9972eac2fa75127ef057a9f8",
+      "commitCount": 4,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:39.004Z"
+    },
+    "2026-05-13": {
+      "zh": "今日研发主要聚焦于NPU后端模块，新增对Ascend量化、多节点执行及ACLNN exec_cmd的支持，同时重构了量化操作以提升代码质量。Graph/Runtime模块修复了非NPU构建中辅助函数暴露的问题。高风险变更涉及NPU后端，测试重点关注多节点通信、量化功能的正确性及性能表现，以及非NPU环境下辅助函数的功能验证。",
+      "en": "Today's development focused on the NPU backend, adding support for Ascend quantization, multinode execution, and ACLNN exec_cmd, alongside refactoring quantization operations to improve code quality. A bugfix was applied to the Graph/Runtime module to expose helper functions in non-NPU builds. High-risk changes are in the NPU backend, with testing focusing on multinode communication, quantization correctness and performance, and verifying helper functions in non-NPU environments.",
+      "signature": "118c8e4a0e0f4e176a29be249f64c0201500f309,361ac0df85a0da952a9dd317ff30610d84c31bb8,c31d2300ad8a313306f8dbc74a27729eb0abd54a",
+      "commitCount": 3,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:43.158Z"
+    },
+    "2026-05-12": {
+      "zh": "当天研发主要聚焦于Graph / Runtime模块，新增了onerec xattn的beam search和融合rec_constrained_topk_sampler以支持约束解码，涉及高风险改动。其他重要模块包括Device Backend、xllm/core和NPU Backend，分别修复了CUDA设备预填充错误、离线推理tp错误及日志重构。测试重点关注Ascend平台的功能正确性和性能表现，以及多设备的兼容性和日志输出准确性。",
+      "en": "Today's development focused on the Graph / Runtime module, adding onerec xattn beam search and a fused rec_constrained_topk_sampler for constrained decoding, involving high-risk changes. Other key modules include Device Backend, xllm/core, and NPU Backend, addressing CUDA prefill errors, offline inference tp bugs, and logging refactoring. Testing should emphasize correctness and performance on the Ascend platform, multi-device compatibility, and accurate log outputs.",
+      "signature": "0c0c2d12a578513f003a7a34f2968638f22f3b7f,450d5a782bbf310a41b4aa5ed82de6543d99f809,7d3bee351b2afc15c553e1f26953bd5e8cb98287,822be03c13e45032b0e1d06a1c764902952a2c8d,bbfb79cd02f458ef38c8f6317becf6bbb5ffff6a,dd81802f0a39a09534fdb7f2bf06d825d7db2240,e8cc53cf1a75c025ab98b0f8ca17d562efdfa991",
+      "commitCount": 7,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:47.721Z"
+    },
+    "2026-05-09": {
+      "zh": "今日研发主要聚焦于MLU后端qwen3.5模型支持、推理引擎的分块预填充功能以及图计算与运行时模块的构建修复。重要模块包括模型支持、推理引擎和图/运行时。风险点在于新模型的高风险改动和推理引擎的中风险更新，测试需重点验证新模型功能性能、分块预填充调度器行为及构建链接的成功性。",
+      "en": "Today's development focused on adding qwen3.5 model support for the MLU backend, implementing chunked prefill in the inference engine, and fixing build issues in the graph/runtime modules. Key modules involved are Model Support, Inference Engine, and Graph/Runtime. Risks include high-risk changes in the new model and medium-risk updates in the inference engine; testing should emphasize verifying model functionality and performance, chunked prefill scheduler behavior, and successful build and linkage.",
+      "signature": "7ea3b4b856c9e4fc598cade2d8dbc900723c8027,bb7131192c537c27b9d7f65640fa6be581792aa8,f322025c18bfe05552baa89f9da44c752555f6d0",
+      "commitCount": 3,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:51.460Z"
+    },
+    "2026-05-08": {
+      "zh": "今日主要研发方向为NPU设备的onerec xattention功能开发及torch_npu 2.9.0版本支持，涉及Graph / Runtime和NPU Backend两个重要模块。此次更新包含高风险改动，重点关注新功能在NPU设备上的正确性、性能表现及NPU功能兼容性和构建脚本的正确性。测试需覆盖相关模块的功能验证和性能测试，确保Ascend平台稳定性。",
+      "en": "Today's development focused on adding onerec xattention support for NPU devices and supporting torch_npu 2.9.0, involving the Graph / Runtime and NPU Backend modules. The updates include high-risk changes, with testing emphasis on correctness and performance of the new feature on NPU devices, as well as compatibility and build script accuracy. Testing should cover functionality verification and performance to ensure stability on the Ascend platform.",
+      "signature": "33d18521b9da593f911e66f30e7fc7b632301f8d,f9a111c43d404d69b15937542339439277d6ec11",
+      "commitCount": 2,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-11T18:43:54.936Z"
     }
   },
   "commits": [
@@ -48687,7 +48743,13 @@
         "inference-engine",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7ea3b4b856c9e4fc598cade2d8dbc900723c8027"
+      "url": "https://github.com/jd-opensource/xllm/commit/7ea3b4b856c9e4fc598cade2d8dbc900723c8027",
+      "aiSummary": {
+        "zh": "本次提交新增了对mlu pd的分块预填充支持，涉及推理引擎模块，修改了16个文件并新增多项测试用例以验证功能正确性。测试重点关注分块预填充调度器的行为和批处理输入构建。",
+        "en": "This commit adds support for chunked prefill for mlu pd in the inference engine module, modifying 16 files and adding multiple tests. Testing focuses on the chunked prefill scheduler behavior and batch input building.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:42:51.496Z"
+      }
     },
     {
       "sha": "bb7131192c537c27b9d7f65640fa6be581792aa8",
@@ -48720,7 +48782,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/bb7131192c537c27b9d7f65640fa6be581792aa8"
+      "url": "https://github.com/jd-opensource/xllm/commit/bb7131192c537c27b9d7f65640fa6be581792aa8",
+      "aiSummary": {
+        "zh": "修复了调度器与分布式运行时链接失败的问题，影响图计算和运行时模块，测试应关注构建和链接是否成功。",
+        "en": "Fixed build failure linking the scheduler with the distributed runtime, affecting the Graph and Runtime modules; testing should focus on successful build and linkage.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:42:53.336Z"
+      }
     },
     {
       "sha": "33d18521b9da593f911e66f30e7fc7b632301f8d",
@@ -48955,7 +49023,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f9a111c43d404d69b15937542339439277d6ec11"
+      "url": "https://github.com/jd-opensource/xllm/commit/f9a111c43d404d69b15937542339439277d6ec11",
+      "aiSummary": {
+        "zh": "本次提交支持了torch_npu 2.9.0版本，涉及NPU后端相关代码和文档的更新，影响Ascend平台。测试时需重点验证NPU功能兼容性和构建脚本的正确性。",
+        "en": "This commit adds support for torch_npu 2.9.0, updating NPU backend code and related documentation, affecting the Ascend platform. Testing should focus on NPU functionality compatibility and build script correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:42:55.252Z"
+      }
     },
     {
       "sha": "9601ca5a6b48ff06fcf3944c4a0455e520fbcce0",
@@ -48987,7 +49061,13 @@
         "bugfix",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/9601ca5a6b48ff06fcf3944c4a0455e520fbcce0"
+      "url": "https://github.com/jd-opensource/xllm/commit/9601ca5a6b48ff06fcf3944c4a0455e520fbcce0",
+      "aiSummary": {
+        "zh": "本次提交修复了本地绑定地址解析的问题，影响范围为xllm/core模块中的网络工具代码。测试应关注本地地址绑定的正确性和网络连接的稳定性。",
+        "en": "This commit fixes the resolution of local bind addresses in the xllm/core module's network utility code. Testing should focus on the correctness of local address binding and network connection stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:42:56.619Z"
+      }
     },
     {
       "sha": "1c312972a8006cbf81c2b8ab37b0a9881916e3f2",
@@ -49069,7 +49149,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1c312972a8006cbf81c2b8ab37b0a9881916e3f2"
+      "url": "https://github.com/jd-opensource/xllm/commit/1c312972a8006cbf81c2b8ab37b0a9881916e3f2",
+      "aiSummary": {
+        "zh": "本次提交重构并优化了推测解码模块的速度，涉及多个核心运行时和缓存相关文件，影响Ascend平台性能。测试重点在于验证推测解码的性能提升和缓存机制的正确性。",
+        "en": "This commit refactors and optimizes the speed of the speculative decoding module, affecting multiple core runtime and cache-related files, with impact on Ascend platform performance. Testing focuses on verifying performance improvements and correctness of the caching mechanism.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:42:58.301Z"
+      }
     },
     {
       "sha": "1e2fcd16b0bf4ec77c19f3d3cf97eae2972f6c2e",
@@ -49967,7 +50053,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1e2fcd16b0bf4ec77c19f3d3cf97eae2972f6c2e"
+      "url": "https://github.com/jd-opensource/xllm/commit/1e2fcd16b0bf4ec77c19f3d3cf97eae2972f6c2e",
+      "aiSummary": {
+        "zh": "本次提交将所有单元测试代码迁移至 tests 目录，并新增了单元测试技能，涉及 Graph 和 Runtime 模块，影响范围较大且风险较高，测试重点关注迁移后的测试用例完整性及新增技能的有效性。",
+        "en": "This commit refactors by moving all unit tests to the tests directory and adds a unit test skill, impacting the Graph and Runtime modules. The focus is on ensuring the completeness of migrated tests and the effectiveness of the new testing skill.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:00.144Z"
+      }
     },
     {
       "sha": "b3b576c753c4b56bd0fda101b84a454a5ec420aa",
@@ -50005,7 +50097,13 @@
         "feature",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b3b576c753c4b56bd0fda101b84a454a5ec420aa"
+      "url": "https://github.com/jd-opensource/xllm/commit/b3b576c753c4b56bd0fda101b84a454a5ec420aa",
+      "aiSummary": {
+        "zh": "本次提交在模型支持模块中，新增了将vlm工具和聊天模板的关键字参数传递到提示渲染的功能，修改了相关代码并增加了测试用例。测试重点是确保参数正确传递和提示渲染的准确性。",
+        "en": "This commit adds the feature to pass vlm tools and chat template kwargs to prompt rendering in the Model Support module, modifying relevant code and adding test cases. Testing focuses on verifying correct parameter passing and prompt rendering accuracy.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:02.408Z"
+      }
     },
     {
       "sha": "a153b740f51bc85073eee7936fad21f15d7ef123",
@@ -50098,7 +50196,13 @@
         "xllm-api-service",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a153b740f51bc85073eee7936fad21f15d7ef123"
+      "url": "https://github.com/jd-opensource/xllm/commit/a153b740f51bc85073eee7936fad21f15d7ef123",
+      "aiSummary": {
+        "zh": "本次提交支持了REC扩展项目信息的解析及响应输出，涉及xllm/api_service模块的多个文件，影响范围中等。测试应关注扩展信息解析的准确性及响应输出的正确性。",
+        "en": "This commit adds support for parsing and responding with REC extended item information, affecting multiple files in the xllm/api_service module with medium impact. Testing should focus on the accuracy of extended info parsing and correctness of response output.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:04.115Z"
+      }
     },
     {
       "sha": "b2e7f008e5c888303df9392a4621063bdd5574db",
@@ -50166,7 +50270,13 @@
         "feature",
         "device-backend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b2e7f008e5c888303df9392a4621063bdd5574db"
+      "url": "https://github.com/jd-opensource/xllm/commit/b2e7f008e5c888303df9392a4621063bdd5574db",
+      "aiSummary": {
+        "zh": "本次提交为MLU设备添加了自动NUMA绑定功能，涉及设备后端模块的多个文件修改。测试应关注NUMA绑定的正确性及对分布式运行时性能的影响。",
+        "en": "This commit adds automatic NUMA binding for MLU devices, modifying multiple files in the device backend module. Testing should focus on the correctness of NUMA binding and its impact on distributed runtime performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:05.888Z"
+      }
     },
     {
       "sha": "b2b3d592f9212806b0c25ccb83c1d58431b0a18a",
@@ -50199,7 +50309,13 @@
         "xllm-core",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b2b3d592f9212806b0c25ccb83c1d58431b0a18a"
+      "url": "https://github.com/jd-opensource/xllm/commit/b2b3d592f9212806b0c25ccb83c1d58431b0a18a",
+      "aiSummary": {
+        "zh": "修复了qwen3.5模型在gdn解码过程中qkvz的reshape问题，影响xllm/core模块，重点测试Ascend平台上的相关功能。",
+        "en": "Fixed the qkvz reshape issue during gdn decoding in the qwen3.5 model, affecting the xllm/core module; testing should focus on functionality on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:07.673Z"
+      }
     },
     {
       "sha": "8a88d41fd3632811090f182e9e760cb6075d3b74",
@@ -50238,7 +50354,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8a88d41fd3632811090f182e9e760cb6075d3b74"
+      "url": "https://github.com/jd-opensource/xllm/commit/8a88d41fd3632811090f182e9e760cb6075d3b74",
+      "aiSummary": {
+        "zh": "本次提交修复了qwen3.5 tilelang中gdn gating的bug，影响Ascend平台的NPU后端。测试重点验证了修复后的功能正确性。",
+        "en": "This commit fixes a bug in qwen3.5 tilelang GDN gating affecting the NPU backend on Ascend platform. Testing focused on verifying the correctness of the fix.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:09.431Z"
+      }
     },
     {
       "sha": "7e596f9baa38d63f7a62d0b22347953f9d61ff10",
@@ -50296,7 +50418,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7e596f9baa38d63f7a62d0b22347953f9d61ff10"
+      "url": "https://github.com/jd-opensource/xllm/commit/7e596f9baa38d63f7a62d0b22347953f9d61ff10",
+      "aiSummary": {
+        "zh": "本次提交重构了REC运行时标志的配置方式，将其从C API初始化选项中设置，影响Graph和Runtime模块，测试需关注Ascend平台上的兼容性和功能正确性。",
+        "en": "This commit refactors the configuration of REC runtime flags to be set from C API initialization options, affecting the Graph and Runtime modules; testing should focus on compatibility and correctness on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:11.398Z"
+      }
     },
     {
       "sha": "c5a1c85e4b87dfc73bdcaa2e0e5db1178c95bfd9",
@@ -50366,7 +50494,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c5a1c85e4b87dfc73bdcaa2e0e5db1178c95bfd9"
+      "url": "https://github.com/jd-opensource/xllm/commit/c5a1c85e4b87dfc73bdcaa2e0e5db1178c95bfd9",
+      "aiSummary": {
+        "zh": "本次提交将NPU ACLNN内核迁移至pytorch_npu辅助模块，涉及7个文件，新增901行代码，删除269行，影响Ascend平台的NPU后端。测试应关注迁移后内核功能的正确性和性能表现。",
+        "en": "This commit refactors NPU ACLNN kernels by migrating them to the pytorch_npu helper, modifying 7 files with 901 additions and 269 deletions, impacting the Ascend NPU backend. Testing should focus on kernel correctness and performance after migration.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:13.750Z"
+      }
     },
     {
       "sha": "aaa3ded9a350be1a65171071e52da74f8094608a",
@@ -50513,7 +50647,13 @@
         "inference-engine",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/aaa3ded9a350be1a65171071e52da74f8094608a"
+      "url": "https://github.com/jd-opensource/xllm/commit/aaa3ded9a350be1a65171071e52da74f8094608a",
+      "aiSummary": {
+        "zh": "本次提交新增了对异构MLU Mooncake推送PD的支持，主要涉及推理引擎中的kv_cache_transfer模块，修改了20个文件，新增了大量代码和测试用例，测试重点在于推送路径和拓扑守护的正确性和稳定性。",
+        "en": "This commit adds support for heterogeneous MLU Mooncake push PD in the inference engine, primarily affecting the kv_cache_transfer module with changes across 20 files. Testing focuses on the correctness and stability of push routing and topology guard functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:15.591Z"
+      }
     },
     {
       "sha": "82b8c2227aa9de53ae7b8f7359ce7db3cd098afa",
@@ -50551,7 +50691,13 @@
         "feature",
         "third-party-torch-npu-ops"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/82b8c2227aa9de53ae7b8f7359ce7db3cd098afa"
+      "url": "https://github.com/jd-opensource/xllm/commit/82b8c2227aa9de53ae7b8f7359ce7db3cd098afa",
+      "aiSummary": {
+        "zh": "本次提交在third_party/torch_npu_ops模块中移除了qwen3.5模型layer_norm中的类型转换，修改涉及两个文件，主要影响模型的归一化计算。测试应关注layer_norm功能的正确性和性能表现。",
+        "en": "This commit removes the cast operation in layer_norm for the qwen3.5 model within the third_party/torch_npu_ops module, affecting two files. Testing should focus on verifying the correctness and performance of the layer_norm functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:17.531Z"
+      }
     },
     {
       "sha": "680eb686d88b8c46f49ac54c2d8ca451b41f7c8d",
@@ -50656,7 +50802,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/680eb686d88b8c46f49ac54c2d8ca451b41f7c8d"
+      "url": "https://github.com/jd-opensource/xllm/commit/680eb686d88b8c46f49ac54c2d8ca451b41f7c8d",
+      "aiSummary": {
+        "zh": "本次提交新增了对 deepseek_v32 模型的 C++ 聊天模板支持，涉及模型支持模块，修改了13个文件。测试重点在于验证新模板的功能正确性和稳定性。",
+        "en": "This commit adds C++ chat template support for the deepseek_v32 model within the Model Support module, modifying 13 files. Testing focuses on verifying the functionality and stability of the new chat template.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:19.638Z"
+      }
     },
     {
       "sha": "22ba449d257900cdc2c1ce8a847c822e11e3dad1",
@@ -50773,7 +50925,13 @@
         "moe",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/22ba449d257900cdc2c1ce8a847c822e11e3dad1"
+      "url": "https://github.com/jd-opensource/xllm/commit/22ba449d257900cdc2c1ce8a847c822e11e3dad1",
+      "aiSummary": {
+        "zh": "本次提交新增了对Qwen3-MoE模型在CUDA设备上的支持，涉及MoE模块的多处文件修改，影响模型推理性能和兼容性。测试重点应关注CUDA环境下MoE模型的正确性和性能表现。",
+        "en": "This commit adds support for the Qwen3-MoE model on CUDA devices, modifying multiple files in the MoE module, impacting model inference performance and compatibility. Testing should focus on correctness and performance of the MoE model in CUDA environments.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:22.124Z"
+      }
     },
     {
       "sha": "378f793bcdcce728c85e3417ef35f1a3798fd8d7",
@@ -50842,7 +51000,13 @@
         "testing",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/378f793bcdcce728c85e3417ef35f1a3798fd8d7"
+      "url": "https://github.com/jd-opensource/xllm/commit/378f793bcdcce728c85e3417ef35f1a3798fd8d7",
+      "aiSummary": {
+        "zh": "本次提交新增了xllm库的测试代码，涉及7个测试相关文件，主要用于CI流水线的测试验证，关注点为测试覆盖和稳定性。该改动属于高风险测试更新，影响测试模块。",
+        "en": "This commit adds test code for the xllm library across 7 test-related files, aimed at CI pipeline validation. The focus is on test coverage and stability, impacting the testing module with a high-risk test update.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:24.945Z"
+      }
     },
     {
       "sha": "7e106300655cbb63a784fb46561c9558b379f495",
@@ -50874,7 +51038,13 @@
         "chore",
         "license"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7e106300655cbb63a784fb46561c9558b379f495"
+      "url": "https://github.com/jd-opensource/xllm/commit/7e106300655cbb63a784fb46561c9558b379f495",
+      "aiSummary": {
+        "zh": "本次提交更新了 LICENSE 文件，使其与 Apache 2.0 模板保持一致，影响范围仅限于许可证文件，无需测试。",
+        "en": "This commit updates the LICENSE file to align with the Apache 2.0 template, affecting only the license documentation with no testing required.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:27.162Z"
+      }
     },
     {
       "sha": "be14834f1cbd5e1753b70136605c9410edf2cd10",
@@ -50938,7 +51108,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/be14834f1cbd5e1753b70136605c9410edf2cd10"
+      "url": "https://github.com/jd-opensource/xllm/commit/be14834f1cbd5e1753b70136605c9410edf2cd10",
+      "aiSummary": {
+        "zh": "本次提交在Graph/Runtime模块中新增了llm解码元数据更新的快速路径，提升性能，影响Ascend平台相关功能，测试重点为性能提升和功能正确性验证。",
+        "en": "This commit adds a fast path for LLM decode metadata update in the Graph/Runtime module, improving performance and affecting Ascend platform features; testing focuses on performance gains and correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-11T18:43:29.678Z"
+      }
     },
     {
       "sha": "e5a73dad1fb0af1efd91f6de98b4c592c44dc159",
