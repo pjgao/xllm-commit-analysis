@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T18:48:08.311Z",
+  "generatedAt": "2026-07-13T19:10:01.297Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1153,
+    "commits": 1162,
     "contributors": 101,
-    "additions": 572969,
-    "deletions": 141660,
-    "filesChanged": 16622,
+    "additions": 608791,
+    "deletions": 158777,
+    "filesChanged": 16989,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-10",
+    "latestDate": "2026-07-13",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 101,
-        "additions": 31267,
-        "deletions": 15255,
-        "files": 1646
+        "commits": 103,
+        "additions": 62461,
+        "deletions": 32007,
+        "files": 1942
       },
       {
         "name": "Zhiwei Liang",
@@ -32,10 +32,10 @@
       },
       {
         "name": "phantomlei",
-        "commits": 65,
-        "additions": 50666,
-        "deletions": 8014,
-        "files": 804
+        "commits": 68,
+        "additions": 51390,
+        "deletions": 8117,
+        "files": 827
       },
       {
         "name": "Yingxu Deng",
@@ -104,19 +104,19 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 401
+        "count": 402
       },
       {
         "key": "NPU Backend",
-        "count": 126
+        "count": 127
       },
       {
         "key": "Inference Engine",
-        "count": 99
+        "count": 100
       },
       {
         "key": "Model Support",
-        "count": 92
+        "count": 95
       },
       {
         "key": "xllm/core",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 63
+        "count": 66
       },
       {
         "key": "xllm/api_service",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 429
+        "count": 432
       },
       {
         "key": "bugfix",
-        "count": 350
+        "count": 352
       },
       {
         "key": "refactor",
@@ -166,11 +166,11 @@
       },
       {
         "key": "performance",
-        "count": 133
+        "count": 136
       },
       {
         "key": "other",
-        "count": 30
+        "count": 31
       },
       {
         "key": "docs",
@@ -431,7 +431,8 @@
     "2026-07-07",
     "2026-07-08",
     "2026-07-09",
-    "2026-07-10"
+    "2026-07-10",
+    "2026-07-13"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -873,9 +874,2518 @@
       "commitCount": 1,
       "model": "openai/gpt-4.1-mini",
       "generatedAt": "2026-07-12T18:48:08.309Z"
+    },
+    "2026-04-27": {
+      "zh": "今日研发重点集中在Graph和Runtime模块，新增了适用于qwen3.5系列的add_norm融合算子，并扩展了更多模型的手动加载器，涉及较大且高风险改动。Spec Decode模块也修复了NPU设备上的模型问题。测试需重点关注算子融合的正确性、加载器的兼容性与稳定性，以及Ascend设备上的性能表现。",
+      "en": "Today's development focused on the Graph and Runtime modules, introducing an add_norm fusion operator for qwen3.5 series and expanding manual model loaders with significant high-risk changes. The Spec Decode module also fixed issues on NPU devices. Testing should emphasize fusion correctness, loader compatibility and stability, and performance on Ascend devices.",
+      "signature": "1c274f403b7be46af7b4e025104e07e89b582a32,35f00cbae687e333d948bc7a4149e5e343d7c9d0,45d099dce4c3f8a0772c7724ce34924c79044fcd,9b40c2129fa920fd9b4cb21ca1746b297319080f,d30f9c7fb4be932613c790ce73b27097933902ed",
+      "commitCount": 5,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-13T19:10:00.744Z"
     }
   },
   "commits": [
+    {
+      "sha": "be633b0c2ad151f96cf838e1ca8967f3c7f2a16a",
+      "parents": [
+        "fd736c6311cecef1209c2c22a4e4571951fb5c42"
+      ],
+      "pr": "1935",
+      "date": "2026-07-13T17:38:45+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "docs: add new docs. (#1935)",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 31183,
+      "deletions": 0,
+      "filesChanged": 185,
+      "files": [
+        {
+          "filename": ".github/workflows/build_docs.yaml",
+          "additions": 50,
+          "deletions": 0,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/deploy_docs.yaml",
+          "additions": 59,
+          "deletions": 0,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": "docs/.gitignore",
+          "additions": 24,
+          "deletions": 0,
+          "module": "docs/.gitignore"
+        },
+        {
+          "filename": "docs/README.md",
+          "additions": 88,
+          "deletions": 0,
+          "module": "docs/README.md"
+        },
+        {
+          "filename": "docs/README_zh.md",
+          "additions": 84,
+          "deletions": 0,
+          "module": "docs/README_zh.md"
+        },
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 340,
+          "deletions": 0,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/package-lock.json",
+          "additions": 7301,
+          "deletions": 0,
+          "module": "docs/package-lock.json"
+        },
+        {
+          "filename": "docs/package.json",
+          "additions": 23,
+          "deletions": 0,
+          "module": "docs/package.json"
+        },
+        {
+          "filename": "docs/public/apple-touch-icon.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/favicon-16x16.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/favicon-32x32.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/favicon.ico",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/favicon.svg",
+          "additions": 13,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/icon-192.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/icon-512.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/public/site.webmanifest",
+          "additions": 18,
+          "deletions": 0,
+          "module": "docs/public"
+        },
+        {
+          "filename": "docs/src/assets/logo_with_llm.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/components/Favicons.astro",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/components/Head.astro",
+          "additions": 7,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/components/Header.astro",
+          "additions": 374,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/components/PageTitle.astro",
+          "additions": 182,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/components/SiteTitle.astro",
+          "additions": 42,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content.config.ts",
+          "additions": 7,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/async_schedule_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/eplb_architecture.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/fixed_steps_scheduler_orca.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_beam_search.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_integration_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_integration_architecture_en.svg",
+          "additions": 54,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_model_onerec.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_model_onetrans.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/generative_recommendation_overview.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/globalkvcache_architecture.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/graph_mode.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/logo.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/logo_with_llm.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/moe_eplevel1.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/moe_eplevel2.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/multi_streams_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/paged_attention_comparison.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/pd_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/piecewise_graph_diagram.svg",
+          "additions": 5558,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/service_arch.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/shared_vmm_mapping_diagram.svg",
+          "additions": 2474,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/wechat_qrcode.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xattention_kv_layout.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xattention_kv_layout_en.svg",
+          "additions": 82,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xattention_three_stage_pipeline.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xattention_three_stage_pipeline_en.svg",
+          "additions": 55,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xllm-ai-coding-workflow-en.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xllm-ai-coding-workflow-zh.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/assets/xllm_arch.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 285,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook.md",
+          "additions": 13,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models.md",
+          "additions": 16,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/deepseek/deepseek_r1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/deepseek/deepseek_v3.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/deepseek/deepseek_v3_1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/deepseek/deepseek_v3_2.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/deepseek/deepseek_v4.md",
+          "additions": 269,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_5.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_5v.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_6.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_6v.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_7.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_4_7_flash.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_5.md",
+          "additions": 536,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_5_1.md",
+          "additions": 6,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_5_2.md",
+          "additions": 6,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/kimi/kimi2.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/kimi/kimi2_5.md",
+          "additions": 300,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/minmax/minmax_m2_7.md",
+          "additions": 198,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/qwen/qwen2_5_vl.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/qwen/qwen3.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/qwen/qwen3_5.md",
+          "additions": 158,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/qwen/qwen3_next.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/qwen/qwen3_vl.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models.md",
+          "additions": 14,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models/flux/flux.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models/flux/flux2.md",
+          "additions": 517,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models/qwen_image/qwen_image.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models/wan/wan2_1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/generative_recommendation_design.md",
+          "additions": 1066,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/graph_mode_design.md",
+          "additions": 478,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/ai_coding_workflow.md",
+          "additions": 110,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/code_arch.md",
+          "additions": 31,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/online_profiling.md",
+          "additions": 106,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 399,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/async_schedule.md",
+          "additions": 30,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/chunked_scheduler.md",
+          "additions": 20,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/disagg_pd.md",
+          "additions": 87,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/eplb.md",
+          "additions": 33,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/flashcomm.md",
+          "additions": 124,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/global_kvcache.md",
+          "additions": 45,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/graph_mode.md",
+          "additions": 84,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/moe_params.md",
+          "additions": 28,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/mtp.md",
+          "additions": 323,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/multi_streams.md",
+          "additions": 30,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/multimodal.md",
+          "additions": 23,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/prefix_cache.md",
+          "additions": 35,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/xllm_service_overview.md",
+          "additions": 54,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/zero_evict_scheduler.md",
+          "additions": 20,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/launch_xllm.md",
+          "additions": 243,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/multi_machine.md",
+          "additions": 113,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/offline_service.md",
+          "additions": 43,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/online_service.md",
+          "additions": 266,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/quick_start.md",
+          "additions": 201,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/ascend_npu.md",
+          "additions": 100,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/cambricon_mlu.md",
+          "additions": 69,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/dcu.md",
+          "additions": 81,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/metax_maca.md",
+          "additions": 88,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/musa.md",
+          "additions": 84,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/nvidia_gpu.md",
+          "additions": 83,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/overview.md",
+          "additions": 24,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/index.md",
+          "additions": 49,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/supported_models.md",
+          "additions": 49,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 285,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook.md",
+          "additions": 13,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models.md",
+          "additions": 16,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/deepseek/deepseek_r1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/deepseek/deepseek_v3.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/deepseek/deepseek_v3_1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/deepseek/deepseek_v3_2.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/deepseek/deepseek_v4.md",
+          "additions": 269,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_5.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_5v.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_6.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_6v.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_7.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_4_7_flash.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_5.md",
+          "additions": 524,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_5_1.md",
+          "additions": 6,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_5_2.md",
+          "additions": 6,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/kimi/kimi2.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/kimi/kimi2_5.md",
+          "additions": 300,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/minmax/minmax_m2_7.md",
+          "additions": 198,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/qwen/qwen2_5_vl.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/qwen/qwen3.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/qwen/qwen3_5.md",
+          "additions": 158,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/qwen/qwen3_next.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/qwen/qwen3_vl.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models.md",
+          "additions": 14,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models/flux/flux.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models/flux/flux2.md",
+          "additions": 519,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models/qwen_image/qwen_image.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models/wan/wan2_1.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/generative_recommendation_design.md",
+          "additions": 1080,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/graph_mode_design.md",
+          "additions": 478,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/ai_coding_workflow.md",
+          "additions": 103,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/code_arch.md",
+          "additions": 30,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/online_profiling.md",
+          "additions": 105,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 399,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/async_schedule.md",
+          "additions": 33,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/chunked_scheduler.md",
+          "additions": 21,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/disagg_pd.md",
+          "additions": 79,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/eplb.md",
+          "additions": 39,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/flashcomm.md",
+          "additions": 124,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/global_kvcache.md",
+          "additions": 38,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/graph_mode.md",
+          "additions": 79,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/moe_params.md",
+          "additions": 22,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/mtp.md",
+          "additions": 154,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/multi_streams.md",
+          "additions": 29,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/multimodal.md",
+          "additions": 23,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/prefix_cache.md",
+          "additions": 36,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/xllm_service_overview.md",
+          "additions": 50,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/zero_evict_scheduler.md",
+          "additions": 21,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/launch_xllm.md",
+          "additions": 243,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/multi_machine.md",
+          "additions": 110,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/offline_service.md",
+          "additions": 44,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/online_service.md",
+          "additions": 266,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/quick_start.md",
+          "additions": 200,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/ascend_npu.md",
+          "additions": 100,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/cambricon_mlu.md",
+          "additions": 69,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/dcu.md",
+          "additions": 81,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/metax_maca.md",
+          "additions": 88,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/musa.md",
+          "additions": 84,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/nvidia_gpu.md",
+          "additions": 81,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/overview.md",
+          "additions": 24,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/index.md",
+          "additions": 61,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/supported_models.md",
+          "additions": 49,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/env.d.ts",
+          "additions": 21,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/pages/index.astro",
+          "additions": 23,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/plugins/rehypeSimpleIcons.mjs",
+          "additions": 86,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/styles/theme.css",
+          "additions": 229,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/tsconfig.json",
+          "additions": 5,
+          "deletions": 0,
+          "module": "docs/tsconfig.json"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/be633b0c2ad151f96cf838e1ca8967f3c7f2a16a",
+      "aiSummary": {
+        "zh": "本次提交新增了大量文档内容，涉及Spec Decode模块，影响范围广泛且风险较高，需重点验证文档构建和部署流程的正确性。测试应关注文档生成的完整性及相关自动化工作流的稳定性。",
+        "en": "This commit adds extensive new documentation related to the Spec Decode module, with a broad impact and high risk. Testing should focus on verifying the correctness of the documentation build and deployment workflows, ensuring completeness and stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:15.143Z"
+      }
+    },
+    {
+      "sha": "fd736c6311cecef1209c2c22a4e4571951fb5c42",
+      "parents": [
+        "57e679ea0f1c8c79adca41f9ab5aa9c060e86e0b"
+      ],
+      "pr": "1922",
+      "date": "2026-07-13T17:21:28+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "feat: add speculative decoding per-token latency metrics. (#1922)",
+      "type": "performance",
+      "module": "Spec Decode",
+      "additions": 283,
+      "deletions": 0,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 22,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_generated_tokens_test.cpp",
+          "additions": 112,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 73,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/metrics.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/metrics.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 23,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fd736c6311cecef1209c2c22a4e4571951fb5c42",
+      "aiSummary": {
+        "zh": "本次提交在 Spec Decode 模块中新增了逐词推测解码的延迟性能指标，涉及多个核心调度和请求处理文件，影响 Ascend 平台。测试重点覆盖了相关性能指标的准确性和调度逻辑的正确性。",
+        "en": "This commit adds per-token latency metrics for speculative decoding in the Spec Decode module, affecting core scheduling and request handling components on the Ascend platform. Tests focus on verifying the accuracy of the new performance metrics and the correctness of scheduling logic.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:18.250Z"
+      }
+    },
+    {
+      "sha": "57e679ea0f1c8c79adca41f9ab5aa9c060e86e0b",
+      "parents": [
+        "b2fc8352eb4ad7ce0db083e04d808dd33d0c5cf1"
+      ],
+      "pr": "1917",
+      "date": "2026-07-13T16:32:57+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "ChrisD",
+        "email": "54457651+cding-nv@users.noreply.github.com"
+      },
+      "title": "feat: add qwen3.5 dcu support. (#1917)",
+      "type": "feature",
+      "module": "Model Support",
+      "additions": 1734,
+      "deletions": 1,
+      "filesChanged": 15,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/dcu/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/dcu_ops_api.h",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/gated_layer_norm.cpp",
+          "additions": 62,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/gemma_rms_norm.cpp",
+          "additions": 38,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_decoder_layer.cpp",
+          "additions": 279,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_decoder_layer.h",
+          "additions": 88,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_gated_delta_net.cpp",
+          "additions": 163,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_gated_delta_net.h",
+          "additions": 72,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_base.cpp",
+          "additions": 852,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_base.h",
+          "additions": 99,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/qwen3_5_decoder_layer.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/models.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/vlm/qwen3_5.h",
+          "additions": 43,
+          "deletions": 1,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "model-support",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/57e679ea0f1c8c79adca41f9ab5aa9c060e86e0b",
+      "aiSummary": {
+        "zh": "本次提交新增了对qwen3.5 DCU模型的支持，涉及核心内核和层的多个文件，影响模型推理性能和兼容性。测试应重点关注新模型的功能正确性和性能表现。",
+        "en": "This commit adds support for the qwen3.5 DCU model, modifying multiple core kernel and layer files, impacting model inference performance and compatibility. Testing should focus on functional correctness and performance of the new model.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:20.227Z"
+      }
+    },
+    {
+      "sha": "b2fc8352eb4ad7ce0db083e04d808dd33d0c5cf1",
+      "parents": [
+        "d97acc0799069cb1b63b201d7603f29e0ad9beb8"
+      ],
+      "pr": "1865",
+      "date": "2026-07-13T15:57:34+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "docs: remove docs dir. (#1865)",
+      "type": "other",
+      "module": "Spec Decode",
+      "additions": 11,
+      "deletions": 16752,
+      "filesChanged": 111,
+      "files": [
+        {
+          "filename": ".agents/skills/tilelang-ascend-kernel/SKILL.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": "MANIFEST.in",
+          "additions": 0,
+          "deletions": 1,
+          "module": "MANIFEST.in"
+        },
+        {
+          "filename": "README.md",
+          "additions": 4,
+          "deletions": 4,
+          "module": "README.md"
+        },
+        {
+          "filename": "docs/project/README_zh.md => README_zh.md",
+          "additions": 5,
+          "deletions": 5,
+          "module": "docs/project"
+        },
+        {
+          "filename": "docs/project/RELEASE.md => RELEASE.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/project"
+        },
+        {
+          "filename": "{docs/assets => assets}/logo_with_llm.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "{docs/assets => assets}"
+        },
+        {
+          "filename": "{docs/assets => assets}/wechat_qrcode.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "{docs/assets => assets}"
+        },
+        {
+          "filename": "{docs/assets => assets}/xllm_arch.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "{docs/assets => assets}"
+        },
+        {
+          "filename": "docs/assets/async_schedule_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/eplb_architecture.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/fixed_steps_scheduler_orca.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_beam_search.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_integration_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_integration_architecture_en.svg",
+          "additions": 0,
+          "deletions": 54,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_model_onerec.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_model_onetrans.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/generative_recommendation_overview.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/globalkvcache_architecture.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/graph_mode.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/groupmatmul_performance.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/logo.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/moe_eplevel1.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/moe_eplevel2.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/multi_streams_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/paged_attention_comparison.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/pd_architecture.jpg",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/piecewise_graph_diagram.svg",
+          "additions": 0,
+          "deletions": 5558,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/service_arch.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/shared_vmm_mapping_diagram.svg",
+          "additions": 0,
+          "deletions": 2474,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/xattention_kv_layout.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/xattention_kv_layout_en.svg",
+          "additions": 0,
+          "deletions": 82,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/xattention_three_stage_pipeline.png",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/assets/xattention_three_stage_pipeline_en.svg",
+          "additions": 0,
+          "deletions": 55,
+          "module": "docs/assets"
+        },
+        {
+          "filename": "docs/en/.readthedocs.yaml",
+          "additions": 0,
+          "deletions": 28,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/accuracy_test.md",
+          "additions": 0,
+          "deletions": 59,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/cli_reference.md",
+          "additions": 0,
+          "deletions": 83,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/design/generative_recommendation_design.md",
+          "additions": 0,
+          "deletions": 1062,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/design/graph_mode_design.md",
+          "additions": 0,
+          "deletions": 474,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/dev_guide/code_arch.md",
+          "additions": 0,
+          "deletions": 27,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 0,
+          "deletions": 396,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/async_schedule.md",
+          "additions": 0,
+          "deletions": 29,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/basics.md",
+          "additions": 0,
+          "deletions": 5,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/chunked_scheduler.md",
+          "additions": 0,
+          "deletions": 19,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/continuous_scheduler.md",
+          "additions": 0,
+          "deletions": 7,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/disagg_pd.md",
+          "additions": 0,
+          "deletions": 95,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/eplb.md",
+          "additions": 0,
+          "deletions": 30,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/global_kvcache.md",
+          "additions": 0,
+          "deletions": 41,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/graph_mode.md",
+          "additions": 0,
+          "deletions": 79,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/groupgemm.md",
+          "additions": 0,
+          "deletions": 40,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/moe_params.md",
+          "additions": 0,
+          "deletions": 24,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/mtp.md",
+          "additions": 0,
+          "deletions": 187,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/multi_streams.md",
+          "additions": 0,
+          "deletions": 31,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/online_profiling.md",
+          "additions": 0,
+          "deletions": 99,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/overview.md",
+          "additions": 0,
+          "deletions": 51,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/ppmatmul.md",
+          "additions": 0,
+          "deletions": 36,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/prefix_cache.md",
+          "additions": 0,
+          "deletions": 19,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/topk_topp.md",
+          "additions": 0,
+          "deletions": 27,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/xllm_service_overview.md",
+          "additions": 0,
+          "deletions": 54,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/features/zero_evict_scheduler.md",
+          "additions": 0,
+          "deletions": 17,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/disagg_pd.md",
+          "additions": 0,
+          "deletions": 99,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/launch_xllm.md",
+          "additions": 0,
+          "deletions": 161,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/multi_machine.md",
+          "additions": 0,
+          "deletions": 109,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/offline_service.md",
+          "additions": 0,
+          "deletions": 40,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/online_service.md",
+          "additions": 0,
+          "deletions": 265,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/getting_started/quick_start.md",
+          "additions": 0,
+          "deletions": 135,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/index.md",
+          "additions": 0,
+          "deletions": 57,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/en/supported_models.md",
+          "additions": 0,
+          "deletions": 49,
+          "module": "docs/en"
+        },
+        {
+          "filename": "docs/mkdocs/javascripts/mathjax.js",
+          "additions": 0,
+          "deletions": 19,
+          "module": "docs/mkdocs"
+        },
+        {
+          "filename": "docs/mkdocs/javascripts/redirect_readthedocs.js",
+          "additions": 0,
+          "deletions": 26,
+          "module": "docs/mkdocs"
+        },
+        {
+          "filename": "docs/mkdocs/overrides/.icons/email-fill.svg",
+          "additions": 0,
+          "deletions": 1,
+          "module": "docs/mkdocs"
+        },
+        {
+          "filename": "docs/mkdocs/overrides/.icons/gitcodeai.svg",
+          "additions": 0,
+          "deletions": 1,
+          "module": "docs/mkdocs"
+        },
+        {
+          "filename": "docs/mkdocs/stylesheets/extra.css",
+          "additions": 0,
+          "deletions": 27,
+          "module": "docs/mkdocs"
+        },
+        {
+          "filename": "docs/requirements.txt",
+          "additions": 0,
+          "deletions": 43,
+          "module": "docs/requirements.txt"
+        },
+        {
+          "filename": "docs/zh/.readthedocs.yaml",
+          "additions": 0,
+          "deletions": 28,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/accuracy_test.md",
+          "additions": 0,
+          "deletions": 58,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/cli_reference.md",
+          "additions": 0,
+          "deletions": 85,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/design/generative_recommendation_design.md",
+          "additions": 0,
+          "deletions": 1076,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/design/graph_mode_design.md",
+          "additions": 0,
+          "deletions": 475,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/dev_guide/code_arch.md",
+          "additions": 0,
+          "deletions": 27,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 0,
+          "deletions": 396,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/async_schedule.md",
+          "additions": 0,
+          "deletions": 33,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/basics.md",
+          "additions": 0,
+          "deletions": 9,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/chunked_scheduler.md",
+          "additions": 0,
+          "deletions": 17,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/continuous_scheduler.md",
+          "additions": 0,
+          "deletions": 7,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/disagg_pd.md",
+          "additions": 0,
+          "deletions": 86,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/eplb.md",
+          "additions": 0,
+          "deletions": 35,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/global_kvcache.md",
+          "additions": 0,
+          "deletions": 33,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/graph_mode.md",
+          "additions": 0,
+          "deletions": 77,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/groupgemm.md",
+          "additions": 0,
+          "deletions": 41,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/moe_params.md",
+          "additions": 0,
+          "deletions": 17,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/mtp.md",
+          "additions": 0,
+          "deletions": 187,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/multi_streams.md",
+          "additions": 0,
+          "deletions": 29,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/multimodal.md",
+          "additions": 0,
+          "deletions": 19,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/online_profiling.md",
+          "additions": 0,
+          "deletions": 98,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/overview.md",
+          "additions": 0,
+          "deletions": 57,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/ppmatmul.md",
+          "additions": 0,
+          "deletions": 36,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/prefix_cache.md",
+          "additions": 0,
+          "deletions": 20,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/topk_topP.md",
+          "additions": 0,
+          "deletions": 27,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/xllm_service_overview.md",
+          "additions": 0,
+          "deletions": 48,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/features/zero_evict_scheduler.md",
+          "additions": 0,
+          "deletions": 17,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/disagg_pd.md",
+          "additions": 0,
+          "deletions": 88,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/launch_xllm.md",
+          "additions": 0,
+          "deletions": 161,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/multi_machine.md",
+          "additions": 0,
+          "deletions": 106,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/offline_service.md",
+          "additions": 0,
+          "deletions": 40,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/online_service.md",
+          "additions": 0,
+          "deletions": 264,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/getting_started/quick_start.md",
+          "additions": 0,
+          "deletions": 134,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/index.md",
+          "additions": 0,
+          "deletions": 66,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/supported_models.md",
+          "additions": 0,
+          "deletions": 48,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "docs/zh/xLLM_Technical_Report_zh.pdf",
+          "additions": 0,
+          "deletions": 0,
+          "module": "docs/zh"
+        },
+        {
+          "filename": "mkdocs_en.yml",
+          "additions": 0,
+          "deletions": 234,
+          "module": "mkdocs_en.yml"
+        },
+        {
+          "filename": "mkdocs_zh.yml",
+          "additions": 0,
+          "deletions": 287,
+          "module": "mkdocs_zh.yml"
+        }
+      ],
+      "tags": [
+        "other",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b2fc8352eb4ad7ce0db083e04d808dd33d0c5cf1",
+      "aiSummary": {
+        "zh": "本次提交移除了docs目录，涉及111个文件，删除大量文档内容，影响Spec Decode模块及Ascend相关功能。测试应重点关注文档完整性及相关功能是否受影响。",
+        "en": "This commit removes the docs directory affecting 111 files with significant deletions, impacting the Spec Decode module and Ascend-related features. Testing should focus on documentation integrity and any potential effects on related functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:22.375Z"
+      }
+    },
+    {
+      "sha": "d97acc0799069cb1b63b201d7603f29e0ad9beb8",
+      "parents": [
+        "4b2abaf30c7ca357fb19a8313ebe000bf6e65cad"
+      ],
+      "pr": "",
+      "date": "2026-07-13T14:47:09+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "shenxiaolong",
+        "email": "1193789086@qq.com"
+      },
+      "title": "bugfix: handle openai named tool choice and deepseek streaming.",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 152,
+      "deletions": 4,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/api_service/chat_json_parser_test.cpp",
+          "additions": 49,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/function_call/deepseekv32_detector_test.cpp",
+          "additions": 34,
+          "deletions": 0,
+          "module": "tests/function_call"
+        },
+        {
+          "filename": "xllm/api_service/chat_json_parser.cpp",
+          "additions": 66,
+          "deletions": 4,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/function_call/deepseekv32_detector.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/function_call"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d97acc0799069cb1b63b201d7603f29e0ad9beb8",
+      "aiSummary": {
+        "zh": "本次提交修复了对 OpenAI 命名工具选择和 Deepseek 流式处理的支持，涉及模型支持模块。测试重点覆盖了相关解析器和检测器的功能正确性。",
+        "en": "This commit fixes handling of OpenAI named tool choice and Deepseek streaming in the model support module. Tests focus on verifying the correctness of the related parser and detector functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:24.256Z"
+      }
+    },
+    {
+      "sha": "4b2abaf30c7ca357fb19a8313ebe000bf6e65cad",
+      "parents": [
+        "95a3e499674900f6d08cce881d14e31479f14ca1"
+      ],
+      "pr": "1924",
+      "date": "2026-07-13T13:58:50+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "Sinle4Cat",
+        "email": "35651345+Sinle4Cat@users.noreply.github.com"
+      },
+      "title": "perf: avoid mega chunk sequence length device reads on npu. (#1924)",
+      "type": "performance",
+      "module": "NPU Backend",
+      "additions": 25,
+      "deletions": 6,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_chunk_gdn.cpp",
+          "additions": 18,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_gated_delta_net_base.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4b2abaf30c7ca357fb19a8313ebe000bf6e65cad",
+      "aiSummary": {
+        "zh": "本次提交优化了NPU后端mega chunk序列长度的设备读取性能，涉及多个核心文件，重点测试NPU设备上的性能提升和功能稳定性。",
+        "en": "This commit improves device read performance for mega chunk sequence length on the NPU backend, affecting multiple core files; testing should focus on performance gains and functional stability on NPU devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:26.008Z"
+      }
+    },
+    {
+      "sha": "95a3e499674900f6d08cce881d14e31479f14ca1",
+      "parents": [
+        "1102b9ecff6de05b69f8a593dcf607cdff37a5e7"
+      ],
+      "pr": "1925",
+      "date": "2026-07-13T11:33:34+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: set up kv cache compleition guard to prevent kv cache transfer error. (#1925)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 259,
+      "deletions": 84,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/kv_transfer_completion_test.cpp",
+          "additions": 86,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/CMakeLists.txt",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.cpp",
+          "additions": 63,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.h",
+          "additions": 49,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/mooncake_transfer_engine.cpp",
+          "additions": 25,
+          "deletions": 55,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 12,
+          "deletions": 28,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/95a3e499674900f6d08cce881d14e31479f14ca1",
+      "aiSummary": {
+        "zh": "本次提交修复了kv缓存传输错误，通过设置kv缓存完成保护机制提升性能，影响Graph / Runtime模块，测试重点为kv缓存传输的正确性和性能表现。",
+        "en": "This commit fixes kv cache transfer errors by setting up a kv cache completion guard, improving performance in the Graph / Runtime module; testing focuses on correctness and performance of kv cache transfer.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:28.347Z"
+      }
+    },
+    {
+      "sha": "1102b9ecff6de05b69f8a593dcf607cdff37a5e7",
+      "parents": [
+        "2c2161f71d259827b626a819004c2538d363bf62"
+      ],
+      "pr": "1915",
+      "date": "2026-07-13T11:29:46+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "Yang Shu",
+        "email": "103491002+asr-sheep1@users.noreply.github.com"
+      },
+      "title": "feat: support deepseek-v3 fp8 w8a8 on dcu device. (#1915)",
+      "type": "feature",
+      "module": "Model Support",
+      "additions": 1993,
+      "deletions": 251,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "scripts/build_support/env.py",
+          "additions": 10,
+          "deletions": 0,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 6,
+          "deletions": 0,
+          "module": "setup.py"
+        },
+        {
+          "filename": "xllm/core/framework/hf_model_loader.cpp",
+          "additions": 37,
+          "deletions": 20,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/CMakeLists.txt",
+          "additions": 21,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_moe_adapter.cpp",
+          "additions": 256,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_moe_adapter.h",
+          "additions": 66,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_quant_adapter.cpp",
+          "additions": 98,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_quant_adapter.h",
+          "additions": 42,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/dcu_ops_api.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/gather_mla_latent_cache.hip",
+          "additions": 189,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/hipblaslt_fp8_adapter.cpp",
+          "additions": 274,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/hipblaslt_fp8_adapter.h",
+          "additions": 47,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 22,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.cpp",
+          "additions": 163,
+          "deletions": 73,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/CMakeLists.txt",
+          "additions": 10,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_attention.cpp",
+          "additions": 215,
+          "deletions": 69,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_attention.h",
+          "additions": 15,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/flash_attention.cpp",
+          "additions": 127,
+          "deletions": 37,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/flash_attention.h",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/fused_moe.cpp",
+          "additions": 339,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/fused_moe.h",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/dit/utils/sparse_attention.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v3.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/models.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "model-support",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1102b9ecff6de05b69f8a593dcf607cdff37a5e7",
+      "aiSummary": {
+        "zh": "本次提交新增对dcu设备上deepseek-v3模型的fp8和w8a8量化支持，涉及模型加载和多文件内核适配，影响模型推理性能和兼容性，测试需重点验证量化精度和设备兼容性。",
+        "en": "This commit adds support for deepseek-v3 fp8 and w8a8 quantization on dcu devices, affecting model loading and multiple kernel files, impacting inference performance and compatibility; testing should focus on quantization accuracy and device compatibility.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:30.539Z"
+      }
+    },
+    {
+      "sha": "2c2161f71d259827b626a819004c2538d363bf62",
+      "parents": [
+        "40b5ff57773398bce8e0efb8980a4c5646660ec8"
+      ],
+      "pr": "1926",
+      "date": "2026-07-13T11:00:32+08:00",
+      "dateKey": "2026-07-13",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: defer stream cancellation to scheduler boundary. (#1926)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 182,
+      "deletions": 19,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 119,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/async_response_processor.cpp",
+          "additions": 12,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/async_response_processor.h",
+          "additions": 10,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 27,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2c2161f71d259827b626a819004c2538d363bf62",
+      "aiSummary": {
+        "zh": "本次提交修复了推理引擎中流取消时机的问题，将流取消延迟到调度器边界，涉及调度器相关模块。测试重点在连续调度器的行为验证。",
+        "en": "This commit fixes the timing of stream cancellation in the inference engine by deferring it to the scheduler boundary, affecting scheduler-related modules. Testing focuses on verifying the behavior of the continuous scheduler.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:32.420Z"
+      }
+    },
     {
       "sha": "40b5ff57773398bce8e0efb8980a4c5646660ec8",
       "parents": [
@@ -53592,7 +56102,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8ff60305ee89ae97f22ba777f37ea27a91dd0ae3"
+      "url": "https://github.com/jd-opensource/xllm/commit/8ff60305ee89ae97f22ba777f37ea27a91dd0ae3",
+      "aiSummary": {
+        "zh": "本次提交修复了在Graph/Runtime模块中，使用folly等待时阻塞brpc回调路径的问题，影响Ascend平台。测试应关注回调路径的非阻塞性和系统稳定性。",
+        "en": "This bugfix avoids blocking the brpc callback path with folly wait in the Graph/Runtime module, affecting the Ascend platform. Testing should focus on ensuring non-blocking callbacks and system stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:34.294Z"
+      }
     },
     {
       "sha": "117430c9a59b28007dc6070d1f3960bc8467db4a",
@@ -53654,7 +56170,13 @@
         "feature",
         "third-party-torch-npu-ops"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/117430c9a59b28007dc6070d1f3960bc8467db4a"
+      "url": "https://github.com/jd-opensource/xllm/commit/117430c9a59b28007dc6070d1f3960bc8467db4a",
+      "aiSummary": {
+        "zh": "本次提交更新了third_party/torch_npu_ops模块中的conv1d_update算子以支持Qwen3-Next和Qwen3.5，涉及多个核心文件的修改。测试应关注算子兼容性及性能表现。",
+        "en": "This commit updates the conv1d_update operator in the third_party/torch_npu_ops module for Qwen3-Next and Qwen3.5, modifying several core files. Testing should focus on operator compatibility and performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:37.152Z"
+      }
     },
     {
       "sha": "1c1a264403ac7a1b7384fe44a497def0cacb181d",
@@ -53711,7 +56233,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/1c1a264403ac7a1b7384fe44a497def0cacb181d"
+      "url": "https://github.com/jd-opensource/xllm/commit/1c1a264403ac7a1b7384fe44a497def0cacb181d",
+      "aiSummary": {
+        "zh": "本次提交修复了Joy MTP权重加载的bug，影响Spec Decode模块及Ascend平台相关代码。测试应重点关注权重加载的正确性及相关功能的稳定性。",
+        "en": "This commit fixes a bug in Joy MTP weight loading affecting the Spec Decode module and Ascend platform code. Testing should focus on verifying correct weight loading and related functionality stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:39.351Z"
+      }
     },
     {
       "sha": "724c8edcc246712151c50a9b8ea7f539c05d3ec2",
@@ -53744,7 +56272,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/724c8edcc246712151c50a9b8ea7f539c05d3ec2"
+      "url": "https://github.com/jd-opensource/xllm/commit/724c8edcc246712151c50a9b8ea7f539c05d3ec2",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU xattention的精度错误，影响图计算运行时模块，重点测试了相关计算的准确性和性能表现。",
+        "en": "This commit fixes an accuracy error in NPU xattention affecting the graph runtime module; testing focused on correctness and performance of the related computations.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:41.108Z"
+      }
     },
     {
       "sha": "3e5a5a98e988aa29957382fc171dca43075615a9",
@@ -53982,7 +56516,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/3e5a5a98e988aa29957382fc171dca43075615a9"
+      "url": "https://github.com/jd-opensource/xllm/commit/3e5a5a98e988aa29957382fc171dca43075615a9",
+      "aiSummary": {
+        "zh": "本次提交重构了kvcache的内存分配逻辑，涉及Graph和Runtime模块，影响范围较大且风险较高，重点测试了缓存功能的正确性和性能表现，特别是在Ascend平台上的兼容性。",
+        "en": "This commit refactors the allocation logic of kvcache, affecting the Graph and Runtime modules with high risk. Testing focuses on the correctness and performance of cache functionality, especially compatibility with the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:43.652Z"
+      }
     },
     {
       "sha": "ec0c913fe6a36110bc568fe75d00930f78c52a36",
@@ -54032,7 +56572,13 @@
         "performance",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ec0c913fe6a36110bc568fe75d00930f78c52a36"
+      "url": "https://github.com/jd-opensource/xllm/commit/ec0c913fe6a36110bc568fe75d00930f78c52a36",
+      "aiSummary": {
+        "zh": "本次提交优化了多模态预处理的准确性，涉及xllm/core模块的多个图像处理器文件。测试应关注预处理结果的准确性和性能提升。",
+        "en": "This commit improves the accuracy of multi-modal preprocessing across several image processor files in the xllm/core module. Testing should focus on preprocessing accuracy and performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:46.059Z"
+      }
     },
     {
       "sha": "3b3f7d9968b0af5f9125a29ac11be88136a1796e",
@@ -54064,7 +56610,13 @@
         "performance",
         "inference-engine"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/3b3f7d9968b0af5f9125a29ac11be88136a1796e"
+      "url": "https://github.com/jd-opensource/xllm/commit/3b3f7d9968b0af5f9125a29ac11be88136a1796e",
+      "aiSummary": {
+        "zh": "本次提交修正了线性状态缓存分配失败时的错误提示信息，影响推理引擎模块。测试应关注错误提示的准确性和性能表现。",
+        "en": "This commit clarifies the error message for linear state cache allocation failure, impacting the Inference Engine module. Testing should focus on the accuracy of the error message and performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:48.797Z"
+      }
     },
     {
       "sha": "c0218f458af60311dc46f4aab96dc4117e0cd2f6",
@@ -54199,7 +56751,13 @@
         "xllm-c-api",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c0218f458af60311dc46f4aab96dc4117e0cd2f6"
+      "url": "https://github.com/jd-opensource/xllm/commit/c0218f458af60311dc46f4aab96dc4117e0cd2f6",
+      "aiSummary": {
+        "zh": "本次提交在xllm/c_api模块中新增了对递归束搜索中num_return_sequences参数的支持，涉及多个核心文件，需重点测试该参数对生成序列数量的影响及性能表现。",
+        "en": "This commit adds support for the num_return_sequences parameter in recursive beam search within the xllm/c_api module, affecting multiple core files; testing should focus on the correctness and performance impact of this new parameter.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:51.202Z"
+      }
     },
     {
       "sha": "0f5c74f2d4f129355f287cc00bee9f3f7772a77d",
@@ -54269,7 +56827,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/0f5c74f2d4f129355f287cc00bee9f3f7772a77d"
+      "url": "https://github.com/jd-opensource/xllm/commit/0f5c74f2d4f129355f287cc00bee9f3f7772a77d",
+      "aiSummary": {
+        "zh": "本次提交对NPU后端的onerec 3b模型进行了性能优化，并增加了对旧模型的支持，影响范围涵盖相关NPU层和模型实现。测试重点需关注性能提升效果及旧模型兼容性。",
+        "en": "This commit optimizes the performance of the onerec 3b model in the NPU backend and adds support for the old model, affecting related NPU layers and model implementations. Testing should focus on performance improvements and compatibility with the old model.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:54.396Z"
+      }
     },
     {
       "sha": "183d0eb97b611a2ae340d8a70ffc8353202d4e14",
@@ -54320,7 +56884,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/183d0eb97b611a2ae340d8a70ffc8353202d4e14"
+      "url": "https://github.com/jd-opensource/xllm/commit/183d0eb97b611a2ae340d8a70ffc8353202d4e14",
+      "aiSummary": {
+        "zh": "本次提交为NPU后端新增了用于Qwen3.5线性注意力的conv1d_fn操作，涉及四个文件，主要添加了核心计算代码。测试应关注该操作在Ascend设备上的正确性和性能表现。",
+        "en": "This commit adds the conv1d_fn operation for Qwen3.5 linear attention to the NPU backend, modifying four files with core implementation. Testing should focus on correctness and performance of this operation on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-13T19:09:57.117Z"
+      }
     },
     {
       "sha": "4fe61bd16c00cd37cf89fa454e1d201bd20893a3",
