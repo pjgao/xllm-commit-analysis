@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T19:10:01.297Z",
+  "generatedAt": "2026-07-14T19:00:09.723Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1162,
+    "commits": 1166,
     "contributors": 101,
-    "additions": 608791,
-    "deletions": 158777,
-    "filesChanged": 16989,
+    "additions": 611624,
+    "deletions": 159123,
+    "filesChanged": 17036,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-13",
+    "latestDate": "2026-07-14",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -39,10 +39,10 @@
       },
       {
         "name": "Yingxu Deng",
-        "commits": 64,
-        "additions": 18978,
-        "deletions": 3648,
-        "files": 457
+        "commits": 65,
+        "additions": 21218,
+        "deletions": 3831,
+        "files": 493
       },
       {
         "name": "yq33victor",
@@ -53,10 +53,10 @@
       },
       {
         "name": "JinDonghe",
-        "commits": 49,
-        "additions": 12370,
-        "deletions": 3380,
-        "files": 355
+        "commits": 50,
+        "additions": 12621,
+        "deletions": 3466,
+        "files": 361
       },
       {
         "name": "weizhehuang0827",
@@ -74,10 +74,10 @@
       },
       {
         "name": "Zhang Minchao",
-        "commits": 35,
-        "additions": 28048,
-        "deletions": 3249,
-        "files": 379
+        "commits": 36,
+        "additions": 28386,
+        "deletions": 3326,
+        "files": 382
       },
       {
         "name": "maxwell",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 402
+        "count": 403
       },
       {
         "key": "NPU Backend",
@@ -116,11 +116,11 @@
       },
       {
         "key": "Model Support",
-        "count": 95
+        "count": 96
       },
       {
         "key": "xllm/core",
-        "count": 86
+        "count": 87
       },
       {
         "key": "Engineering",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 66
+        "count": 67
       },
       {
         "key": "xllm/api_service",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 352
+        "count": 355
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 136
+        "count": 137
       },
       {
         "key": "other",
@@ -432,7 +432,8 @@
     "2026-07-08",
     "2026-07-09",
     "2026-07-10",
-    "2026-07-13"
+    "2026-07-13",
+    "2026-07-14"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -885,6 +886,421 @@
     }
   },
   "commits": [
+    {
+      "sha": "52eca61af531cb20b62a7cd16ba4cb253db0d90a",
+      "parents": [
+        "37d0594ae6f4ff93a85aa3f0d75eaaab312d7b74"
+      ],
+      "pr": "1943",
+      "date": "2026-07-14T23:48:47+08:00",
+      "dateKey": "2026-07-14",
+      "author": {
+        "name": "Joey Gao",
+        "email": "gaopengju3@huawei.com"
+      },
+      "title": "bugfix: pass estimated linear state slots. (#1943)",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 4,
+      "deletions": 0,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/52eca61af531cb20b62a7cd16ba4cb253db0d90a",
+      "aiSummary": {
+        "zh": "本次提交修复了传递估计线性状态槽位的错误，修改涉及xllm/core模块中的两个文件。测试应关注状态槽位传递的正确性及相关功能的稳定性。",
+        "en": "This commit fixes the passing of estimated linear state slots in the xllm/core module, modifying two files. Testing should focus on the correctness of state slot passing and related functionality stability.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:32.665Z"
+      }
+    },
+    {
+      "sha": "37d0594ae6f4ff93a85aa3f0d75eaaab312d7b74",
+      "parents": [
+        "57776cb3eca26f25c6a6ac9c32743ccc6c110c3d"
+      ],
+      "pr": "1931",
+      "date": "2026-07-14T17:55:32+08:00",
+      "dateKey": "2026-07-14",
+      "author": {
+        "name": "JinDonghe",
+        "email": "54488932+DongheJin@users.noreply.github.com"
+      },
+      "title": "bugfix: preserve MTP correctness during asynchronous execution. (#1931)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 251,
+      "deletions": 86,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 82,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 24,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.h",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 129,
+          "deletions": 62,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/37d0594ae6f4ff93a85aa3f0d75eaaab312d7b74",
+      "aiSummary": {
+        "zh": "本次提交修复了异步执行过程中MTP的正确性问题，影响Spec Decode模块及Ascend平台相关功能，测试重点为异步执行的正确性验证。",
+        "en": "This commit fixes MTP correctness issues during asynchronous execution, impacting the Spec Decode module and Ascend platform; testing focuses on verifying correctness under asynchronous execution.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:34.549Z"
+      }
+    },
+    {
+      "sha": "57776cb3eca26f25c6a6ac9c32743ccc6c110c3d",
+      "parents": [
+        "d54bf511711780be73d8dd066d52cb91f9e68b6a"
+      ],
+      "pr": "1846",
+      "date": "2026-07-14T16:11:54+08:00",
+      "dateKey": "2026-07-14",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "feat: add linear-state block manager and prefix cache (3/n). (#1846)",
+      "type": "performance",
+      "module": "Model Support",
+      "additions": 2240,
+      "deletions": 183,
+      "filesChanged": 36,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/block_manager_pool_test_peer.h",
+          "additions": 56,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/block_manager_test.cpp",
+          "additions": 837,
+          "deletions": 68,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/prefix_cache/CMakeLists.txt",
+          "additions": 10,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/prefix_cache/linear_state_prefix_cache_test.cpp",
+          "additions": 355,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block.h",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager.h",
+          "additions": 17,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.cpp",
+          "additions": 26,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.h",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 23,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.h",
+          "additions": 14,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.cpp",
+          "additions": 74,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.h",
+          "additions": 13,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.cpp",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/linear_state_block_manager.cpp",
+          "additions": 186,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/linear_state_block_manager.h",
+          "additions": 126,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 9,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/block_hasher.cpp",
+          "additions": 33,
+          "deletions": 26,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/block_hasher.h",
+          "additions": 16,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/linear_state_prefix_cache.cpp",
+          "additions": 88,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/linear_state_prefix_cache.h",
+          "additions": 87,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache.cpp",
+          "additions": 22,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache.h",
+          "additions": 25,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache_factory.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 43,
+          "deletions": 26,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 55,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 25,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 62,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "model-support",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/57776cb3eca26f25c6a6ac9c32743ccc6c110c3d",
+      "aiSummary": {
+        "zh": "本次提交新增了线性状态块管理器和前缀缓存，涉及模型支持模块，提升性能。测试重点覆盖了块管理器和前缀缓存相关功能，确保高风险改动的稳定性。",
+        "en": "This commit adds a linear-state block manager and prefix cache in the model support module to improve performance. Tests focus on block manager and prefix cache functionalities to ensure stability of these high-risk changes.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:37.024Z"
+      }
+    },
+    {
+      "sha": "d54bf511711780be73d8dd066d52cb91f9e68b6a",
+      "parents": [
+        "be633b0c2ad151f96cf838e1ca8967f3c7f2a16a"
+      ],
+      "pr": "1939",
+      "date": "2026-07-14T14:41:42+08:00",
+      "dateKey": "2026-07-14",
+      "author": {
+        "name": "Zhang Minchao",
+        "email": "zhangminchao1@jd.com"
+      },
+      "title": "bugfix: fix padded decode cuda graph metadata. (#1939)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 338,
+      "deletions": 77,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/core/runtime/cuda_graph_executor_test.cpp",
+          "additions": 230,
+          "deletions": 36,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/llm_decode_metadata_update.cu",
+          "additions": 15,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/cuda_graph_executor_impl.cpp",
+          "additions": 93,
+          "deletions": 38,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d54bf511711780be73d8dd066d52cb91f9e68b6a",
+      "aiSummary": {
+        "zh": "本次提交修复了 CUDA 图元数据中 padded decode 的错误，影响图计算和运行时模块，重点测试了 CUDA 图执行器相关功能的正确性。",
+        "en": "This commit fixes a bug in padded decode CUDA graph metadata affecting the graph and runtime modules, with tests focusing on the correctness of the CUDA graph executor.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:39.261Z"
+      }
+    },
     {
       "sha": "be633b0c2ad151f96cf838e1ca8967f3c7f2a16a",
       "parents": [
@@ -56928,7 +57344,13 @@
         "bugfix",
         "pyproject-toml"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/4fe61bd16c00cd37cf89fa454e1d201bd20893a3"
+      "url": "https://github.com/jd-opensource/xllm/commit/4fe61bd16c00cd37cf89fa454e1d201bd20893a3",
+      "aiSummary": {
+        "zh": "本次提交修复了 xllm 控制台脚本的元数据问题，主要修改了 pyproject.toml 和 setup.py 文件，影响脚本的正确执行。测试时需关注控制台脚本是否能正常调用。",
+        "en": "This commit fixes the metadata of the xllm console script by modifying pyproject.toml and setup.py, impacting the correct execution of the script. Testing should focus on verifying the console script runs properly.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:42.395Z"
+      }
     },
     {
       "sha": "801f37295ec67756ddeb80b564f2774f0b113445",
@@ -56967,7 +57389,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/801f37295ec67756ddeb80b564f2774f0b113445"
+      "url": "https://github.com/jd-opensource/xllm/commit/801f37295ec67756ddeb80b564f2774f0b113445",
+      "aiSummary": {
+        "zh": "本次提交修复了混合KV缓存层的检测问题，涉及Graph和Runtime模块，重点测试缓存层检测的准确性及性能表现，影响Ascend平台相关功能。",
+        "en": "This commit fixes the hybrid KV cache layer detection issue in the Graph and Runtime modules, impacting Ascend-related features. Testing should focus on the accuracy of cache layer detection and performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:45.051Z"
+      }
     },
     {
       "sha": "7eff2db95ad20c01816139d32eb2df22a77daead",
@@ -57199,7 +57627,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7eff2db95ad20c01816139d32eb2df22a77daead"
+      "url": "https://github.com/jd-opensource/xllm/commit/7eff2db95ad20c01816139d32eb2df22a77daead",
+      "aiSummary": {
+        "zh": "本次提交新增了混合注意力块管理器，涉及图计算和运行时模块，影响Ascend平台。测试重点包括批处理输入构建和块管理功能的正确性。",
+        "en": "This commit adds a hybrid attention block manager affecting the Graph and Runtime modules, with impact on the Ascend platform. Testing focuses on batch input building and block management correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:50.070Z"
+      }
     },
     {
       "sha": "32412dade7f88aa4c2b868b39461122b849e3b0d",
@@ -57262,7 +57696,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/32412dade7f88aa4c2b868b39461122b849e3b0d"
+      "url": "https://github.com/jd-opensource/xllm/commit/32412dade7f88aa4c2b868b39461122b849e3b0d",
+      "aiSummary": {
+        "zh": "本次提交修复了通过配置 ssm_cache_type 初始化 ssm_cache 的问题，并修正了 qwen3.5 模型中 g 和 beta 的维度顺序，影响图计算和运行时模块，测试时需关注缓存初始化及维度顺序是否正确。",
+        "en": "This commit fixes the initialization of ssm_cache based on the ssm_cache_type configuration and corrects the dimension order of g and beta for the qwen3.5 model, impacting the Graph and Runtime modules. Testing should focus on cache initialization and verifying the dimension order correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:52.913Z"
+      }
     },
     {
       "sha": "460bdd944cf567ca9c3b876735539867f6d0a19f",
@@ -57332,7 +57772,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/460bdd944cf567ca9c3b876735539867f6d0a19f"
+      "url": "https://github.com/jd-opensource/xllm/commit/460bdd944cf567ca9c3b876735539867f6d0a19f",
+      "aiSummary": {
+        "zh": "本次提交修复了LLM默认流执行时的重叠问题，影响Graph和Runtime模块，特别是Ascend平台。测试需关注流执行的正确性和性能表现。",
+        "en": "This commit fixes the overlapping issue in default stream execution of LLM, impacting the Graph and Runtime modules, especially on Ascend. Testing should focus on correctness and performance of stream execution.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:55.322Z"
+      }
     },
     {
       "sha": "7474fe086b510e91025af974a4be2f898ff8459d",
@@ -57425,7 +57871,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7474fe086b510e91025af974a4be2f898ff8459d"
+      "url": "https://github.com/jd-opensource/xllm/commit/7474fe086b510e91025af974a4be2f898ff8459d",
+      "aiSummary": {
+        "zh": "本次提交新增了对Qwen模型中down_proj的降维回退支持，针对压缩张量忽略的模块进行了适配，涉及模型加载和多层解码器相关代码。测试重点在于验证该功能在相关模块中的正确性和稳定性。",
+        "en": "This commit adds fallback support for Qwen down_proj in modules ignored by compressed tensors, affecting model loading and various decoder layers. Testing focuses on ensuring correctness and stability of this feature across the impacted modules.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T18:59:58.174Z"
+      }
     },
     {
       "sha": "d1fd2dd7b6e41a8303cfaaf42eb613633ec26eb7",
@@ -57597,7 +58049,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d1fd2dd7b6e41a8303cfaaf42eb613633ec26eb7"
+      "url": "https://github.com/jd-opensource/xllm/commit/d1fd2dd7b6e41a8303cfaaf42eb613633ec26eb7",
+      "aiSummary": {
+        "zh": "本次提交将kv_cache_transfer从kv_cache中分离出来，涉及Graph和Runtime模块，影响较大且关联Ascend平台。测试应重点关注缓存转移功能的正确性和性能表现。",
+        "en": "This commit refactors by separating kv_cache_transfer from kv_cache, affecting the Graph and Runtime modules with significant impact including Ascend platform relevance. Testing should focus on correctness and performance of the cache transfer functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T19:00:00.001Z"
+      }
     },
     {
       "sha": "43b98339874bab8524ff6f8fe75f9fde96bd0629",
@@ -57690,7 +58148,13 @@
         "engineering",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/43b98339874bab8524ff6f8fe75f9fde96bd0629"
+      "url": "https://github.com/jd-opensource/xllm/commit/43b98339874bab8524ff6f8fe75f9fde96bd0629",
+      "aiSummary": {
+        "zh": "本次提交重构了仓库根目录布局，涉及多个文件的移动和调整，影响范围涵盖工程配置和文档。测试应关注构建流程和文档链接的正确性。",
+        "en": "This commit refactors the repository root layout, involving multiple file relocations and adjustments affecting engineering configurations and documentation. Testing should focus on build processes and documentation link integrity.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T19:00:01.675Z"
+      }
     },
     {
       "sha": "17f4427e8842cf7a732cb55b9f4e0462d1f229f6",
@@ -57723,7 +58187,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/17f4427e8842cf7a732cb55b9f4e0462d1f229f6"
+      "url": "https://github.com/jd-opensource/xllm/commit/17f4427e8842cf7a732cb55b9f4e0462d1f229f6",
+      "aiSummary": {
+        "zh": "本次提交将kvcache的内存分配方式从torch::empty改为torch::zeros，影响Graph / Runtime模块，重点测试内存初始化是否正确及性能变化。",
+        "en": "This commit refactors kvcache allocation by replacing torch::empty with torch::zeros in the Graph / Runtime module; testing should focus on correct memory initialization and any performance impact.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T19:00:03.540Z"
+      }
     },
     {
       "sha": "2f46b5523b8a6400fc057d97e6ac6ce9d4ea7b6e",
@@ -57767,7 +58237,13 @@
         "bugfix",
         "xllm-api-service"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2f46b5523b8a6400fc057d97e6ac6ce9d4ea7b6e"
+      "url": "https://github.com/jd-opensource/xllm/commit/2f46b5523b8a6400fc057d97e6ac6ce9d4ea7b6e",
+      "aiSummary": {
+        "zh": "本次提交修复了xllm/api_service模块中HTTP内容类型与vLLM不一致的问题，涉及三个文件的修改。测试重点验证了内容类型的正确对齐，确保接口兼容性。",
+        "en": "This commit fixes the HTTP content type alignment issue with vLLM in the xllm/api_service module, modifying three files. Testing focuses on verifying correct content type alignment to ensure interface compatibility.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T19:00:06.235Z"
+      }
     },
     {
       "sha": "fe14046f74b32a387c6f9e32154a2fdf934bf0d1",
@@ -57903,7 +58379,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/fe14046f74b32a387c6f9e32154a2fdf934bf0d1"
+      "url": "https://github.com/jd-opensource/xllm/commit/fe14046f74b32a387c6f9e32154a2fdf934bf0d1",
+      "aiSummary": {
+        "zh": "本次提交支持所有生成型视觉语言模型的嵌入接口，涉及图计算和运行时模块，重点测试接口兼容性及性能表现，特别关注对Ascend平台的影响。",
+        "en": "This commit adds embedding interface support for all generative VLM models, affecting the graph and runtime modules. Testing should focus on interface compatibility, performance, and impact on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-14T19:00:08.026Z"
+      }
     },
     {
       "sha": "f1816bc5f951f26020c4d3c68f3112e50f280286",
