@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T18:49:55.278Z",
+  "generatedAt": "2026-07-26T18:54:11.415Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -80116,7 +80116,13 @@
         "bugfix",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2e492173154514597c29e3e5ff0123956875f483"
+      "url": "https://github.com/jd-opensource/xllm/commit/2e492173154514597c29e3e5ff0123956875f483",
+      "aiSummary": {
+        "zh": "修复了在MLU设备上由于RoPE模式从pad切换到pack导致的Qwen VL错误，影响模型支持模块。测试应关注该修复是否解决了相关设备上的错误。",
+        "en": "Fixed Qwen VL errors on MLU devices caused by RoPE mode switching from pad to pack, affecting the model support module. Testing should focus on verifying the error resolution on the affected devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:39.846Z"
+      }
     },
     {
       "sha": "2be6bc9c7088019b3f6d0bf10ba26a4ca1e33f2e",
@@ -80354,7 +80360,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/2be6bc9c7088019b3f6d0bf10ba26a4ca1e33f2e"
+      "url": "https://github.com/jd-opensource/xllm/commit/2be6bc9c7088019b3f6d0bf10ba26a4ca1e33f2e",
+      "aiSummary": {
+        "zh": "本次提交重构了Graph/Runtime模块，使用枚举类型定义master_status，涉及35个文件，改动较大且影响Ascend平台。测试应重点关注状态定义的正确性及分布式运行时的稳定性。",
+        "en": "This refactor replaces master_status with an enum type in the Graph/Runtime module, affecting 35 files and impacting the Ascend platform. Testing should focus on correctness of status definitions and stability of the distributed runtime.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:42.319Z"
+      }
     },
     {
       "sha": "7e2c710db42fa2f616ae94cff0f845eecf165082",
@@ -80514,7 +80526,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7e2c710db42fa2f616ae94cff0f845eecf165082"
+      "url": "https://github.com/jd-opensource/xllm/commit/7e2c710db42fa2f616ae94cff0f845eecf165082",
+      "aiSummary": {
+        "zh": "本次提交为所有生成型大语言模型支持了embedding接口，涉及Graph和Runtime模块，改动较大且影响Ascend平台。测试重点需关注embedding功能的正确性及对现有生成模型的兼容性。",
+        "en": "This commit adds embedding interface support for all generative LLM models, affecting the Graph and Runtime modules with significant changes impacting the Ascend platform. Testing should focus on the correctness of embedding functionality and compatibility with existing generative models.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:44.279Z"
+      }
     },
     {
       "sha": "8ef7efa4b2b733509f63273f905a4faca7441537",
@@ -80558,7 +80576,13 @@
         "feature",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/8ef7efa4b2b733509f63273f905a4faca7441537"
+      "url": "https://github.com/jd-opensource/xllm/commit/8ef7efa4b2b733509f63273f905a4faca7441537",
+      "aiSummary": {
+        "zh": "本次提交在xllm/core模块中注册了glm5检测器，涉及全局标志、函数调用解析和检测器注册相关文件。测试应关注新检测器的正确注册及功能表现。",
+        "en": "This commit registers the glm5 detector in the xllm/core module, modifying global flags, function call parsing, and detector registry files. Testing should focus on the correct registration and functionality of the new detector.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:46.086Z"
+      }
     },
     {
       "sha": "f9e07808790e0532f2518239276e8d9c10a9e9eb",
@@ -80597,7 +80621,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f9e07808790e0532f2518239276e8d9c10a9e9eb"
+      "url": "https://github.com/jd-opensource/xllm/commit/f9e07808790e0532f2518239276e8d9c10a9e9eb",
+      "aiSummary": {
+        "zh": "本次提交为cuda的act_and_mul激活核函数添加了gtest测试覆盖，涉及Graph / Runtime模块，重点验证激活核函数的正确性。影响范围主要是CUDA相关的激活核实现。",
+        "en": "This commit adds gtest coverage for the CUDA act_and_mul activation kernel, impacting the Graph / Runtime module, with a focus on verifying the correctness of the activation kernel. The scope mainly involves CUDA-related activation kernel implementation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:47.800Z"
+      }
     },
     {
       "sha": "ee72c8499f6d1e64d78085978c46a3f1bbbdc2e7",
@@ -80661,7 +80691,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/ee72c8499f6d1e64d78085978c46a3f1bbbdc2e7"
+      "url": "https://github.com/jd-opensource/xllm/commit/ee72c8499f6d1e64d78085978c46a3f1bbbdc2e7",
+      "aiSummary": {
+        "zh": "本次提交修复了deepseekv32工具调用相关的多个bug，影响NPU后端特别是Ascend平台的功能稳定性。测试重点在于验证deepseekv32检测器和解码层的正确性及性能表现。",
+        "en": "This commit fixes multiple bugs in the deepseekv32 tool call affecting the NPU backend, specifically impacting Ascend platform stability. Testing focuses on verifying the correctness and performance of the deepseekv32 detector and decoder layer.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:49.959Z"
+      }
     },
     {
       "sha": "57617fd5baccb8784e52fd899884fb6fe25fe353",
@@ -80706,7 +80742,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/57617fd5baccb8784e52fd899884fb6fe25fe353"
+      "url": "https://github.com/jd-opensource/xllm/commit/57617fd5baccb8784e52fd899884fb6fe25fe353",
+      "aiSummary": {
+        "zh": "本次提交修复了模型初始化过程中vocab_size不匹配导致的警告噪声，影响Graph和Runtime模块，重点测试模型初始化时警告信息是否减少。",
+        "en": "This commit fixes the warning noise caused by vocab_size mismatch during model initialization, affecting the Graph and Runtime modules; testing should focus on verifying the reduction of such warnings during initialization.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:51.814Z"
+      }
     },
     {
       "sha": "b3ed0ee7b0325f8c90232b6e9ec41fc421547610",
@@ -80847,7 +80889,13 @@
         "device-backend",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b3ed0ee7b0325f8c90232b6e9ec41fc421547610"
+      "url": "https://github.com/jd-opensource/xllm/commit/b3ed0ee7b0325f8c90232b6e9ec41fc421547610",
+      "aiSummary": {
+        "zh": "本次提交为MLU设备后端构建了序列并行的前置条件，涉及多个并行状态相关文件，影响设备并行计算模块。测试应关注并行状态的正确初始化与异步执行的稳定性。",
+        "en": "This commit builds sequence parallel prerequisites for the MLU device backend, affecting multiple parallel state-related files within the device backend module. Testing should focus on correct initialization and stable asynchronous execution of parallel states.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:53.789Z"
+      }
     },
     {
       "sha": "6528f2bbd3b9912338e8583c579d6c164b60893c",
@@ -80922,7 +80970,13 @@
         "device-backend",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/6528f2bbd3b9912338e8583c579d6c164b60893c"
+      "url": "https://github.com/jd-opensource/xllm/commit/6528f2bbd3b9912338e8583c579d6c164b60893c",
+      "aiSummary": {
+        "zh": "本次提交修复了CUDA设备上分块预填充的精度问题，涉及设备后端多个核心文件，需重点测试CUDA相关的预填充和解码功能的准确性和性能表现。",
+        "en": "This commit fixes a precision issue in chunked prefill on CUDA devices, affecting multiple core files in the device backend. Testing should focus on the accuracy and performance of CUDA-related prefill and decode operations.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:55.781Z"
+      }
     },
     {
       "sha": "69e728d39a6da6da666895d17bbafff40b535d0d",
@@ -80960,7 +81014,13 @@
         "docs",
         "engineering"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/69e728d39a6da6da666895d17bbafff40b535d0d"
+      "url": "https://github.com/jd-opensource/xllm/commit/69e728d39a6da6da666895d17bbafff40b535d0d",
+      "aiSummary": {
+        "zh": "本次提交更新了README文件中的信息，涉及两个文档文件，主要影响文档展示内容。测试重点为确认文档内容更新正确且格式无误。",
+        "en": "This commit updates information in the README files, affecting two documentation files. The impact is limited to documentation content, with testing focused on verifying correct updates and formatting.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:57.863Z"
+      }
     },
     {
       "sha": "fe1c5bf124e93e18a7ea65efe0a5c25f7007baef",
@@ -80992,7 +81052,13 @@
         "bugfix",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/fe1c5bf124e93e18a7ea65efe0a5c25f7007baef"
+      "url": "https://github.com/jd-opensource/xllm/commit/fe1c5bf124e93e18a7ea65efe0a5c25f7007baef",
+      "aiSummary": {
+        "zh": "本次提交修复了xllm/core模块中CMakeLists.txt文件缺失brpc/options.proto的问题，确保构建配置完整。测试应关注构建过程是否正常完成。",
+        "en": "This commit fixes the missing brpc/options.proto entry in the xllm/core CMakeLists.txt, ensuring complete build configuration. Testing should focus on successful build completion.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:53:59.509Z"
+      }
     },
     {
       "sha": "7fcccf565cbf438fc8978d7d2e7d4507abe11b29",
@@ -81030,7 +81096,13 @@
         "bugfix",
         "third-party-minja"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7fcccf565cbf438fc8978d7d2e7d4507abe11b29"
+      "url": "https://github.com/jd-opensource/xllm/commit/7fcccf565cbf438fc8978d7d2e7d4507abe11b29",
+      "aiSummary": {
+        "zh": "本次提交修复了当存在助手消息时聊天模板导致的coredump错误，影响third_party/minja模块及聊天模板相关代码，测试需关注助手消息处理的稳定性。",
+        "en": "This commit fixes a coredump error in the chat template when assistant messages are present, affecting the third_party/minja module and chat template code; testing should focus on the stability of assistant message handling.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:54:01.527Z"
+      }
     },
     {
       "sha": "b614f5cea6ad74b39d341e0ac1160e1633f65ed2",
@@ -81075,7 +81147,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/b614f5cea6ad74b39d341e0ac1160e1633f65ed2"
+      "url": "https://github.com/jd-opensource/xllm/commit/b614f5cea6ad74b39d341e0ac1160e1633f65ed2",
+      "aiSummary": {
+        "zh": "本次提交在多模态模型中支持调度重叠，涉及图计算和运行时模块，重点测试调度逻辑的正确性及对Ascend平台的影响。",
+        "en": "This commit adds support for schedule overlap in multimodal models, affecting the graph and runtime modules, with testing focused on scheduling correctness and impact on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:54:03.568Z"
+      }
     },
     {
       "sha": "f3fe225e9ed91c4be4b68fe437723ea9ccf9664a",
@@ -81131,7 +81209,13 @@
         "refactor",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/f3fe225e9ed91c4be4b68fe437723ea9ccf9664a"
+      "url": "https://github.com/jd-opensource/xllm/commit/f3fe225e9ed91c4be4b68fe437723ea9ccf9664a",
+      "aiSummary": {
+        "zh": "本次提交重构了xllm/core模块，移除了无用的函数调用并优化了相关测试用例，涉及5个文件。测试重点在于确保重构未引入功能回归。",
+        "en": "This commit refactors the xllm/core module by removing useless function calls and refining related tests across 5 files. Testing focuses on verifying no regressions were introduced.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:54:07.020Z"
+      }
     },
     {
       "sha": "113804a991459678ba9ab65b63ca3d45b801e389",
@@ -81224,7 +81308,13 @@
         "device-backend",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/113804a991459678ba9ab65b63ca3d45b801e389"
+      "url": "https://github.com/jd-opensource/xllm/commit/113804a991459678ba9ab65b63ca3d45b801e389",
+      "aiSummary": {
+        "zh": "本次提交为CUDA设备新增了更多设备工具函数，涉及设备后端模块，修改了多个相关文件。测试应关注新工具函数的正确性及对现有CUDA功能的兼容性。",
+        "en": "This commit adds more device utility functions for CUDA devices within the Device Backend module, modifying multiple related files. Testing should focus on the correctness of the new utilities and compatibility with existing CUDA functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-26T18:54:09.354Z"
+      }
     },
     {
       "sha": "dca05bb020bf292d8f7a10d89eb3fc45711c1566",
