@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T18:54:11.415Z",
+  "generatedAt": "2026-07-27T19:09:49.846Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1227,
-    "contributors": 107,
-    "additions": 655319,
-    "deletions": 172038,
-    "filesChanged": 18003,
+    "commits": 1238,
+    "contributors": 108,
+    "additions": 661735,
+    "deletions": 175620,
+    "filesChanged": 18136,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-24",
+    "latestDate": "2026-07-27",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -39,10 +39,10 @@
       },
       {
         "name": "Yingxu Deng",
-        "commits": 73,
-        "additions": 23857,
-        "deletions": 4011,
-        "files": 567
+        "commits": 74,
+        "additions": 24167,
+        "deletions": 4028,
+        "files": 576
       },
       {
         "name": "yq33victor",
@@ -53,17 +53,17 @@
       },
       {
         "name": "JinDonghe",
-        "commits": 51,
-        "additions": 12893,
-        "deletions": 3502,
-        "files": 374
+        "commits": 53,
+        "additions": 12986,
+        "deletions": 3517,
+        "files": 378
       },
       {
         "name": "weizhehuang0827",
-        "commits": 48,
-        "additions": 15524,
-        "deletions": 11262,
-        "files": 3229
+        "commits": 50,
+        "additions": 15529,
+        "deletions": 11267,
+        "files": 3233
       },
       {
         "name": "a120092009",
@@ -95,24 +95,24 @@
       },
       {
         "name": "Raymond",
-        "commits": 25,
-        "additions": 10008,
-        "deletions": 5404,
-        "files": 370
+        "commits": 26,
+        "additions": 11312,
+        "deletions": 6056,
+        "files": 406
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 421
+        "count": 422
       },
       {
         "key": "NPU Backend",
-        "count": 137
+        "count": 138
       },
       {
         "key": "Inference Engine",
-        "count": 106
+        "count": 107
       },
       {
         "key": "Model Support",
@@ -124,15 +124,15 @@
       },
       {
         "key": "Spec Decode",
-        "count": 78
+        "count": 81
       },
       {
         "key": "Engineering",
-        "count": 75
+        "count": 77
       },
       {
         "key": "Device Backend",
-        "count": 72
+        "count": 73
       },
       {
         "key": "xllm/api_service",
@@ -154,19 +154,19 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 447
+        "count": 449
       },
       {
         "key": "bugfix",
-        "count": 376
+        "count": 381
       },
       {
         "key": "refactor",
-        "count": 181
+        "count": 182
       },
       {
         "key": "performance",
-        "count": 155
+        "count": 158
       },
       {
         "key": "other",
@@ -441,7 +441,8 @@
     "2026-07-21",
     "2026-07-22",
     "2026-07-23",
-    "2026-07-24"
+    "2026-07-24",
+    "2026-07-27"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1246,6 +1247,1165 @@
     }
   },
   "commits": [
+    {
+      "sha": "f7b4342c7b39071adcd43c886db9774681aac341",
+      "parents": [
+        "a865489d539b3b664da2541390a2c0b8bea7a07f"
+      ],
+      "pr": "2051",
+      "date": "2026-07-27T22:30:01+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "ware2009",
+        "email": "libra1588@126.com"
+      },
+      "title": "feat: change the xllm_atb_layers to main. (#2051)",
+      "type": "feature",
+      "module": "third_party/xllm_atb_layers",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "third_party/xllm_atb_layers",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/xllm_atb_layers"
+        }
+      ],
+      "tags": [
+        "feature",
+        "third-party-xllm-atb-layers"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f7b4342c7b39071adcd43c886db9774681aac341",
+      "aiSummary": {
+        "zh": "本次提交将 third_party/xllm_atb_layers 模块的主分支更改为 main，影响该第三方库的版本管理。测试应关注分支切换是否正确且不影响功能。",
+        "en": "This commit changes the main branch of the third_party/xllm_atb_layers module to main, affecting version management of this third-party library. Testing should focus on verifying the branch switch is correct and does not impact functionality.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:09.575Z"
+      }
+    },
+    {
+      "sha": "a865489d539b3b664da2541390a2c0b8bea7a07f",
+      "parents": [
+        "42b2fd89f58684979054e6ce20fa041e69a2d010"
+      ],
+      "pr": "2003",
+      "date": "2026-07-27T21:23:49+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "shifengmin",
+        "email": "shifengmin.3@jd.com"
+      },
+      "title": "refactor: move npu context parallel partition into model side. (#2003)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 3223,
+      "deletions": 2801,
+      "filesChanged": 58,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 0,
+          "deletions": 68,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/CMakeLists.txt",
+          "additions": 40,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/cp_group_ranks_test.cpp",
+          "additions": 144,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/npu_cp_capability_test.cpp",
+          "additions": 66,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/npu_cp_plan_test.cpp",
+          "additions": 843,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 10,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/cp_input_partition_test.cpp",
+          "additions": 0,
+          "deletions": 334,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 7,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.h",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 114,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_input_builder.cpp",
+          "additions": 5,
+          "deletions": 47,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_input_builder.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_transfer.h",
+          "additions": 1,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 5,
+          "deletions": 30,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/collective_communicator.cpp",
+          "additions": 27,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/collective_communicator.h",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/mapping_npu.cpp",
+          "additions": 11,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_ep_padding.cpp",
+          "additions": 0,
+          "deletions": 210,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_ep_padding.h",
+          "additions": 0,
+          "deletions": 92,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_plan.cpp",
+          "additions": 1244,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_plan.h",
+          "additions": 203,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_prepare.cpp",
+          "additions": 0,
+          "deletions": 542,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_prepare.h",
+          "additions": 0,
+          "deletions": 77,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/parallel_args.h",
+          "additions": 2,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/parallel_state.cpp",
+          "additions": 30,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/parallel_state.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v2_attention.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/base_loader.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/column_parallel_linear_loader.cpp",
+          "additions": 10,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/lm_head_loader.cpp",
+          "additions": 11,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/word_embedding_loader.cpp",
+          "additions": 10,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_column_parallel_linear_impl.cpp",
+          "additions": 18,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_deepseek_v32_decoder_layer_impl.cpp",
+          "additions": 36,
+          "deletions": 40,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_lm_head_impl.cpp",
+          "additions": 24,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_word_embedding_impl.cpp",
+          "additions": 10,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/platform.h",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 85,
+          "deletions": 76,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/cp_input_partition.cpp",
+          "additions": 0,
+          "deletions": 324,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/cp_input_partition.h",
+          "additions": 0,
+          "deletions": 65,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 11,
+          "deletions": 292,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 32,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 110,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 66,
+          "deletions": 237,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 21,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 7,
+          "deletions": 42,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v32.h",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/glm52.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/deepseek_v32.h",
+          "additions": 14,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm4_moe_mtp.h",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm5_moe.h",
+          "additions": 14,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/mtp_model_base.h",
+          "additions": 22,
+          "deletions": 12,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 33,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.h",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a865489d539b3b664da2541390a2c0b8bea7a07f",
+      "aiSummary": {
+        "zh": "本次提交将NPU上下文的并行分区逻辑移至模型端，涉及图计算和运行时模块，影响Ascend平台。测试重点包括并行状态和运行时相关单元测试的调整和新增。",
+        "en": "This commit refactors the NPU context parallel partition logic by moving it to the model side, affecting the Graph and Runtime modules and impacting the Ascend platform. Testing focuses on adjustments and additions to parallel state and runtime unit tests.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:12.675Z"
+      }
+    },
+    {
+      "sha": "42b2fd89f58684979054e6ce20fa041e69a2d010",
+      "parents": [
+        "cf5c5304329d57ee904527eb682de82d77085d22"
+      ],
+      "pr": "2029",
+      "date": "2026-07-27T21:06:46+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "JinDonghe",
+        "email": "54488932+DongheJin@users.noreply.github.com"
+      },
+      "title": "bugfix: synchronize speculative execution across DP ranks. (#2029)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 71,
+      "deletions": 1,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 36,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 31,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/42b2fd89f58684979054e6ce20fa041e69a2d010",
+      "aiSummary": {
+        "zh": "本次提交修复了Spec Decode模块中跨数据并行（DP）rank的推测执行同步问题，影响Ascend平台相关功能。测试重点在于验证推测执行的同步正确性。",
+        "en": "This commit fixes synchronization of speculative execution across data parallel (DP) ranks in the Spec Decode module, affecting features on the Ascend platform. Testing focuses on verifying correct synchronization of speculative execution.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:15.229Z"
+      }
+    },
+    {
+      "sha": "cf5c5304329d57ee904527eb682de82d77085d22",
+      "parents": [
+        "9e2734a435c18284404461678757bfd14a8ea30e"
+      ],
+      "pr": "2049",
+      "date": "2026-07-27T20:12:42+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "maojunx99",
+        "email": "112036804+maojunx99@users.noreply.github.com"
+      },
+      "title": "bugfix: update xllm_ops git commit to include mtp_prepare_next_draft operation (#2049)",
+      "type": "bugfix",
+      "module": "third_party/xllm_ops",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "third_party/xllm_ops",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/xllm_ops"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "third-party-xllm-ops"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cf5c5304329d57ee904527eb682de82d77085d22",
+      "aiSummary": {
+        "zh": "本次提交修复了third_party/xllm_ops模块中xllm_ops的git提交记录，新增了mtp_prepare_next_draft操作。影响范围限于该第三方模块，测试应关注该操作是否正确包含并生效。",
+        "en": "This bugfix updates the xllm_ops git commit in the third_party/xllm_ops module to include the mtp_prepare_next_draft operation. The impact is limited to this third-party module, with testing focused on verifying the inclusion and functionality of the new operation.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:18.904Z"
+      }
+    },
+    {
+      "sha": "9e2734a435c18284404461678757bfd14a8ea30e",
+      "parents": [
+        "062ff4ddaed18f8638df4f405da983a817d30cbe"
+      ],
+      "pr": "2008",
+      "date": "2026-07-27T17:21:48+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "Raymond",
+        "email": "kangmeng3@jd.com"
+      },
+      "title": "feat: support DSV4 device prefix cache (SWA + C4 + C128). (#2008)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 1304,
+      "deletions": 652,
+      "filesChanged": 36,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/block_manager_test.cpp",
+          "additions": 6,
+          "deletions": 12,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/composite_block_manager_test.cpp",
+          "additions": 203,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 1,
+          "deletions": 6,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 0,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager.h",
+          "additions": 17,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.cpp",
+          "additions": 16,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_impl.h",
+          "additions": 9,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.h",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.cpp",
+          "additions": 484,
+          "deletions": 172,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.h",
+          "additions": 56,
+          "deletions": 46,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/linear_state_block_manager.cpp",
+          "additions": 32,
+          "deletions": 34,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/linear_state_block_manager.h",
+          "additions": 19,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/single_block_manager.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.cpp",
+          "additions": 41,
+          "deletions": 34,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/sliding_window_block_manager.h",
+          "additions": 14,
+          "deletions": 28,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/linear_state_prefix_cache.cpp",
+          "additions": 172,
+          "deletions": 57,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/linear_state_prefix_cache.h",
+          "additions": 22,
+          "deletions": 50,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache.cpp",
+          "additions": 5,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache.h",
+          "additions": 25,
+          "deletions": 57,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/prefix_cache/prefix_cache_factory.cpp",
+          "additions": 11,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 25,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 27,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 42,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_block_manager_impl.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_chunked_prefill_scheduler.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 14,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/unified_policy.cpp",
+          "additions": 17,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/zero_eviction_scheduler.cpp",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9e2734a435c18284404461678757bfd14a8ea30e",
+      "aiSummary": {
+        "zh": "本次提交在推理引擎模块中新增对DSV4设备前缀缓存的支持，涉及多个核心框架文件，提升性能且风险较高。测试重点覆盖了块管理器和调度器相关功能，确保缓存机制的正确性和稳定性。",
+        "en": "This commit adds support for DSV4 device prefix cache in the Inference Engine module, affecting multiple core framework files to improve performance with high risk. Testing focuses on block manager and scheduler functionalities to ensure correctness and stability of the caching mechanism.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:22.167Z"
+      }
+    },
+    {
+      "sha": "062ff4ddaed18f8638df4f405da983a817d30cbe",
+      "parents": [
+        "8b85eab8e17e54191bb0d975300ee05b31b0e2f9"
+      ],
+      "pr": "2009",
+      "date": "2026-07-27T17:17:17+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "feat: add NPU device support for embedded-python model executor with TP and ProcessGroupHCCL. (#2009)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 310,
+      "deletions": 17,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "scripts/build_support/env.py",
+          "additions": 28,
+          "deletions": 1,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "scripts/deps/__init__.py",
+          "additions": 0,
+          "deletions": 0,
+          "module": "scripts/deps"
+        },
+        {
+          "filename": "scripts/deps/torch_npu_install.py",
+          "additions": 124,
+          "deletions": 0,
+          "module": "scripts/deps"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 7,
+          "deletions": 0,
+          "module": "setup.py"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/npu_ops_library.cpp",
+          "additions": 43,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/device.cpp",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/ops/collectives.py",
+          "additions": 24,
+          "deletions": 14,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 61,
+          "deletions": 0,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/062ff4ddaed18f8638df4f405da983a817d30cbe",
+      "aiSummary": {
+        "zh": "本次提交为嵌入式Python模型执行器新增了对NPU设备的支持，涵盖TP和ProcessGroupHCCL，影响NPU后端相关模块。测试应重点关注NPU设备的分布式运行和通信功能的正确性。",
+        "en": "This commit adds NPU device support for the embedded Python model executor, including TP and ProcessGroupHCCL, impacting the NPU backend modules. Testing should focus on the correctness of distributed execution and communication on NPU devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:25.083Z"
+      }
+    },
+    {
+      "sha": "8b85eab8e17e54191bb0d975300ee05b31b0e2f9",
+      "parents": [
+        "8100080e3b397cbb5a915760e0ba9147f63084e5"
+      ],
+      "pr": "1966",
+      "date": "2026-07-27T16:56:27+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "maojunx99",
+        "email": "112036804+maojunx99@users.noreply.github.com"
+      },
+      "title": "perf: eliminate validate-to-draft bubbles with asynchronous device-side handoff. (#1966)",
+      "type": "performance",
+      "module": "Spec Decode",
+      "additions": 1475,
+      "deletions": 88,
+      "filesChanged": 19,
+      "files": [
+        {
+          "filename": "tests/core/kernels/npu/CMakeLists.txt",
+          "additions": 19,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/mtp_prepare_next_draft_test.cpp",
+          "additions": 105,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 16,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_async_state_test.cpp",
+          "additions": 107,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "third_party/xllm_ops",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/xllm_ops"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/mtp_prepare_next_draft.cpp",
+          "additions": 174,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream.cpp",
+          "additions": 21,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream_event.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_input_builder.cpp",
+          "additions": 144,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_input_builder.h",
+          "additions": 43,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_state.cpp",
+          "additions": 141,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_state.h",
+          "additions": 69,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 512,
+          "deletions": 66,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 63,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 31,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8b85eab8e17e54191bb0d975300ee05b31b0e2f9",
+      "aiSummary": {
+        "zh": "本次提交通过异步设备端交接消除了验证到草稿阶段的气泡，提升了Spec Decode模块的性能，影响Ascend平台。测试重点包括异步状态和下一草稿准备的相关功能。",
+        "en": "This commit eliminates validate-to-draft bubbles using asynchronous device-side handoff, improving performance in the Spec Decode module and affecting the Ascend platform. Testing focuses on asynchronous state handling and preparing the next draft.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:27.724Z"
+      }
+    },
+    {
+      "sha": "8100080e3b397cbb5a915760e0ba9147f63084e5",
+      "parents": [
+        "896bf43bb2bfe024192e6863a495aca343751c10"
+      ],
+      "pr": "2038",
+      "date": "2026-07-27T14:35:24+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "Han Teng",
+        "email": "165119118+Cooofish@users.noreply.github.com"
+      },
+      "title": "perf: skip greedy speculative token broadcasts. (#2038)",
+      "type": "performance",
+      "module": "Spec Decode",
+      "additions": 4,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8100080e3b397cbb5a915760e0ba9147f63084e5",
+      "aiSummary": {
+        "zh": "本次提交在 Spec Decode 模块中优化了性能，跳过了贪婪推测令牌的广播，影响范围主要是 mtp_worker_impl.cpp 文件。测试应关注性能提升及功能正确性。",
+        "en": "This commit improves performance in the Spec Decode module by skipping greedy speculative token broadcasts, affecting the mtp_worker_impl.cpp file. Testing should focus on performance gains and correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:30.756Z"
+      }
+    },
+    {
+      "sha": "896bf43bb2bfe024192e6863a495aca343751c10",
+      "parents": [
+        "60c0f735229de630a7de5a80a8e5e3337501435f"
+      ],
+      "pr": "2033",
+      "date": "2026-07-27T14:24:11+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "JinDonghe",
+        "email": "54488932+DongheJin@users.noreply.github.com"
+      },
+      "title": "bugfix: support Debian Mooncake build dependencies. (#2033)",
+      "type": "bugfix",
+      "module": "Engineering",
+      "additions": 22,
+      "deletions": 14,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "scripts/build_support/utils.py",
+          "additions": 22,
+          "deletions": 14,
+          "module": "scripts/build_support"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/896bf43bb2bfe024192e6863a495aca343751c10",
+      "aiSummary": {
+        "zh": "本次提交修复了 Debian Mooncake 构建依赖支持的问题，修改了 scripts/build_support/utils.py 文件，影响构建流程。测试应关注构建依赖是否正确安装和构建是否成功。",
+        "en": "This commit fixes support for Debian Mooncake build dependencies by modifying scripts/build_support/utils.py, impacting the build process. Testing should focus on verifying correct dependency installation and successful build.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:33.542Z"
+      }
+    },
+    {
+      "sha": "60c0f735229de630a7de5a80a8e5e3337501435f",
+      "parents": [
+        "0fe6398533cf662cda05631ab7cf616e29d06442"
+      ],
+      "pr": "2041",
+      "date": "2026-07-27T12:40:42+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "bugfix: fix recursive submodule check breaking mlu/ilu/cuda CI. (#2041)",
+      "type": "bugfix",
+      "module": "Device Backend",
+      "additions": 3,
+      "deletions": 3,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": ".github/workflows/build_x86_64_cuda.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/build_x86_64_ilu.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".github/workflows/build_x86_64_mlu.yaml",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/workflows"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "device-backend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/60c0f735229de630a7de5a80a8e5e3337501435f",
+      "aiSummary": {
+        "zh": "本次提交修复了递归子模块检查导致mlu、ilu和cuda相关CI流程失败的问题，影响设备后端相关的持续集成。测试重点是确保相关CI流程正常通过。",
+        "en": "This commit fixes the recursive submodule check that broke the mlu, ilu, and cuda CI workflows, impacting the device backend continuous integration. Testing focuses on verifying the CI workflows pass correctly.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:36.198Z"
+      }
+    },
+    {
+      "sha": "0fe6398533cf662cda05631ab7cf616e29d06442",
+      "parents": [
+        "f174bf6943872f79c65a5e2051e2da79d49aa500"
+      ],
+      "pr": "2030",
+      "date": "2026-07-27T10:38:00+08:00",
+      "dateKey": "2026-07-27",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "bugfix: check nested submodules recursively before build. (#2030)",
+      "type": "bugfix",
+      "module": "Engineering",
+      "additions": 2,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "scripts/build_support/utils.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "scripts/build_support"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0fe6398533cf662cda05631ab7cf616e29d06442",
+      "aiSummary": {
+        "zh": "本次提交修复了构建前递归检查嵌套子模块的bug，影响构建流程的准确性。测试应关注递归子模块检测的正确性和构建是否正常完成。",
+        "en": "This commit fixes a bug to recursively check nested submodules before build, affecting the accuracy of the build process. Testing should focus on correct recursive submodule detection and successful build completion.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:38.376Z"
+      }
+    },
     {
       "sha": "f174bf6943872f79c65a5e2051e2da79d49aa500",
       "parents": [
@@ -81389,7 +82549,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/dca05bb020bf292d8f7a10d89eb3fc45711c1566"
+      "url": "https://github.com/jd-opensource/xllm/commit/dca05bb020bf292d8f7a10d89eb3fc45711c1566",
+      "aiSummary": {
+        "zh": "本次提交新增了对LongCat-Image-Edit在CUDA设备上的支持，涉及模型加载、核心算子和视觉注意力层等多个模块，需重点测试CUDA环境下的功能兼容性和性能表现。",
+        "en": "This commit adds support for LongCat-Image-Edit on CUDA devices, affecting model loading, core operators, and vision attention layers; testing should focus on functionality compatibility and performance on CUDA environments.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:40.795Z"
+      }
     },
     {
       "sha": "9c805b8a0e4357927f4b0aee75f52c8e223e8247",
@@ -81433,7 +82599,13 @@
         "bugfix",
         "model-support"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/9c805b8a0e4357927f4b0aee75f52c8e223e8247"
+      "url": "https://github.com/jd-opensource/xllm/commit/9c805b8a0e4357927f4b0aee75f52c8e223e8247",
+      "aiSummary": {
+        "zh": "本次提交修复了xattention中mbox模型（qwen2.5）多轮核心计算的bug，影响模型支持模块。测试应关注多轮推理的正确性和性能表现。",
+        "en": "This commit fixes a bug in the multi-round core computation of the mbox model (qwen2.5) within xattention, affecting the model support module. Testing should focus on the correctness and performance of multi-round inference.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:42.945Z"
+      }
     },
     {
       "sha": "47f87a53a39cc247335c58fb7b65ac108e8c2cbc",
@@ -81472,7 +82644,13 @@
         "spec-decode",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/47f87a53a39cc247335c58fb7b65ac108e8c2cbc"
+      "url": "https://github.com/jd-opensource/xllm/commit/47f87a53a39cc247335c58fb7b65ac108e8c2cbc",
+      "aiSummary": {
+        "zh": "本次提交修复了深度搜索DP中MTP工作线程空运行的问题，涉及Spec Decode模块，影响Ascend平台。测试应关注相关功能的正确执行和性能表现。",
+        "en": "This commit fixes the empty run issue of the MTP worker in deepseek DP within the Spec Decode module, affecting the Ascend platform. Testing should focus on correct functionality and performance in related scenarios.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:45.178Z"
+      }
     },
     {
       "sha": "d78ddf87e874f08f5bd49e17992b49503c7dc0f8",
@@ -81522,7 +82700,13 @@
         "feature",
         "xllm-core"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d78ddf87e874f08f5bd49e17992b49503c7dc0f8"
+      "url": "https://github.com/jd-opensource/xllm/commit/d78ddf87e874f08f5bd49e17992b49503c7dc0f8",
+      "aiSummary": {
+        "zh": "本次提交在多轮对话流水线中新增了返回对数概率的标志，修改涉及xllm/core模块的四个文件。测试应关注多轮对话功能是否正确返回logprob值。",
+        "en": "This commit adds flags to the multi-round pipeline to return log probabilities, affecting four files in the xllm/core module. Testing should focus on verifying that the multi-round dialogue correctly returns logprob values.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-27T19:09:48.228Z"
+      }
     },
     {
       "sha": "5b42b40d2ef725fb04bc894f21055d7d0cd83571",
