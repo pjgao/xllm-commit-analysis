@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T18:54:37.306Z",
+  "generatedAt": "2026-07-30T19:08:37.283Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1256,
+    "commits": 1263,
     "contributors": 109,
-    "additions": 667809,
-    "deletions": 177007,
-    "filesChanged": 18269,
+    "additions": 673403,
+    "deletions": 177492,
+    "filesChanged": 18360,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-29",
+    "latestDate": "2026-07-30",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -25,10 +25,10 @@
       },
       {
         "name": "phantomlei",
-        "commits": 84,
-        "additions": 66932,
-        "deletions": 13016,
-        "files": 1182
+        "commits": 85,
+        "additions": 67043,
+        "deletions": 13017,
+        "files": 1187
       },
       {
         "name": "Yingxu Deng",
@@ -88,23 +88,23 @@
       },
       {
         "name": "Jun Xiong",
-        "commits": 29,
-        "additions": 3680,
-        "deletions": 3597,
-        "files": 331
+        "commits": 30,
+        "additions": 4355,
+        "deletions": 3628,
+        "files": 355
       },
       {
         "name": "Raymond",
-        "commits": 27,
-        "additions": 11960,
-        "deletions": 6157,
-        "files": 424
+        "commits": 28,
+        "additions": 12253,
+        "deletions": 6444,
+        "files": 461
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 425
+        "count": 427
       },
       {
         "key": "NPU Backend",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 110
+        "count": 112
       },
       {
         "key": "Model Support",
@@ -120,7 +120,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 90
+        "count": 91
       },
       {
         "key": "Spec Decode",
@@ -140,29 +140,29 @@
       },
       {
         "key": "MoE",
-        "count": 22
-      },
-      {
-        "key": "Testing",
-        "count": 11
+        "count": 23
       },
       {
         "key": "xllm/models",
+        "count": 12
+      },
+      {
+        "key": "Testing",
         "count": 11
       }
     ],
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 454
+        "count": 457
       },
       {
         "key": "bugfix",
-        "count": 389
+        "count": 391
       },
       {
         "key": "refactor",
-        "count": 182
+        "count": 184
       },
       {
         "key": "performance",
@@ -444,7 +444,8 @@
     "2026-07-24",
     "2026-07-27",
     "2026-07-28",
-    "2026-07-29"
+    "2026-07-29",
+    "2026-07-30"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1302,9 +1303,833 @@
       "commitCount": 6,
       "model": "openai/gpt-4.1-mini",
       "generatedAt": "2026-07-29T18:54:37.304Z"
+    },
+    "2026-07-30": {
+      "zh": "今日研发重点围绕Graph/Runtime、推理引擎及MoE模块，新增了MUSA设备相关核函数及兼容性支持，同时完善了推理引擎请求参数功能。高风险改动主要集中在核心计算核函数和推理引擎参数处理，测试需重点验证新核函数性能、请求参数准确性及多节点通信的稳定性。构建配置重构也需关注构建流程的正常运行。",
+      "en": "Today's development focused on the Graph/Runtime, Inference Engine, and MoE modules, adding new kernels and compatibility for MUSA devices and enhancing request parameter support in the inference engine. High-risk changes are centered on core computation kernels and request parameter handling, with testing emphasizing kernel performance, parameter accuracy, and multi-node communication stability. Refactoring of build configurations also requires verification of build process integrity.",
+      "signature": "1bd60bcf1c817d741de8d1dba5635bb6986e70b2,39286e1e6ca61b95019f649174f129de9f25ff75,3a8988afa0edf406dc39ea6d41d537708345f798,6672b2be3b480f534b6db8fdbd7e20f6bab2df48,90048fd8fe5dc8275086c94e9193d7c7d2a86507,ca1ca69683592268750a0692125ce0f152dc6481,cd2ae39186bab7b41c87e8220878212b075512a6",
+      "commitCount": 7,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:11.751Z"
+    },
+    "2026-03-09": {
+      "zh": "今日研发重点涵盖Graph/Runtime和设备后端模块，完成了CUDA激活核测试覆盖及MLU序列并行前置条件构建。修复了NPU后端deepseekv32工具调用和CUDA设备预填充精度问题，风险较低。测试重点关注激活核正确性、并行状态初始化及CUDA预填充和解码的准确性与性能。",
+      "en": "Today's development focused on Graph/Runtime and device backend modules, including adding CUDA activation kernel test coverage and building sequence parallel prerequisites for MLU. Bug fixes addressed deepseekv32 tool call issues in the NPU backend and precision problems in CUDA device prefill, with low risk. Testing should emphasize activation kernel correctness, parallel state initialization, and accuracy and performance of CUDA prefill and decode operations.",
+      "signature": "57617fd5baccb8784e52fd899884fb6fe25fe353,6528f2bbd3b9912338e8583c579d6c164b60893c,69e728d39a6da6da666895d17bbafff40b535d0d,b3ed0ee7b0325f8c90232b6e9ec41fc421547610,ee72c8499f6d1e64d78085978c46a3f1bbbdc2e7,f9e07808790e0532f2518239276e8d9c10a9e9eb",
+      "commitCount": 6,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:16.126Z"
+    },
+    "2026-03-07": {
+      "zh": "今日研发主要聚焦于xllm/core、模型支持及设备后端模块，完成多项功能新增与关键bug修复。重点支持了LongCat-Image-Edit在CUDA设备上的适配及多模态模型调度重叠功能，风险较低但需关注CUDA环境下的新功能兼容性和多轮推理的正确性。测试应重点验证构建流程、助手消息处理稳定性及Ascend平台相关功能的性能表现。",
+      "en": "Today's development focused on xllm/core, model support, and device backend modules, delivering several feature additions and critical bug fixes. Key updates include support for LongCat-Image-Edit on CUDA devices and schedule overlap in multimodal models, with low risk but requiring testing on CUDA compatibility and multi-round inference correctness. Testing should emphasize build process validation, assistant message stability, and performance on the Ascend platform.",
+      "signature": "113804a991459678ba9ab65b63ca3d45b801e389,47f87a53a39cc247335c58fb7b65ac108e8c2cbc,7fcccf565cbf438fc8978d7d2e7d4507abe11b29,9c805b8a0e4357927f4b0aee75f52c8e223e8247,b614f5cea6ad74b39d341e0ac1160e1633f65ed2,dca05bb020bf292d8f7a10d89eb3fc45711c1566,f3fe225e9ed91c4be4b68fe437723ea9ccf9664a,fe1c5bf124e93e18a7ea65efe0a5c25f7007baef",
+      "commitCount": 8,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:20.472Z"
+    },
+    "2026-03-06": {
+      "zh": "今日研发重点涵盖Graph/Runtime、xllm/core、设备及NPU后端等多个核心模块，新增多轮对话logprob返回和REC多轮两阶段xattention支持。涉及高风险性能优化，特别是Ascend平台上的kvcache哈希算法和推测解码流水线优化。测试需重点关注多轮交互正确性、CUDA Graph性能、状态管理及单元测试构建稳定性。",
+      "en": "Today's development focused on core modules including Graph/Runtime, xllm/core, device and NPU backends, introducing multi-round dialogue logprob return and REC multi-round two-stage xattention support. High-risk performance optimizations were made, especially on the Ascend platform for kvcache hash algorithm and speculative decoding pipeline. Testing should emphasize multi-round interaction correctness, CUDA Graph performance, state management, and unit test build stability.",
+      "signature": "5b42b40d2ef725fb04bc894f21055d7d0cd83571,5d614d4e6f8449342b4db3fae1c005a4dc76c33e,83af58de842c7bd4cef22a9bf365d6ac381d509d,c94a4f564fa4a025d0508976cd4827ccbc01f158,d78ddf87e874f08f5bd49e17992b49503c7dc0f8,dd8ec315d25a60d305a988a3659d601213edd967,e27af10498d88cc025ebe3fc9f633b85b17a816b,e5dc86408ab0b69cd1cc4a9cde63885417acc414",
+      "commitCount": 8,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:24.772Z"
+    },
+    "2026-03-05": {
+      "zh": "今日研发主要聚焦于设备后端、模型支持及图计算运行时模块，完成了融合RMSNorm和静态FP8量化以提升性能，新增对joyai-llm-flash模型在mlu设备上的支持，并修复了NPU处理组返回值错误。整体风险较低，测试重点关注性能提升、数值稳定性、模型兼容性及返回值正确性。确保各模块功能稳定和性能优化效果显著。",
+      "en": "Today's development focused on the device backend, model support, and graph/runtime modules, implementing fused RMSNorm and static FP8 quantization for performance improvement, adding support for the joyai-llm-flash model on mlu devices, and fixing an incorrect return value in the NPU process group. The overall risk is low, with testing emphasis on performance gains, numerical stability, model compatibility, and return value correctness to ensure stable functionality and effective optimizations.",
+      "signature": "56be695845b4a60127f39e089b5bfa3edf924dbf,dc6c338b502c5c7b3fe9d7b382da5c9205e42a28,f0deae1789ffd7ced6e1d7e8cbc1d8a9fff6e0d7",
+      "commitCount": 3,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:30.061Z"
+    },
+    "2026-03-04": {
+      "zh": "今日研发重点聚焦于Graph/Runtime模块，新增了动态多模型支持、Qwen3模型在musa设备上的支持及GLM5模型在NPU设备上的支持，同时实现了APIService的RPC接口。重构工作涉及依赖关系调整和执行器优化，整体存在较高风险，特别是在Ascend平台上的兼容性。测试需重点关注多模型管理、设备适配、RPC接口性能及依赖稳定性，确保新功能和重构改动的正确性与稳定性。",
+      "en": "Today's development focused on the Graph/Runtime module, introducing dynamic multi-model support, Qwen3 model support on musa devices, GLM5 model support on NPU devices, and implementing the RPC interface in APIService. Refactoring efforts addressed dependency adjustments and executor optimizations, with high risk especially regarding Ascend platform compatibility. Testing should emphasize multi-model management, device adaptation, RPC interface performance, and dependency stability to ensure correctness and reliability of new features and refactors.",
+      "signature": "16dbbca50837b3aef75e50359591a1ee476bca52,26d9bf2dbd8753d20b180e31124b5902009ab5e3,2cb98ee83087a5182349eabf6389cf659d484150,3076b06c7b181c6334d19d4b72d3097fef67f284,5137f4eb98f1733d2f7d121a6e6dbffb804c32c8,5b51999a23a1152f3272c03f1c55e2df2a6b1087,b019e75867a17bf9731710b533dd86784be244e4,beb9d6d79306dcebeb26697c170d1821eca341e0,d4dd900fd80eaca8ba8e147adfc9293982e5b535",
+      "commitCount": 9,
+      "model": "openai/gpt-4.1-mini",
+      "generatedAt": "2026-07-30T19:08:37.281Z"
     }
   },
   "commits": [
+    {
+      "sha": "cd2ae39186bab7b41c87e8220878212b075512a6",
+      "parents": [
+        "1bd60bcf1c817d741de8d1dba5635bb6986e70b2"
+      ],
+      "pr": "2086",
+      "date": "2026-07-30T20:48:48+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "Raymond",
+        "email": "kangmeng3@jd.com"
+      },
+      "title": "refactor: decouple SINGLE block into EMBEDDING slot and LINEAR conv/ssm group. (#2086)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 293,
+      "deletions": 287,
+      "filesChanged": 37,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 21,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/block_manager_test.cpp",
+          "additions": 68,
+          "deletions": 53,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/composite_block_manager_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/{single_block_manager_test.cpp => embedding_block_manager_test.cpp}",
+          "additions": 17,
+          "deletions": 17,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_kv_state_test.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_task_update_test.cpp",
+          "additions": 5,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 16,
+          "deletions": 6,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/constants.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.cpp",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 3,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_input_builder.cpp",
+          "additions": 3,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/rec_multi_round_batch_input_builder.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block.h",
+          "additions": 17,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 28,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.cpp",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.h",
+          "additions": 9,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/concurrent_block_manager_impl.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/{single_block_manager.cpp => embedding_block_manager.cpp}",
+          "additions": 20,
+          "deletions": 19,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/{single_block_manager.h => embedding_block_manager.h}",
+          "additions": 9,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_impl.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/linear_attention_kv_cache_impl.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 4,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 9,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 6,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/pd_ooc_scheduler.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 0,
+          "deletions": 28,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cd2ae39186bab7b41c87e8220878212b075512a6",
+      "aiSummary": {
+        "zh": "本次提交重构了Graph/Runtime模块，将SINGLE块拆分为EMBEDDING槽和LINEAR conv/ssm组，影响范围包括多个核心框架和运行时文件，测试重点在相关单元测试的调整和新增以保证功能正确性。",
+        "en": "This commit refactors the Graph/Runtime module by decoupling the SINGLE block into EMBEDDING slot and LINEAR conv/ssm group, affecting multiple core framework and runtime files; testing focuses on adjustments and additions to unit tests to ensure correctness.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:12.824Z"
+      }
+    },
+    {
+      "sha": "1bd60bcf1c817d741de8d1dba5635bb6986e70b2",
+      "parents": [
+        "3a8988afa0edf406dc39ea6d41d537708345f798"
+      ],
+      "pr": "2069",
+      "date": "2026-07-30T20:42:33+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "xiaoyu.chen",
+        "email": "chenxiaoyu8@jd.com"
+      },
+      "title": "bugfix: fix VAE_IMAGE_SIZE calc logic. (#2069)",
+      "type": "bugfix",
+      "module": "xllm/models",
+      "additions": 5,
+      "deletions": 4,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_qwenimage_edit_plus.h",
+          "additions": 5,
+          "deletions": 4,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-models"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1bd60bcf1c817d741de8d1dba5635bb6986e70b2",
+      "aiSummary": {
+        "zh": "本次提交修复了xllm/models模块中VAE_IMAGE_SIZE的计算逻辑错误，修改集中在pipeline_qwenimage_edit_plus.h文件。测试应关注计算结果的正确性及相关功能的稳定性。",
+        "en": "This commit fixes the calculation logic of VAE_IMAGE_SIZE in the xllm/models module, specifically in the pipeline_qwenimage_edit_plus.h file. Testing should focus on verifying the correctness of the calculation and the stability of related functionalities.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:16.272Z"
+      }
+    },
+    {
+      "sha": "3a8988afa0edf406dc39ea6d41d537708345f798",
+      "parents": [
+        "6672b2be3b480f534b6db8fdbd7e20f6bab2df48"
+      ],
+      "pr": "2089",
+      "date": "2026-07-30T19:19:50+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: fixes multi-node worker address selection. (#2089)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 111,
+      "deletions": 1,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/util/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/net_test.cpp",
+          "additions": 42,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/net.cpp",
+          "additions": 61,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/net.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3a8988afa0edf406dc39ea6d41d537708345f798",
+      "aiSummary": {
+        "zh": "本次提交修复了多节点工作者地址选择的错误，影响推理引擎模块。测试重点包括网络相关功能和多节点通信的正确性验证。",
+        "en": "This commit fixes the multi-node worker address selection bug affecting the Inference Engine module. Testing focuses on network functionality and correctness of multi-node communication.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:18.634Z"
+      }
+    },
+    {
+      "sha": "6672b2be3b480f534b6db8fdbd7e20f6bab2df48",
+      "parents": [
+        "39286e1e6ca61b95019f649174f129de9f25ff75"
+      ],
+      "pr": "2084",
+      "date": "2026-07-30T16:18:55+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "feat: add fp8, moe, sampling kernels for MUSA devices. (#2084)",
+      "type": "feature",
+      "module": "MoE",
+      "additions": 4324,
+      "deletions": 47,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/musa/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/causal_conv1d.cu",
+          "additions": 795,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/fp8_act_quant.cu",
+          "additions": 1351,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/fp8_block_gemm.cpp",
+          "additions": 87,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/fused_qknorm_rope.cu",
+          "additions": 393,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gdn_state_commit.cu",
+          "additions": 171,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_fused_moe_aot.cpp",
+          "additions": 625,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_moe_gemm.cpp",
+          "additions": 348,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_ops_api.h",
+          "additions": 312,
+          "deletions": 40,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/rejection_sample.cu",
+          "additions": 164,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/replace_token.cu",
+          "additions": 70,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/flashinfer_attention.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_next_attention.cpp",
+          "additions": 3,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_next_gated_delta_net.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "moe",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6672b2be3b480f534b6db8fdbd7e20f6bab2df48",
+      "aiSummary": {
+        "zh": "本次提交为MUSA设备新增了fp8、moe和采样相关的核函数，涉及核心计算模块，需重点测试新核函数的性能和正确性。改动范围较大，包含14个文件，属于高风险特性更新。",
+        "en": "This commit adds fp8, moe, and sampling kernels for MUSA devices, impacting core computation modules. Testing should focus on the performance and correctness of the new kernels, as the change affects 14 files and is a high-risk feature update.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:21.132Z"
+      }
+    },
+    {
+      "sha": "39286e1e6ca61b95019f649174f129de9f25ff75",
+      "parents": [
+        "ca1ca69683592268750a0692125ce0f152dc6481"
+      ],
+      "pr": "2078",
+      "date": "2026-07-30T14:22:21+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "feat: adds platform musa device compatibilities. (#2078)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 61,
+      "deletions": 12,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "xllm/core/platform/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/device.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/musa/musa_csrc_guards.h",
+          "additions": 23,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/torch_profiler.cpp",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/torch_profiler.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/vmm_api.cpp",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/39286e1e6ca61b95019f649174f129de9f25ff75",
+      "aiSummary": {
+        "zh": "本次提交新增了对MUSA平台设备的兼容性支持，涉及Graph和Runtime模块，修改了多个平台相关文件。测试重点应关注MUSA设备上的功能正确性及性能表现。",
+        "en": "This commit adds compatibility support for the MUSA platform device, affecting the Graph and Runtime modules with changes across multiple platform-related files. Testing should focus on functionality correctness and performance on MUSA devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:23.051Z"
+      }
+    },
+    {
+      "sha": "ca1ca69683592268750a0692125ce0f152dc6481",
+      "parents": [
+        "90048fd8fe5dc8275086c94e9193d7c7d2a86507"
+      ],
+      "pr": "2082",
+      "date": "2026-07-30T14:19:43+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "Jun Xiong",
+        "email": "76585708+JimHsiung@users.noreply.github.com"
+      },
+      "title": "feat: support include_stop_str_in_output request parameter. (#2082)",
+      "type": "feature",
+      "module": "Inference Engine",
+      "additions": 675,
+      "deletions": 31,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 22,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/request_params_test.cpp",
+          "additions": 39,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_stop_output_test.cpp",
+          "additions": 456,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/cc_api/internal.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/cc_api"
+        },
+        {
+          "filename": "xllm/cc_api/types.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/cc_api"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 52,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 20,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.cpp",
+          "additions": 39,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/pd_ooc_scheduler.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/chat.proto",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/completion.proto",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/disagg_pd.proto",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/multimodal.proto",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/pybind/bind.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/pybind"
+        }
+      ],
+      "tags": [
+        "feature",
+        "inference-engine",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ca1ca69683592268750a0692125ce0f152dc6481",
+      "aiSummary": {
+        "zh": "本次提交在推理引擎模块中新增了支持 include_stop_str_in_output 请求参数的功能，涉及24个文件，新增大量测试用例以确保该功能的正确性和稳定性。测试重点关注请求参数的处理及输出结果的准确性。",
+        "en": "This commit adds support for the include_stop_str_in_output request parameter in the Inference Engine module, modifying 24 files with extensive test coverage to ensure correctness and stability. Testing focuses on request parameter handling and output accuracy.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:25.608Z"
+      }
+    },
+    {
+      "sha": "90048fd8fe5dc8275086c94e9193d7c7d2a86507",
+      "parents": [
+        "50833e05e4ebe2263de391ea62bc66a804afe28e"
+      ],
+      "pr": "2077",
+      "date": "2026-07-30T09:52:04+08:00",
+      "dateKey": "2026-07-30",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "refactor: remove redudant USE_MUSA/USE_CUDA flags in CMakefile for musa kernels. (#2077)",
+      "type": "refactor",
+      "module": "xllm/core",
+      "additions": 125,
+      "deletions": 103,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/musa/CMakeLists.txt",
+          "additions": 71,
+          "deletions": 50,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/CMakeLists.txt",
+          "additions": 54,
+          "deletions": 53,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/90048fd8fe5dc8275086c94e9193d7c7d2a86507",
+      "aiSummary": {
+        "zh": "本次提交重构了xllm/core模块中musa内核相关的CMakeLists.txt文件，移除了冗余的USE_MUSA和USE_CUDA编译标志。影响范围主要是构建配置，测试应关注构建过程是否正常且功能未受影响。",
+        "en": "This refactor removes redundant USE_MUSA and USE_CUDA flags from the CMakeLists.txt files for musa kernels in the xllm/core module. The impact is limited to build configuration, with testing focused on ensuring the build and functionality remain unaffected.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:28.712Z"
+      }
+    },
     {
       "sha": "50833e05e4ebe2263de391ea62bc66a804afe28e",
       "parents": [
@@ -87315,7 +88140,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/16dbbca50837b3aef75e50359591a1ee476bca52"
+      "url": "https://github.com/jd-opensource/xllm/commit/16dbbca50837b3aef75e50359591a1ee476bca52",
+      "aiSummary": {
+        "zh": "本次提交在Graph/Runtime模块中为xllm服务内部实现了APIService的RPC接口，涉及多文件改动，影响范围较大。测试应重点关注RPC接口的正确性和性能表现，特别是在Ascend环境下的兼容性。",
+        "en": "This commit implements the RPC interface in APIService for internal use of the xllm service within the Graph/Runtime module, involving extensive file changes. Testing should focus on the correctness and performance of the RPC interface, especially its compatibility with Ascend.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:31.317Z"
+      }
     },
     {
       "sha": "3076b06c7b181c6334d19d4b72d3097fef67f284",
@@ -87420,7 +88251,13 @@
         "model-support",
         "medium-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/3076b06c7b181c6334d19d4b72d3097fef67f284"
+      "url": "https://github.com/jd-opensource/xllm/commit/3076b06c7b181c6334d19d4b72d3097fef67f284",
+      "aiSummary": {
+        "zh": "本次提交为MLU中的deepseek模型支持了普通的rope机制，涉及模型参数和旋转嵌入相关代码的修改，测试重点包括索引器和注意力机制的单元测试。该改动影响模型的序列处理能力，属于中等风险特性更新。",
+        "en": "This commit enables normal rope support for deepseek models in MLU, modifying model arguments and rotary embedding components. The impact covers sequence processing in models, with tests focusing on indexer and attention mechanism units, classified as a medium-risk feature update.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:34.348Z"
+      }
     },
     {
       "sha": "e0a393851b71af34ee5d36fe93e97495e09e678c",
@@ -87452,7 +88289,13 @@
         "bugfix",
         "xllm-models"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/e0a393851b71af34ee5d36fe93e97495e09e678c"
+      "url": "https://github.com/jd-opensource/xllm/commit/e0a393851b71af34ee5d36fe93e97495e09e678c",
+      "aiSummary": {
+        "zh": "本次提交修复了在加载 OneRec 状态字典时对 shared_dict 进行大小检查的问题，修改影响 xllm/models 模块。测试应关注状态字典加载的正确性和稳定性。",
+        "en": "This commit fixes the size check for shared_dict before loading the OneRec state_dict, affecting the xllm/models module. Testing should focus on the correctness and stability of state_dict loading.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:37.176Z"
+      }
     },
     {
       "sha": "440543c3f1771deb28c9fd3c1413c82d41b298e5",
@@ -87504,7 +88347,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/440543c3f1771deb28c9fd3c1413c82d41b298e5"
+      "url": "https://github.com/jd-opensource/xllm/commit/440543c3f1771deb28c9fd3c1413c82d41b298e5",
+      "aiSummary": {
+        "zh": "本次提交重构了解码器中reshape和缓存的CUDA内核以支持非连续张量，影响图计算和运行时性能，测试重点验证了非连续张量的正确处理和性能表现。",
+        "en": "This commit refactors the decoder reshape-and-cache CUDA kernel to support non-contiguous tensors, impacting graph computation and runtime performance; tests focus on correctness and performance with non-contiguous tensors.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:39.742Z"
+      }
     },
     {
       "sha": "4e4e5deea7f1357430387797d2698a328ff71176",
@@ -87580,7 +88429,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/4e4e5deea7f1357430387797d2698a328ff71176"
+      "url": "https://github.com/jd-opensource/xllm/commit/4e4e5deea7f1357430387797d2698a328ff71176",
+      "aiSummary": {
+        "zh": "本次提交新增了onerec模型的实现，涉及图计算和运行时模块，影响Ascend平台。测试应关注模型功能正确性及运行时性能表现。",
+        "en": "This commit adds the implementation of the onerec model affecting the Graph and Runtime modules, with impact on the Ascend platform. Testing should focus on model correctness and runtime performance.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:43.119Z"
+      }
     },
     {
       "sha": "d7739163538e986afd791bb9b0560157ddfdb97d",
@@ -87618,7 +88473,13 @@
         "docs",
         "engineering"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/d7739163538e986afd791bb9b0560157ddfdb97d"
+      "url": "https://github.com/jd-opensource/xllm/commit/d7739163538e986afd791bb9b0560157ddfdb97d",
+      "aiSummary": {
+        "zh": "本次提交更新了README.md和README_zh.md中的致谢内容，属于文档层面的修改，对工程模块无功能影响，无需测试关注。",
+        "en": "This commit updates the acknowledgements in README.md and README_zh.md, a documentation change with no functional impact on the engineering module, requiring no test focus.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:45.426Z"
+      }
     },
     {
       "sha": "0e03e8cbbb7d6046e54bb0dce4c7dabee104971b",
@@ -87651,7 +88512,13 @@
         "npu-backend",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/0e03e8cbbb7d6046e54bb0dce4c7dabee104971b"
+      "url": "https://github.com/jd-opensource/xllm/commit/0e03e8cbbb7d6046e54bb0dce4c7dabee104971b",
+      "aiSummary": {
+        "zh": "本次提交修复了NPU设备上使用分块预填充时Qwen2.5模型准确率下降的问题，影响NPU后端模块。测试重点需关注模型在Ascend设备上的准确率表现。",
+        "en": "This commit fixes the accuracy degradation of the Qwen2.5 model on NPU devices when using chunked prefill, affecting the NPU backend module. Testing should focus on the model's accuracy on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:48.152Z"
+      }
     },
     {
       "sha": "6aa4c0cb664aec30e55e05850a72094f42d70aa4",
@@ -87883,7 +88750,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/6aa4c0cb664aec30e55e05850a72094f42d70aa4"
+      "url": "https://github.com/jd-opensource/xllm/commit/6aa4c0cb664aec30e55e05850a72094f42d70aa4",
+      "aiSummary": {
+        "zh": "本次提交为LLM支持了后缀解码功能，涉及Graph和Runtime模块，改动较大且影响Ascend平台。测试应重点关注后缀解码的正确性及性能表现。",
+        "en": "This commit adds suffix decoding support for LLM, affecting the Graph and Runtime modules with significant changes impacting the Ascend platform. Testing should focus on the correctness and performance of suffix decoding.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:50.550Z"
+      }
     },
     {
       "sha": "7937ac0003a7dc1778a7ac324f250058dd980c33",
@@ -88162,7 +89035,13 @@
         "device-backend",
         "high-risk"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/7937ac0003a7dc1778a7ac324f250058dd980c33"
+      "url": "https://github.com/jd-opensource/xllm/commit/7937ac0003a7dc1778a7ac324f250058dd980c33",
+      "aiSummary": {
+        "zh": "本次提交在设备后端新增了对Qwen3 W8A8量化的cutlass支持，涉及大量代码新增和多文件修改，属于高风险特性。测试应重点关注量化计算的正确性和性能表现。",
+        "en": "This commit adds cutlass support for Qwen3 W8A8 quantization in the device backend, with extensive code additions and multiple file changes, marked as high risk. Testing should focus on correctness and performance of quantized computations.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:53.040Z"
+      }
     },
     {
       "sha": "719c9335367e165e472340e1567259b474593e02",
@@ -88238,7 +89117,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/719c9335367e165e472340e1567259b474593e02"
+      "url": "https://github.com/jd-opensource/xllm/commit/719c9335367e165e472340e1567259b474593e02",
+      "aiSummary": {
+        "zh": "本次提交修复了草稿模型中对额外token的kv缓存计算问题，涉及Spec Decode模块，影响Ascend平台性能。测试重点关注缓存计算的正确性和性能提升。",
+        "en": "This commit fixes the kv cache computation for bonus tokens in the draft model within the Spec Decode module, impacting performance on Ascend. Testing focuses on correctness of cache computation and performance improvements.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:56.078Z"
+      }
     },
     {
       "sha": "a7e9f44ff4cd2101cc619d399529c2722c79c1e1",
@@ -88271,7 +89156,13 @@
         "graph-runtime",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/a7e9f44ff4cd2101cc619d399529c2722c79c1e1"
+      "url": "https://github.com/jd-opensource/xllm/commit/a7e9f44ff4cd2101cc619d399529c2722c79c1e1",
+      "aiSummary": {
+        "zh": "本次提交通过使用128位向量化优化了激活核函数，提升了图计算运行时的性能，影响范围主要为Ascend平台。测试重点应关注优化后的激活核在不同输入下的正确性和性能表现。",
+        "en": "This commit optimizes the activation kernel using 128-bit vectorization, improving performance in the graph runtime module, primarily affecting the Ascend platform. Testing should focus on correctness and performance of the optimized activation kernel across various inputs.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:07:59.200Z"
+      }
     },
     {
       "sha": "4b8ecbae664ce816d429b91c89ad5a48ebcfcc5a",
@@ -88443,7 +89334,13 @@
         "high-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/4b8ecbae664ce816d429b91c89ad5a48ebcfcc5a"
+      "url": "https://github.com/jd-opensource/xllm/commit/4b8ecbae664ce816d429b91c89ad5a48ebcfcc5a",
+      "aiSummary": {
+        "zh": "本次提交为RecWorkerImpl支持多流处理，涉及Graph和Runtime模块，修改了24个文件，新增和删除代码较多，属于高风险改动，需重点测试多流并发处理的稳定性和性能表现，特别是在Ascend平台上的影响。",
+        "en": "This commit adds multi-stream support to RecWorkerImpl, affecting the Graph and Runtime modules with changes across 24 files. It is a high-risk feature that requires thorough testing of concurrency stability and performance, especially on the Ascend platform.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:08:03.293Z"
+      }
     },
     {
       "sha": "c6ff45a690b5a0d6a22aff60ca3a9d3274eee8ac",
@@ -88525,7 +89422,13 @@
         "medium-risk",
         "affects-ascend"
       ],
-      "url": "https://github.com/jd-opensource/xllm/commit/c6ff45a690b5a0d6a22aff60ca3a9d3274eee8ac"
+      "url": "https://github.com/jd-opensource/xllm/commit/c6ff45a690b5a0d6a22aff60ca3a9d3274eee8ac",
+      "aiSummary": {
+        "zh": "本次提交在CUDA设备上支持分块预填充功能，涉及图计算和运行时模块，需重点测试CUDA环境下的预填充性能和正确性。该功能对Ascend设备有影响，属于中等风险特性。",
+        "en": "This commit adds support for chunked prefill on CUDA devices, affecting the Graph and Runtime modules. Testing should focus on prefill performance and correctness in CUDA environments, with medium risk and impact on Ascend devices.",
+        "model": "openai/gpt-4.1-mini",
+        "generatedAt": "2026-07-30T19:08:07.018Z"
+      }
     },
     {
       "sha": "bebd38bb5170144733ab4457ca2af5ab33d94dd0",
