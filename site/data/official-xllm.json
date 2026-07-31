@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T19:08:37.283Z",
+  "generatedAt": "2026-07-31T19:05:10.391Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1263,
-    "contributors": 109,
-    "additions": 673403,
-    "deletions": 177492,
-    "filesChanged": 18360,
+    "commits": 1271,
+    "contributors": 110,
+    "additions": 678366,
+    "deletions": 178625,
+    "filesChanged": 18433,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-07-30",
+    "latestDate": "2026-07-31",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -25,10 +25,10 @@
       },
       {
         "name": "phantomlei",
-        "commits": 85,
-        "additions": 67043,
-        "deletions": 13017,
-        "files": 1187
+        "commits": 86,
+        "additions": 67058,
+        "deletions": 13022,
+        "files": 1189
       },
       {
         "name": "Yingxu Deng",
@@ -104,15 +104,15 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 427
+        "count": 428
       },
       {
         "key": "NPU Backend",
-        "count": 143
+        "count": 144
       },
       {
         "key": "Inference Engine",
-        "count": 112
+        "count": 113
       },
       {
         "key": "Model Support",
@@ -120,7 +120,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 91
+        "count": 94
       },
       {
         "key": "Spec Decode",
@@ -140,11 +140,11 @@
       },
       {
         "key": "MoE",
-        "count": 23
+        "count": 24
       },
       {
         "key": "xllm/models",
-        "count": 12
+        "count": 13
       },
       {
         "key": "Testing",
@@ -154,15 +154,15 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 457
+        "count": 460
       },
       {
         "key": "bugfix",
-        "count": 391
+        "count": 393
       },
       {
         "key": "refactor",
-        "count": 184
+        "count": 187
       },
       {
         "key": "performance",
@@ -445,7 +445,8 @@
     "2026-07-27",
     "2026-07-28",
     "2026-07-29",
-    "2026-07-30"
+    "2026-07-30",
+    "2026-07-31"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1354,6 +1355,660 @@
     }
   },
   "commits": [
+    {
+      "sha": "d36941c71b90872fc5f205cba4e89d1d645bb491",
+      "parents": [
+        "49651e8f2845047376637fa2852d5d00b369816d"
+      ],
+      "pr": "2093",
+      "date": "2026-07-31T17:39:00+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "refactor: refactor MUSA attention kernels and layers due to the removal of redundant USE_CUDA flags. (#2093)",
+      "type": "refactor",
+      "module": "xllm/core",
+      "additions": 1592,
+      "deletions": 226,
+      "filesChanged": 11,
+      "files": [
+        {
+          "filename": "xllm/core/kernels/musa/activation.cu",
+          "additions": 159,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/attention_decode.cpp",
+          "additions": 574,
+          "deletions": 57,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/attention_prefill.cpp",
+          "additions": 22,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/attention_runner.cpp",
+          "additions": 292,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/attention_runner.h",
+          "additions": 58,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/attention.cpp",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/attention.h",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/flashinfer_attention.cpp",
+          "additions": 351,
+          "deletions": 58,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/flashinfer_attention.h",
+          "additions": 8,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/flashinfer_planinfo.cpp",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_next_attention.cpp",
+          "additions": 121,
+          "deletions": 80,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-core",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d36941c71b90872fc5f205cba4e89d1d645bb491"
+    },
+    {
+      "sha": "49651e8f2845047376637fa2852d5d00b369816d",
+      "parents": [
+        "b51f2d0cac19f933ad8e2b84623b6e73f3c56a53"
+      ],
+      "pr": "2067",
+      "date": "2026-07-31T17:09:17+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "ethan686",
+        "email": "73508499+ethan686@users.noreply.github.com"
+      },
+      "title": "refactor: replace wan2.2 tp with linear.cpp. (#2067)",
+      "type": "refactor",
+      "module": "xllm/core",
+      "additions": 209,
+      "deletions": 236,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "xllm/core/framework/parallel_state/dit_collective_communicator.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/quant_args.h",
+          "additions": 0,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_wan.h",
+          "additions": 180,
+          "deletions": 225,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/util.h",
+          "additions": 20,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/49651e8f2845047376637fa2852d5d00b369816d"
+    },
+    {
+      "sha": "b51f2d0cac19f933ad8e2b84623b6e73f3c56a53",
+      "parents": [
+        "44fec5f6d5542bb733237e796b402f887662a567"
+      ],
+      "pr": "2052",
+      "date": "2026-07-31T16:36:19+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "zhangjieshao",
+        "email": "145412007+zhangjieshao98@users.noreply.github.com"
+      },
+      "title": "refactor: extract VaeParallelMixin, remove ctx pass-through in VAE. (#2052)",
+      "type": "refactor",
+      "module": "xllm/models",
+      "additions": 477,
+      "deletions": 521,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/models/dit/autoencoders/autoencoder_kl_qwenimage.h",
+          "additions": 93,
+          "deletions": 125,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/autoencoders/autoencoder_kl_wan.h",
+          "additions": 171,
+          "deletions": 170,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_parallel_mixin.h",
+          "additions": 213,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/vae_spatial_parallel.h",
+          "additions": 0,
+          "deletions": 224,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-models",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b51f2d0cac19f933ad8e2b84623b6e73f3c56a53"
+    },
+    {
+      "sha": "44fec5f6d5542bb733237e796b402f887662a567",
+      "parents": [
+        "91111ab6ef3d57f14f6258a4ab1520532f8170bc"
+      ],
+      "pr": "2073",
+      "date": "2026-07-31T16:23:47+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "wuyifan2017",
+        "email": "wuyifan2017@gmail.com"
+      },
+      "title": "feat: add Ascend950 TileLang and causal convolution support. (#2073)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 57,
+      "deletions": 7,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernel_family_builder.py",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/causal_conv1d.py",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/toolchain.py",
+          "additions": 44,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/44fec5f6d5542bb733237e796b402f887662a567"
+    },
+    {
+      "sha": "91111ab6ef3d57f14f6258a4ab1520532f8170bc",
+      "parents": [
+        "dc80abc78b73ef9b6419d7b14b768626495072e7"
+      ],
+      "pr": "1995",
+      "date": "2026-07-31T16:07:50+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "Hao Wang",
+        "email": "88070160+Vectorwh@users.noreply.github.com"
+      },
+      "title": "feat: support heterogeneous qwen3.5 PD disaggregation. (#1995)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1645,
+      "deletions": 101,
+      "filesChanged": 42,
+      "files": [
+        {
+          "filename": "tests/core/framework/config/disagg_pd_config_test.cpp",
+          "additions": 23,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/pd_topology_guard_test.cpp",
+          "additions": 50,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/push_route_test.cpp",
+          "additions": 18,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/engine.h",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 91,
+          "deletions": 30,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.h",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 21,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.h",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 20,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/disagg_pd_config.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/disagg_pd_config.h",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_transfer.h",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/llm_data_dist_transfer.cpp",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/llm_data_dist_transfer.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/pd_topology_guard.cpp",
+          "additions": 27,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/pd_topology_guard.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/push_route.cpp",
+          "additions": 25,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/push_route.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/spec_kv_cache_transfer.cpp",
+          "additions": 890,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/spec_kv_cache_transfer.h",
+          "additions": 66,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 49,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/async_response_processor.cpp",
+          "additions": 32,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 94,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/qwen3_5_mtp_base.h",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/proto/disagg_pd.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/91111ab6ef3d57f14f6258a4ab1520532f8170bc"
+    },
+    {
+      "sha": "dc80abc78b73ef9b6419d7b14b768626495072e7",
+      "parents": [
+        "ec5188c217ecb743e039d2b87d2bab2c961754f8"
+      ],
+      "pr": "2039",
+      "date": "2026-07-31T10:59:30+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "wangyunlong",
+        "email": "51049879+wly-115@users.noreply.github.com"
+      },
+      "title": "bugfix: fix multimodal data races in parallel batch building. (#2039)",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 21,
+      "deletions": 8,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_input_builder.cpp",
+          "additions": 15,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_input_builder.h",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/dc80abc78b73ef9b6419d7b14b768626495072e7"
+    },
+    {
+      "sha": "ec5188c217ecb743e039d2b87d2bab2c961754f8",
+      "parents": [
+        "ba33d67a4bd26c579676ef17027d1f45849a6cf8"
+      ],
+      "pr": "2091",
+      "date": "2026-07-31T10:31:53+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "bugfix: align local worker shared memory decisions. (#2091)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 15,
+      "deletions": 5,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/util/net_test.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ec5188c217ecb743e039d2b87d2bab2c961754f8"
+    },
+    {
+      "sha": "ba33d67a4bd26c579676ef17027d1f45849a6cf8",
+      "parents": [
+        "cd2ae39186bab7b41c87e8220878212b075512a6"
+      ],
+      "pr": "2087",
+      "date": "2026-07-31T10:19:03+08:00",
+      "dateKey": "2026-07-31",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "feat: add MoE and decode layers for MUSA devices (#2087)",
+      "type": "feature",
+      "module": "MoE",
+      "additions": 947,
+      "deletions": 29,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/layers/musa/qwen3_5_fused_moe.cpp",
+          "additions": 829,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_5_fused_moe.h",
+          "additions": 96,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_next_hybrid_decoder_layer_base.cpp",
+          "additions": 20,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/qwen3_next_hybrid_decoder_layer_base.h",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "moe",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ba33d67a4bd26c579676ef17027d1f45849a6cf8"
+    },
     {
       "sha": "cd2ae39186bab7b41c87e8220878212b075512a6",
       "parents": [
