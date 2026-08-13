@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T18:44:59.725Z",
+  "generatedAt": "2026-08-13T18:45:15.433Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1364,
+    "commits": 1375,
     "contributors": 114,
-    "additions": 755589,
-    "deletions": 197360,
-    "filesChanged": 19853,
+    "additions": 760239,
+    "deletions": 198146,
+    "filesChanged": 19966,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-12",
+    "latestDate": "2026-08-13",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -25,17 +25,17 @@
       },
       {
         "name": "phantomlei",
-        "commits": 98,
-        "additions": 73334,
-        "deletions": 14578,
-        "files": 1356
+        "commits": 99,
+        "additions": 73589,
+        "deletions": 14664,
+        "files": 1364
       },
       {
         "name": "Yingxu Deng",
-        "commits": 87,
-        "additions": 25597,
-        "deletions": 4110,
-        "files": 628
+        "commits": 90,
+        "additions": 25765,
+        "deletions": 4146,
+        "files": 636
       },
       {
         "name": "Zhiwei Liang",
@@ -95,28 +95,28 @@
       },
       {
         "name": "Raymond",
-        "commits": 29,
-        "additions": 14757,
-        "deletions": 7111,
-        "files": 499
+        "commits": 30,
+        "additions": 18705,
+        "deletions": 7684,
+        "files": 563
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 467
+        "count": 470
       },
       {
         "key": "NPU Backend",
-        "count": 159
+        "count": 161
       },
       {
         "key": "Inference Engine",
-        "count": 117
+        "count": 118
       },
       {
         "key": "Model Support",
-        "count": 104
+        "count": 105
       },
       {
         "key": "xllm/core",
@@ -124,11 +124,11 @@
       },
       {
         "key": "Spec Decode",
-        "count": 90
+        "count": 91
       },
       {
         "key": "Engineering",
-        "count": 81
+        "count": 83
       },
       {
         "key": "Device Backend",
@@ -140,7 +140,7 @@
       },
       {
         "key": "MoE",
-        "count": 24
+        "count": 25
       },
       {
         "key": "xllm/models",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 495
+        "count": 500
       },
       {
         "key": "bugfix",
-        "count": 420
+        "count": 424
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 172
+        "count": 173
       },
       {
         "key": "other",
@@ -174,7 +174,7 @@
       },
       {
         "key": "docs",
-        "count": 22
+        "count": 23
       },
       {
         "key": "chore",
@@ -454,7 +454,8 @@
     "2026-08-07",
     "2026-08-10",
     "2026-08-11",
-    "2026-08-12"
+    "2026-08-12",
+    "2026-08-13"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1363,6 +1364,979 @@
     }
   },
   "commits": [
+    {
+      "sha": "df9f919cfea625b970f91b48017e7d3510204c0e",
+      "parents": [
+        "f1874df63b9ade4685db6625157b14fbaf485f18"
+      ],
+      "pr": "2225",
+      "date": "2026-08-13T22:17:42+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "feat: support deepseek v4 pd transfer on mlu. (#2225)",
+      "type": "feature",
+      "module": "Model Support",
+      "additions": 255,
+      "deletions": 86,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_test.cpp",
+          "additions": 108,
+          "deletions": 35,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/pd_topology_guard_test.cpp",
+          "additions": 33,
+          "deletions": 12,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/deepseek_v4_kv_cache_impl.cpp",
+          "additions": 70,
+          "deletions": 24,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_tensor_role.h",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/pd_topology_guard.cpp",
+          "additions": 13,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/pd_topology_guard.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 12,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/utils.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/df9f919cfea625b970f91b48017e7d3510204c0e"
+    },
+    {
+      "sha": "f1874df63b9ade4685db6625157b14fbaf485f18",
+      "parents": [
+        "3942020fffcb97e7bdc37676c1750b6673ea7fa8"
+      ],
+      "pr": "2222",
+      "date": "2026-08-13T22:08:46+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "feat: add expert parallel (EP) support for DeepSeek-V3.2 Python model. (#2222)",
+      "type": "feature",
+      "module": "MoE",
+      "additions": 141,
+      "deletions": 29,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/kernels_cuda/moe.py",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/moe.py",
+          "additions": 15,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 122,
+          "deletions": 26,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "moe"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f1874df63b9ade4685db6625157b14fbaf485f18"
+    },
+    {
+      "sha": "3942020fffcb97e7bdc37676c1750b6673ea7fa8",
+      "parents": [
+        "e4550664400305677fdf23d5090ad9246fea9676"
+      ],
+      "pr": "2230",
+      "date": "2026-08-13T18:59:20+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "wuyifan2017",
+        "email": "wuyifan2017@gmail.com"
+      },
+      "title": "bugfix: fix A5 TileLang and mRoPE support. (#2230)",
+      "type": "bugfix",
+      "module": "NPU Backend",
+      "additions": 4,
+      "deletions": 4,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "third_party/torch_npu_ops",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/torch_npu_ops"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/spec_verify_attention_tiling_update.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/spec_verify_token_update.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/split_qkv_rmsnorm_mrope.py",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/toolchain.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3942020fffcb97e7bdc37676c1750b6673ea7fa8"
+    },
+    {
+      "sha": "e4550664400305677fdf23d5090ad9246fea9676",
+      "parents": [
+        "deba9da2e63fea74dad1e20e5c92336e8fcdbbad"
+      ],
+      "pr": "2227",
+      "date": "2026-08-13T16:58:37+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "bugfix: fix executor test match pattern after aclgraph support. (#2227)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 2,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e4550664400305677fdf23d5090ad9246fea9676"
+    },
+    {
+      "sha": "deba9da2e63fea74dad1e20e5c92336e8fcdbbad",
+      "parents": [
+        "c8e0507b7ec8f706c546b8a242c93d269c97c655"
+      ],
+      "pr": "2179",
+      "date": "2026-08-13T16:10:16+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "catfish",
+        "email": "fay85@me.com"
+      },
+      "title": "build: support standalone MUSA builds. (#2179)",
+      "type": "feature",
+      "module": "Engineering",
+      "additions": 86,
+      "deletions": 17,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 10,
+          "deletions": 7,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 0,
+          "deletions": 1,
+          "module": "setup.py"
+        },
+        {
+          "filename": "third_party/CMakeLists.txt",
+          "additions": 9,
+          "deletions": 0,
+          "module": "third_party/CMakeLists.txt"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/musa/musa_utils.h",
+          "additions": 35,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/numa_utils.cpp",
+          "additions": 15,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/platform.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/tensor_helper.h",
+          "additions": 6,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "engineering",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/deba9da2e63fea74dad1e20e5c92336e8fcdbbad"
+    },
+    {
+      "sha": "c8e0507b7ec8f706c546b8a242c93d269c97c655",
+      "parents": [
+        "a4e7cc42e029ef7919ca6f1d8bc66bd51ea2cdea"
+      ],
+      "pr": "2150",
+      "date": "2026-08-13T16:04:08+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "Raymond",
+        "email": "kangmeng3@jd.com"
+      },
+      "title": "feat: add Mooncake Store support to host cache. (#2150)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 3948,
+      "deletions": 573,
+      "filesChanged": 64,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 33,
+          "deletions": 0,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/global_kvcache.md",
+          "additions": 432,
+          "deletions": 29,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/global_kvcache.md",
+          "additions": 432,
+          "deletions": 22,
+          "module": "docs/src"
+        },
+        {
+          "filename": "scripts/build_support/utils.py",
+          "additions": 18,
+          "deletions": 3,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "scripts/kvcache_store/README.md",
+          "additions": 176,
+          "deletions": 0,
+          "module": "scripts/kvcache_store"
+        },
+        {
+          "filename": "scripts/kvcache_store/start_mooncake_client.sh",
+          "additions": 214,
+          "deletions": 0,
+          "module": "scripts/kvcache_store"
+        },
+        {
+          "filename": "scripts/kvcache_store/start_mooncake_ha_service.sh",
+          "additions": 215,
+          "deletions": 0,
+          "module": "scripts/kvcache_store"
+        },
+        {
+          "filename": "scripts/kvcache_store/xllm_mooncake_ha_args.sh",
+          "additions": 74,
+          "deletions": 0,
+          "module": "scripts/kvcache_store"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 39,
+          "deletions": 5,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/core/framework/block/hierarchy_block_manager_pool_test.cpp",
+          "additions": 382,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_test.cpp",
+          "additions": 25,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_kv_state_test.cpp",
+          "additions": 17,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/attention_metadata_builder_test.cpp",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 142,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/scheduler_policy_test.cpp",
+          "additions": 308,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/scripts/test_build_dependencies.py",
+          "additions": 19,
+          "deletions": 0,
+          "module": "tests/scripts"
+        },
+        {
+          "filename": "third_party/Mooncake",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/Mooncake"
+        },
+        {
+          "filename": "third_party/dependencies.sh",
+          "additions": 112,
+          "deletions": 1,
+          "module": "third_party/dependencies.sh"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 120,
+          "deletions": 58,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/engine.h",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 18,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.h",
+          "additions": 2,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 26,
+          "deletions": 40,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/composite_block_manager.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.cpp",
+          "additions": 305,
+          "deletions": 92,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.h",
+          "additions": 28,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/kv_cache_manager.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/kv_cache_store_config.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_utils.cpp",
+          "additions": 1,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer.cpp",
+          "additions": 111,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer.h",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_store.cpp",
+          "additions": 218,
+          "deletions": 152,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_store.h",
+          "additions": 41,
+          "deletions": 33,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/mooncake_kv_cache_transfer.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/mooncake_transfer_engine.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/prefetch_result.h",
+          "additions": 126,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/options.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 36,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 88,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 14,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 4,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.cpp",
+          "additions": 1,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/pd_ooc_scheduler.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 5,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/unified_policy.cpp",
+          "additions": 23,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 9,
+          "deletions": 3,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c8e0507b7ec8f706c546b8a242c93d269c97c655"
+    },
+    {
+      "sha": "a4e7cc42e029ef7919ca6f1d8bc66bd51ea2cdea",
+      "parents": [
+        "ee53af9da3740edaf06282cf40b6cd150701e216"
+      ],
+      "pr": "2218",
+      "date": "2026-08-13T15:29:42+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "shenxiaolong",
+        "email": "1193789086@qq.com"
+      },
+      "title": "feat: enable GLM5.2 EPLv2 & shared expert overlap. (#2218)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 116,
+      "deletions": 9,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "third_party/xllm_atb_layers",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/xllm_atb_layers"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_base_layer.cpp",
+          "additions": 14,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_deepseek_v32_decoder_layer_impl.cpp",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm5_moe.h",
+          "additions": 5,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm5_moe_mtp.h",
+          "additions": 5,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm_shared_expert_stream.h",
+          "additions": 83,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a4e7cc42e029ef7919ca6f1d8bc66bd51ea2cdea"
+    },
+    {
+      "sha": "ee53af9da3740edaf06282cf40b6cd150701e216",
+      "parents": [
+        "9fd47f698a6dc7786e397f89b237756fc64bf8d8"
+      ],
+      "pr": "2223",
+      "date": "2026-08-13T14:51:14+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "guojinrong",
+        "email": "guojinrong6@jd.com"
+      },
+      "title": "docs: update project README. (#2223)",
+      "type": "docs",
+      "module": "Engineering",
+      "additions": 2,
+      "deletions": 2,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "README.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "README.md"
+        },
+        {
+          "filename": "README_zh.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "README_zh.md"
+        }
+      ],
+      "tags": [
+        "docs",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ee53af9da3740edaf06282cf40b6cd150701e216"
+    },
+    {
+      "sha": "9fd47f698a6dc7786e397f89b237756fc64bf8d8",
+      "parents": [
+        "c7fbc5cf311383989a8d1e61d2afe027c7802a5a"
+      ],
+      "pr": "2215",
+      "date": "2026-08-13T14:15:12+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "feat: add data-parallel support for qwen3 dense in NPU Python ACL graph decode. (#2215)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 25,
+      "deletions": 5,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 6,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3.py",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9fd47f698a6dc7786e397f89b237756fc64bf8d8"
+    },
+    {
+      "sha": "c7fbc5cf311383989a8d1e61d2afe027c7802a5a",
+      "parents": [
+        "84622205ba436bafb4cb982f871591b9bef63258"
+      ],
+      "pr": "2213",
+      "date": "2026-08-13T11:31:51+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "ustcfy",
+        "email": "96854327+ustcfy@users.noreply.github.com"
+      },
+      "title": "bugfix: retain no-sync inputs until validation completes. (#2213)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 39,
+      "deletions": 56,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 26,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 7,
+          "deletions": 37,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c7fbc5cf311383989a8d1e61d2afe027c7802a5a"
+    },
+    {
+      "sha": "84622205ba436bafb4cb982f871591b9bef63258",
+      "parents": [
+        "a7630f3ce2a592a3d99488585624d3976bfe0442"
+      ],
+      "pr": "2216",
+      "date": "2026-08-13T11:18:35+08:00",
+      "dateKey": "2026-08-13",
+      "author": {
+        "name": "shenxiaolong",
+        "email": "1193789086@qq.com"
+      },
+      "title": "bugfix: skip metadata rebuild for prelaunched MTP draft. (#2216)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 32,
+      "deletions": 3,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/runtime/mtp_async_input_builder_test.cpp",
+          "additions": 24,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_input_builder.cpp",
+          "additions": 5,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_async_input_builder.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/84622205ba436bafb4cb982f871591b9bef63258"
+    },
     {
       "sha": "a7630f3ce2a592a3d99488585624d3976bfe0442",
       "parents": [
