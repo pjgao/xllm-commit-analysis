@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T18:45:15.433Z",
+  "generatedAt": "2026-08-14T18:38:57.607Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1375,
+    "commits": 1380,
     "contributors": 114,
-    "additions": 760239,
-    "deletions": 198146,
-    "filesChanged": 19966,
+    "additions": 765965,
+    "deletions": 203222,
+    "filesChanged": 20177,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-13",
+    "latestDate": "2026-08-14",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -25,17 +25,17 @@
       },
       {
         "name": "phantomlei",
-        "commits": 99,
-        "additions": 73589,
-        "deletions": 14664,
-        "files": 1364
+        "commits": 100,
+        "additions": 74362,
+        "deletions": 14799,
+        "files": 1384
       },
       {
         "name": "Yingxu Deng",
-        "commits": 90,
-        "additions": 25765,
-        "deletions": 4146,
-        "files": 636
+        "commits": 91,
+        "additions": 28862,
+        "deletions": 8806,
+        "files": 765
       },
       {
         "name": "Zhiwei Liang",
@@ -60,10 +60,10 @@
       },
       {
         "name": "weizhehuang0827",
-        "commits": 55,
-        "additions": 18311,
-        "deletions": 12720,
-        "files": 3320
+        "commits": 57,
+        "additions": 19908,
+        "deletions": 12980,
+        "files": 3374
       },
       {
         "name": "Zhang Minchao",
@@ -108,7 +108,7 @@
       },
       {
         "key": "NPU Backend",
-        "count": 161
+        "count": 163
       },
       {
         "key": "Inference Engine",
@@ -116,7 +116,7 @@
       },
       {
         "key": "Model Support",
-        "count": 105
+        "count": 106
       },
       {
         "key": "xllm/core",
@@ -124,7 +124,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 91
+        "count": 93
       },
       {
         "key": "Engineering",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 500
+        "count": 502
       },
       {
         "key": "bugfix",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 204
+        "count": 205
       },
       {
         "key": "performance",
-        "count": 173
+        "count": 175
       },
       {
         "key": "other",
@@ -455,7 +455,8 @@
     "2026-08-10",
     "2026-08-11",
     "2026-08-12",
-    "2026-08-13"
+    "2026-08-13",
+    "2026-08-14"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1364,6 +1365,1411 @@
     }
   },
   "commits": [
+    {
+      "sha": "5b295c29ada2628fa66e51a19b1c2dec9962a20d",
+      "parents": [
+        "e6076a3d94f2d52361ab67b465362a0c2a134506"
+      ],
+      "pr": "2244",
+      "date": "2026-08-14T19:57:21+08:00",
+      "dateKey": "2026-08-14",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "refactor: move non-worker spec/mtp files from runtime to framework/speculative. (#2244)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 135,
+      "deletions": 124,
+      "filesChanged": 29,
+      "files": [
+        {
+          "filename": "tests/core/framework/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 17,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/CMakeLists.txt",
+          "additions": 99,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/{runtime => framework/speculative}/adaptive_speculative_controller_test.cpp",
+          "additions": 0,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/{kv_cache => speculative}/embedding_cache_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/{runtime => framework/speculative}/mtp_async_input_builder_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/{runtime => framework/speculative}/mtp_async_state_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/{runtime => framework/speculative}/spec_input_builder_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/{runtime => framework/speculative}/speculative_profile_registry_test.cpp",
+          "additions": 0,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 78,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/CMakeLists.txt",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/{kv_cache => speculative}/embedding_cache.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/{kv_cache => speculative}/embedding_cache.h",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/mtp_async_input_builder.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/mtp_async_input_builder.h",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/mtp_async_state.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/mtp_async_state.h",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/spec_input_builder.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{runtime => framework/speculative}/spec_input_builder.h",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_executor_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5b295c29ada2628fa66e51a19b1c2dec9962a20d"
+    },
+    {
+      "sha": "e6076a3d94f2d52361ab67b465362a0c2a134506",
+      "parents": [
+        "e3935105216e679e734a89390541c976aa614fde"
+      ],
+      "pr": "2231",
+      "date": "2026-08-14T18:05:04+08:00",
+      "dateKey": "2026-08-14",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "feat: adaptive speculative decoding for DFlash and DSpark on NPU. (#2231)",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 1462,
+      "deletions": 136,
+      "filesChanged": 25,
+      "files": [
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 26,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/dspark_confidence_head_test.cpp",
+          "additions": 143,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 18,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.h",
+          "additions": 32,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/causal_lm.h",
+          "additions": 43,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_args.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_traits.h",
+          "additions": 29,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.cpp",
+          "additions": 123,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.h",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.cpp",
+          "additions": 15,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 427,
+          "deletions": 24,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 55,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 66,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 24,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.h",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 91,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 126,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 11,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3_dspark.h",
+          "additions": 226,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e6076a3d94f2d52361ab67b465362a0c2a134506"
+    },
+    {
+      "sha": "e3935105216e679e734a89390541c976aa614fde",
+      "parents": [
+        "b508b5a6df89343305c4359e07447629fb466aa6"
+      ],
+      "pr": "2187",
+      "date": "2026-08-14T15:21:32+08:00",
+      "dateKey": "2026-08-14",
+      "author": {
+        "name": "Han Teng",
+        "email": "165119118+Cooofish@users.noreply.github.com"
+      },
+      "title": "perf: adapt Qwen W8A8 quantization for FlashComm. (#2187)",
+      "type": "performance",
+      "module": "Model Support",
+      "additions": 259,
+      "deletions": 21,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/layers/npu_torch/linear_w8a8_dynamic_tests.cpp",
+          "additions": 86,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/npu_torch/tests_utils.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/flash_comm1_context.cpp",
+          "additions": 40,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/flash_comm1_context.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/dense_mlp.cpp",
+          "additions": 42,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.cpp",
+          "additions": 34,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/linear.h",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/quant_utils.h",
+          "additions": 37,
+          "deletions": 15,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e3935105216e679e734a89390541c976aa614fde"
+    },
+    {
+      "sha": "b508b5a6df89343305c4359e07447629fb466aa6",
+      "parents": [
+        "98a2821e7a3346bb7693932fa4cdafc37a7f7e2d"
+      ],
+      "pr": "2217",
+      "date": "2026-08-14T14:42:51+08:00",
+      "dateKey": "2026-08-14",
+      "author": {
+        "name": "phantomlei",
+        "email": "phantomlei3@gmail.com"
+      },
+      "title": "feat: add asynchronous host kv cache transfers. (#2217)",
+      "type": "performance",
+      "module": "NPU Backend",
+      "additions": 773,
+      "deletions": 135,
+      "filesChanged": 20,
+      "files": [
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_test.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer_test.cpp",
+          "additions": 195,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/kv_transfer_completion_test.cpp",
+          "additions": 54,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/mlu_batch_memcpy_test.cpp",
+          "additions": 199,
+          "deletions": 9,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/mlu_layer_synchronizer_test.cpp",
+          "additions": 14,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.cpp",
+          "additions": 39,
+          "deletions": 51,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.h",
+          "additions": 5,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer.cpp",
+          "additions": 72,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.cpp",
+          "additions": 55,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.h",
+          "additions": 43,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/batch_memcpy.h",
+          "additions": 9,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/layer_synchronizer.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_batch_memcpy.cpp",
+          "additions": 64,
+          "deletions": 36,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_batch_memcpy.h",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_layer_synchronizer.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_batch_memcpy.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_batch_memcpy.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "npu-backend",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b508b5a6df89343305c4359e07447629fb466aa6"
+    },
+    {
+      "sha": "98a2821e7a3346bb7693932fa4cdafc37a7f7e2d",
+      "parents": [
+        "df9f919cfea625b970f91b48017e7d3510204c0e"
+      ],
+      "pr": "2234",
+      "date": "2026-08-14T13:56:30+08:00",
+      "dateKey": "2026-08-14",
+      "author": {
+        "name": "Yingxu Deng",
+        "email": "dengyingxu1@jd.com"
+      },
+      "title": "feat: add Python linting and formatting with ruff + codespell. (#2234)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 3097,
+      "deletions": 4660,
+      "filesChanged": 129,
+      "files": [
+        {
+          "filename": ".github/workflows/check_format.yml",
+          "additions": 20,
+          "deletions": 5,
+          "module": ".github/workflows"
+        },
+        {
+          "filename": ".pre-commit-config.yaml",
+          "additions": 25,
+          "deletions": 6,
+          "module": ".pre-commit-config.yaml"
+        },
+        {
+          "filename": "cmake/hipify.py",
+          "additions": 10,
+          "deletions": 18,
+          "module": "cmake/hipify.py"
+        },
+        {
+          "filename": "examples/generate.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "examples/generate.py"
+        },
+        {
+          "filename": "examples/generate_beam_search.py",
+          "additions": 5,
+          "deletions": 5,
+          "module": "examples/generate_beam_search.py"
+        },
+        {
+          "filename": "examples/generate_embedding.py",
+          "additions": 1,
+          "deletions": 2,
+          "module": "examples/generate_embedding.py"
+        },
+        {
+          "filename": "examples/generate_vlm.py",
+          "additions": 5,
+          "deletions": 6,
+          "module": "examples/generate_vlm.py"
+        },
+        {
+          "filename": "examples/sample.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "examples/sample.py"
+        },
+        {
+          "filename": "pyproject.toml",
+          "additions": 72,
+          "deletions": 0,
+          "module": "pyproject.toml"
+        },
+        {
+          "filename": "scripts/build_support/env.py",
+          "additions": 127,
+          "deletions": 63,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "scripts/build_support/utils.py",
+          "additions": 70,
+          "deletions": 67,
+          "module": "scripts/build_support"
+        },
+        {
+          "filename": "scripts/deps/torch_npu_install.py",
+          "additions": 13,
+          "deletions": 11,
+          "module": "scripts/deps"
+        },
+        {
+          "filename": "scripts/logger.py",
+          "additions": 3,
+          "deletions": 7,
+          "module": "scripts/logger.py"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 152,
+          "deletions": 158,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/pybind_public_cp_api_test.py",
+          "additions": 3,
+          "deletions": 12,
+          "module": "tests/pybind_public_cp_api_test.py"
+        },
+        {
+          "filename": "tests/python/test_collectives.py",
+          "additions": 10,
+          "deletions": 31,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_kernels_import.py",
+          "additions": 5,
+          "deletions": 13,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 28,
+          "deletions": 65,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_python_kernel_layout.py",
+          "additions": 1,
+          "deletions": 4,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_parallel.py",
+          "additions": 5,
+          "deletions": 15,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_triton_ops.py",
+          "additions": 35,
+          "deletions": 100,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/scripts/test_build_dependencies.py",
+          "additions": 2,
+          "deletions": 6,
+          "module": "tests/scripts"
+        },
+        {
+          "filename": "tests/scripts/test_python_kernel_staging.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "tests/scripts"
+        },
+        {
+          "filename": "tools/build_fast_tokenizer_json.py",
+          "additions": 7,
+          "deletions": 18,
+          "module": "tools/build_fast_tokenizer_json.py"
+        },
+        {
+          "filename": "tools/compare_tensor.py",
+          "additions": 2,
+          "deletions": 10,
+          "module": "tools/compare_tensor.py"
+        },
+        {
+          "filename": "tools/convert_rwkv7_world.py",
+          "additions": 6,
+          "deletions": 19,
+          "module": "tools/convert_rwkv7_world.py"
+        },
+        {
+          "filename": "tools/dequant_minimax_fp8.py",
+          "additions": 15,
+          "deletions": 49,
+          "module": "tools/dequant_minimax_fp8.py"
+        },
+        {
+          "filename": "tools/export_mtp.py",
+          "additions": 6,
+          "deletions": 6,
+          "module": "tools/export_mtp.py"
+        },
+        {
+          "filename": "tools/npu_timeline.py",
+          "additions": 484,
+          "deletions": 487,
+          "module": "tools/npu_timeline.py"
+        },
+        {
+          "filename": "xllm/__init__.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/__init__.py"
+        },
+        {
+          "filename": "xllm/auto_config/qwen3.py",
+          "additions": 8,
+          "deletions": 11,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/auto_config/utils.py",
+          "additions": 34,
+          "deletions": 47,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/cli/compile_kernels.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/cli/prepare_ascend.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/common/cache.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/common/manifest.py",
+          "additions": 5,
+          "deletions": 14,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/common/spec.py",
+          "additions": 22,
+          "deletions": 71,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/common/toolchain.py",
+          "additions": 3,
+          "deletions": 6,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/abi_entry.py",
+          "additions": 3,
+          "deletions": 10,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/build.py",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernel_family_builder.py",
+          "additions": 19,
+          "deletions": 59,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernel_registry.py",
+          "additions": 10,
+          "deletions": 31,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/causal_conv1d.py",
+          "additions": 95,
+          "deletions": 40,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/causal_conv1d_decode.py",
+          "additions": 4,
+          "deletions": 16,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/chunk_gated_delta_rule_fwd_h.py",
+          "additions": 29,
+          "deletions": 92,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/fused_gdn_gating.py",
+          "additions": 53,
+          "deletions": 140,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/fused_sigmoid_gating_delta_rule.py",
+          "additions": 18,
+          "deletions": 52,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/rope.py",
+          "additions": 8,
+          "deletions": 21,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/spec_verify_attention_tiling_update.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/spec_verify_token_update.py",
+          "additions": 8,
+          "deletions": 21,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/split_qkv_rmsnorm_mrope.py",
+          "additions": 50,
+          "deletions": 125,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/utils.py",
+          "additions": 14,
+          "deletions": 33,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/toolchain.py",
+          "additions": 3,
+          "deletions": 10,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/cuda/build.py",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/tilelang_ascend_install.py",
+          "additions": 16,
+          "deletions": 6,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang_launcher.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/causal_conv1d_update_decode.py",
+          "additions": 36,
+          "deletions": 41,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_gdn_gating.py",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_post_conv_prep.py",
+          "additions": 11,
+          "deletions": 24,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_recurrent_gated_delta_rule_packed_decode.py",
+          "additions": 47,
+          "deletions": 19,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_sigmoid_gating_delta_rule_update.py",
+          "additions": 88,
+          "deletions": 65,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/scripts/triton_compile.py",
+          "additions": 19,
+          "deletions": 33,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/launch_server.py",
+          "additions": 14,
+          "deletions": 33,
+          "module": "xllm/launch_server.py"
+        },
+        {
+          "filename": "xllm/pybind/args.py",
+          "additions": 200,
+          "deletions": 44,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/embedding.py",
+          "additions": 17,
+          "deletions": 17,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/errors.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/llm.py",
+          "additions": 63,
+          "deletions": 101,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/mm_utils.py",
+          "additions": 12,
+          "deletions": 17,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/multimodal.py",
+          "additions": 14,
+          "deletions": 12,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/params.py",
+          "additions": 9,
+          "deletions": 13,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/utils.py",
+          "additions": 9,
+          "deletions": 18,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/pybind/vlm.py",
+          "additions": 29,
+          "deletions": 43,
+          "module": "xllm/pybind"
+        },
+        {
+          "filename": "xllm/python/attention/backend.py",
+          "additions": 10,
+          "deletions": 16,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/expanded_decode_metadata.py",
+          "additions": 17,
+          "deletions": 56,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/flashinfer.py",
+          "additions": 18,
+          "deletions": 49,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 92,
+          "deletions": 102,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/distributed/collectives.py",
+          "additions": 17,
+          "deletions": 58,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/_custom_op.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/attention.py",
+          "additions": 3,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/gated_delta_net.py",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/moe.py",
+          "additions": 2,
+          "deletions": 5,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/quantization.py",
+          "additions": 3,
+          "deletions": 10,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/rotary_embedding.py",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/sparse_attention.py",
+          "additions": 5,
+          "deletions": 16,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/causal_conv1d.py",
+          "additions": 7,
+          "deletions": 26,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/chunk_delta_h.py",
+          "additions": 18,
+          "deletions": 55,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/chunk_o.py",
+          "additions": 6,
+          "deletions": 19,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/chunk_scaled_dot_kkt.py",
+          "additions": 2,
+          "deletions": 7,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/cumsum.py",
+          "additions": 6,
+          "deletions": 21,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/index.py",
+          "additions": 2,
+          "deletions": 10,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/solve_tril.py",
+          "additions": 43,
+          "deletions": 128,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/utils.py",
+          "additions": 9,
+          "deletions": 35,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/wy_fast.py",
+          "additions": 2,
+          "deletions": 7,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fused_moe.py",
+          "additions": 5,
+          "deletions": 17,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/gated_delta_net.py",
+          "additions": 12,
+          "deletions": 40,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/gdn_prefill.py",
+          "additions": 10,
+          "deletions": 39,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/l2_norm.py",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/rms_norm.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/silu_and_mul.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/_custom_op.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/attention.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/gated_delta_net.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/moe.py",
+          "additions": 14,
+          "deletions": 23,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/normalization.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/quantization.py",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/rotary_embedding.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/triton/split_qkv_rmsnorm_rope.py",
+          "additions": 15,
+          "deletions": 45,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/triton/utils.py",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/fused_moe.py",
+          "additions": 4,
+          "deletions": 12,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/gated_delta_net.py",
+          "additions": 10,
+          "deletions": 30,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/layernorm.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/linear.py",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/rotary_embedding.py",
+          "additions": 3,
+          "deletions": 13,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/cp_utils.py",
+          "additions": 4,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 16,
+          "deletions": 37,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/forward_context.py",
+          "additions": 4,
+          "deletions": 7,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/base.py",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 63,
+          "deletions": 177,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_cuda_graph.py",
+          "additions": 27,
+          "deletions": 76,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/base.py",
+          "additions": 3,
+          "deletions": 5,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 208,
+          "deletions": 281,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32_mtp.py",
+          "additions": 10,
+          "deletions": 25,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 96,
+          "deletions": 169,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3.py",
+          "additions": 35,
+          "deletions": 79,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_5.py",
+          "additions": 34,
+          "deletions": 96,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_vl.py",
+          "additions": 112,
+          "deletions": 226,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/platform.py",
+          "additions": 9,
+          "deletions": 16,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/registry.py",
+          "additions": 6,
+          "deletions": 8,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/98a2821e7a3346bb7693932fa4cdafc37a7f7e2d"
+    },
     {
       "sha": "df9f919cfea625b970f91b48017e7d3510204c0e",
       "parents": [
