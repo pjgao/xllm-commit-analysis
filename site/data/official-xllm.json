@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T18:20:37.839Z",
+  "generatedAt": "2026-08-18T18:20:10.318Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1387,
+    "commits": 1391,
     "contributors": 114,
-    "additions": 775797,
-    "deletions": 204476,
-    "filesChanged": 20343,
+    "additions": 777407,
+    "deletions": 205596,
+    "filesChanged": 20386,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-17",
+    "latestDate": "2026-08-18",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -45,6 +45,13 @@
         "files": 938
       },
       {
+        "name": "weizhehuang0827",
+        "commits": 61,
+        "additions": 19955,
+        "deletions": 13048,
+        "files": 3378
+      },
+      {
         "name": "JinDonghe",
         "commits": 60,
         "additions": 21395,
@@ -59,18 +66,11 @@
         "files": 669
       },
       {
-        "name": "weizhehuang0827",
-        "commits": 59,
-        "additions": 19936,
-        "deletions": 13022,
-        "files": 3376
-      },
-      {
         "name": "Zhang Minchao",
-        "commits": 45,
-        "additions": 46668,
-        "deletions": 5149,
-        "files": 686
+        "commits": 46,
+        "additions": 48256,
+        "deletions": 6240,
+        "files": 726
       },
       {
         "name": "a120092009",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 471
+        "count": 472
       },
       {
         "key": "NPU Backend",
@@ -120,7 +120,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 97
+        "count": 100
       },
       {
         "key": "xllm/core",
@@ -158,11 +158,11 @@
       },
       {
         "key": "bugfix",
-        "count": 426
+        "count": 429
       },
       {
         "key": "refactor",
-        "count": 206
+        "count": 207
       },
       {
         "key": "performance",
@@ -458,7 +458,8 @@
     "2026-08-13",
     "2026-08-14",
     "2026-08-15",
-    "2026-08-17"
+    "2026-08-17",
+    "2026-08-18"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1367,6 +1368,373 @@
     }
   },
   "commits": [
+    {
+      "sha": "c7455cde3d9cd0c453745aa2084f4c64ceddee58",
+      "parents": [
+        "6b9f852f40a24ff26fae0ddc87f1edb942134e36"
+      ],
+      "pr": "2254",
+      "date": "2026-08-18T17:14:56+08:00",
+      "dateKey": "2026-08-18",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "bugfix: do not build a tokenizer for draft-engine workers. (#2254)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 19,
+      "deletions": 11,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 19,
+          "deletions": 11,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c7455cde3d9cd0c453745aa2084f4c64ceddee58"
+    },
+    {
+      "sha": "6b9f852f40a24ff26fae0ddc87f1edb942134e36",
+      "parents": [
+        "e6f73ee9d31b1cbec37cec1b457a64430ac3b949"
+      ],
+      "pr": "2259",
+      "date": "2026-08-18T15:43:38+08:00",
+      "dateKey": "2026-08-18",
+      "author": {
+        "name": "Zhang Minchao",
+        "email": "zhangminchao1@jd.com"
+      },
+      "title": "refactor: separate Ascend TileLang DSL implementations from AOT descriptors. (#2259)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 1588,
+      "deletions": 1091,
+      "filesChanged": 40,
+      "files": [
+        {
+          "filename": ".agents/skills/tilelang-ascend-kernel/SKILL.md",
+          "additions": 15,
+          "deletions": 10,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 19,
+          "deletions": 13,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 19,
+          "deletions": 13,
+          "module": "docs/src"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 5,
+          "deletions": 4,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_input_builder_test.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/npu_xllm_ops_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/__init__.py",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/apply_token_bitmask.py",
+          "additions": 55,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/causal_conv1d.py",
+          "additions": 114,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/causal_conv1d_decode.py",
+          "additions": 82,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/chunk_gated_delta_rule_fwd_h.py",
+          "additions": 90,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/fused_gdn_gating.py",
+          "additions": 148,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/fused_sigmoid_gating_delta_rule.py",
+          "additions": 178,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/rope.py",
+          "additions": 123,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/spec_verify_attention_tiling_update.py",
+          "additions": 53,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/spec_verify_token_update.py",
+          "additions": 47,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/split_qkv_rmsnorm_mrope.py",
+          "additions": 210,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/{kernels => aot}/utils.py",
+          "additions": 14,
+          "deletions": 106,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernel_family_builder.py",
+          "additions": 15,
+          "deletions": 3,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernel_registry.py",
+          "additions": 4,
+          "deletions": 6,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/__init__.py",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/toolchain.py",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/models/py_model_helper.cpp",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/README.md",
+          "additions": 72,
+          "deletions": 27,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/__init__.py",
+          "additions": 63,
+          "deletions": 50,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/__init__.py",
+          "additions": 7,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 81,
+          "deletions": 64,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/__init__.py",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/apply_token_bitmask.py",
+          "additions": 0,
+          "deletions": 24,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/causal_conv1d.py",
+          "additions": 0,
+          "deletions": 85,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/causal_conv1d_decode.py",
+          "additions": 0,
+          "deletions": 54,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/chunk_gated_delta_rule_fwd_h.py",
+          "additions": 0,
+          "deletions": 60,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/fused_gdn_gating.py",
+          "additions": 5,
+          "deletions": 117,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/fused_sigmoid_gating_delta_rule.py",
+          "additions": 2,
+          "deletions": 135,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/rope.py",
+          "additions": 3,
+          "deletions": 86,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/spec_verify_attention_tiling_update.py",
+          "additions": 0,
+          "deletions": 23,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/spec_verify_token_update.py",
+          "additions": 0,
+          "deletions": 17,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/{compiler/tilelang/targets/ascend/kernels => python/kernels_npu/tilelang}/split_qkv_rmsnorm_mrope.py",
+          "additions": 9,
+          "deletions": 174,
+          "module": "xllm/{compiler"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/utils.py",
+          "additions": 106,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/platform.py",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6b9f852f40a24ff26fae0ddc87f1edb942134e36"
+    },
+    {
+      "sha": "e6f73ee9d31b1cbec37cec1b457a64430ac3b949",
+      "parents": [
+        "a93e6d5c1b285d2d970916155775f50f5e7df874"
+      ],
+      "pr": "2257",
+      "date": "2026-08-18T14:27:26+08:00",
+      "dateKey": "2026-08-18",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "bugfix: remove useless test. (#2257)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 0,
+      "deletions": 15,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/core/framework/speculative/adaptive_speculative_controller_test.cpp",
+          "additions": 0,
+          "deletions": 15,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e6f73ee9d31b1cbec37cec1b457a64430ac3b949"
+    },
+    {
+      "sha": "a93e6d5c1b285d2d970916155775f50f5e7df874",
+      "parents": [
+        "a9746346b2615d00fcbe64ed0fe5bac583da9879"
+      ],
+      "pr": "2239",
+      "date": "2026-08-18T11:36:06+08:00",
+      "dateKey": "2026-08-18",
+      "author": {
+        "name": "HeJun",
+        "email": "hejun@outlook.at"
+      },
+      "title": "bugfix: fix A5 mRoPE precision error in split_qkv_rmsnorm_mrope kernel. (#2239)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 3,
+      "deletions": 3,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/kernels/split_qkv_rmsnorm_mrope.py",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/compiler"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a93e6d5c1b285d2d970916155775f50f5e7df874"
+    },
     {
       "sha": "a9746346b2615d00fcbe64ed0fe5bac583da9879",
       "parents": [
