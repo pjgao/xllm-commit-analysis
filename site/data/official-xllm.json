@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T18:21:02.578Z",
+  "generatedAt": "2026-08-21T18:20:25.856Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1405,
+    "commits": 1406,
     "contributors": 115,
-    "additions": 791139,
-    "deletions": 211796,
-    "filesChanged": 22428,
+    "additions": 791154,
+    "deletions": 211875,
+    "filesChanged": 22434,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-20",
+    "latestDate": "2026-08-21",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -46,10 +46,10 @@
       },
       {
         "name": "weizhehuang0827",
-        "commits": 64,
-        "additions": 20316,
-        "deletions": 13258,
-        "files": 3391
+        "commits": 65,
+        "additions": 20331,
+        "deletions": 13337,
+        "files": 3397
       },
       {
         "name": "JinDonghe",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 479
+        "count": 480
       },
       {
         "key": "NPU Backend",
@@ -162,7 +162,7 @@
       },
       {
         "key": "refactor",
-        "count": 211
+        "count": 212
       },
       {
         "key": "performance",
@@ -461,7 +461,8 @@
     "2026-08-17",
     "2026-08-18",
     "2026-08-19",
-    "2026-08-20"
+    "2026-08-20",
+    "2026-08-21"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1370,6 +1371,69 @@
     }
   },
   "commits": [
+    {
+      "sha": "3906f5a914fba3a7fc14c023d6ebbf5048635502",
+      "parents": [
+        "78aa2a8583b7a85c21cd369a995f2bf2c431ffb0"
+      ],
+      "pr": "2281",
+      "date": "2026-08-21T11:36:45+08:00",
+      "dateKey": "2026-08-21",
+      "author": {
+        "name": "weizhehuang0827",
+        "email": "61739372+weizhehuang0827@users.noreply.github.com"
+      },
+      "title": "refactor: remove the dead non-batched DSpark confidence-probs path. (#2281)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 15,
+      "deletions": 79,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "xllm/core/framework/model/causal_lm.h",
+          "additions": 8,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_traits.h",
+          "additions": 0,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.h",
+          "additions": 3,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4_dspark.h",
+          "additions": 1,
+          "deletions": 19,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3_dspark.h",
+          "additions": 2,
+          "deletions": 18,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3906f5a914fba3a7fc14c023d6ebbf5048635502"
+    },
     {
       "sha": "78aa2a8583b7a85c21cd369a995f2bf2c431ffb0",
       "parents": [
