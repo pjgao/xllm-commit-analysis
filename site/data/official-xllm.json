@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T18:12:46.217Z",
+  "generatedAt": "2026-08-24T18:22:22.837Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1406,
+    "commits": 1407,
     "contributors": 115,
-    "additions": 791154,
-    "deletions": 211875,
-    "filesChanged": 22434,
+    "additions": 791784,
+    "deletions": 212684,
+    "filesChanged": 22474,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-21",
+    "latestDate": "2026-08-24",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -115,12 +115,12 @@
         "count": 118
       },
       {
-        "key": "Model Support",
+        "key": "Spec Decode",
         "count": 107
       },
       {
-        "key": "Spec Decode",
-        "count": 106
+        "key": "Model Support",
+        "count": 107
       },
       {
         "key": "xllm/core",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 433
+        "count": 434
       },
       {
         "key": "refactor",
@@ -462,7 +462,8 @@
     "2026-08-18",
     "2026-08-19",
     "2026-08-20",
-    "2026-08-21"
+    "2026-08-21",
+    "2026-08-24"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1371,6 +1372,274 @@
     }
   },
   "commits": [
+    {
+      "sha": "9e0f1402c1cee9798a485a45913296f83ebd1ec3",
+      "parents": [
+        "3906f5a914fba3a7fc14c023d6ebbf5048635502"
+      ],
+      "pr": "2175",
+      "date": "2026-08-24T17:51:10+08:00",
+      "dateKey": "2026-08-24",
+      "author": {
+        "name": "ustcfy",
+        "email": "96854327+ustcfy@users.noreply.github.com"
+      },
+      "title": "bugfix: separate greedy and probabilistic draft proposals for rejection sampling. (#2175)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 630,
+      "deletions": 809,
+      "filesChanged": 40,
+      "files": [
+        {
+          "filename": "RELEASE.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "RELEASE.md"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 3,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/rejection_sampler_test.cpp",
+          "additions": 82,
+          "deletions": 105,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/spec_input_builder_test.cpp",
+          "additions": 0,
+          "deletions": 108,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_protocol.h",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.cpp",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server_process.cpp",
+          "additions": 7,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.cpp",
+          "additions": 19,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.h",
+          "additions": 17,
+          "deletions": 30,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/draft_proposal.h",
+          "additions": 102,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/draft_sampling_mode.h",
+          "additions": 53,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.cpp",
+          "additions": 111,
+          "deletions": 114,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.h",
+          "additions": 3,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.cpp",
+          "additions": 13,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_input_builder.cpp",
+          "additions": 6,
+          "deletions": 139,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_input_builder.h",
+          "additions": 3,
+          "deletions": 47,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_verify.cpp",
+          "additions": 6,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_verify.h",
+          "additions": 2,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 40,
+          "deletions": 69,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 4,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 23,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.h",
+          "additions": 8,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/eagle3_worker_impl.cpp",
+          "additions": 22,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 46,
+          "deletions": 51,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 2,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/options.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 15,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/suffix_worker_impl.cpp",
+          "additions": 6,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/suffix_worker_impl.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9e0f1402c1cee9798a485a45913296f83ebd1ec3"
+    },
     {
       "sha": "3906f5a914fba3a7fc14c023d6ebbf5048635502",
       "parents": [
