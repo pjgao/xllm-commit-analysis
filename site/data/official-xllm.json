@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T01:15:40.153Z",
+  "generatedAt": "2026-08-29T20:06:50.600Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1407,
-    "contributors": 115,
-    "additions": 791784,
-    "deletions": 212684,
-    "filesChanged": 22474,
+    "commits": 1408,
+    "contributors": 116,
+    "additions": 792231,
+    "deletions": 212686,
+    "filesChanged": 22479,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-24",
+    "latestDate": "2026-08-29",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -115,11 +115,11 @@
         "count": 118
       },
       {
-        "key": "Spec Decode",
-        "count": 107
+        "key": "Model Support",
+        "count": 108
       },
       {
-        "key": "Model Support",
+        "key": "Spec Decode",
         "count": 107
       },
       {
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 509
+        "count": 510
       },
       {
         "key": "bugfix",
@@ -463,7 +463,8 @@
     "2026-08-19",
     "2026-08-20",
     "2026-08-21",
-    "2026-08-24"
+    "2026-08-24",
+    "2026-08-29"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1372,6 +1373,63 @@
     }
   },
   "commits": [
+    {
+      "sha": "d441cabf6be49ccba344852e3f34ee2500a3f376",
+      "parents": [
+        "9e0f1402c1cee9798a485a45913296f83ebd1ec3"
+      ],
+      "pr": "2289",
+      "date": "2026-08-29T23:58:12+08:00",
+      "dateKey": "2026-08-29",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "feat: announce GLM 5.3 Flash support and add deployment guides. (#2289)",
+      "type": "feature",
+      "module": "Model Support",
+      "additions": 447,
+      "deletions": 2,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "README.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "README.md"
+        },
+        {
+          "filename": "README_zh.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "README_zh.md"
+        },
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 5,
+          "deletions": 0,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_5_3_flash.md",
+          "additions": 219,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_5_3_flash.md",
+          "additions": 219,
+          "deletions": 0,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "feature",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d441cabf6be49ccba344852e3f34ee2500a3f376"
+    },
     {
       "sha": "9e0f1402c1cee9798a485a45913296f83ebd1ec3",
       "parents": [
