@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T20:13:04.832Z",
+  "generatedAt": "2026-08-31T22:08:12.618Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1408,
-    "contributors": 116,
-    "additions": 792231,
-    "deletions": 212686,
-    "filesChanged": 22479,
+    "commits": 1411,
+    "contributors": 117,
+    "additions": 792584,
+    "deletions": 212720,
+    "filesChanged": 22498,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-29",
+    "latestDate": "2026-08-31",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 480
+        "count": 482
       },
       {
         "key": "NPU Backend",
@@ -116,7 +116,7 @@
       },
       {
         "key": "Model Support",
-        "count": 108
+        "count": 109
       },
       {
         "key": "Spec Decode",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 434
+        "count": 435
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 178
+        "count": 179
       },
       {
         "key": "other",
@@ -177,11 +177,11 @@
         "count": 23
       },
       {
-        "key": "chore",
-        "count": 9
+        "key": "test",
+        "count": 10
       },
       {
-        "key": "test",
+        "key": "chore",
         "count": 9
       }
     ]
@@ -464,7 +464,8 @@
     "2026-08-20",
     "2026-08-21",
     "2026-08-24",
-    "2026-08-29"
+    "2026-08-29",
+    "2026-08-31"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1373,6 +1374,201 @@
     }
   },
   "commits": [
+    {
+      "sha": "9d471fd9e0f2df7100dc7b82970bd43dd162ab3a",
+      "parents": [
+        "29ced312268af823134b20e959caa779a3bbe581"
+      ],
+      "pr": "2292",
+      "date": "2026-08-31T21:54:57+08:00",
+      "dateKey": "2026-08-31",
+      "author": {
+        "name": "GoldBean-0819",
+        "email": "261165757@qq.com"
+      },
+      "title": "test: cover DP-scaled ACL graph capacity. (#2292)",
+      "type": "test",
+      "module": "Graph / Runtime",
+      "additions": 24,
+      "deletions": 0,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/runtime/acl_graph_bucket_policy_test.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/profile/profile_graph_warmup_test.cpp",
+          "additions": 18,
+          "deletions": 0,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9d471fd9e0f2df7100dc7b82970bd43dd162ab3a"
+    },
+    {
+      "sha": "29ced312268af823134b20e959caa779a3bbe581",
+      "parents": [
+        "0a4b55b2a768063d9fe4c2125dfab24e60d3fd57"
+      ],
+      "pr": "2291",
+      "date": "2026-08-31T21:54:15+08:00",
+      "dateKey": "2026-08-31",
+      "author": {
+        "name": "GoldBean-0819",
+        "email": "261165757@qq.com"
+      },
+      "title": "bugfix: account for DP-local ACL graph batch capacity. (#2291)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 36,
+      "deletions": 21,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_bucket_policy.h",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_executor_impl.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 15,
+          "deletions": 10,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/29ced312268af823134b20e959caa779a3bbe581"
+    },
+    {
+      "sha": "0a4b55b2a768063d9fe4c2125dfab24e60d3fd57",
+      "parents": [
+        "d441cabf6be49ccba344852e3f34ee2500a3f376"
+      ],
+      "pr": "2290",
+      "date": "2026-08-31T21:53:11+08:00",
+      "dateKey": "2026-08-31",
+      "author": {
+        "name": "GoldBean-0819",
+        "email": "261165757@qq.com"
+      },
+      "title": "feat: add layerwise split kv cache sharding for GLM-5.2 Python. (#2290)",
+      "type": "performance",
+      "module": "Model Support",
+      "additions": 293,
+      "deletions": 13,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "tests/python/test_collectives.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 24,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 19,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/attention/backend.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 77,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/distributed/__init__.py",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/distributed/collectives.py",
+          "additions": 29,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/cp_utils.py",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/forward_context.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 103,
+          "deletions": 7,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0a4b55b2a768063d9fe4c2125dfab24e60d3fd57"
+    },
     {
       "sha": "d441cabf6be49ccba344852e3f34ee2500a3f376",
       "parents": [
