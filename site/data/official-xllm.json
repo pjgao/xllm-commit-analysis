@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T22:08:12.618Z",
+  "generatedAt": "2026-09-01T20:15:43.148Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1411,
-    "contributors": 117,
-    "additions": 792584,
-    "deletions": 212720,
-    "filesChanged": 22498,
+    "commits": 1413,
+    "contributors": 118,
+    "additions": 792630,
+    "deletions": 212757,
+    "filesChanged": 22512,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-08-31",
+    "latestDate": "2026-09-01",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Engineering",
-        "count": 83
+        "count": 84
       },
       {
         "key": "Device Backend",
@@ -170,7 +170,7 @@
       },
       {
         "key": "other",
-        "count": 33
+        "count": 35
       },
       {
         "key": "docs",
@@ -465,7 +465,8 @@
     "2026-08-21",
     "2026-08-24",
     "2026-08-29",
-    "2026-08-31"
+    "2026-08-31",
+    "2026-09-01"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1374,6 +1375,143 @@
     }
   },
   "commits": [
+    {
+      "sha": "ad34d061226352b19f43bbc16e9fbf23c0b0edf1",
+      "parents": [
+        "4e2441db269c70a3e8fb078de22f4f1b536a407f"
+      ],
+      "pr": "2294",
+      "date": "2026-09-01T14:57:26+08:00",
+      "dateKey": "2026-09-01",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "docs: align documentation with current implementation. (#2294)",
+      "type": "other",
+      "module": "Engineering",
+      "additions": 45,
+      "deletions": 36,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "docs/README.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/README.md"
+        },
+        {
+          "filename": "docs/README_zh.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/README_zh.md"
+        },
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 7,
+          "deletions": 2,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 5,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/diffusion_models/wan/wan2_2.md",
+          "additions": 4,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/generative_recommendation_design.md",
+          "additions": 5,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 5,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/diffusion_models/wan/wan2_2.md",
+          "additions": 4,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/generative_recommendation_design.md",
+          "additions": 5,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "other",
+        "engineering",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ad34d061226352b19f43bbc16e9fbf23c0b0edf1"
+    },
+    {
+      "sha": "4e2441db269c70a3e8fb078de22f4f1b536a407f",
+      "parents": [
+        "9d471fd9e0f2df7100dc7b82970bd43dd162ab3a"
+      ],
+      "pr": "2293",
+      "date": "2026-09-01T12:37:14+08:00",
+      "dateKey": "2026-09-01",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "docs: import AGENTS.md from a real CLAUDE.md file. (#2293)",
+      "type": "other",
+      "module": "CLAUDE.md",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "CLAUDE.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "CLAUDE.md"
+        }
+      ],
+      "tags": [
+        "other",
+        "claude-md"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4e2441db269c70a3e8fb078de22f4f1b536a407f"
+    },
     {
       "sha": "9d471fd9e0f2df7100dc7b82970bd43dd162ab3a",
       "parents": [
