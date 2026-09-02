@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T20:15:43.148Z",
+  "generatedAt": "2026-09-02T20:13:51.111Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1413,
+    "commits": 1414,
     "contributors": 118,
-    "additions": 792630,
-    "deletions": 212757,
-    "filesChanged": 22512,
+    "additions": 792715,
+    "deletions": 212809,
+    "filesChanged": 22515,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-01",
+    "latestDate": "2026-09-02",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Device Backend",
-        "count": 78
+        "count": 79
       },
       {
         "key": "xllm/api_service",
@@ -177,12 +177,12 @@
         "count": 23
       },
       {
-        "key": "test",
+        "key": "chore",
         "count": 10
       },
       {
-        "key": "chore",
-        "count": 9
+        "key": "test",
+        "count": 10
       }
     ]
   },
@@ -466,7 +466,8 @@
     "2026-08-24",
     "2026-08-29",
     "2026-08-31",
-    "2026-09-01"
+    "2026-09-01",
+    "2026-09-02"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1375,6 +1376,50 @@
     }
   },
   "commits": [
+    {
+      "sha": "ab2c2266f7fdaa7c7c59af5ebbe2eb7e9a80b3dc",
+      "parents": [
+        "ad34d061226352b19f43bbc16e9fbf23c0b0edf1"
+      ],
+      "pr": "2297",
+      "date": "2026-09-02T18:26:26+08:00",
+      "dateKey": "2026-09-02",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "build: honor TORCH_CUDA_ARCH_LIST in CUDA builds. (#2297)",
+      "type": "chore",
+      "module": "Device Backend",
+      "additions": 85,
+      "deletions": 52,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 18,
+          "deletions": 3,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 3,
+          "deletions": 5,
+          "module": "setup.py"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/CMakeLists.txt",
+          "additions": 64,
+          "deletions": 44,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "chore",
+        "device-backend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ab2c2266f7fdaa7c7c59af5ebbe2eb7e9a80b3dc"
+    },
     {
       "sha": "ad34d061226352b19f43bbc16e9fbf23c0b0edf1",
       "parents": [
