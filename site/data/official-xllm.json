@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T20:13:51.111Z",
+  "generatedAt": "2026-09-03T20:14:38.282Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1414,
+    "commits": 1415,
     "contributors": 118,
-    "additions": 792715,
+    "additions": 792733,
     "deletions": 212809,
-    "filesChanged": 22515,
+    "filesChanged": 22518,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-02",
+    "latestDate": "2026-09-03",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -170,7 +170,7 @@
       },
       {
         "key": "other",
-        "count": 35
+        "count": 36
       },
       {
         "key": "docs",
@@ -467,7 +467,8 @@
     "2026-08-29",
     "2026-08-31",
     "2026-09-01",
-    "2026-09-02"
+    "2026-09-02",
+    "2026-09-03"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1376,6 +1377,50 @@
     }
   },
   "commits": [
+    {
+      "sha": "5731d8787f9ccdfaff9b1704d792212e8ff5daf5",
+      "parents": [
+        "ab2c2266f7fdaa7c7c59af5ebbe2eb7e9a80b3dc"
+      ],
+      "pr": "2301",
+      "date": "2026-09-03T20:21:24+08:00",
+      "dateKey": "2026-09-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "skills: require clang-format on every edited c++ file. (#2301)",
+      "type": "other",
+      "module": ".agents/skills",
+      "additions": 18,
+      "deletions": 0,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": ".agents/skills/code-review/references/custom-code-style.md",
+          "additions": 2,
+          "deletions": 0,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".cursor/rules/clang-format.mdc",
+          "additions": 15,
+          "deletions": 0,
+          "module": ".cursor/rules"
+        },
+        {
+          "filename": "AGENTS.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "AGENTS.md"
+        }
+      ],
+      "tags": [
+        "other",
+        "agents-skills"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5731d8787f9ccdfaff9b1704d792212e8ff5daf5"
+    },
     {
       "sha": "ab2c2266f7fdaa7c7c59af5ebbe2eb7e9a80b3dc",
       "parents": [
