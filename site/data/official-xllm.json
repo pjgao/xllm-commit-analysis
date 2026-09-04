@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T20:14:38.282Z",
+  "generatedAt": "2026-09-04T19:59:24.254Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1415,
+    "commits": 1417,
     "contributors": 118,
-    "additions": 792733,
-    "deletions": 212809,
-    "filesChanged": 22518,
+    "additions": 792899,
+    "deletions": 212990,
+    "filesChanged": 22532,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-03",
+    "latestDate": "2026-09-04",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -124,7 +124,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 97
+        "count": 98
       },
       {
         "key": "Engineering",
@@ -136,7 +136,7 @@
       },
       {
         "key": "xllm/api_service",
-        "count": 27
+        "count": 28
       },
       {
         "key": "MoE",
@@ -162,7 +162,7 @@
       },
       {
         "key": "refactor",
-        "count": 212
+        "count": 214
       },
       {
         "key": "performance",
@@ -468,7 +468,8 @@
     "2026-08-31",
     "2026-09-01",
     "2026-09-02",
-    "2026-09-03"
+    "2026-09-03",
+    "2026-09-04"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1377,6 +1378,143 @@
     }
   },
   "commits": [
+    {
+      "sha": "0ab2b06660a1ec391b0b0b2b69fd141e0fed3058",
+      "parents": [
+        "0b8fc1fb5589407e79b1be99db3f514035a8fdf0"
+      ],
+      "pr": "2302",
+      "date": "2026-09-04T18:06:53+08:00",
+      "dateKey": "2026-09-04",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: fold AssistantMaster into Master for non-leader ranks. (#2302)",
+      "type": "refactor",
+      "module": "xllm/core",
+      "additions": 165,
+      "deletions": 170,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/dit_master.cpp",
+          "additions": 9,
+          "deletions": 35,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dit_master.h",
+          "additions": 0,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 9,
+          "deletions": 37,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.h",
+          "additions": 6,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 43,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.h",
+          "additions": 16,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.cpp",
+          "additions": 41,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.h",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 9,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.h",
+          "additions": 0,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 6,
+          "deletions": 16,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0ab2b06660a1ec391b0b0b2b69fd141e0fed3058"
+    },
+    {
+      "sha": "0b8fc1fb5589407e79b1be99db3f514035a8fdf0",
+      "parents": [
+        "5731d8787f9ccdfaff9b1704d792212e8ff5daf5"
+      ],
+      "pr": "2300",
+      "date": "2026-09-04T10:22:26+08:00",
+      "dateKey": "2026-09-04",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: rename xllm_metrics.h to rpc_request_metrics.h. (#2300)",
+      "type": "refactor",
+      "module": "xllm/api_service",
+      "additions": 1,
+      "deletions": 11,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/api_service/api_service.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/{xllm_metrics.h => rpc_request_metrics.h}",
+          "additions": 0,
+          "deletions": 10,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-api-service"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0b8fc1fb5589407e79b1be99db3f514035a8fdf0"
+    },
     {
       "sha": "5731d8787f9ccdfaff9b1704d792212e8ff5daf5",
       "parents": [
