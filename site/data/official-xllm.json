@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T19:59:24.254Z",
+  "generatedAt": "2026-09-05T19:39:50.638Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1417,
+    "commits": 1421,
     "contributors": 118,
-    "additions": 792899,
-    "deletions": 212990,
-    "filesChanged": 22532,
+    "additions": 795924,
+    "deletions": 214320,
+    "filesChanged": 22555,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-04",
+    "latestDate": "2026-09-05",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 117,
-        "additions": 65301,
-        "deletions": 33369,
-        "files": 2064
+        "commits": 118,
+        "additions": 65302,
+        "deletions": 33370,
+        "files": 2065
       },
       {
         "name": "phantomlei",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 482
+        "count": 485
       },
       {
         "key": "NPU Backend",
@@ -162,7 +162,7 @@
       },
       {
         "key": "refactor",
-        "count": 214
+        "count": 217
       },
       {
         "key": "performance",
@@ -178,7 +178,7 @@
       },
       {
         "key": "chore",
-        "count": 10
+        "count": 11
       },
       {
         "key": "test",
@@ -469,7 +469,8 @@
     "2026-09-01",
     "2026-09-02",
     "2026-09-03",
-    "2026-09-04"
+    "2026-09-04",
+    "2026-09-05"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1378,6 +1379,254 @@
     }
   },
   "commits": [
+    {
+      "sha": "96a048a9243817f3fbd92a90f70fcdb8abe7649c",
+      "parents": [
+        "89333e071c1c5287073e885d2bb26630b18574ff"
+      ],
+      "pr": "2305",
+      "date": "2026-09-05T21:37:33+08:00",
+      "dateKey": "2026-09-05",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: extract RecRequestFactory from RecMaster in distributed runtime. (#2305)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 1290,
+      "deletions": 734,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 25,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/rec_request_factory_test.cpp",
+          "additions": 347,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 33,
+          "deletions": 632,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.h",
+          "additions": 9,
+          "deletions": 102,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_request_factory.cpp",
+          "additions": 684,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_request_factory.h",
+          "additions": 190,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/96a048a9243817f3fbd92a90f70fcdb8abe7649c"
+    },
+    {
+      "sha": "89333e071c1c5287073e885d2bb26630b18574ff",
+      "parents": [
+        "7bf1cb7b5c5096d14187b159747a4ac4caf96ac8"
+      ],
+      "pr": "2304",
+      "date": "2026-09-05T21:09:07+08:00",
+      "dateKey": "2026-09-05",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: extract VLMRequestFactory from VLMMaster in distributed runtime. (#2304)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 755,
+      "deletions": 220,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 26,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/vlm_request_factory_test.cpp",
+          "additions": 333,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 23,
+          "deletions": 202,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.h",
+          "additions": 7,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.cpp",
+          "additions": 264,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.h",
+          "additions": 100,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/89333e071c1c5287073e885d2bb26630b18574ff"
+    },
+    {
+      "sha": "7bf1cb7b5c5096d14187b159747a4ac4caf96ac8",
+      "parents": [
+        "f3fcd85d534f6b1f26fb78818600f3ceb8c6bd84"
+      ],
+      "pr": "2303",
+      "date": "2026-09-05T19:24:33+08:00",
+      "dateKey": "2026-09-05",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: extract LLMRequestFactory from LLMMaster in distributed runtime. (#2303)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 979,
+      "deletions": 375,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 24,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/llm_request_factory_test.cpp",
+          "additions": 310,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 28,
+          "deletions": 349,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.h",
+          "additions": 4,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.cpp",
+          "additions": 465,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.h",
+          "additions": 142,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7bf1cb7b5c5096d14187b159747a4ac4caf96ac8"
+    },
+    {
+      "sha": "f3fcd85d534f6b1f26fb78818600f3ceb8c6bd84",
+      "parents": [
+        "0ab2b06660a1ec391b0b0b2b69fd141e0fed3058"
+      ],
+      "pr": "2306",
+      "date": "2026-09-05T19:22:41+08:00",
+      "dateKey": "2026-09-05",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "chore: update CODEOWNERS. (#2306)",
+      "type": "chore",
+      "module": ".github/CODEOWNERS",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": ".github/CODEOWNERS",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".github/CODEOWNERS"
+        }
+      ],
+      "tags": [
+        "chore",
+        "github-codeowners"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f3fcd85d534f6b1f26fb78818600f3ceb8c6bd84"
+    },
     {
       "sha": "0ab2b06660a1ec391b0b0b2b69fd141e0fed3058",
       "parents": [
