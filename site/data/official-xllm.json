@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T19:39:50.638Z",
+  "generatedAt": "2026-09-06T19:42:19.698Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1421,
+    "commits": 1423,
     "contributors": 118,
-    "additions": 795924,
-    "deletions": 214320,
-    "filesChanged": 22555,
+    "additions": 796175,
+    "deletions": 214421,
+    "filesChanged": 22566,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-05",
+    "latestDate": "2026-09-06",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 118
+        "count": 119
       },
       {
         "key": "Model Support",
@@ -124,7 +124,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 98
+        "count": 99
       },
       {
         "key": "Engineering",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 217
+        "count": 218
       },
       {
         "key": "performance",
-        "count": 179
+        "count": 180
       },
       {
         "key": "other",
@@ -470,7 +470,8 @@
     "2026-09-02",
     "2026-09-03",
     "2026-09-04",
-    "2026-09-05"
+    "2026-09-05",
+    "2026-09-06"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1379,6 +1380,124 @@
     }
   },
   "commits": [
+    {
+      "sha": "784f3a3b4630032eb67e6ae8c9cb0f210cbfc717",
+      "parents": [
+        "aed0f2067c05e7eee5eac71314efb69b8f8df68c"
+      ],
+      "pr": "2308",
+      "date": "2026-09-06T18:47:44+08:00",
+      "dateKey": "2026-09-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: move heavy payloads into RequestState instead of copying. (#2308)",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 182,
+      "deletions": 29,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 23,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.cpp",
+          "additions": 15,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 14,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state_benchmark.cpp",
+          "additions": 130,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/784f3a3b4630032eb67e6ae8c9cb0f210cbfc717"
+    },
+    {
+      "sha": "aed0f2067c05e7eee5eac71314efb69b8f8df68c",
+      "parents": [
+        "96a048a9243817f3fbd92a90f70fcdb8abe7649c"
+      ],
+      "pr": "2307",
+      "date": "2026-09-06T13:55:03+08:00",
+      "dateKey": "2026-09-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: centralize sampling/scheduler param mapping on RequestParams. (#2307)",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 69,
+      "deletions": 72,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.cpp",
+          "additions": 4,
+          "deletions": 32,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_request_factory.cpp",
+          "additions": 1,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.cpp",
+          "additions": 41,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.h",
+          "additions": 22,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.cpp",
+          "additions": 1,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/aed0f2067c05e7eee5eac71314efb69b8f8df68c"
+    },
     {
       "sha": "96a048a9243817f3fbd92a90f70fcdb8abe7649c",
       "parents": [
