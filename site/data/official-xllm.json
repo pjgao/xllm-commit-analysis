@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T19:42:19.698Z",
+  "generatedAt": "2026-09-07T20:52:58.133Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1423,
-    "contributors": 118,
-    "additions": 796175,
-    "deletions": 214421,
-    "filesChanged": 22566,
+    "commits": 1427,
+    "contributors": 119,
+    "additions": 797098,
+    "deletions": 214524,
+    "filesChanged": 22610,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-06",
+    "latestDate": "2026-09-07",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 485
+        "count": 486
       },
       {
         "key": "NPU Backend",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 119
+        "count": 120
       },
       {
         "key": "Model Support",
@@ -120,7 +120,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 107
+        "count": 108
       },
       {
         "key": "xllm/core",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Engineering",
-        "count": 84
+        "count": 85
       },
       {
         "key": "Device Backend",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 510
+        "count": 511
       },
       {
         "key": "bugfix",
-        "count": 435
+        "count": 436
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 180
+        "count": 182
       },
       {
         "key": "other",
@@ -471,7 +471,8 @@
     "2026-09-03",
     "2026-09-04",
     "2026-09-05",
-    "2026-09-06"
+    "2026-09-06",
+    "2026-09-07"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1380,6 +1381,378 @@
     }
   },
   "commits": [
+    {
+      "sha": "102a6454d7d8d72eb963827ddb7bd3e892125929",
+      "parents": [
+        "478dda209aa1aae0d54e7d4d75d3ad39b8b46d4f"
+      ],
+      "pr": "2313",
+      "date": "2026-09-07T22:07:26+08:00",
+      "dateKey": "2026-09-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: build Sequence token buffer with a single memcpy. (#2313)",
+      "type": "performance",
+      "module": "Engineering",
+      "additions": 14,
+      "deletions": 4,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 14,
+          "deletions": 4,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/102a6454d7d8d72eb963827ddb7bd3e892125929"
+    },
+    {
+      "sha": "478dda209aa1aae0d54e7d4d75d3ad39b8b46d4f",
+      "parents": [
+        "ebc7ea1f104a2421481ac5820cba4c18650aeb6e"
+      ],
+      "pr": "2312",
+      "date": "2026-09-07T21:36:09+08:00",
+      "dateKey": "2026-09-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: cut copies and lazily allocate logprob buffers in request build path. (#2312)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 268,
+      "deletions": 35,
+      "filesChanged": 18,
+      "files": [
+        {
+          "filename": ".agents/skills/code-review/references/custom-code-style.md",
+          "additions": 20,
+          "deletions": 0,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".clang-tidy",
+          "additions": 36,
+          "deletions": 0,
+          "module": ".clang-tidy"
+        },
+        {
+          "filename": ".cursor/rules/move-copy-semantics.mdc",
+          "additions": 32,
+          "deletions": 0,
+          "module": ".cursor/rules"
+        },
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/block/hierarchy_block_manager_pool_test.cpp",
+          "additions": 5,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/request_prefix_cache_tokens_test.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sample_slot_test.cpp",
+          "additions": 5,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.cpp",
+          "additions": 7,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 19,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state_benchmark.cpp",
+          "additions": 75,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 29,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_logprob_state.cpp",
+          "additions": 21,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_logprob_state.h",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequences_group.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequences_group.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/478dda209aa1aae0d54e7d4d75d3ad39b8b46d4f"
+    },
+    {
+      "sha": "ebc7ea1f104a2421481ac5820cba4c18650aeb6e",
+      "parents": [
+        "3f861cff501f3dfaec4922ce23eda8e120ba2070"
+      ],
+      "pr": "2310",
+      "date": "2026-09-07T17:28:28+08:00",
+      "dateKey": "2026-09-07",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "bugfix: exclude resampled tokens from DFlash and DSpark acceptance counts. (#2310)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 108,
+      "deletions": 4,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 104,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ebc7ea1f104a2421481ac5820cba4c18650aeb6e"
+    },
+    {
+      "sha": "3f861cff501f3dfaec4922ce23eda8e120ba2070",
+      "parents": [
+        "784f3a3b4630032eb67e6ae8c9cb0f210cbfc717"
+      ],
+      "pr": "2309",
+      "date": "2026-09-07T15:48:55+08:00",
+      "dateKey": "2026-09-07",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "feat: log per-request speculative token acceptance rates. (#2309)",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 533,
+      "deletions": 60,
+      "filesChanged": 23,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/CMakeLists.txt",
+          "additions": 24,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 214,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 68,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 43,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.h",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.cpp",
+          "additions": 18,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 12,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_manager.cpp",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_manager.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 14,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/params_utils.cpp",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/params_utils.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 55,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3f861cff501f3dfaec4922ce23eda8e120ba2070"
+    },
     {
       "sha": "784f3a3b4630032eb67e6ae8c9cb0f210cbfc717",
       "parents": [
