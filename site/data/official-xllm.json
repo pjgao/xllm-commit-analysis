@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T20:52:58.133Z",
+  "generatedAt": "2026-09-08T20:25:42.676Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1427,
+    "commits": 1430,
     "contributors": 119,
-    "additions": 797098,
-    "deletions": 214524,
-    "filesChanged": 22610,
+    "additions": 801729,
+    "deletions": 214869,
+    "filesChanged": 22634,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-07",
+    "latestDate": "2026-09-08",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -124,7 +124,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 99
+        "count": 100
       },
       {
         "key": "Engineering",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 511
+        "count": 512
       },
       {
         "key": "bugfix",
-        "count": 436
+        "count": 437
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 182
+        "count": 183
       },
       {
         "key": "other",
@@ -472,7 +472,8 @@
     "2026-09-04",
     "2026-09-05",
     "2026-09-06",
-    "2026-09-07"
+    "2026-09-07",
+    "2026-09-08"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1381,6 +1382,230 @@
     }
   },
   "commits": [
+    {
+      "sha": "2c7b65be7aa348b99b42b84c0ae43aaee25ed68d",
+      "parents": [
+        "3eaf4cd9a3cd5172af3c8bc76508aa0631583602"
+      ],
+      "pr": "2316",
+      "date": "2026-09-08T15:55:40+08:00",
+      "dateKey": "2026-09-08",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: enforce beam-search logprob requirements in RecRequestFactory. (#2316)",
+      "type": "bugfix",
+      "module": "tests/core",
+      "additions": 431,
+      "deletions": 28,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/llm_request_factory_test.cpp",
+          "additions": 27,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/rec_request_factory_test.cpp",
+          "additions": 172,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/request_params_test.cpp",
+          "additions": 98,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.cpp",
+          "additions": 10,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_request_factory.cpp",
+          "additions": 14,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.cpp",
+          "additions": 28,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 11,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampler.cpp",
+          "additions": 12,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 52,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "tests-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2c7b65be7aa348b99b42b84c0ae43aaee25ed68d"
+    },
+    {
+      "sha": "3eaf4cd9a3cd5172af3c8bc76508aa0631583602",
+      "parents": [
+        "a9503b8b1f1425d2bde3b646c41b17c7d53a7ce9"
+      ],
+      "pr": "2315",
+      "date": "2026-09-08T14:20:23+08:00",
+      "dateKey": "2026-09-08",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: drop three redundant heap allocations per Sequence. (#2315)",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 43,
+      "deletions": 35,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 20,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 13,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_logprob_state.h",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3eaf4cd9a3cd5172af3c8bc76508aa0631583602"
+    },
+    {
+      "sha": "a9503b8b1f1425d2bde3b646c41b17c7d53a7ce9",
+      "parents": [
+        "102a6454d7d8d72eb963827ddb7bd3e892125929"
+      ],
+      "pr": "2311",
+      "date": "2026-09-08T14:15:19+08:00",
+      "dateKey": "2026-09-08",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "feat: add KDA Triton kernels and tests. (#2311)",
+      "type": "feature",
+      "module": "tests/python",
+      "additions": 4157,
+      "deletions": 282,
+      "filesChanged": 11,
+      "files": [
+        {
+          "filename": "tests/python/test_kda_triton_ops.py",
+          "additions": 971,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_triton_ops.py",
+          "additions": 8,
+          "deletions": 280,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/cumsum.py",
+          "additions": 19,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/fused_recurrent.py",
+          "additions": 389,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda.py",
+          "additions": 1155,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda_chunk_delta_h.py",
+          "additions": 357,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda_intra.py",
+          "additions": 869,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda_intra_token_parallel.py",
+          "additions": 198,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda_l2norm.py",
+          "additions": 128,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/kda_op.py",
+          "additions": 56,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/triton/fla/utils.py",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "tests-python",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a9503b8b1f1425d2bde3b646c41b17c7d53a7ce9"
+    },
     {
       "sha": "102a6454d7d8d72eb963827ddb7bd3e892125929",
       "parents": [
