@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T20:09:19.902Z",
+  "generatedAt": "2026-09-10T20:10:47.564Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1502,
+    "commits": 1505,
     "contributors": 119,
-    "additions": 848253,
-    "deletions": 224841,
-    "filesChanged": 23527,
+    "additions": 851471,
+    "deletions": 225200,
+    "filesChanged": 23553,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-09",
+    "latestDate": "2026-09-10",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -112,15 +112,15 @@
       },
       {
         "key": "Inference Engine",
-        "count": 131
+        "count": 132
+      },
+      {
+        "key": "Model Support",
+        "count": 117
       },
       {
         "key": "Spec Decode",
         "count": 117
-      },
-      {
-        "key": "Model Support",
-        "count": 116
       },
       {
         "key": "xllm/core",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 225
+        "count": 226
       },
       {
         "key": "performance",
-        "count": 203
+        "count": 204
       },
       {
         "key": "other",
@@ -182,7 +182,7 @@
       },
       {
         "key": "test",
-        "count": 10
+        "count": 11
       }
     ]
   },
@@ -474,7 +474,8 @@
     "2026-09-06",
     "2026-09-07",
     "2026-09-08",
-    "2026-09-09"
+    "2026-09-09",
+    "2026-09-10"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1383,6 +1384,242 @@
     }
   },
   "commits": [
+    {
+      "sha": "a590f85f14bf0c3b0c01a24e762d9eef80cd224b",
+      "parents": [
+        "5425c0d7673d8d458a3d13d4a2a02194f64dbc47"
+      ],
+      "pr": "2324",
+      "date": "2026-09-10T16:35:40+08:00",
+      "dateKey": "2026-09-10",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "test: align glm attention mock with forward context. (#2324)",
+      "type": "test",
+      "module": "Model Support",
+      "additions": 11,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 11,
+          "deletions": 2,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a590f85f14bf0c3b0c01a24e762d9eef80cd224b"
+    },
+    {
+      "sha": "5425c0d7673d8d458a3d13d4a2a02194f64dbc47",
+      "parents": [
+        "76d57f03d3fb89f6acc052f1280a003bfb852657"
+      ],
+      "pr": "2323",
+      "date": "2026-09-10T12:31:11+08:00",
+      "dateKey": "2026-09-10",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: add per-hop benchmarks for the api_service -> executor request path. (#2323)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 1854,
+      "deletions": 1,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "xllm/api_service/CMakeLists.txt",
+          "additions": 25,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service_benchmark.cpp",
+          "additions": 367,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/framework/batch/CMakeLists.txt",
+          "additions": 27,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 512,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 48,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory_benchmark.cpp",
+          "additions": 285,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_output_benchmark.cpp",
+          "additions": 197,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/CMakeLists.txt",
+          "additions": 29,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler_benchmark.cpp",
+          "additions": 364,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5425c0d7673d8d458a3d13d4a2a02194f64dbc47"
+    },
+    {
+      "sha": "76d57f03d3fb89f6acc052f1280a003bfb852657",
+      "parents": [
+        "aca1414044ac999a12b006d35a81e5e51d456377"
+      ],
+      "pr": "2317",
+      "date": "2026-09-10T11:06:45+08:00",
+      "dateKey": "2026-09-10",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: split REC sequences out of Sequence into a class hierarchy. (#2317)",
+      "type": "refactor",
+      "module": "tests/core",
+      "additions": 1353,
+      "deletions": 356,
+      "filesChanged": 16,
+      "files": [
+        {
+          "filename": "tests/core/framework/request/CMakeLists.txt",
+          "additions": 12,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/rec_sequence_test.cpp",
+          "additions": 451,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch.cpp",
+          "additions": 18,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/onerec_batch_input_builder.cpp",
+          "additions": 13,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/onerec_xattention_batch_input_builder.cpp",
+          "additions": 6,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/onerec_sequence.cpp",
+          "additions": 274,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/onerec_sequence.h",
+          "additions": 102,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_sequence.cpp",
+          "additions": 105,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_sequence.h",
+          "additions": 116,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 74,
+          "deletions": 239,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 51,
+          "deletions": 74,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_factory.cpp",
+          "additions": 63,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_factory.h",
+          "additions": 38,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequences_group.cpp",
+          "additions": 21,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequences_group.h",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "tests-core",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/76d57f03d3fb89f6acc052f1280a003bfb852657"
+    },
     {
       "sha": "aca1414044ac999a12b006d35a81e5e51d456377",
       "parents": [
