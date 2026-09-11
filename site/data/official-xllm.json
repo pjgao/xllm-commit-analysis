@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T20:10:47.564Z",
+  "generatedAt": "2026-09-11T20:09:56.434Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1505,
-    "contributors": 119,
-    "additions": 851471,
-    "deletions": 225200,
-    "filesChanged": 23553,
+    "commits": 1511,
+    "contributors": 121,
+    "additions": 852953,
+    "deletions": 225595,
+    "filesChanged": 23924,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-10",
+    "latestDate": "2026-09-11",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 118,
-        "additions": 65302,
-        "deletions": 33370,
-        "files": 2065
+        "commits": 119,
+        "additions": 65399,
+        "deletions": 33387,
+        "files": 2069
       },
       {
         "name": "phantomlei",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 514
+        "count": 515
       },
       {
         "key": "NPU Backend",
@@ -115,12 +115,12 @@
         "count": 132
       },
       {
-        "key": "Model Support",
-        "count": 117
+        "key": "Spec Decode",
+        "count": 118
       },
       {
-        "key": "Spec Decode",
-        "count": 117
+        "key": "Model Support",
+        "count": 118
       },
       {
         "key": "xllm/core",
@@ -135,11 +135,11 @@
         "count": 79
       },
       {
-        "key": "MoE",
-        "count": 28
+        "key": "xllm/api_service",
+        "count": 30
       },
       {
-        "key": "xllm/api_service",
+        "key": "MoE",
         "count": 28
       },
       {
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 204
+        "count": 208
       },
       {
         "key": "other",
@@ -178,11 +178,11 @@
       },
       {
         "key": "chore",
-        "count": 13
+        "count": 14
       },
       {
         "key": "test",
-        "count": 11
+        "count": 12
       }
     ]
   },
@@ -475,7 +475,8 @@
     "2026-09-07",
     "2026-09-08",
     "2026-09-09",
-    "2026-09-10"
+    "2026-09-10",
+    "2026-09-11"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1384,6 +1385,2392 @@
     }
   },
   "commits": [
+    {
+      "sha": "19ab750d886dd39ecf7bd8e5074915c8eab8dc21",
+      "parents": [
+        "11c097b532c71ad34c9be111d442cb1b3e1508df"
+      ],
+      "pr": "2332",
+      "date": "2026-09-11T18:04:12+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: skip the throwaway DOM parse on the completion and chat ingress. (#2332)",
+      "type": "performance",
+      "module": "tests/api_service",
+      "additions": 678,
+      "deletions": 0,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/api_service/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/json_fast_path_test.cpp",
+          "additions": 235,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "xllm/api_service/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_json_parser.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/completion_json_parser.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/json_fast_path.cpp",
+          "additions": 340,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/json_fast_path.h",
+          "additions": 71,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "performance",
+        "tests-api-service",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/19ab750d886dd39ecf7bd8e5074915c8eab8dc21"
+    },
+    {
+      "sha": "11c097b532c71ad34c9be111d442cb1b3e1508df",
+      "parents": [
+        "c6b40e061fe7590b8ef0d4683be133e6561789a2"
+      ],
+      "pr": "2331",
+      "date": "2026-09-11T17:08:34+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: reserve the logprob repeated fields before filling them. (#2331)",
+      "type": "performance",
+      "module": "xllm/api_service",
+      "additions": 23,
+      "deletions": 0,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/api_service/api_service_benchmark.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/completion_service_impl.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/rec_completion_service_impl.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/sample_service_impl.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-api-service"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/11c097b532c71ad34c9be111d442cb1b3e1508df"
+    },
+    {
+      "sha": "c6b40e061fe7590b8ef0d4683be133e6561789a2",
+      "parents": [
+        "6e22f70bf78fbb1b556d4d93d9a04afa1504dff3"
+      ],
+      "pr": "2330",
+      "date": "2026-09-11T16:19:35+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: split the api_service ingress benchmarks by hop. (#2330)",
+      "type": "performance",
+      "module": "xllm/api_service",
+      "additions": 149,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/api_service/api_service_benchmark.cpp",
+          "additions": 149,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-api-service"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c6b40e061fe7590b8ef0d4683be133e6561789a2"
+    },
+    {
+      "sha": "6e22f70bf78fbb1b556d4d93d9a04afa1504dff3",
+      "parents": [
+        "e26109c586ec183c90d4586a95d4c76eebf282f0"
+      ],
+      "pr": "2314",
+      "date": "2026-09-11T15:04:14+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "chore: normalize existing Apache-2.0 license headers. (#2314)",
+      "type": "chore",
+      "module": "Spec Decode",
+      "additions": 378,
+      "deletions": 378,
+      "filesChanged": 354,
+      "files": [
+        {
+          "filename": ".agents/skills/code-review/references/custom-code-style.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/api_service/completion_json_parser_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/models_service_impl_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/request_id_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/core/common/flash_comm1_context_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/common/options_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/spawn_worker_protocol_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/eplb_aggregator_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/eplb_executor_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/eplb_manager_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/eplb_options_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/eplb_utils_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/eplb/expert_weight_buffer_shm_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/cache_layout_builder_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/linear_state_restore_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/hierarchy_kv_cache_transfer_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/kv_transfer_completion_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache_transfer/reshard_planner_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/npu_cp_plan_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/process_group_batch_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/prefix_cache/linear_state_prefix_cache_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/dit_request_params_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_generated_tokens_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_stop_output_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/json_object_grammar_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/sampler_filter_mask_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/adaptive_speculative_controller_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_json_object_state_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/speculative_profile_registry_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/state_dict/state_dict_utils_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/cuda/moe/moe_topk_test.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/causal_conv1d_fn_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/causal_conv1d_update_decode_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/chunk_gated_delta_rule_regression_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/fused_gdn_gating_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/fused_recurrent_gated_delta_rule_beta_regression_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/fused_recurrent_gated_delta_rule_packed_decode_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/fused_recurrent_gated_delta_rule_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/fused_sigmoid_update_regression_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/scaled_quantize_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/apply_token_bitmask_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/causal_conv1d_decode_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/fused_sigmoid_gating_delta_rule_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/spec_verify_attention_tiling_update_wrapper_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/spec_verify_token_update_wrapper_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/dsa_topk_share_plan_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/dcp_attention_merge_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/dcp_decode_context_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/deepseek_v4_sparse_moe_block_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/dsa_topk_relay_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/qwen3_5_attention_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/qwen3_5_fused_moe_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/qwen3_5_gated_delta_net_ops_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/qwen3_5_gated_delta_net_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/mlu/qwen3_next_rms_norm_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/npu_torch/deepseek_v4_eplb_load_utils_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/npu_torch/deepseek_v4_eplb_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/rotary_embedding_util_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/host_page_aligned_region_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/mlu_batch_memcpy_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/mlu/mlu_layer_synchronizer_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_bucket_policy_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_task_update_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/dspark_confidence_head_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mlu_linear_state_restore_worker_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_host_offload_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/worker_json_object_overlap_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/model_path_utils_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/net_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/shared_memory_manager_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/verbose_trace_logger_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/vocab_validation_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/models/dit/utils/cola_utils_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/models"
+        },
+        {
+          "filename": "tests/models/model_registry_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/models"
+        },
+        {
+          "filename": "tests/python/test_deepseek_v32_parallel.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/scripts/test_build_dependencies.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/scripts"
+        },
+        {
+          "filename": "tests/scripts/test_python_kernel_staging.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/scripts"
+        },
+        {
+          "filename": "tools/build_fast_tokenizer_json.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tools/build_fast_tokenizer_json.py"
+        },
+        {
+          "filename": "tools/npu_timeline.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tools/npu_timeline.py"
+        },
+        {
+          "filename": "xllm/api_service/completion_json_parser.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/completion_json_parser.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/request_id.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/request_id.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/auto_config/__init__.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/auto_config/qwen3.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/auto_config/utils.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/__init__.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/apply_token_bitmask.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/causal_conv1d.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/causal_conv1d_decode.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/chunk_gated_delta_rule_fwd_h.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/fused_gdn_gating.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/fused_sigmoid_gating_delta_rule.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/rope.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/spec_verify_attention_tiling_update.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/spec_verify_token_update.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/split_qkv_rmsnorm_mrope.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/targets/ascend/aot/utils.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/core/common/flash_comm1_context.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/flash_comm1_context.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/xllm_build_info.h.in",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_protocol.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_aggregator.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_aggregator.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_info.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_options.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_options.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/eplb/eplb_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/cache_layout_builder.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/cache_layout_builder.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_capacity.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_tensor_allocator.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_tensor_allocator.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_shard_layout.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_shard_layout.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/layerwise_split_layout.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/logical_cache_layout.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/cache_layout.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/cache_layout.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_store.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_cache_store.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/kv_transfer_completion.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/prefetch_result.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/reshard_planner.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache_transfer/reshard_planner.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/aux_hidden_capture.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/mtp_topk_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/mtp_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_plan.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/npu_cp_plan.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/rank_generator.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/json_object_grammar.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/json_object_grammar.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/mtp_json_object_state.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/speculative_profile_registry.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/speculative_profile_registry.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/air_log_softmax_last_dim.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/block_copy.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/core/math.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_extensions/common.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_extensions/epilogue/scaled_mm_epilogues_c3x.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/cutlass_gemm_caller.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_helper.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_kernels.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm100_fp8.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm100_fp8_dispatch.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm120_fp8.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm120_fp8_dispatch.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm90_fp8.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/scaled_mm_sm90_fp8_dispatch.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/sm120_fp8_dispatch_policy.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/c3x/sm120_fp8_kernel_configs.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/scaled_mm_c3x_sm100.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/scaled_mm_c3x_sm120.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/scaled_mm_c3x_sm90.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/cutlass_w8a8/scaled_mm_entry.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/device_utils.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fp8_quant.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fp8_quant_utils.cuh",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fused_qknorm_rope.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/llm_decode_metadata_update.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_combine.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_compute_index.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/moe/moe_fused_topk.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/rec_beam_search.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/reshape_paged_cache.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/xattention/cache_select.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/xattention/decoder_reshape_and_cache.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/xattention/lse_combine.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/xattention/prefill_reshape_and_cache.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_moe_adapter.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_moe_adapter.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_quant_adapter.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/aiter_quant_adapter.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/build_block_table_from_paged_kv.hip",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/causal_conv1d_adapter.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/causal_conv1d_adapter.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/flash_mla_adapter.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/flash_mla_adapter.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/gather_mla_latent_cache.hip",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/hipblaslt_fp8_adapter.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/hipblaslt_fp8_adapter.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/random_sample.hip",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/rejection_sample.hip",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/scaled_quantize.hip",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/topk_gate.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/causal_conv1d_fn.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/causal_conv1d_update_decode.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/chunk_gated_delta_rule.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/chunk_gated_delta_rule.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_gdn_gating.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_post_conv_prep.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_recurrent_gated_delta_rule.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_recurrent_gated_delta_rule_packed_decode.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_sigmoid_gating_delta_rule_update.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/__init__.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/causal_conv1d_update_decode.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_gdn_gating.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_post_conv_prep.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_recurrent_gated_delta_rule_packed_decode.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/triton_kernel/fused_sigmoid_gating_delta_rule_update.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/causal_conv1d.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/fused_qknorm_rope.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gdn_decode.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gdn_ops.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gdn_prefill.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gdn_state_commit.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/gemma_norm.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/llm_decode_metadata_update.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/moe_combine_indexed.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_ops_api.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_tvmffi_stream.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/musa_tvmffi_stream.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/musa/rejection_sample.cu",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/aclnn/pytorch_npu_helper.hpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/npu_block_sparse_attention.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/npu_rain_fusion_attention.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/apply_token_bitmask_wrapper.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/causal_conv1d_decode_wrapper.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/causal_conv1d_wrapper.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/fused_sigmoid_gating_delta_rule_wrapper.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/spec_verify_attention_tiling_update_wrapper.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/spec_verify_token_update_wrapper.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/gamma_add_rms_norm.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/layer_norm_fwd.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/mtp_prepare_next_draft.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_chunk_gdn.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/reshape_and_cache_a5.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/kv_shard_batch_metadata.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/kv_shard_batch_metadata.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/quant_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_attention.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_attention.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_decoder_layer_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/deepseek_v2_decoder_layer_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_decoder_layer.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_decoder_layer.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_gated_delta_net.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_5_gated_delta_net.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_base.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_base.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_helpers.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_impls.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_kernel_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/dcu/qwen3_gated_delta_net_torch_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dcp_attention_merge.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dcp_attention_merge.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dcp_decode_context.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dcp_decode_context.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v2_attention_dcp.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v4/deepseek_v4_sparse_moe_block.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v4/deepseek_v4_sparse_moe_block.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v4/dsa_empty_dp_input.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v4/dsa_empty_dp_input.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dsa_topk_relay.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/dsa_topk_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_5_gated_delta_net.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_5_gated_delta_net.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_next_rms_norm.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/qwen3_5/qwen3_next_rms_norm.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/linear_block_fp8.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/linear_block_fp8.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/rms_norm_gated.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/musa/rms_norm_gated.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/mistral3_vision_encoder_loader.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/mistral3_vision_encoder_loader.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/mistral_decoder_loader.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/loader/mistral_decoder_loader.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_mistral3_vision_encoder_layer_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_mistral3_vision_encoder_layer_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_mistral_decoder_layer_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu/npu_mistral_decoder_layer_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/deepseek_v4_eplb_load_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/deepseek_v4_eplb_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_batch_memcpy.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_batch_memcpy.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_host_memory.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/mlu/mlu_host_memory.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/musa/musa_utils.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/acl_graph_task_update_context.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/sleepable_allocator.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/sleepable_allocator.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_bucket_policy.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_executor_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/decode_graph_bucket.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/decode_graph_bucket.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/json_object_output_rows.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/musa_graph_executor_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/musa_graph_executor_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/decode_graph_warmup_plan.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/decode_graph_warmup_plan.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/arg.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/arg_pack.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/backend.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/backends/mlu_backend.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/dtype.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/jit_kernel.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/spec.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/include/types.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/scripts/triton_compile.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/src/backend.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/src/jit_kernel.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/src/mlu_backend.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/triton_jit/src/spec.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/dit_model_discovery.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/dit_model_discovery.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/dit/autoencoders/autoencoder_kl_flux2.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_flux2.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/pipelines/pipeline_flux2_base.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/processors/flux2_image_processor.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/transformers/transformer_flux2.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_block_weight_manager.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_block_weight_manager.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_parallel_mixin.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/utils/sparse_attention.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4_dspark.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/dspark_confidence_head.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/dspark_markov_head.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/dspark_weight_source.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/deepseek_v4_base.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/deepseek_v4_mtp.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/mtp_model_base.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/mtp_topk_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/qwen3_5_mtp.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm_shared_expert_stream.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/mistral.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/mtp_topk_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3_dflash.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3_dspark.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/qwen3_5_mtp_base.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/vlm/npu/mistral3.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/processors/mistral3_image_processor.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/mistral3_image_processor.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/mistral3_prompt_processor.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/mistral3_prompt_processor.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/__init__.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/apply_token_bitmask.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/spec_verify_attention_tiling_update.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/tilelang/spec_verify_token_update.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32_mtp.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "chore",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6e22f70bf78fbb1b556d4d93d9a04afa1504dff3"
+    },
+    {
+      "sha": "e26109c586ec183c90d4586a95d4c76eebf282f0",
+      "parents": [
+        "b43059afd5efd65ba3df1d0f0bbd5d55d90cb89e"
+      ],
+      "pr": "2319",
+      "date": "2026-09-11T15:03:18+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "Rpeng",
+        "email": "1941447882@qq.com"
+      },
+      "title": "test: cover auto-tuning model configuration helpers. (#2319)",
+      "type": "test",
+      "module": "Model Support",
+      "additions": 157,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/python/test_auto_config_utils.py",
+          "additions": 157,
+          "deletions": 0,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e26109c586ec183c90d4586a95d4c76eebf282f0"
+    },
+    {
+      "sha": "b43059afd5efd65ba3df1d0f0bbd5d55d90cb89e",
+      "parents": [
+        "a590f85f14bf0c3b0c01a24e762d9eef80cd224b"
+      ],
+      "pr": "2325",
+      "date": "2026-09-11T11:38:05+08:00",
+      "dateKey": "2026-09-11",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "bugfix: fix glm52 index cache writes during acl graph capture. (#2325)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 97,
+      "deletions": 17,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/kernels/npu/npu_xllm_ops_test.cpp",
+          "additions": 67,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention_cp.py",
+          "additions": 23,
+          "deletions": 8,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 6,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/sparse_attention.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b43059afd5efd65ba3df1d0f0bbd5d55d90cb89e"
+    },
     {
       "sha": "a590f85f14bf0c3b0c01a24e762d9eef80cd224b",
       "parents": [
