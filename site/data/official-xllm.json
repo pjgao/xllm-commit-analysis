@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T19:58:06.385Z",
+  "generatedAt": "2026-09-14T21:08:15.907Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1511,
+    "commits": 1514,
     "contributors": 121,
-    "additions": 852953,
-    "deletions": 225595,
-    "filesChanged": 23924,
+    "additions": 854093,
+    "deletions": 225666,
+    "filesChanged": 23939,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-11",
+    "latestDate": "2026-09-14",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 119,
-        "additions": 65399,
-        "deletions": 33387,
-        "files": 2069
+        "commits": 120,
+        "additions": 65460,
+        "deletions": 33390,
+        "files": 2071
       },
       {
         "name": "phantomlei",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 515
+        "count": 518
       },
       {
         "key": "NPU Backend",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 535
+        "count": 536
       },
       {
         "key": "bugfix",
-        "count": 457
+        "count": 458
       },
       {
         "key": "refactor",
@@ -182,7 +182,7 @@
       },
       {
         "key": "test",
-        "count": 12
+        "count": 13
       }
     ]
   },
@@ -476,7 +476,8 @@
     "2026-09-08",
     "2026-09-09",
     "2026-09-10",
-    "2026-09-11"
+    "2026-09-11",
+    "2026-09-14"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1385,6 +1386,179 @@
     }
   },
   "commits": [
+    {
+      "sha": "a1372b336f9b6752e5a8cab7a9067d51b54185b8",
+      "parents": [
+        "f00248070ad41a2a97598a9f305d7b1e9acc7d84"
+      ],
+      "pr": "2326",
+      "date": "2026-09-14T14:47:21+08:00",
+      "dateKey": "2026-09-14",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "feat: support more ep size for glm52 pytorch graph execution. (#2326)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 61,
+      "deletions": 3,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 59,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a1372b336f9b6752e5a8cab7a9067d51b54185b8"
+    },
+    {
+      "sha": "f00248070ad41a2a97598a9f305d7b1e9acc7d84",
+      "parents": [
+        "025393e5b4da7a6de3c852d5c61297dbb02729ef"
+      ],
+      "pr": "2328",
+      "date": "2026-09-14T09:02:01+08:00",
+      "dateKey": "2026-09-14",
+      "author": {
+        "name": "GoldBean-0819",
+        "email": "261165757@qq.com"
+      },
+      "title": "bugfix: harden GLM Python context parallel execution. (#2328)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 760,
+      "deletions": 68,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 50,
+          "deletions": 9,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/npu_cp_capability_test.cpp",
+          "additions": 53,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/npu/test_mla_index_cache_graph.py",
+          "additions": 125,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_indexer_cp.py",
+          "additions": 373,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp.py",
+          "additions": 25,
+          "deletions": 14,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 20,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/model_config.cpp",
+          "additions": 16,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/model_config.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 64,
+          "deletions": 18,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 32,
+          "deletions": 18,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f00248070ad41a2a97598a9f305d7b1e9acc7d84"
+    },
+    {
+      "sha": "025393e5b4da7a6de3c852d5c61297dbb02729ef",
+      "parents": [
+        "19ab750d886dd39ecf7bd8e5074915c8eab8dc21"
+      ],
+      "pr": "2329",
+      "date": "2026-09-14T08:43:13+08:00",
+      "dateKey": "2026-09-14",
+      "author": {
+        "name": "GoldBean-0819",
+        "email": "261165757@qq.com"
+      },
+      "title": "test: add isolated two-rank HCCL graph regression. (#2329)",
+      "type": "test",
+      "module": "Graph / Runtime",
+      "additions": 319,
+      "deletions": 0,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/CMakeLists.txt",
+          "additions": 16,
+          "deletions": 0,
+          "module": "tests/CMakeLists.txt"
+        },
+        {
+          "filename": "tests/npu/hccl_decode_graph_worker.py",
+          "additions": 160,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_hccl_decode_graph.py",
+          "additions": 143,
+          "deletions": 0,
+          "module": "tests/npu"
+        }
+      ],
+      "tags": [
+        "test",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/025393e5b4da7a6de3c852d5c61297dbb02729ef"
+    },
     {
       "sha": "19ab750d886dd39ecf7bd8e5074915c8eab8dc21",
       "parents": [
