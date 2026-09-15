@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T21:08:15.907Z",
+  "generatedAt": "2026-09-15T20:34:52.073Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1514,
-    "contributors": 121,
-    "additions": 854093,
-    "deletions": 225666,
-    "filesChanged": 23939,
+    "commits": 1534,
+    "contributors": 124,
+    "additions": 860775,
+    "deletions": 226192,
+    "filesChanged": 24058,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-14",
+    "latestDate": "2026-09-15",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 518
+        "count": 525
       },
       {
         "key": "NPU Backend",
@@ -115,20 +115,20 @@
         "count": 132
       },
       {
-        "key": "Spec Decode",
-        "count": 118
+        "key": "Model Support",
+        "count": 120
       },
       {
-        "key": "Model Support",
-        "count": 118
+        "key": "Spec Decode",
+        "count": 119
       },
       {
         "key": "xllm/core",
-        "count": 101
+        "count": 104
       },
       {
         "key": "Engineering",
-        "count": 87
+        "count": 90
       },
       {
         "key": "Device Backend",
@@ -144,7 +144,7 @@
       },
       {
         "key": "xllm/models",
-        "count": 16
+        "count": 17
       },
       {
         "key": "Testing",
@@ -154,19 +154,19 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 536
+        "count": 540
       },
       {
         "key": "bugfix",
-        "count": 458
+        "count": 471
       },
       {
         "key": "refactor",
-        "count": 226
+        "count": 227
       },
       {
         "key": "performance",
-        "count": 208
+        "count": 209
       },
       {
         "key": "other",
@@ -178,7 +178,7 @@
       },
       {
         "key": "chore",
-        "count": 14
+        "count": 15
       },
       {
         "key": "test",
@@ -477,7 +477,8 @@
     "2026-09-09",
     "2026-09-10",
     "2026-09-11",
-    "2026-09-14"
+    "2026-09-14",
+    "2026-09-15"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1386,6 +1387,1254 @@
     }
   },
   "commits": [
+    {
+      "sha": "291b79f0acfc48aae3bc96408332212c9e807f9b",
+      "parents": [
+        "66d6fb7f833ee3f00a1a78ecb5eaba21c28c99f9"
+      ],
+      "pr": "2341",
+      "date": "2026-09-15T21:44:28+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "王远",
+        "email": "592825995@qq.com"
+      },
+      "title": "bugfix: fix xlite glm-5.2 regression and dp padding rank. (#2341)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 14,
+      "deletions": 6,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_causal_lm_base.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.cpp",
+          "additions": 11,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/291b79f0acfc48aae3bc96408332212c9e807f9b"
+    },
+    {
+      "sha": "66d6fb7f833ee3f00a1a78ecb5eaba21c28c99f9",
+      "parents": [
+        "ce56306d693a201953b0f14ffda7d5bf3131fd46"
+      ],
+      "pr": "2339",
+      "date": "2026-09-15T20:07:26+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "edge-nullptr",
+        "email": "326812523+edge-nullptr@users.noreply.github.com"
+      },
+      "title": "feat: support GLM-5.3 Python MTP execution. (#2339)",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 803,
+      "deletions": 76,
+      "filesChanged": 19,
+      "files": [
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 10,
+          "deletions": 27,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/hf_model_loader_test.cpp",
+          "additions": 23,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/models/model_registry_test.cpp",
+          "additions": 31,
+          "deletions": 0,
+          "module": "tests/models"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 67,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_mtp.py",
+          "additions": 260,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 37,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_registry.py",
+          "additions": 7,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/config/model_config.cpp",
+          "additions": 1,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 39,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm5_moe.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/glm5_moe_mtp.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 13,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/base.py",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_platform_support.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 79,
+          "deletions": 27,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2_mtp.py",
+          "additions": 210,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/registry.py",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/66d6fb7f833ee3f00a1a78ecb5eaba21c28c99f9"
+    },
+    {
+      "sha": "ce56306d693a201953b0f14ffda7d5bf3131fd46",
+      "parents": [
+        "beabafad07953629e6af0fa54125126a1349ebc3"
+      ],
+      "pr": "2340",
+      "date": "2026-09-15T19:54:53+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "edge-nullptr",
+        "email": "326812523+edge-nullptr@users.noreply.github.com"
+      },
+      "title": "feat: support GLM-5.3 Python DFlash2 execution. (#2340)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 988,
+      "deletions": 70,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "tests/core/framework/hf_model_loader_test.cpp",
+          "additions": 33,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/gumbel_sampling_test.cpp",
+          "additions": 68,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_qwen3_dflash2.py",
+          "additions": 245,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/gumbel_sampling.cpp",
+          "additions": 8,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash2_worker_impl.cpp",
+          "additions": 42,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash2_worker_impl.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 13,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3.h",
+          "additions": 20,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 39,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/qwen3.h",
+          "additions": 20,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 11,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/__init__.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/attention.py",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/dflash2_grouped_conv.py",
+          "additions": 117,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_platform_support.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3.py",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_dflash.py",
+          "additions": 49,
+          "deletions": 18,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_dflash2.py",
+          "additions": 281,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/registry.py",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ce56306d693a201953b0f14ffda7d5bf3131fd46"
+    },
+    {
+      "sha": "beabafad07953629e6af0fa54125126a1349ebc3",
+      "parents": [
+        "bb0b8d70105dc42dcf3e448aac94330bc9896cdb"
+      ],
+      "pr": "2338",
+      "date": "2026-09-15T15:19:51+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "edge-nullptr",
+        "email": "326812523+edge-nullptr@users.noreply.github.com"
+      },
+      "title": "bugfix: support static and dynamic GLM W8A8 attention. (#2338)",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 294,
+      "deletions": 14,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_indexer_cp.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 115,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 138,
+          "deletions": 13,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/weight_utils.py",
+          "additions": 40,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/beabafad07953629e6af0fa54125126a1349ebc3"
+    },
+    {
+      "sha": "bb0b8d70105dc42dcf3e448aac94330bc9896cdb",
+      "parents": [
+        "4af0159189f30791ac57253690378586580eeb69"
+      ],
+      "pr": "2336",
+      "date": "2026-09-15T15:13:08+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "edge-nullptr",
+        "email": "326812523+edge-nullptr@users.noreply.github.com"
+      },
+      "title": "bugfix: fix Ninja ELF RPATH handling on Linux. (#2336)",
+      "type": "bugfix",
+      "module": "CMakeLists.txt",
+      "additions": 10,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 10,
+          "deletions": 0,
+          "module": "CMakeLists.txt"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "cmakelists-txt"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/bb0b8d70105dc42dcf3e448aac94330bc9896cdb"
+    },
+    {
+      "sha": "4af0159189f30791ac57253690378586580eeb69",
+      "parents": [
+        "fa506dd67b31257f6307309e1e9caa6fe92d123a"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: derive head_dim after loading mla fields",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 16,
+      "deletions": 8,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_config_builder.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/register_all.h",
+          "additions": 12,
+          "deletions": 8,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4af0159189f30791ac57253690378586580eeb69"
+    },
+    {
+      "sha": "fa506dd67b31257f6307309e1e9caa6fe92d123a",
+      "parents": [
+        "fd269604211de305cc7e8668fd5dd0e0fb70cd77"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: verify installed xlite revision before skipping install",
+      "type": "bugfix",
+      "module": "Engineering",
+      "additions": 10,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "cmake/xlite.cmake",
+          "additions": 10,
+          "deletions": 1,
+          "module": "cmake/xlite.cmake"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fa506dd67b31257f6307309e1e9caa6fe92d123a"
+    },
+    {
+      "sha": "fd269604211de305cc7e8668fd5dd0e0fb70cd77",
+      "parents": [
+        "5a031c16c6ac085d4cbd092c82ceb6d6cb1b92de"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: l2 normalize qwen3 embeddings in xlite pooler",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 24,
+      "deletions": 0,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_causal_lm_base.h",
+          "additions": 18,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_model_adapter.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/qwen3_adapter.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fd269604211de305cc7e8668fd5dd0e0fb70cd77"
+    },
+    {
+      "sha": "5a031c16c6ac085d4cbd092c82ceb6d6cb1b92de",
+      "parents": [
+        "efd61add9dcbaa2952afcd97b39af71118c7e750"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: read attention_bias field for qwen3 models",
+      "type": "bugfix",
+      "module": "xllm/models",
+      "additions": 2,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/models/llm/xlite/register_all.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-models"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5a031c16c6ac085d4cbd092c82ceb6d6cb1b92de"
+    },
+    {
+      "sha": "efd61add9dcbaa2952afcd97b39af71118c7e750",
+      "parents": [
+        "214f7dd9d7bc4b122d57c87f72f0a82ddb3d2cab"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "docs: add xlite to npu_kernel_backend cli reference",
+      "type": "feature",
+      "module": "docs/src",
+      "additions": 2,
+      "deletions": 2,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "feature",
+        "docs-src"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/efd61add9dcbaa2952afcd97b39af71118c7e750"
+    },
+    {
+      "sha": "214f7dd9d7bc4b122d57c87f72f0a82ddb3d2cab",
+      "parents": [
+        "0a1d1b744a6a6f65a4d355eba911155d61b9837f"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "build: default use_xlite on for npu builds",
+      "type": "chore",
+      "module": "Graph / Runtime",
+      "additions": 9,
+      "deletions": 8,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 2,
+          "deletions": 1,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "cmake/xlite.cmake",
+          "additions": 2,
+          "deletions": 2,
+          "module": "cmake/xlite.cmake"
+        },
+        {
+          "filename": "xllm/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/CMakeLists.txt"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "chore",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/214f7dd9d7bc4b122d57c87f72f0a82ddb3d2cab"
+    },
+    {
+      "sha": "0a1d1b744a6a6f65a4d355eba911155d61b9837f",
+      "parents": [
+        "69eedbd0d3706d5e470230c4655684c2634facc1"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: wait hierarchy kv load before xlite forward",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 10,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0a1d1b744a6a6f65a4d355eba911155d61b9837f"
+    },
+    {
+      "sha": "69eedbd0d3706d5e470230c4655684c2634facc1",
+      "parents": [
+        "e24b0e59d765932180ef9d71941e3f328c54a3d6"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: fix xlite weight reload leak and reject unsupported features",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 91,
+      "deletions": 3,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_causal_lm_base.h",
+          "additions": 62,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_config_builder.h",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.h",
+          "additions": 12,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/69eedbd0d3706d5e470230c4655684c2634facc1"
+    },
+    {
+      "sha": "e24b0e59d765932180ef9d71941e3f328c54a3d6",
+      "parents": [
+        "665cb70f54b3a548a7783ed313976baea8a034d0"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: reject non-w8a8 quantization for xlite backend",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 18,
+      "deletions": 8,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_config_builder.h",
+          "additions": 18,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e24b0e59d765932180ef9d71941e3f328c54a3d6"
+    },
+    {
+      "sha": "665cb70f54b3a548a7783ed313976baea8a034d0",
+      "parents": [
+        "bf5ac93ff5c96cd7472502ab9b5433cb7edc56b7"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: fix xlite push mode layer events and python3 executable lookup",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 20,
+      "deletions": 3,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "cmake/xlite.cmake",
+          "additions": 3,
+          "deletions": 3,
+          "module": "cmake/xlite.cmake"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_attn_meta_builder.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.cpp",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/665cb70f54b3a548a7783ed313976baea8a034d0"
+    },
+    {
+      "sha": "bf5ac93ff5c96cd7472502ab9b5433cb7edc56b7",
+      "parents": [
+        "9f786253bde362c7619309bd027df6289b381756"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: fix xlite norm bias binding, complete qwen3 w8a8 quant support and honor config eos",
+      "type": "bugfix",
+      "module": "Engineering",
+      "additions": 157,
+      "deletions": 31,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/layers/xlite/xlite_config_builder.h",
+          "additions": 8,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_weight_utils.h",
+          "additions": 139,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/register_all.h",
+          "additions": 10,
+          "deletions": 7,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/bf5ac93ff5c96cd7472502ab9b5433cb7edc56b7"
+    },
+    {
+      "sha": "9f786253bde362c7619309bd027df6289b381756",
+      "parents": [
+        "46abcedf9fb7ae9239c6b4cf0581f791c2d46511"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "bugfix: reject xlite backend when not compiled or model unsupported",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 28,
+      "deletions": 1,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/models/llm/xlite/register_all.h",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 17,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9f786253bde362c7619309bd027df6289b381756"
+    },
+    {
+      "sha": "46abcedf9fb7ae9239c6b4cf0581f791c2d46511",
+      "parents": [
+        "6ad4dd1ad3f8c106bbb24af4a9602ac329b49523"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "refactor: wire GVirt submodule and auto-install xlite at configure time",
+      "type": "refactor",
+      "module": "Engineering",
+      "additions": 67,
+      "deletions": 2,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": ".gitmodules",
+          "additions": 4,
+          "deletions": 0,
+          "module": ".gitmodules"
+        },
+        {
+          "filename": "cmake/xlite.cmake",
+          "additions": 62,
+          "deletions": 2,
+          "module": "cmake/xlite.cmake"
+        },
+        {
+          "filename": "third_party/GVirt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "third_party/GVirt"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/46abcedf9fb7ae9239c6b4cf0581f791c2d46511"
+    },
+    {
+      "sha": "6ad4dd1ad3f8c106bbb24af4a9602ac329b49523",
+      "parents": [
+        "39307b3ba7f2849ed81e90ed73e86462688472a9"
+      ],
+      "pr": "",
+      "date": "2026-09-15T14:35:33+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "uuzWY",
+        "email": "Ethan.wangyuan@huawei.com"
+      },
+      "title": "feat: add xlite as third npu backend (support qwen3-dense/qwen3-moe/glm-4.7/glm-5.1/glm-5.2)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 2788,
+      "deletions": 3,
+      "filesChanged": 27,
+      "files": [
+        {
+          "filename": "CMakeLists.txt",
+          "additions": 7,
+          "deletions": 0,
+          "module": "CMakeLists.txt"
+        },
+        {
+          "filename": "cmake/xlite.cmake",
+          "additions": 23,
+          "deletions": 0,
+          "module": "cmake/xlite.cmake"
+        },
+        {
+          "filename": "xllm/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/CMakeLists.txt"
+        },
+        {
+          "filename": "xllm/core/framework/model/causal_lm.h",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_traits.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_attn_meta_builder.h",
+          "additions": 84,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_causal_lm_base.h",
+          "additions": 227,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_config_builder.h",
+          "additions": 263,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_freqs_cis.h",
+          "additions": 101,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_init_utils.h",
+          "additions": 49,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_model_adapter.h",
+          "additions": 56,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_register_macros.h",
+          "additions": 40,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/xlite/xlite_weight_utils.h",
+          "additions": 1094,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor_impl_factory.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.cpp",
+          "additions": 153,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xlite_executor_impl.h",
+          "additions": 63,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/deepseek_v3_adapter.h",
+          "additions": 52,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/glm4_moe_adapter.h",
+          "additions": 51,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/glm5_moe_adapter.h",
+          "additions": 48,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/qwen3_adapter.h",
+          "additions": 43,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/adapters/qwen3_moe_adapter.h",
+          "additions": 51,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/xlite/register_all.h",
+          "additions": 321,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 15,
+          "deletions": 3,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/models.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6ad4dd1ad3f8c106bbb24af4a9602ac329b49523"
+    },
+    {
+      "sha": "39307b3ba7f2849ed81e90ed73e86462688472a9",
+      "parents": [
+        "a1372b336f9b6752e5a8cab7a9067d51b54185b8"
+      ],
+      "pr": "2335",
+      "date": "2026-09-15T12:56:11+08:00",
+      "dateKey": "2026-09-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: decode the chat ingress with json2pb, carving out the Struct members. (#2335)",
+      "type": "performance",
+      "module": "tests/api_service",
+      "additions": 1331,
+      "deletions": 288,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "tests/api_service/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/chat_request_decoder_test.cpp",
+          "additions": 292,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "xllm/api_service/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.cpp",
+          "additions": 4,
+          "deletions": 6,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service_benchmark.cpp",
+          "additions": 87,
+          "deletions": 4,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_request_decoder.cpp",
+          "additions": 221,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_request_decoder.h",
+          "additions": 104,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_struct_spans.cpp",
+          "additions": 168,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_struct_spans.h",
+          "additions": 53,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/json_fast_path.cpp",
+          "additions": 35,
+          "deletions": 278,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/json_scan.cpp",
+          "additions": 180,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/json_scan.h",
+          "additions": 168,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "performance",
+        "tests-api-service",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/39307b3ba7f2849ed81e90ed73e86462688472a9"
+    },
     {
       "sha": "a1372b336f9b6752e5a8cab7a9067d51b54185b8",
       "parents": [
