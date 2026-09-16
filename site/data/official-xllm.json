@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T20:34:52.073Z",
+  "generatedAt": "2026-09-16T20:34:27.514Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1534,
+    "commits": 1537,
     "contributors": 124,
-    "additions": 860775,
-    "deletions": 226192,
-    "filesChanged": 24058,
+    "additions": 860888,
+    "deletions": 226315,
+    "filesChanged": 24091,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-15",
+    "latestDate": "2026-09-16",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 525
+        "count": 526
       },
       {
         "key": "NPU Backend",
@@ -124,7 +124,7 @@
       },
       {
         "key": "xllm/core",
-        "count": 104
+        "count": 106
       },
       {
         "key": "Engineering",
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 471
+        "count": 472
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 209
+        "count": 211
       },
       {
         "key": "other",
@@ -478,7 +478,8 @@
     "2026-09-10",
     "2026-09-11",
     "2026-09-14",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-09-16"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1387,6 +1388,285 @@
     }
   },
   "commits": [
+    {
+      "sha": "6d6e643c6fcd777947ca6d2830d8a578fedc7d70",
+      "parents": [
+        "954f2ed7c9f5c48485f1e6cc44ca4b91d77fb580"
+      ],
+      "pr": "",
+      "date": "2026-09-16T11:11:06+08:00",
+      "dateKey": "2026-09-16",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "bugfix: preserve movable payloads in lambda captures.",
+      "type": "bugfix",
+      "module": "xllm/core",
+      "additions": 16,
+      "deletions": 13,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 15,
+          "deletions": 12,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6d6e643c6fcd777947ca6d2830d8a578fedc7d70"
+    },
+    {
+      "sha": "954f2ed7c9f5c48485f1e6cc44ca4b91d77fb580",
+      "parents": [
+        "b39e5e2837b2760fc69cfc50ae4be78248e29e97"
+      ],
+      "pr": "",
+      "date": "2026-09-16T11:11:06+08:00",
+      "dateKey": "2026-09-16",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "perf: pass retained parameters by value and drop no-op const moves.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 81,
+      "deletions": 92,
+      "filesChanged": 23,
+      "files": [
+        {
+          "filename": "xllm/api_service/completion_service_impl.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/embedding_service_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/rec_completion_service_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/common/message.h",
+          "additions": 14,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 8,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 12,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/dit_cache/fbcache_taylorseer.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/dit_model_context.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/dit_model_context.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_batch_data.cpp",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_batch_data.h",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_data.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_data.h",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_data_item.cpp",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_data_item.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_visitor.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dit_worker_impl.cpp",
+          "additions": 7,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/request_priority_queue.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/954f2ed7c9f5c48485f1e6cc44ca4b91d77fb580"
+    },
+    {
+      "sha": "b39e5e2837b2760fc69cfc50ae4be78248e29e97",
+      "parents": [
+        "291b79f0acfc48aae3bc96408332212c9e807f9b"
+      ],
+      "pr": "",
+      "date": "2026-09-16T11:11:06+08:00",
+      "dateKey": "2026-09-16",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "perf: extend sink-parameter moves to remaining request types.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 16,
+      "deletions": 18,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/dit_request_state.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b39e5e2837b2760fc69cfc50ae4be78248e29e97"
+    },
     {
       "sha": "291b79f0acfc48aae3bc96408332212c9e807f9b",
       "parents": [
