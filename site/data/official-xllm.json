@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T20:34:27.514Z",
+  "generatedAt": "2026-09-17T20:41:22.150Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1537,
-    "contributors": 124,
-    "additions": 860888,
-    "deletions": 226315,
-    "filesChanged": 24091,
+    "commits": 1541,
+    "contributors": 125,
+    "additions": 862294,
+    "deletions": 226415,
+    "filesChanged": 24112,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-16",
+    "latestDate": "2026-09-17",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 526
+        "count": 527
       },
       {
         "key": "NPU Backend",
-        "count": 170
+        "count": 171
       },
       {
         "key": "Inference Engine",
@@ -148,7 +148,7 @@
       },
       {
         "key": "Testing",
-        "count": 11
+        "count": 13
       }
     ],
     "typeBreakdown": [
@@ -158,15 +158,15 @@
       },
       {
         "key": "bugfix",
-        "count": 472
+        "count": 473
       },
       {
         "key": "refactor",
-        "count": 227
+        "count": 228
       },
       {
         "key": "performance",
-        "count": 211
+        "count": 213
       },
       {
         "key": "other",
@@ -479,7 +479,8 @@
     "2026-09-11",
     "2026-09-14",
     "2026-09-15",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-09-17"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1388,6 +1389,240 @@
     }
   },
   "commits": [
+    {
+      "sha": "cf27f022ed36cddb8617d025a8a450144c910c4c",
+      "parents": [
+        "e66742d8177c0ab71a2280591ce2ddcecf1d8ab0"
+      ],
+      "pr": "2345",
+      "date": "2026-09-17T20:13:57+08:00",
+      "dateKey": "2026-09-17",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "test: fix boolean coercion expectations in chat decoder tests. (#2345)",
+      "type": "bugfix",
+      "module": "Testing",
+      "additions": 8,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/api_service/chat_request_decoder_test.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "tests/api_service"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cf27f022ed36cddb8617d025a8a450144c910c4c"
+    },
+    {
+      "sha": "e66742d8177c0ab71a2280591ce2ddcecf1d8ab0",
+      "parents": [
+        "437bef793ee4bcba147686d78d3a3d154f1738dc"
+      ],
+      "pr": "2343",
+      "date": "2026-09-17T17:58:27+08:00",
+      "dateKey": "2026-09-17",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "perf: fuse GLM MLA preprocess and cache write. (#2343)",
+      "type": "performance",
+      "module": "NPU Backend",
+      "additions": 770,
+      "deletions": 6,
+      "filesChanged": 11,
+      "files": [
+        {
+          "filename": "tests/core/kernels/npu/npu_xllm_ops_test.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/conftest.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 142,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 64,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_mla_preprocess_v2_npu.py",
+          "additions": 262,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/npu_ops_library.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/mla_preprocess.cpp",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/mla.py",
+          "additions": 20,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 248,
+          "deletions": 4,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e66742d8177c0ab71a2280591ce2ddcecf1d8ab0"
+    },
+    {
+      "sha": "437bef793ee4bcba147686d78d3a3d154f1738dc",
+      "parents": [
+        "128e8e147ed00797d11dc98128d50bebb2139a7f"
+      ],
+      "pr": "",
+      "date": "2026-09-17T17:57:37+08:00",
+      "dateKey": "2026-09-17",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: move the rendered JSON documents into minja and benchmark the chat-template render.",
+      "type": "performance",
+      "module": "Testing",
+      "additions": 626,
+      "deletions": 13,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/framework/chat_template/jinja_chat_template_test.cpp",
+          "additions": 183,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/chat_template/CMakeLists.txt",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/chat_template/chat_template_benchmark.cpp",
+          "additions": 299,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/chat_template/jinja_chat_template.cpp",
+          "additions": 104,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/chat_template/jinja_chat_template.h",
+          "additions": 25,
+          "deletions": 4,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "testing",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/437bef793ee4bcba147686d78d3a3d154f1738dc"
+    },
+    {
+      "sha": "128e8e147ed00797d11dc98128d50bebb2139a7f",
+      "parents": [
+        "6d6e643c6fcd777947ca6d2830d8a578fedc7d70"
+      ],
+      "pr": "2344",
+      "date": "2026-09-17T17:42:48+08:00",
+      "dateKey": "2026-09-17",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: remove dead worker code and unused includes. (#2344)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 2,
+      "deletions": 80,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 38,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.h",
+          "additions": 0,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/rec_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/rec_worker_impl.h",
+          "additions": 0,
+          "deletions": 16,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/128e8e147ed00797d11dc98128d50bebb2139a7f"
+    },
     {
       "sha": "6d6e643c6fcd777947ca6d2830d8a578fedc7d70",
       "parents": [
