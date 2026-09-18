@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T20:41:22.150Z",
+  "generatedAt": "2026-09-18T20:06:00.561Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1541,
+    "commits": 1545,
     "contributors": 125,
-    "additions": 862294,
-    "deletions": 226415,
-    "filesChanged": 24112,
+    "additions": 862868,
+    "deletions": 226496,
+    "filesChanged": 24122,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-17",
+    "latestDate": "2026-09-18",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 120,
-        "additions": 65460,
+        "commits": 121,
+        "additions": 65931,
         "deletions": 33390,
-        "files": 2071
+        "files": 2074
       },
       {
         "name": "phantomlei",
@@ -108,19 +108,19 @@
       },
       {
         "key": "NPU Backend",
-        "count": 171
+        "count": 172
       },
       {
         "key": "Inference Engine",
-        "count": 132
+        "count": 133
+      },
+      {
+        "key": "Spec Decode",
+        "count": 121
       },
       {
         "key": "Model Support",
         "count": 120
-      },
-      {
-        "key": "Spec Decode",
-        "count": 119
       },
       {
         "key": "xllm/core",
@@ -154,15 +154,15 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 540
+        "count": 541
       },
       {
         "key": "bugfix",
-        "count": 473
+        "count": 474
       },
       {
         "key": "refactor",
-        "count": 228
+        "count": 229
       },
       {
         "key": "performance",
@@ -182,7 +182,7 @@
       },
       {
         "key": "test",
-        "count": 13
+        "count": 14
       }
     ]
   },
@@ -480,7 +480,8 @@
     "2026-09-14",
     "2026-09-15",
     "2026-09-16",
-    "2026-09-17"
+    "2026-09-17",
+    "2026-09-18"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1389,6 +1390,174 @@
     }
   },
   "commits": [
+    {
+      "sha": "d9efac42f5e513eaff321ea95da782f1a139551c",
+      "parents": [
+        "d2d6ea73d49d36205b3645722a057f63ccd65991"
+      ],
+      "pr": "2349",
+      "date": "2026-09-18T22:13:27+08:00",
+      "dateKey": "2026-09-18",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "test: stabilize Python executor test collection and fixtures. (#2349)",
+      "type": "test",
+      "module": "Inference Engine",
+      "additions": 11,
+      "deletions": 8,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_mla_preprocess_v2_npu.py",
+          "additions": 9,
+          "deletions": 8,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d9efac42f5e513eaff321ea95da782f1a139551c"
+    },
+    {
+      "sha": "d2d6ea73d49d36205b3645722a057f63ccd65991",
+      "parents": [
+        "c75b5e4fd8ff8ef6fb7085eba3602060e6259364"
+      ],
+      "pr": "2348",
+      "date": "2026-09-18T16:41:11+08:00",
+      "dateKey": "2026-09-18",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: consolidate DP token-count scaling in speculative decode. (#2348)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 24,
+      "deletions": 68,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 54,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/suffix_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d2d6ea73d49d36205b3645722a057f63ccd65991"
+    },
+    {
+      "sha": "c75b5e4fd8ff8ef6fb7085eba3602060e6259364",
+      "parents": [
+        "c4334883526063d8f2a726d737985635e72e2896"
+      ],
+      "pr": "2347",
+      "date": "2026-09-18T16:40:52+08:00",
+      "dateKey": "2026-09-18",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "bugfix: expand MTP linear-state rows for Python graph. (#2347)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 68,
+      "deletions": 5,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 68,
+          "deletions": 5,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c75b5e4fd8ff8ef6fb7085eba3602060e6259364"
+    },
+    {
+      "sha": "c4334883526063d8f2a726d737985635e72e2896",
+      "parents": [
+        "cf27f022ed36cddb8617d025a8a450144c910c4c"
+      ],
+      "pr": "2346",
+      "date": "2026-09-18T15:40:14+08:00",
+      "dateKey": "2026-09-18",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "feat: add npu profiling and perfetto skill. (#2346)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 471,
+      "deletions": 0,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/SKILL.md",
+          "additions": 163,
+          "deletions": 0,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/references/capture.md",
+          "additions": 164,
+          "deletions": 0,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/references/perfetto.md",
+          "additions": 144,
+          "deletions": 0,
+          "module": ".agents/skills"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c4334883526063d8f2a726d737985635e72e2896"
+    },
     {
       "sha": "cf27f022ed36cddb8617d025a8a450144c910c4c",
       "parents": [
