@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:06:00.561Z",
+  "generatedAt": "2026-09-19T19:43:21.605Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1545,
-    "contributors": 125,
-    "additions": 862868,
-    "deletions": 226496,
-    "filesChanged": 24122,
+    "commits": 1551,
+    "contributors": 126,
+    "additions": 866236,
+    "deletions": 228386,
+    "filesChanged": 24200,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-18",
+    "latestDate": "2026-09-19",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 527
+        "count": 529
       },
       {
         "key": "NPU Backend",
@@ -112,11 +112,11 @@
       },
       {
         "key": "Inference Engine",
-        "count": 133
+        "count": 134
       },
       {
         "key": "Spec Decode",
-        "count": 121
+        "count": 124
       },
       {
         "key": "Model Support",
@@ -158,15 +158,15 @@
       },
       {
         "key": "bugfix",
-        "count": 474
+        "count": 476
       },
       {
         "key": "refactor",
-        "count": 229
+        "count": 231
       },
       {
         "key": "performance",
-        "count": 213
+        "count": 215
       },
       {
         "key": "other",
@@ -481,7 +481,8 @@
     "2026-09-15",
     "2026-09-16",
     "2026-09-17",
-    "2026-09-18"
+    "2026-09-18",
+    "2026-09-19"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1390,6 +1391,639 @@
     }
   },
   "commits": [
+    {
+      "sha": "26a3f29d5be066d75905d4cb450e9747281a4f51",
+      "parents": [
+        "4f901e6cbf1f5b7cc97171567094387ab73f783a"
+      ],
+      "pr": "",
+      "date": "2026-09-19T21:15:59+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "kongzhuzhu",
+        "email": "kongzhuzhu@users.noreply.github.com"
+      },
+      "title": "perf: reuse paired dp acl graph variants.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 191,
+      "deletions": 1569,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "scripts/lint/check-commit-msg.sh",
+          "additions": 1,
+          "deletions": 2,
+          "module": "scripts/lint"
+        },
+        {
+          "filename": "tests/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 31,
+          "module": "tests/CMakeLists.txt"
+        },
+        {
+          "filename": "tests/api_service/chat_request_decoder_test.cpp",
+          "additions": 1,
+          "deletions": 14,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/npu/sfa_dcp_hccl_worker.py",
+          "additions": 0,
+          "deletions": 119,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_cp_context_native.py",
+          "additions": 0,
+          "deletions": 124,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_mla_index_cache_graph.py",
+          "additions": 0,
+          "deletions": 39,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_mtp_decode_graph.py",
+          "additions": 0,
+          "deletions": 149,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_sfa_dcp_hccl_graph.py",
+          "additions": 0,
+          "deletions": 89,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 68,
+          "deletions": 470,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 53,
+          "deletions": 440,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention.py",
+          "additions": 0,
+          "deletions": 81,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 63,
+          "deletions": 10,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/26a3f29d5be066d75905d4cb450e9747281a4f51"
+    },
+    {
+      "sha": "4f901e6cbf1f5b7cc97171567094387ab73f783a",
+      "parents": [
+        "6a240b18a6bf64bc389433c7bdf3ef54121123ac"
+      ],
+      "pr": "",
+      "date": "2026-09-19T21:15:59+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "kongzhuzhu",
+        "email": "kongzhuzhu@users.noreply.github.com"
+      },
+      "title": "bugfix: stabilize dp acl graph warmup and replay state.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 623,
+      "deletions": 137,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "tests/core/runtime/mtp_decode_metadata_test.cpp",
+          "additions": 52,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/npu/test_mla_index_cache_graph.py",
+          "additions": 39,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_mtp_decode_graph.py",
+          "additions": 12,
+          "deletions": 4,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 114,
+          "deletions": 2,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention.py",
+          "additions": 81,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 10,
+          "deletions": 20,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 10,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 210,
+          "deletions": 84,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 65,
+          "deletions": 14,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 27,
+          "deletions": 4,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4f901e6cbf1f5b7cc97171567094387ab73f783a"
+    },
+    {
+      "sha": "6a240b18a6bf64bc389433c7bdf3ef54121123ac",
+      "parents": [
+        "b403f68a2f95121b193f9033b0189d3f7318a1c9"
+      ],
+      "pr": "",
+      "date": "2026-09-19T21:15:59+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "kongzhuzhu",
+        "email": "kongzhuzhu@users.noreply.github.com"
+      },
+      "title": "bugfix: support python cp/dcp mtp acl graph execution.",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 2189,
+      "deletions": 147,
+      "filesChanged": 38,
+      "files": [
+        {
+          "filename": "tests/CMakeLists.txt",
+          "additions": 31,
+          "deletions": 0,
+          "module": "tests/CMakeLists.txt"
+        },
+        {
+          "filename": "tests/api_service/chat_request_decoder_test.cpp",
+          "additions": 14,
+          "deletions": 1,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sample_slot_test.cpp",
+          "additions": 56,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_input_builder_test.cpp",
+          "additions": 22,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_state_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_decode_metadata_test.cpp",
+          "additions": 156,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/npu/sfa_dcp_hccl_worker.py",
+          "additions": 119,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_cp_context_native.py",
+          "additions": 124,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_mtp_decode_graph.py",
+          "additions": 141,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/npu/test_sfa_dcp_hccl_graph.py",
+          "additions": 89,
+          "deletions": 0,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 358,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 41,
+          "deletions": 9,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 438,
+          "deletions": 11,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention_cp.py",
+          "additions": 40,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp_backend.py",
+          "additions": 72,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_params.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request.cpp",
+          "additions": 5,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/mtp_async_state.cpp",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_manager.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 24,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_attention_metadata.cpp",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_attention_metadata.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/backend.py",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/sfa_dcp_backend.py",
+          "additions": 18,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/cp_utils.py",
+          "additions": 26,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 99,
+          "deletions": 32,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 220,
+          "deletions": 42,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6a240b18a6bf64bc389433c7bdf3ef54121123ac"
+    },
+    {
+      "sha": "b403f68a2f95121b193f9033b0189d3f7318a1c9",
+      "parents": [
+        "d6eacc4adc3542695e2e7e686ce2924efe4a9549"
+      ],
+      "pr": "2353",
+      "date": "2026-09-19T20:35:57+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "shirley-yang-1988",
+        "email": "shirley.hj728@gmail.com"
+      },
+      "title": "bugfix: fix first-token latency accounting during overlapped prefill. (#2353)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 358,
+      "deletions": 7,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 32,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 136,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_generated_tokens_test.cpp",
+          "additions": 26,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 83,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 64,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b403f68a2f95121b193f9033b0189d3f7318a1c9"
+    },
+    {
+      "sha": "d6eacc4adc3542695e2e7e686ce2924efe4a9549",
+      "parents": [
+        "51d1ca0a90540ed7a071ddd9c0441e1888428382"
+      ],
+      "pr": "",
+      "date": "2026-09-19T16:33:06+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: fold draft device option into the shared device list.",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 4,
+      "deletions": 16,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 4,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/options.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d6eacc4adc3542695e2e7e686ce2924efe4a9549"
+    },
+    {
+      "sha": "51d1ca0a90540ed7a071ddd9c0441e1888428382",
+      "parents": [
+        "d9efac42f5e513eaff321ea95da782f1a139551c"
+      ],
+      "pr": "",
+      "date": "2026-09-19T16:33:06+08:00",
+      "dateKey": "2026-09-19",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: remove unreachable speculative device allocation branch.",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 3,
+      "deletions": 14,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 3,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/51d1ca0a90540ed7a071ddd9c0441e1888428382"
+    },
     {
       "sha": "d9efac42f5e513eaff321ea95da782f1a139551c",
       "parents": [
