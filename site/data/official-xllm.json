@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T19:43:21.605Z",
+  "generatedAt": "2026-09-20T19:54:57.974Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1551,
+    "commits": 1552,
     "contributors": 126,
-    "additions": 866236,
-    "deletions": 228386,
-    "filesChanged": 24200,
+    "additions": 866665,
+    "deletions": 228444,
+    "filesChanged": 24205,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-19",
+    "latestDate": "2026-09-20",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -116,7 +116,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 124
+        "count": 125
       },
       {
         "key": "Model Support",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 215
+        "count": 216
       },
       {
         "key": "other",
@@ -482,7 +482,8 @@
     "2026-09-16",
     "2026-09-17",
     "2026-09-18",
-    "2026-09-19"
+    "2026-09-19",
+    "2026-09-20"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1391,6 +1392,64 @@
     }
   },
   "commits": [
+    {
+      "sha": "cf4c7732d52da3a39cb35b0125a6b08cf2229c69",
+      "parents": [
+        "26a3f29d5be066d75905d4cb450e9747281a4f51"
+      ],
+      "pr": "2350",
+      "date": "2026-09-20T10:53:18+08:00",
+      "dateKey": "2026-09-20",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "perf: optimize GLM MLA preprocessing for MTP and dynamic W8A8. (#2350)",
+      "type": "performance",
+      "module": "Spec Decode",
+      "additions": 429,
+      "deletions": 58,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 137,
+          "deletions": 5,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 52,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/mla.py",
+          "additions": 129,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 109,
+          "deletions": 51,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cf4c7732d52da3a39cb35b0125a6b08cf2229c69"
+    },
     {
       "sha": "26a3f29d5be066d75905d4cb450e9747281a4f51",
       "parents": [
