@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T19:54:57.974Z",
+  "generatedAt": "2026-09-21T21:19:51.723Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1552,
+    "commits": 1555,
     "contributors": 126,
-    "additions": 866665,
-    "deletions": 228444,
-    "filesChanged": 24205,
+    "additions": 866912,
+    "deletions": 228632,
+    "filesChanged": 24224,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-20",
+    "latestDate": "2026-09-21",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -112,11 +112,11 @@
       },
       {
         "key": "Inference Engine",
-        "count": 134
+        "count": 135
       },
       {
         "key": "Spec Decode",
-        "count": 125
+        "count": 126
       },
       {
         "key": "Model Support",
@@ -136,7 +136,7 @@
       },
       {
         "key": "xllm/api_service",
-        "count": 30
+        "count": 31
       },
       {
         "key": "MoE",
@@ -158,11 +158,11 @@
       },
       {
         "key": "bugfix",
-        "count": 476
+        "count": 478
       },
       {
         "key": "refactor",
-        "count": 231
+        "count": 232
       },
       {
         "key": "performance",
@@ -483,7 +483,8 @@
     "2026-09-17",
     "2026-09-18",
     "2026-09-19",
-    "2026-09-20"
+    "2026-09-20",
+    "2026-09-21"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1392,6 +1393,200 @@
     }
   },
   "commits": [
+    {
+      "sha": "8c058e0097cc38f0149f01979d8e6eeda2f72dc6",
+      "parents": [
+        "3769656ef97b754cbdb77a28f7c9a5928c21a891"
+      ],
+      "pr": "2358",
+      "date": "2026-09-21T17:59:38+08:00",
+      "dateKey": "2026-09-21",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "bugfix: release stream attachment immediately on finish. (#2358)",
+      "type": "bugfix",
+      "module": "xllm/api_service",
+      "additions": 16,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/api_service/stream_call.h",
+          "additions": 16,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "xllm-api-service"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8c058e0097cc38f0149f01979d8e6eeda2f72dc6"
+    },
+    {
+      "sha": "3769656ef97b754cbdb77a28f7c9a5928c21a891",
+      "parents": [
+        "afbf64aa930571c867268e1922a8a0c69e578608"
+      ],
+      "pr": "2356",
+      "date": "2026-09-21T10:22:44+08:00",
+      "dateKey": "2026-09-21",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "bugfix: initialize tokenizer state for request workers. (#2356)",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 21,
+      "deletions": 5,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/tokenizer/tokenizer.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/tokenizer/tokenizer_proxy.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/tokenizer/tokenizer_proxy.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/async_response_processor.cpp",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/async_response_processor.h",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3769656ef97b754cbdb77a28f7c9a5928c21a891"
+    },
+    {
+      "sha": "afbf64aa930571c867268e1922a8a0c69e578608",
+      "parents": [
+        "cf4c7732d52da3a39cb35b0125a6b08cf2229c69"
+      ],
+      "pr": "2357",
+      "date": "2026-09-21T10:21:04+08:00",
+      "dateKey": "2026-09-21",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: centralize speculative-decode target hidden selection. (#2357)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 210,
+      "deletions": 182,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "tests/core/framework/speculative/embedding_cache_test.cpp",
+          "additions": 9,
+          "deletions": 9,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 6,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/draft_extend_input.cpp",
+          "additions": 103,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/draft_extend_input.h",
+          "additions": 51,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/embedding_cache.cpp",
+          "additions": 4,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/embedding_cache.h",
+          "additions": 5,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 11,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 37,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_worker_impl.cpp",
+          "additions": 11,
+          "deletions": 50,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/afbf64aa930571c867268e1922a8a0c69e578608"
+    },
     {
       "sha": "cf4c7732d52da3a39cb35b0125a6b08cf2229c69",
       "parents": [
