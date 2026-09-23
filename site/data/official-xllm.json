@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T20:36:42.700Z",
+  "generatedAt": "2026-09-23T20:47:28.779Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1559,
+    "commits": 1561,
     "contributors": 126,
-    "additions": 872189,
-    "deletions": 229224,
-    "filesChanged": 24275,
+    "additions": 872856,
+    "deletions": 229489,
+    "filesChanged": 24287,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-22",
+    "latestDate": "2026-09-23",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -94,17 +94,17 @@
         "files": 440
       },
       {
-        "name": "Jun Xiong",
+        "name": "Tongxuan Liu",
         "commits": 32,
-        "additions": 12034,
-        "deletions": 8563,
-        "files": 479
+        "additions": 17591,
+        "deletions": 3352,
+        "files": 227
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 530
+        "count": 531
       },
       {
         "key": "NPU Backend",
@@ -148,13 +148,13 @@
       },
       {
         "key": "Testing",
-        "count": 14
+        "count": 15
       }
     ],
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 542
+        "count": 543
       },
       {
         "key": "bugfix",
@@ -177,12 +177,12 @@
         "count": 23
       },
       {
-        "key": "chore",
+        "key": "test",
         "count": 15
       },
       {
-        "key": "test",
-        "count": 14
+        "key": "chore",
+        "count": 15
       }
     ]
   },
@@ -485,7 +485,8 @@
     "2026-09-19",
     "2026-09-20",
     "2026-09-21",
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-23"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1394,6 +1395,132 @@
     }
   },
   "commits": [
+    {
+      "sha": "7993f58bd9ae533abbfc533dd5938772f80409d7",
+      "parents": [
+        "a4865de0b45edf7009e37c0302cc1d70fa9e9c9b"
+      ],
+      "pr": "2364",
+      "date": "2026-09-23T17:12:16+08:00",
+      "dateKey": "2026-09-23",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "feat: support DP in task pipeline. (#2364)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 568,
+      "deletions": 265,
+      "filesChanged": 11,
+      "files": [
+        {
+          "filename": "tests/core/runtime/slot_buffer_test.cpp",
+          "additions": 264,
+          "deletions": 124,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_input_test.cpp",
+          "additions": 106,
+          "deletions": 15,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 12,
+          "deletions": 2,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.cpp",
+          "additions": 80,
+          "deletions": 34,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.h",
+          "additions": 25,
+          "deletions": 30,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 69,
+          "deletions": 51,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7993f58bd9ae533abbfc533dd5938772f80409d7"
+    },
+    {
+      "sha": "a4865de0b45edf7009e37c0302cc1d70fa9e9c9b",
+      "parents": [
+        "86f6ea8dcc5110844f4038994e68bd7ff647dd4b"
+      ],
+      "pr": "2363",
+      "date": "2026-09-23T15:26:29+08:00",
+      "dateKey": "2026-09-23",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: add chat-template render cost attribution benchmarks. (#2363)",
+      "type": "test",
+      "module": "Testing",
+      "additions": 99,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/chat_template/chat_template_benchmark.cpp",
+          "additions": 99,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a4865de0b45edf7009e37c0302cc1d70fa9e9c9b"
+    },
     {
       "sha": "86f6ea8dcc5110844f4038994e68bd7ff647dd4b",
       "parents": [
