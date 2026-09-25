@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T20:52:59.084Z",
+  "generatedAt": "2026-09-25T20:49:53.673Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1566,
+    "commits": 1570,
     "contributors": 126,
-    "additions": 873265,
-    "deletions": 234961,
-    "filesChanged": 24444,
+    "additions": 874550,
+    "deletions": 235332,
+    "filesChanged": 24480,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-24",
+    "latestDate": "2026-09-25",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 121,
-        "additions": 65931,
-        "deletions": 33390,
-        "files": 2074
+        "commits": 122,
+        "additions": 66615,
+        "deletions": 33420,
+        "files": 2088
       },
       {
         "name": "phantomlei",
@@ -87,24 +87,24 @@
         "files": 586
       },
       {
+        "name": "Tongxuan Liu",
+        "commits": 39,
+        "additions": 18313,
+        "deletions": 9148,
+        "files": 392
+      },
+      {
         "name": "maxwell",
         "commits": 36,
         "additions": 26946,
         "deletions": 1763,
         "files": 440
-      },
-      {
-        "name": "Tongxuan Liu",
-        "commits": 36,
-        "additions": 17712,
-        "deletions": 8807,
-        "files": 370
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 534
+        "count": 535
       },
       {
         "key": "NPU Backend",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 135
+        "count": 138
       },
       {
         "key": "Spec Decode",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 543
+        "count": 544
       },
       {
         "key": "bugfix",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 236
+        "count": 238
       },
       {
         "key": "performance",
-        "count": 220
+        "count": 221
       },
       {
         "key": "other",
@@ -487,7 +487,8 @@
     "2026-09-21",
     "2026-09-22",
     "2026-09-23",
-    "2026-09-24"
+    "2026-09-24",
+    "2026-09-25"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1396,6 +1397,329 @@
     }
   },
   "commits": [
+    {
+      "sha": "9819bef818f86e088f1a67fe5c21bcb7e4f2bc37",
+      "parents": [
+        "4f96bb1f86f68cea2646ca3b60c44b5a9e98ed7e"
+      ],
+      "pr": "2334",
+      "date": "2026-09-25T19:57:48+08:00",
+      "dateKey": "2026-09-25",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "feat: add glm dsa multi stream execution. (#2334)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 684,
+      "deletions": 30,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 38,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_device_stream.py",
+          "additions": 149,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_indexer_cp.py",
+          "additions": 13,
+          "deletions": 3,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 319,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/kernel_config.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/device_stream.py",
+          "additions": 76,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 68,
+          "deletions": 25,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9819bef818f86e088f1a67fe5c21bcb7e4f2bc37"
+    },
+    {
+      "sha": "4f96bb1f86f68cea2646ca3b60c44b5a9e98ed7e",
+      "parents": [
+        "1b4220f81f56ceba7a00cb9c3a2eea58c8f28297"
+      ],
+      "pr": "2375",
+      "date": "2026-09-25T18:07:27+08:00",
+      "dateKey": "2026-09-25",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: move latency and memory metrics into scheduler metrics. (#2375)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 447,
+      "deletions": 223,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 1,
+          "deletions": 20,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/scheduler_metrics_test.cpp",
+          "additions": 163,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 8,
+          "deletions": 139,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 2,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 1,
+          "deletions": 46,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.h",
+          "additions": 0,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_metrics.cpp",
+          "additions": 203,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_metrics.h",
+          "additions": 66,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4f96bb1f86f68cea2646ca3b60c44b5a9e98ed7e"
+    },
+    {
+      "sha": "1b4220f81f56ceba7a00cb9c3a2eea58c8f28297",
+      "parents": [
+        "c8c5e4d1a7323de9eb1c3814a1ed58ff07aeda8e"
+      ],
+      "pr": "",
+      "date": "2026-09-25T15:37:50+08:00",
+      "dateKey": "2026-09-25",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: move batch mode construction next to policy factory.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 41,
+      "deletions": 40,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 1,
+          "deletions": 34,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 33,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1b4220f81f56ceba7a00cb9c3a2eea58c8f28297"
+    },
+    {
+      "sha": "c8c5e4d1a7323de9eb1c3814a1ed58ff07aeda8e",
+      "parents": [
+        "dca93836f789bde2a2c6d007028a9c8dcc6880e9"
+      ],
+      "pr": "",
+      "date": "2026-09-25T15:37:50+08:00",
+      "dateKey": "2026-09-25",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: move scheduler test hooks out of production.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 113,
+      "deletions": 78,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 42,
+          "deletions": 16,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/fixed_steps_scheduler_test.cpp",
+          "additions": 19,
+          "deletions": 11,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/scheduler_policy_test.cpp",
+          "additions": 38,
+          "deletions": 10,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 5,
+          "deletions": 38,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler_benchmark.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c8c5e4d1a7323de9eb1c3814a1ed58ff07aeda8e"
+    },
     {
       "sha": "dca93836f789bde2a2c6d007028a9c8dcc6880e9",
       "parents": [
