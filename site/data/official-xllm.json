@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T20:18:19.302Z",
+  "generatedAt": "2026-09-27T20:33:05.889Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1583,
+    "commits": 1591,
     "contributors": 127,
-    "additions": 876565,
-    "deletions": 235724,
-    "filesChanged": 24751,
+    "additions": 880940,
+    "deletions": 236458,
+    "filesChanged": 24832,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-26",
+    "latestDate": "2026-09-27",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 122,
-        "additions": 66615,
-        "deletions": 33420,
-        "files": 2088
+        "commits": 124,
+        "additions": 67856,
+        "deletions": 33505,
+        "files": 2112
       },
       {
         "name": "phantomlei",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 538
+        "count": 542
       },
       {
         "key": "NPU Backend",
-        "count": 177
+        "count": 178
       },
       {
         "key": "Inference Engine",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Engineering",
-        "count": 94
+        "count": 95
       },
       {
         "key": "Device Backend",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 548
+        "count": 552
       },
       {
         "key": "bugfix",
-        "count": 479
+        "count": 480
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 225
+        "count": 227
       },
       {
         "key": "other",
@@ -178,7 +178,7 @@
       },
       {
         "key": "chore",
-        "count": 19
+        "count": 20
       },
       {
         "key": "test",
@@ -489,7 +489,8 @@
     "2026-09-23",
     "2026-09-24",
     "2026-09-25",
-    "2026-09-26"
+    "2026-09-26",
+    "2026-09-27"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1398,6 +1399,710 @@
     }
   },
   "commits": [
+    {
+      "sha": "1b882e7b14f0500cca3174b488df411372fbff5a",
+      "parents": [
+        "3e046546c2b12fd8e605b3f9ff4a054ee8d6e0e5"
+      ],
+      "pr": "2390",
+      "date": "2026-09-27T23:37:10+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "bugfix: use int32 cumsum for npu kv lengths. (#2390)",
+      "type": "bugfix",
+      "module": "NPU Backend",
+      "additions": 3,
+      "deletions": 2,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/layers/common/attention_metadata_builder.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1b882e7b14f0500cca3174b488df411372fbff5a"
+    },
+    {
+      "sha": "3e046546c2b12fd8e605b3f9ff4a054ee8d6e0e5",
+      "parents": [
+        "f11b7ed185e88bb1906f59f3b17b8516a661384d"
+      ],
+      "pr": "2387",
+      "date": "2026-09-27T19:17:12+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "perf: reuse rope coefficients across glm5 layers and consumers. (#2387)",
+      "type": "performance",
+      "module": "tests/python",
+      "additions": 515,
+      "deletions": 169,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_cp.py",
+          "additions": 106,
+          "deletions": 52,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_indexer_cp.py",
+          "additions": 31,
+          "deletions": 34,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_mtp.py",
+          "additions": 36,
+          "deletions": 5,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 8,
+          "deletions": 7,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_rope_reuse_npu.py",
+          "additions": 219,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp.py",
+          "additions": 6,
+          "deletions": 3,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 95,
+          "deletions": 62,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2_mtp.py",
+          "additions": 10,
+          "deletions": 2,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "tests-python",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3e046546c2b12fd8e605b3f9ff4a054ee8d6e0e5"
+    },
+    {
+      "sha": "f11b7ed185e88bb1906f59f3b17b8516a661384d",
+      "parents": [
+        "1ad252513e63e11874010f0463adbf3d6c6a5f0d"
+      ],
+      "pr": "2384",
+      "date": "2026-09-27T18:08:26+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "perf: align Python graph MoE with fused NPU operators. (#2384)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 1019,
+      "deletions": 109,
+      "filesChanged": 15,
+      "files": [
+        {
+          "filename": "tests/python/test_deepseek_v4_model.py",
+          "additions": 37,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_grouped_moe.py",
+          "additions": 64,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/aclnn/pytorch_npu_helper.hpp",
+          "additions": 37,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/npu_ops_library.cpp",
+          "additions": 29,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/grouped_matmul.cpp",
+          "additions": 92,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/moe_grouped_matmul_swiglu_quant.cpp",
+          "additions": 111,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/moe_init_routing_v3.cpp",
+          "additions": 93,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/quant_matmul.cpp",
+          "additions": 119,
+          "deletions": 40,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 40,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/_custom_op.py",
+          "additions": 72,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/moe.py",
+          "additions": 224,
+          "deletions": 66,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/quantization.py",
+          "additions": 51,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 36,
+          "deletions": 2,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f11b7ed185e88bb1906f59f3b17b8516a661384d"
+    },
+    {
+      "sha": "1ad252513e63e11874010f0463adbf3d6c6a5f0d",
+      "parents": [
+        "32778a803ceee3c7d0fa58ef6cd854deee9e82ce"
+      ],
+      "pr": "2386",
+      "date": "2026-09-27T16:40:16+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "feat: support ACL Graph in task pipeline. (#2386)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1531,
+      "deletions": 323,
+      "filesChanged": 25,
+      "files": [
+        {
+          "filename": "tests/core/runtime/slot_buffer_test.cpp",
+          "additions": 83,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_input_test.cpp",
+          "additions": 77,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/profile/profile_graph_warmup_test.cpp",
+          "additions": 52,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 30,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention.py",
+          "additions": 46,
+          "deletions": 8,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_prepared_acl_graph.py",
+          "additions": 437,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.cpp",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.h",
+          "additions": 6,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor_impl.h",
+          "additions": 8,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 33,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.cpp",
+          "additions": 53,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.h",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 101,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 17,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 71,
+          "deletions": 79,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 38,
+          "deletions": 12,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/forward_context.py",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/acl_graph.py",
+          "additions": 224,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 20,
+          "deletions": 186,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/prepared_acl_graph.py",
+          "additions": 185,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1ad252513e63e11874010f0463adbf3d6c6a5f0d"
+    },
+    {
+      "sha": "32778a803ceee3c7d0fa58ef6cd854deee9e82ce",
+      "parents": [
+        "60d60241fbfd2ab01cb95fee3bb803355dc0b045"
+      ],
+      "pr": "",
+      "date": "2026-09-27T16:08:26+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "chore: retire unused MLA projection helper.",
+      "type": "chore",
+      "module": "tests/python",
+      "additions": 27,
+      "deletions": 41,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/python/test_glm5_2_mla_projection_npu.py",
+          "additions": 27,
+          "deletions": 27,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/attention.py",
+          "additions": 0,
+          "deletions": 12,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "chore",
+        "tests-python"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/32778a803ceee3c7d0fa58ef6cd854deee9e82ce"
+    },
+    {
+      "sha": "60d60241fbfd2ab01cb95fee3bb803355dc0b045",
+      "parents": [
+        "96bb41d598a88019c7156f65515de3ec649b80fd"
+      ],
+      "pr": "2374",
+      "date": "2026-09-27T15:02:38+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "feat: support speculators DFlash2 config format. (#2374)",
+      "type": "feature",
+      "module": "Engineering",
+      "additions": 39,
+      "deletions": 5,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/python/test_qwen3_dflash2.py",
+          "additions": 20,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/models/llm/qwen3.h",
+          "additions": 17,
+          "deletions": 5,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_dflash2.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "engineering"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/60d60241fbfd2ab01cb95fee3bb803355dc0b045"
+    },
+    {
+      "sha": "96bb41d598a88019c7156f65515de3ec649b80fd",
+      "parents": [
+        "6bfc6c9fd2f7f1cd66eaf91fe0c178572b6c3cad"
+      ],
+      "pr": "",
+      "date": "2026-09-27T14:01:12+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: add torch profiling backend for ascend npu.",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 593,
+      "deletions": 38,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/online_profiling.md",
+          "additions": 26,
+          "deletions": 7,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/online_profiling.md",
+          "additions": 26,
+          "deletions": 7,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/platform/CMakeLists.txt",
+          "additions": 12,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/npu_torch_profiler_test.cpp",
+          "additions": 247,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/profile_config.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/profile_config.h",
+          "additions": 3,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/CMakeLists.txt",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_torch_profiler.cpp",
+          "additions": 189,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_torch_profiler.h",
+          "additions": 49,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 30,
+          "deletions": 12,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/96bb41d598a88019c7156f65515de3ec649b80fd"
+    },
+    {
+      "sha": "6bfc6c9fd2f7f1cd66eaf91fe0c178572b6c3cad",
+      "parents": [
+        "bafe8187eb58386d9212cd81d75fc822c9bc1d97"
+      ],
+      "pr": "",
+      "date": "2026-09-27T14:01:12+08:00",
+      "dateKey": "2026-09-27",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: add ascend npu online profiling support.",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 648,
+      "deletions": 47,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/online_profiling.md",
+          "additions": 27,
+          "deletions": 6,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/online_profiling.md",
+          "additions": 27,
+          "deletions": 6,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/platform/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/npu_profiler_test.cpp",
+          "additions": 261,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 25,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/profile_config.cpp",
+          "additions": 5,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/profile_config.h",
+          "additions": 11,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_profiler.cpp",
+          "additions": 172,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_profiler.h",
+          "additions": 63,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 36,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6bfc6c9fd2f7f1cd66eaf91fe0c178572b6c3cad"
+    },
     {
       "sha": "bafe8187eb58386d9212cd81d75fc822c9bc1d97",
       "parents": [
