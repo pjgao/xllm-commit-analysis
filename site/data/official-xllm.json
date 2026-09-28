@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T20:33:05.889Z",
+  "generatedAt": "2026-09-28T22:42:44.124Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1591,
+    "commits": 1595,
     "contributors": 127,
-    "additions": 880940,
-    "deletions": 236458,
-    "filesChanged": 24832,
+    "additions": 889110,
+    "deletions": 237281,
+    "filesChanged": 24937,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-27",
+    "latestDate": "2026-09-28",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -81,10 +81,10 @@
       },
       {
         "name": "Tongxuan Liu",
-        "commits": 46,
-        "additions": 18620,
-        "deletions": 9364,
-        "files": 637
+        "commits": 48,
+        "additions": 18983,
+        "deletions": 9419,
+        "files": 659
       },
       {
         "name": "a120092009",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 542
+        "count": 543
       },
       {
         "key": "NPU Backend",
@@ -112,11 +112,11 @@
       },
       {
         "key": "Inference Engine",
-        "count": 138
+        "count": 140
       },
       {
         "key": "Spec Decode",
-        "count": 127
+        "count": 128
       },
       {
         "key": "Model Support",
@@ -154,19 +154,19 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 552
+        "count": 553
       },
       {
         "key": "bugfix",
-        "count": 480
+        "count": 481
       },
       {
         "key": "refactor",
-        "count": 238
+        "count": 239
       },
       {
         "key": "performance",
-        "count": 227
+        "count": 228
       },
       {
         "key": "other",
@@ -490,7 +490,8 @@
     "2026-09-24",
     "2026-09-25",
     "2026-09-26",
-    "2026-09-27"
+    "2026-09-27",
+    "2026-09-28"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1399,6 +1400,746 @@
     }
   },
   "commits": [
+    {
+      "sha": "0ac9ce19c2aa6a700bc2c1cbc182956d9568c10b",
+      "parents": [
+        "80cf5feb566edcef694de3fc256b714c46317827"
+      ],
+      "pr": "2393",
+      "date": "2026-09-28T18:45:27+08:00",
+      "dateKey": "2026-09-28",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "bugfix: support python native operator tests from source builds. (#2393)",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 573,
+      "deletions": 314,
+      "filesChanged": 27,
+      "files": [
+        {
+          "filename": "tests/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 12,
+          "module": "tests/CMakeLists.txt"
+        },
+        {
+          "filename": "tests/core/kernels/npu/npu_xllm_ops_test.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/pybind_public_cp_api_test.py",
+          "additions": 4,
+          "deletions": 13,
+          "module": "tests/pybind_public_cp_api_test.py"
+        },
+        {
+          "filename": "tests/python/CMakeLists.txt",
+          "additions": 37,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/conftest.py",
+          "additions": 4,
+          "deletions": 33,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_collectives.py",
+          "additions": 2,
+          "deletions": 23,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_csa_attention.py",
+          "additions": 1,
+          "deletions": 4,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_deepseek_v32_parallel.py",
+          "additions": 1,
+          "deletions": 9,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_deepseek_v4_model.py",
+          "additions": 1,
+          "deletions": 3,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_flashinfer_attention.py",
+          "additions": 0,
+          "deletions": 2,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_mla_projection_npu.py",
+          "additions": 0,
+          "deletions": 3,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_rope_reuse_npu.py",
+          "additions": 1,
+          "deletions": 14,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_grouped_moe.py",
+          "additions": 1,
+          "deletions": 22,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_kda_triton_ops.py",
+          "additions": 0,
+          "deletions": 8,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_mla_preprocess_v2_npu.py",
+          "additions": 32,
+          "deletions": 10,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 2,
+          "deletions": 4,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention_cp.py",
+          "additions": 8,
+          "deletions": 7,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_cuda.py",
+          "additions": 14,
+          "deletions": 25,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_triton_ops.py",
+          "additions": 0,
+          "deletions": 12,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/__init__.py",
+          "additions": 28,
+          "deletions": 10,
+          "module": "xllm/__init__.py"
+        },
+        {
+          "filename": "xllm/models/py_model_helper.cpp",
+          "additions": 10,
+          "deletions": 7,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/README.md",
+          "additions": 146,
+          "deletions": 47,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/README_zh.md",
+          "additions": 259,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/__init__.py",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/__init__.py",
+          "additions": 8,
+          "deletions": 5,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_cuda/_custom_op.py",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/mla.py",
+          "additions": 5,
+          "deletions": 36,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0ac9ce19c2aa6a700bc2c1cbc182956d9568c10b"
+    },
+    {
+      "sha": "80cf5feb566edcef694de3fc256b714c46317827",
+      "parents": [
+        "3747b19f628ea543237860b8f4e90df46b046deb"
+      ],
+      "pr": "2394",
+      "date": "2026-09-28T15:14:48+08:00",
+      "dateKey": "2026-09-28",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: hold scheduler singletons as members and re-file request_queue_size. (#2394)",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 59,
+      "deletions": 37,
+      "filesChanged": 16,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 2,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 1,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/c_api/internal/rec.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/c_api"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/rec_config.cpp",
+          "additions": 0,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/rec_config.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/scheduler_config.cpp",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/scheduler_config.h",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 11,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 14,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/80cf5feb566edcef694de3fc256b714c46317827"
+    },
+    {
+      "sha": "3747b19f628ea543237860b8f4e90df46b046deb",
+      "parents": [
+        "14c2435cddd54fc1c7bed39ed1bc3ac1b152d150"
+      ],
+      "pr": "2391",
+      "date": "2026-09-28T13:48:03+08:00",
+      "dateKey": "2026-09-28",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "feat: support speculative decoding in task pipeline. (#2391)",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 7234,
+      "deletions": 454,
+      "filesChanged": 56,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_estimation_test.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/dflash2_sampling_test.cpp",
+          "additions": 106,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/spec_input_builder_test.cpp",
+          "additions": 39,
+          "deletions": 20,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 55,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_context_test.cpp",
+          "additions": 634,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_decode_input_test.cpp",
+          "additions": 383,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_parallel_plan_test.cpp",
+          "additions": 152,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_prefill_input_test.cpp",
+          "additions": 348,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/slot_buffer_test.cpp",
+          "additions": 131,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 514,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_pipeline_test_peer.h",
+          "additions": 63,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 43,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/profile/profile_graph_warmup_test.cpp",
+          "additions": 22,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 95,
+          "deletions": 2,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention.py",
+          "additions": 113,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_prepared_acl_graph.py",
+          "additions": 120,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 28,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 10,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_estimation.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_estimation.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/mtp_topk_state.h",
+          "additions": 46,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/dflash2_sampling.cpp",
+          "additions": 120,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/dflash2_sampling.h",
+          "additions": 37,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash2_worker_impl.cpp",
+          "additions": 7,
+          "deletions": 102,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash2_worker_impl.h",
+          "additions": 0,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 68,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 50,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 19,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.cpp",
+          "additions": 1017,
+          "deletions": 113,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/slot_buffer.h",
+          "additions": 183,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 70,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 138,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 2147,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.h",
+          "additions": 143,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 12,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 53,
+          "deletions": 56,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 24,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/graph_warmup.cpp",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/graph_warmup.h",
+          "additions": 5,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 5,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/model_config_utils.cpp",
+          "additions": 34,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/model_config_utils.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/mlu/mtp_topk_state.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/mtp_topk_state.h",
+          "additions": 2,
+          "deletions": 36,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 81,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 27,
+          "deletions": 8,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/prepared_acl_graph.py",
+          "additions": 26,
+          "deletions": 8,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3747b19f628ea543237860b8f4e90df46b046deb"
+    },
+    {
+      "sha": "14c2435cddd54fc1c7bed39ed1bc3ac1b152d150",
+      "parents": [
+        "1b882e7b14f0500cca3174b488df411372fbff5a"
+      ],
+      "pr": "2380",
+      "date": "2026-09-28T12:40:51+08:00",
+      "dateKey": "2026-09-28",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: reuse scheduler scratch buffers across requests. (#2380)",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 304,
+      "deletions": 18,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 80,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/BENCHMARKS.md",
+          "additions": 86,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler_benchmark.cpp",
+          "additions": 120,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 16,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/14c2435cddd54fc1c7bed39ed1bc3ac1b152d150"
+    },
     {
       "sha": "1b882e7b14f0500cca3174b488df411372fbff5a",
       "parents": [
