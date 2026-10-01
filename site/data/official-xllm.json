@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T21:37:15.375Z",
+  "generatedAt": "2026-10-01T22:05:57.406Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1627,
+    "commits": 1638,
     "contributors": 127,
-    "additions": 917971,
-    "deletions": 246697,
-    "filesChanged": 25530,
+    "additions": 921146,
+    "deletions": 247125,
+    "filesChanged": 25622,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-09-30",
+    "latestDate": "2026-10-01",
     "topAuthors": [
       {
         "name": "Xu Zhang",
-        "commits": 124,
-        "additions": 67856,
-        "deletions": 33505,
-        "files": 2112
+        "commits": 129,
+        "additions": 70736,
+        "deletions": 33799,
+        "files": 2190
       },
       {
         "name": "phantomlei",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 553
+        "count": 554
       },
       {
         "key": "NPU Backend",
-        "count": 183
+        "count": 185
       },
       {
         "key": "Inference Engine",
@@ -120,7 +120,7 @@
       },
       {
         "key": "Model Support",
-        "count": 123
+        "count": 124
       },
       {
         "key": "xllm/core",
@@ -144,7 +144,7 @@
       },
       {
         "key": "Testing",
-        "count": 17
+        "count": 18
       },
       {
         "key": "xllm/models",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 561
+        "count": 565
       },
       {
         "key": "bugfix",
-        "count": 487
+        "count": 488
       },
       {
         "key": "refactor",
@@ -166,11 +166,11 @@
       },
       {
         "key": "performance",
-        "count": 235
+        "count": 239
       },
       {
         "key": "other",
-        "count": 36
+        "count": 37
       },
       {
         "key": "docs",
@@ -182,7 +182,7 @@
       },
       {
         "key": "test",
-        "count": 15
+        "count": 16
       }
     ]
   },
@@ -493,7 +493,8 @@
     "2026-09-27",
     "2026-09-28",
     "2026-09-29",
-    "2026-09-30"
+    "2026-09-30",
+    "2026-10-01"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1402,6 +1403,851 @@
     }
   },
   "commits": [
+    {
+      "sha": "ea453a47c28cccf994eb878bdab63bde057654ea",
+      "parents": [
+        "6ecdbfb4fd567902e8034d629ed1c1d6b9c7a1a5"
+      ],
+      "pr": "",
+      "date": "2026-10-01T20:45:56+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "docs: clarify npu profiling and trace analysis guidance.",
+      "type": "other",
+      "module": "NPU Backend",
+      "additions": 70,
+      "deletions": 93,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/SKILL.md",
+          "additions": 30,
+          "deletions": 41,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/references/capture.md",
+          "additions": 21,
+          "deletions": 29,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".agents/skills/xllm-npu-profiler/references/perfetto.md",
+          "additions": 19,
+          "deletions": 23,
+          "module": ".agents/skills"
+        }
+      ],
+      "tags": [
+        "other",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ea453a47c28cccf994eb878bdab63bde057654ea"
+    },
+    {
+      "sha": "6ecdbfb4fd567902e8034d629ed1c1d6b9c7a1a5",
+      "parents": [
+        "1d790e68dc01ee58bab8735e10852156d4d112aa"
+      ],
+      "pr": "",
+      "date": "2026-10-01T20:45:56+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "docs: clarify c++ and python unit test guidance.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 21,
+      "deletions": 10,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": ".agents/skills/add-unit-test/SKILL.md",
+          "additions": 15,
+          "deletions": 4,
+          "module": ".agents/skills"
+        },
+        {
+          "filename": ".agents/skills/add-unit-test/references/xllm-test-patterns.md",
+          "additions": 6,
+          "deletions": 6,
+          "module": ".agents/skills"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6ecdbfb4fd567902e8034d629ed1c1d6b9c7a1a5"
+    },
+    {
+      "sha": "1d790e68dc01ee58bab8735e10852156d4d112aa",
+      "parents": [
+        "89010d3d482579dc1d09bea5974ebcc67a5fc8b0"
+      ],
+      "pr": "",
+      "date": "2026-10-01T19:16:38+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: propagate explicit openai stop reasons.",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 207,
+      "deletions": 27,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "tests/api_service/openai_protocol_test.cpp",
+          "additions": 26,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/core/framework/request/sequence_stop_output_test.cpp",
+          "additions": 52,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/api_service/chat_service_impl.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/completion_service_impl.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.cpp",
+          "additions": 29,
+          "deletions": 8,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/finish_reason.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/llm_request_factory.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/onerec_sequence.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/rec_request_factory.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_output.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequences_group.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.cpp",
+          "additions": 21,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/stopping_checker.h",
+          "additions": 10,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/vlm_request_factory.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/xservice_client.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 10,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/chat.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/common.proto",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/completion.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/disagg_pd.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1d790e68dc01ee58bab8735e10852156d4d112aa"
+    },
+    {
+      "sha": "89010d3d482579dc1d09bea5974ebcc67a5fc8b0",
+      "parents": [
+        "1b5a8eb5c5c6d0ac6284a115c0b2022d15ff82f8"
+      ],
+      "pr": "",
+      "date": "2026-10-01T19:16:38+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: align openai system fingerprint behavior.",
+      "type": "feature",
+      "module": "tests/api_service",
+      "additions": 102,
+      "deletions": 12,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/api_service/openai_protocol_test.cpp",
+          "additions": 29,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.cpp",
+          "additions": 22,
+          "deletions": 10,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.cpp",
+          "additions": 31,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/stream_call.h",
+          "additions": 14,
+          "deletions": 2,
+          "module": "xllm/api_service"
+        }
+      ],
+      "tags": [
+        "feature",
+        "tests-api-service"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/89010d3d482579dc1d09bea5974ebcc67a5fc8b0"
+    },
+    {
+      "sha": "1b5a8eb5c5c6d0ac6284a115c0b2022d15ff82f8",
+      "parents": [
+        "77990c3df11bcf4ddf44256a953be438ebeff862"
+      ],
+      "pr": "",
+      "date": "2026-10-01T19:16:38+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: align openai model card metadata.",
+      "type": "feature",
+      "module": "Model Support",
+      "additions": 115,
+      "deletions": 21,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "tests/api_service/models_service_impl_test.cpp",
+          "additions": 41,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.cpp",
+          "additions": 2,
+          "deletions": 10,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/models_service_impl.cpp",
+          "additions": 17,
+          "deletions": 7,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/models_service_impl.h",
+          "additions": 7,
+          "deletions": 3,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.cpp",
+          "additions": 35,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/service_impl_factory.cpp",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/models.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "feature",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1b5a8eb5c5c6d0ac6284a115c0b2022d15ff82f8"
+    },
+    {
+      "sha": "77990c3df11bcf4ddf44256a953be438ebeff862",
+      "parents": [
+        "d16ece4fbfba22080fcae804f3aaceac13b3d386"
+      ],
+      "pr": "",
+      "date": "2026-10-01T19:16:38+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: align with official openai api interfaces.",
+      "type": "feature",
+      "module": "tests/api_service",
+      "additions": 2215,
+      "deletions": 135,
+      "filesChanged": 27,
+      "files": [
+        {
+          "filename": "tests/api_service/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/models_service_impl_test.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/api_service/openai_protocol_test.cpp",
+          "additions": 686,
+          "deletions": 0,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/core/framework/request/request_params_test.cpp",
+          "additions": 38,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/api_service/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.cpp",
+          "additions": 117,
+          "deletions": 27,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/api_service.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/call.cpp",
+          "additions": 18,
+          "deletions": 8,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_service_impl.cpp",
+          "additions": 27,
+          "deletions": 11,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/completion_service_impl.cpp",
+          "additions": 95,
+          "deletions": 36,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/embedding_service_impl.cpp",
+          "additions": 58,
+          "deletions": 25,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/models_service_impl.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/non_stream_call.h",
+          "additions": 24,
+          "deletions": 3,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_batch.h",
+          "additions": 105,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_http.h",
+          "additions": 62,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.cpp",
+          "additions": 310,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_json.h",
+          "additions": 42,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_request.cpp",
+          "additions": 450,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/openai_request.h",
+          "additions": 37,
+          "deletions": 0,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/stream_call.h",
+          "additions": 101,
+          "deletions": 5,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/core/common/types.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.cpp",
+          "additions": 10,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_params.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/common.proto",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/completion.proto",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/embedding.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/proto/models.proto",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "feature",
+        "tests-api-service",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/77990c3df11bcf4ddf44256a953be438ebeff862"
+    },
+    {
+      "sha": "d16ece4fbfba22080fcae804f3aaceac13b3d386",
+      "parents": [
+        "703c0ed6a6b22fda6cd5450a353a834283948541"
+      ],
+      "pr": "",
+      "date": "2026-10-01T17:56:27+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "perf: remove router casts with bf16 addmm.",
+      "type": "performance",
+      "module": "xllm/python",
+      "additions": 30,
+      "deletions": 11,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 30,
+          "deletions": 11,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-python"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d16ece4fbfba22080fcae804f3aaceac13b3d386"
+    },
+    {
+      "sha": "703c0ed6a6b22fda6cd5450a353a834283948541",
+      "parents": [
+        "19df258936df18c47ef053da714588244d26725d"
+      ],
+      "pr": "",
+      "date": "2026-10-01T17:56:27+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "perf: avoid redundant single-row all-gather copies.",
+      "type": "performance",
+      "module": "xllm/python",
+      "additions": 16,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/python/distributed/collectives.py",
+          "additions": 16,
+          "deletions": 1,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-python"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/703c0ed6a6b22fda6cd5450a353a834283948541"
+    },
+    {
+      "sha": "19df258936df18c47ef053da714588244d26725d",
+      "parents": [
+        "b78457dec27366c8fec8f09497cff5b8942260fa"
+      ],
+      "pr": "",
+      "date": "2026-10-01T17:56:27+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "perf: reuse int64 mla slots across target layers.",
+      "type": "performance",
+      "module": "xllm/python",
+      "additions": 60,
+      "deletions": 4,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/mla.py",
+          "additions": 17,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 21,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 20,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-python"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/19df258936df18c47ef053da714588244d26725d"
+    },
+    {
+      "sha": "b78457dec27366c8fec8f09497cff5b8942260fa",
+      "parents": [
+        "39867d58815fe5f8f5e010a22ca8ee58592efd7d"
+      ],
+      "pr": "",
+      "date": "2026-10-01T17:56:27+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "perf: apply addnormdynamicquant fusion to shared layers.",
+      "type": "performance",
+      "module": "xllm/python",
+      "additions": 98,
+      "deletions": 15,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/kernels_npu/mla.py",
+          "additions": 10,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v32.py",
+          "additions": 57,
+          "deletions": 9,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_2.py",
+          "additions": 31,
+          "deletions": 2,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-python"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b78457dec27366c8fec8f09497cff5b8942260fa"
+    },
+    {
+      "sha": "39867d58815fe5f8f5e010a22ca8ee58592efd7d",
+      "parents": [
+        "47a7528560dd1b1c4378a2f20f7f0075c46f9acb"
+      ],
+      "pr": "2403",
+      "date": "2026-10-01T11:54:18+08:00",
+      "dateKey": "2026-10-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "bugfix: fix npu server shutdown ordering. (#2403)",
+      "type": "bugfix",
+      "module": "NPU Backend",
+      "additions": 241,
+      "deletions": 99,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "cmake/cc_test.cmake",
+          "additions": 3,
+          "deletions": 2,
+          "module": "cmake/cc_test.cmake"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/collective_service_test.cpp",
+          "additions": 45,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_collectives_shutdown.py",
+          "additions": 113,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/collective_service.cpp",
+          "additions": 9,
+          "deletions": 47,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/collective_service.h",
+          "additions": 8,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dist_manager.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_allocator.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/xtensor/xtensor_manager_pool.cpp",
+          "additions": 1,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/distributed/collectives.py",
+          "additions": 20,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 28,
+          "deletions": 12,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/39867d58815fe5f8f5e010a22ca8ee58592efd7d"
+    },
     {
       "sha": "47a7528560dd1b1c4378a2f20f7f0075c46f9acb",
       "parents": [
