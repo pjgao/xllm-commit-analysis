@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T20:18:38.604Z",
+  "generatedAt": "2026-10-04T20:37:58.947Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1665,
+    "commits": 1680,
     "contributors": 127,
-    "additions": 931798,
-    "deletions": 252311,
-    "filesChanged": 25968,
+    "additions": 938753,
+    "deletions": 255808,
+    "filesChanged": 26101,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-10-03",
+    "latestDate": "2026-10-04",
     "topAuthors": [
       {
         "name": "Xu Zhang",
@@ -25,10 +25,10 @@
       },
       {
         "name": "xllm-org",
-        "commits": 101,
-        "additions": 69789,
-        "deletions": 14945,
-        "files": 1336
+        "commits": 108,
+        "additions": 74886,
+        "deletions": 15515,
+        "files": 1417
       },
       {
         "name": "phantomlei",
@@ -53,10 +53,10 @@
       },
       {
         "name": "Tongxuan Liu",
-        "commits": 68,
-        "additions": 28731,
-        "deletions": 15481,
-        "files": 1031
+        "commits": 69,
+        "additions": 29007,
+        "deletions": 15738,
+        "files": 1046
       },
       {
         "name": "weizhehuang0827",
@@ -104,23 +104,23 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 562
+        "count": 566
       },
       {
         "key": "NPU Backend",
-        "count": 186
+        "count": 187
       },
       {
         "key": "Inference Engine",
-        "count": 148
+        "count": 151
       },
       {
         "key": "Spec Decode",
-        "count": 132
+        "count": 135
       },
       {
         "key": "Model Support",
-        "count": 125
+        "count": 127
       },
       {
         "key": "xllm/core",
@@ -144,7 +144,7 @@
       },
       {
         "key": "Testing",
-        "count": 20
+        "count": 22
       },
       {
         "key": "xllm/models",
@@ -154,19 +154,19 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 570
+        "count": 572
       },
       {
         "key": "bugfix",
-        "count": 493
+        "count": 496
       },
       {
         "key": "refactor",
-        "count": 263
+        "count": 266
       },
       {
         "key": "performance",
-        "count": 242
+        "count": 246
       },
       {
         "key": "other",
@@ -177,12 +177,12 @@
         "count": 23
       },
       {
-        "key": "chore",
+        "key": "test",
         "count": 20
       },
       {
-        "key": "test",
-        "count": 17
+        "key": "chore",
+        "count": 20
       }
     ]
   },
@@ -496,7 +496,8 @@
     "2026-09-30",
     "2026-10-01",
     "2026-10-02",
-    "2026-10-03"
+    "2026-10-03",
+    "2026-10-04"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1405,6 +1406,1213 @@
     }
   },
   "commits": [
+    {
+      "sha": "e1d0983cf3ab70bce68419903cdca48d88a52384",
+      "parents": [
+        "22ae27ae839df0f9e5ea1e1cd3beedadaaa2f125"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: simplify qwen backend and gated delta coverage.",
+      "type": "refactor",
+      "module": "Model Support",
+      "additions": 410,
+      "deletions": 1064,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/python/qwen3_5_test_utils.py",
+          "additions": 50,
+          "deletions": 23,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_cuda.py",
+          "additions": 167,
+          "deletions": 348,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_npu.py",
+          "additions": 193,
+          "deletions": 693,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e1d0983cf3ab70bce68419903cdca48d88a52384"
+    },
+    {
+      "sha": "22ae27ae839df0f9e5ea1e1cd3beedadaaa2f125",
+      "parents": [
+        "4734a3a42bf34d32c0e712faf9d6d338bcacd056"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: consolidate context parallel attention and metadata coverage.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 180,
+      "deletions": 375,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/python/test_dsa_metadata.py",
+          "additions": 18,
+          "deletions": 75,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_indexer_cp.py",
+          "additions": 128,
+          "deletions": 228,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp.py",
+          "additions": 9,
+          "deletions": 57,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp_backend.py",
+          "additions": 11,
+          "deletions": 3,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_sfa_dcp_fusion.py",
+          "additions": 14,
+          "deletions": 12,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/22ae27ae839df0f9e5ea1e1cd3beedadaaa2f125"
+    },
+    {
+      "sha": "4734a3a42bf34d32c0e712faf9d6d338bcacd056",
+      "parents": [
+        "88bb9477d50291a15c741d995f94ce78b60bee7b"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: consolidate model loading and draft cache coverage.",
+      "type": "performance",
+      "module": "Spec Decode",
+      "additions": 154,
+      "deletions": 349,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/python/test_deepseek_v32_parallel.py",
+          "additions": 59,
+          "deletions": 188,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_parallel.py",
+          "additions": 24,
+          "deletions": 55,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_parallel.py",
+          "additions": 14,
+          "deletions": 41,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_dflash.py",
+          "additions": 47,
+          "deletions": 49,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_dflash2.py",
+          "additions": 10,
+          "deletions": 16,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/4734a3a42bf34d32c0e712faf9d6d338bcacd056"
+    },
+    {
+      "sha": "88bb9477d50291a15c741d995f94ce78b60bee7b",
+      "parents": [
+        "f899bf520c2f87eaa239fd6d50fce71c7e7d1c00"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: consolidate npu numerical and cache replay coverage.",
+      "type": "performance",
+      "module": "NPU Backend",
+      "additions": 251,
+      "deletions": 420,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/npu/test_mla_index_cache_graph.py",
+          "additions": 0,
+          "deletions": 125,
+          "module": "tests/npu"
+        },
+        {
+          "filename": "tests/python/test_fused_moe.py",
+          "additions": 36,
+          "deletions": 125,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_mla_projection_npu.py",
+          "additions": 8,
+          "deletions": 24,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_glm5_2_rope_reuse_npu.py",
+          "additions": 84,
+          "deletions": 39,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_mla_index_cache_graph.py",
+          "additions": 123,
+          "deletions": 107,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/88bb9477d50291a15c741d995f94ce78b60bee7b"
+    },
+    {
+      "sha": "f899bf520c2f87eaa239fd6d50fce71c7e7d1c00",
+      "parents": [
+        "81dab23230cca76a6eec5f6cfb2f3be8351a5cab"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: consolidate executor and acl graph behavioral coverage.",
+      "type": "test",
+      "module": "Graph / Runtime",
+      "additions": 174,
+      "deletions": 357,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 56,
+          "deletions": 103,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 95,
+          "deletions": 195,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_prepared_acl_graph.py",
+          "additions": 22,
+          "deletions": 59,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_capture.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f899bf520c2f87eaa239fd6d50fce71c7e7d1c00"
+    },
+    {
+      "sha": "81dab23230cca76a6eec5f6cfb2f3be8351a5cab",
+      "parents": [
+        "2709faeaa5aaaaa9652477c56cab693d644be458"
+      ],
+      "pr": "",
+      "date": "2026-10-04T17:07:25+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "test: verify context parallel options through real constructors.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 63,
+      "deletions": 60,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/pybind_public_cp_api_test.py",
+          "additions": 0,
+          "deletions": 60,
+          "module": "tests/pybind_public_cp_api_test.py"
+        },
+        {
+          "filename": "tests/python/test_pybind_public_cp_api.py",
+          "additions": 63,
+          "deletions": 0,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/81dab23230cca76a6eec5f6cfb2f3be8351a5cab"
+    },
+    {
+      "sha": "2709faeaa5aaaaa9652477c56cab693d644be458",
+      "parents": [
+        "297dceb0ce15d60d96401a87a8f07f4b8e1b0f36"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "refactor: annotate the rotary cache and forward-context cp_context types.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 7,
+      "deletions": 3,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/layers/qwen3_5/gated_delta_net.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/rotary_embedding.py",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/forward_context.py",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2709faeaa5aaaaa9652477c56cab693d644be458"
+    },
+    {
+      "sha": "297dceb0ce15d60d96401a87a8f07f4b8e1b0f36",
+      "parents": [
+        "768a0471c5553e23a4444590d0e19abd2ed3710b"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "feat: add SFA C8 packed KV cache write/read path for GLM-5.2 python model.",
+      "type": "performance",
+      "module": "Model Support",
+      "additions": 177,
+      "deletions": 4,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 113,
+          "deletions": 4,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/__init__.py",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/kernels_npu/sparse_attention.py",
+          "additions": 60,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/297dceb0ce15d60d96401a87a8f07f4b8e1b0f36"
+    },
+    {
+      "sha": "768a0471c5553e23a4444590d0e19abd2ed3710b",
+      "parents": [
+        "5abc552b001e2620d4c4f46ab6ac7808086f8220"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "refactor: drop redundant zero-init buffer in Glm5NextExperts graph-friendly path.",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 1,
+      "deletions": 9,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/python/models/glm5_next.py",
+          "additions": 1,
+          "deletions": 9,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/768a0471c5553e23a4444590d0e19abd2ed3710b"
+    },
+    {
+      "sha": "5abc552b001e2620d4c4f46ab6ac7808086f8220",
+      "parents": [
+        "9657608d9fd6fe64d81a9b7903e71b7ac33253a2"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "bugfix: add deepseek v4 cp and dp execution paths.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 2215,
+      "deletions": 377,
+      "filesChanged": 27,
+      "files": [
+        {
+          "filename": "setup.py",
+          "additions": 2,
+          "deletions": 1,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_estimation_test.cpp",
+          "additions": 37,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/parallel_state/npu_cp_capability_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_csa_attention.py",
+          "additions": 314,
+          "deletions": 13,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 341,
+          "deletions": 4,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph_empty_dp.py",
+          "additions": 57,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_deepseek_v4_model.py",
+          "additions": 121,
+          "deletions": 7,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_dsa_metadata.py",
+          "additions": 18,
+          "deletions": 35,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 38,
+          "deletions": 16,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_v4_cp_context.py",
+          "additions": 213,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/config/parallel_config_validation.cpp",
+          "additions": 9,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_estimation.cpp",
+          "additions": 12,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/compressor.cpp",
+          "additions": 18,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_attention_metadata.cpp",
+          "additions": 15,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_attention_metadata.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 9,
+          "deletions": 6,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/attention/backend.py",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/csa_attention.py",
+          "additions": 444,
+          "deletions": 159,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/attention/dsa_metadata.py",
+          "additions": 31,
+          "deletions": 23,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/linear.py",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/layers/rotary_embedding.py",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/acl_graph.py",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 139,
+          "deletions": 11,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 11,
+          "deletions": 8,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/v4_cp_context.py",
+          "additions": 198,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_v4.py",
+          "additions": 141,
+          "deletions": 83,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5abc552b001e2620d4c4f46ab6ac7808086f8220"
+    },
+    {
+      "sha": "9657608d9fd6fe64d81a9b7903e71b7ac33253a2",
+      "parents": [
+        "c3ee4a3ddf2c25ac08154adf79cabb2f27c46597"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "bugfix: release decode reservations on prefill scheduling failure.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 956,
+      "deletions": 36,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 672,
+          "deletions": 11,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/disagg_pd_service_impl.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/request_state.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 192,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.h",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/disagg_pd.proto",
+          "additions": 19,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9657608d9fd6fe64d81a9b7903e71b7ac33253a2"
+    },
+    {
+      "sha": "c3ee4a3ddf2c25ac08154adf79cabb2f27c46597",
+      "parents": [
+        "70f5324e2bfdcecc15a3e7180d79c2d7eef1197b"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "feat: unify Qwen3.5 GDN execution with MegaGdn ops.",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 1608,
+      "deletions": 131,
+      "filesChanged": 30,
+      "files": [
+        {
+          "filename": "tests/core/framework/kv_cache/kv_cache_estimation_test.cpp",
+          "additions": 29,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_state_test.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/npu_xllm_ops_test.cpp",
+          "additions": 212,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/npu_torch/CMakeLists.txt",
+          "additions": 31,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/npu_torch/qwen3_5_gated_delta_net_indices_test.cpp",
+          "additions": 226,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_estimation.cpp",
+          "additions": 15,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/kv_cache/kv_cache_estimation.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/mega_gdn_constants.h",
+          "additions": 35,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_chunk_gdn.cpp",
+          "additions": 18,
+          "deletions": 24,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_gdn_decode.cpp",
+          "additions": 64,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_gdn_mtp_decode.cpp",
+          "additions": 66,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/npu_mega_gdn_prefill.cpp",
+          "additions": 134,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/xllm_ops_api.h",
+          "additions": 49,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 67,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 52,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/attention_metadata.h",
+          "additions": 21,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/common/rms_norm_gated.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_5_gated_delta_net.cpp",
+          "additions": 511,
+          "deletions": 83,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_5_gated_delta_net.h",
+          "additions": 17,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/npu_torch/qwen3_gated_delta_net_base.h",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 0,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c3ee4a3ddf2c25ac08154adf79cabb2f27c46597"
+    },
+    {
+      "sha": "70f5324e2bfdcecc15a3e7180d79c2d7eef1197b",
+      "parents": [
+        "de4a82b64a88d859a3f843ee733bbd435062be3c"
+      ],
+      "pr": "",
+      "date": "2026-10-04T14:17:47+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "xllm-org",
+        "email": "org.xllm1@jd.com"
+      },
+      "title": "bugfix: fix logits not implemented fatal in cp speculative prefill.",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 133,
+      "deletions": 10,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/framework/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/causal_lm_test.cpp",
+          "additions": 111,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/causal_lm.h",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/causal_vlm.h",
+          "additions": 1,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/70f5324e2bfdcecc15a3e7180d79c2d7eef1197b"
+    },
+    {
+      "sha": "de4a82b64a88d859a3f843ee733bbd435062be3c",
+      "parents": [
+        "fe4488547f3311cca5d01b5f291beaa6cf626558"
+      ],
+      "pr": "",
+      "date": "2026-10-04T12:38:39+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: rename dist manager to distributed worker manager.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 276,
+      "deletions": 257,
+      "filesChanged": 15,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dist_manager.h",
+          "additions": 0,
+          "deletions": 61,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{dist_manager.cpp => distributed_worker_manager.cpp}",
+          "additions": 119,
+          "deletions": 134,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_worker_manager.h",
+          "additions": 60,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dit_engine.cpp",
+          "additions": 11,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dit_engine.h",
+          "additions": 9,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 10,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.h",
+          "additions": 9,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.cpp",
+          "additions": 19,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.h",
+          "additions": 12,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_master.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 10,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.h",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/de4a82b64a88d859a3f843ee733bbd435062be3c"
+    },
+    {
+      "sha": "fe4488547f3311cca5d01b5f291beaa6cf626558",
+      "parents": [
+        "31980af901669c1d77251889a9dc756deab8e022"
+      ],
+      "pr": "2423",
+      "date": "2026-10-04T11:13:31+08:00",
+      "dateKey": "2026-10-04",
+      "author": {
+        "name": "oleanderrr",
+        "email": "oleanderr@qq.com"
+      },
+      "title": "feat: support prefill CP in task pipeline. (#2423)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 350,
+      "deletions": 45,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 122,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 106,
+          "deletions": 13,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_npu_paged_attention.py",
+          "additions": 33,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 6,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 14,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 10,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 22,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 13,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/prepared_acl_graph.py",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fe4488547f3311cca5d01b5f291beaa6cf626558"
+    },
     {
       "sha": "31980af901669c1d77251889a9dc756deab8e022",
       "parents": [
