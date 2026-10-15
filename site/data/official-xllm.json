@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T21:04:10.895Z",
+  "generatedAt": "2026-10-15T20:38:50.784Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1859,
+    "commits": 1874,
     "contributors": 127,
-    "additions": 1035555,
-    "deletions": 295639,
-    "filesChanged": 29168,
+    "additions": 1037174,
+    "deletions": 295989,
+    "filesChanged": 29199,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-10-14",
+    "latestDate": "2026-10-15",
     "topAuthors": [
       {
         "name": "xllm-org",
@@ -24,18 +24,18 @@
         "files": 2063
       },
       {
+        "name": "Tongxuan Liu",
+        "commits": 148,
+        "additions": 69642,
+        "deletions": 39493,
+        "files": 2961
+      },
+      {
         "name": "Xu Zhang",
         "commits": 138,
         "additions": 78535,
         "deletions": 34865,
         "files": 2327
-      },
-      {
-        "name": "Tongxuan Liu",
-        "commits": 133,
-        "additions": 68023,
-        "deletions": 39143,
-        "files": 2930
       },
       {
         "name": "phantomlei",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Inference Engine",
-        "count": 176
+        "count": 177
       },
       {
         "key": "Spec Decode",
@@ -120,11 +120,11 @@
       },
       {
         "key": "Model Support",
-        "count": 142
+        "count": 143
       },
       {
         "key": "xllm/core",
-        "count": 112
+        "count": 117
       },
       {
         "key": "Engineering",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Device Backend",
-        "count": 81
+        "count": 82
       },
       {
         "key": "xllm/api_service",
@@ -144,11 +144,11 @@
       },
       {
         "key": "Testing",
-        "count": 25
+        "count": 30
       },
       {
         "key": "tests/core",
-        "count": 22
+        "count": 24
       }
     ],
     "typeBreakdown": [
@@ -158,7 +158,7 @@
       },
       {
         "key": "bugfix",
-        "count": 535
+        "count": 538
       },
       {
         "key": "refactor",
@@ -166,7 +166,7 @@
       },
       {
         "key": "performance",
-        "count": 285
+        "count": 293
       },
       {
         "key": "other",
@@ -174,7 +174,7 @@
       },
       {
         "key": "test",
-        "count": 30
+        "count": 34
       },
       {
         "key": "docs",
@@ -507,7 +507,8 @@
     "2026-10-11",
     "2026-10-12",
     "2026-10-13",
-    "2026-10-14"
+    "2026-10-14",
+    "2026-10-15"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1416,6 +1417,584 @@
     }
   },
   "commits": [
+    {
+      "sha": "f5283a6bf1d844864afb87e78fa17a10c6e00ba1",
+      "parents": [
+        "63991bd0ccf3d2cf8141851668b996f471195055"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: handle empty mrope partitions in threaded input preparation.",
+      "type": "bugfix",
+      "module": "tests/core",
+      "additions": 73,
+      "deletions": 16,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 55,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/forward_input_builder.cpp",
+          "additions": 10,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/forward_input_factory_benchmark.cpp",
+          "additions": 8,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "tests-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f5283a6bf1d844864afb87e78fa17a10c6e00ba1"
+    },
+    {
+      "sha": "63991bd0ccf3d2cf8141851668b996f471195055",
+      "parents": [
+        "ab2e0d3e7baa77b1f5da8e087a70b58fb344e7f0"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: cover forward input preparation regressions.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 285,
+      "deletions": 3,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 149,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/batch/forward_input_factory_test.cpp",
+          "additions": 136,
+          "deletions": 3,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/63991bd0ccf3d2cf8141851668b996f471195055"
+    },
+    {
+      "sha": "ab2e0d3e7baa77b1f5da8e087a70b58fb344e7f0",
+      "parents": [
+        "1b23fb2c2d921749997e9fd99f7bc93872c5d750"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: reuse forward input output storage.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 22,
+      "deletions": 4,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/forward_input_factory.cpp",
+          "additions": 22,
+          "deletions": 4,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ab2e0d3e7baa77b1f5da8e087a70b58fb344e7f0"
+    },
+    {
+      "sha": "1b23fb2c2d921749997e9fd99f7bc93872c5d750",
+      "parents": [
+        "6fa65453e9b983334c50d07b3c6f11a83b4803d5"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: optimize forward input builder allocations.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 117,
+      "deletions": 89,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/forward_input_builder.cpp",
+          "additions": 110,
+          "deletions": 76,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/forward_input_builder.h",
+          "additions": 7,
+          "deletions": 13,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1b23fb2c2d921749997e9fd99f7bc93872c5d750"
+    },
+    {
+      "sha": "6fa65453e9b983334c50d07b3c6f11a83b4803d5",
+      "parents": [
+        "bb20aabc6b9c5437fd05e4f24518cb3c1a70d3f7"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: avoid redundant tensor allocation.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 1,
+      "deletions": 3,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/util/tensor_helper.h",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6fa65453e9b983334c50d07b3c6f11a83b4803d5"
+    },
+    {
+      "sha": "bb20aabc6b9c5437fd05e4f24518cb3c1a70d3f7",
+      "parents": [
+        "c6623f1b762b7c8d17670cf1f7996871784a6029"
+      ],
+      "pr": "",
+      "date": "2026-10-15T19:33:34+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: add forward input factory benchmark.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 390,
+      "deletions": 0,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/CMakeLists.txt",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/forward_input_factory_benchmark.cpp",
+          "additions": 366,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/bb20aabc6b9c5437fd05e4f24518cb3c1a70d3f7"
+    },
+    {
+      "sha": "c6623f1b762b7c8d17670cf1f7996871784a6029",
+      "parents": [
+        "33c5c8ab22d8a88bcc94149d6edfcdeca4f79f2b"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: isolate batch factory benchmarks from device startup.",
+      "type": "bugfix",
+      "module": "Device Backend",
+      "additions": 304,
+      "deletions": 173,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/CMakeLists.txt",
+          "additions": 29,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 48,
+          "deletions": 172,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_factory_benchmark.cpp",
+          "additions": 227,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "device-backend",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c6623f1b762b7c8d17670cf1f7996871784a6029"
+    },
+    {
+      "sha": "33c5c8ab22d8a88bcc94149d6edfcdeca4f79f2b",
+      "parents": [
+        "906ab86fb0f0905e2101ed11dad2ceeb2392f950"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: isolate batch factory benchmark timing.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 3,
+      "deletions": 7,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 3,
+          "deletions": 7,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/33c5c8ab22d8a88bcc94149d6edfcdeca4f79f2b"
+    },
+    {
+      "sha": "906ab86fb0f0905e2101ed11dad2ceeb2392f950",
+      "parents": [
+        "a7c1e606d717b88e0f75ea8ca4a1d2ebc821708e"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: inline sequence kv cache token access.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 1,
+      "deletions": 5,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.cpp",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence_kv_state.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/906ab86fb0f0905e2101ed11dad2ceeb2392f950"
+    },
+    {
+      "sha": "a7c1e606d717b88e0f75ea8ca4a1d2ebc821708e",
+      "parents": [
+        "52acd5a43252eedc6cc07bde9d7a2b3685863d33"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: skip undefined batch embedding handles.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 2,
+      "deletions": 3,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_state.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a7c1e606d717b88e0f75ea8ca4a1d2ebc821708e"
+    },
+    {
+      "sha": "52acd5a43252eedc6cc07bde9d7a2b3685863d33",
+      "parents": [
+        "7a659e174769107f9cc76066178f32d64b97d72c"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: remove redundant batch assembly work.",
+      "type": "performance",
+      "module": "tests/core",
+      "additions": 190,
+      "deletions": 30,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_factory_test.cpp",
+          "additions": 179,
+          "deletions": 24,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_builder.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_state.cpp",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "tests-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/52acd5a43252eedc6cc07bde9d7a2b3685863d33"
+    },
+    {
+      "sha": "7a659e174769107f9cc76066178f32d64b97d72c",
+      "parents": [
+        "92cd1fbd6c3d47214b05318f01e36aff3b725cce"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: extend llm batch assembly benchmark scenarios.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 90,
+      "deletions": 11,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 90,
+          "deletions": 11,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/7a659e174769107f9cc76066178f32d64b97d72c"
+    },
+    {
+      "sha": "92cd1fbd6c3d47214b05318f01e36aff3b725cce",
+      "parents": [
+        "354e79df796435f9872be30a160bc75b7ac8596a"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: reduce redundant batch assembly allocations.",
+      "type": "performance",
+      "module": "xllm/core",
+      "additions": 39,
+      "deletions": 3,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_builder.cpp",
+          "additions": 17,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_state.cpp",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_state.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/sequence.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "xllm-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/92cd1fbd6c3d47214b05318f01e36aff3b725cce"
+    },
+    {
+      "sha": "354e79df796435f9872be30a160bc75b7ac8596a",
+      "parents": [
+        "c891217022f28bd0861431195f95606f920b60b4"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: initialize batch benchmark model arguments.",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 3,
+      "deletions": 3,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/354e79df796435f9872be30a160bc75b7ac8596a"
+    },
+    {
+      "sha": "c891217022f28bd0861431195f95606f920b60b4",
+      "parents": [
+        "cbc03ff72c826a9b443d055f29f08ec8f2ecfe50"
+      ],
+      "pr": "",
+      "date": "2026-10-15T16:33:39+08:00",
+      "dateKey": "2026-10-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: add llm batch factory benchmark.",
+      "type": "performance",
+      "module": "Testing",
+      "additions": 99,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/framework/batch/batch_benchmark.cpp",
+          "additions": 99,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c891217022f28bd0861431195f95606f920b60b4"
+    },
     {
       "sha": "cbc03ff72c826a9b443d055f29f08ec8f2ecfe50",
       "parents": [
