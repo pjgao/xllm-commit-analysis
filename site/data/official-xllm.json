@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T20:11:40.222Z",
+  "generatedAt": "2026-10-17T19:47:27.769Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1907,
+    "commits": 1911,
     "contributors": 127,
-    "additions": 1058501,
-    "deletions": 301395,
-    "filesChanged": 29506,
+    "additions": 1058948,
+    "deletions": 302254,
+    "filesChanged": 29561,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-10-16",
+    "latestDate": "2026-10-17",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
@@ -116,7 +116,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 170
+        "count": 171
       },
       {
         "key": "Model Support",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Engineering",
-        "count": 100
+        "count": 101
       },
       {
         "key": "Device Backend",
@@ -144,7 +144,7 @@
       },
       {
         "key": "Testing",
-        "count": 31
+        "count": 33
       },
       {
         "key": "tests/core",
@@ -158,11 +158,11 @@
       },
       {
         "key": "bugfix",
-        "count": 549
+        "count": 550
       },
       {
         "key": "refactor",
-        "count": 328
+        "count": 331
       },
       {
         "key": "performance",
@@ -509,7 +509,8 @@
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-17"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1418,6 +1419,443 @@
     }
   },
   "commits": [
+    {
+      "sha": "9cb007246fde484069741e55ffecff19ca6af410",
+      "parents": [
+        "2eb294f1cf04e5e1e2df21994d9a904ccbc0cfcd"
+      ],
+      "pr": "",
+      "date": "2026-10-17T15:46:20+08:00",
+      "dateKey": "2026-10-17",
+      "author": {
+        "name": "zhangxu.709",
+        "email": "zhangxu.709@jd.com"
+      },
+      "title": "docs: simplify developer guide navigation and titles.",
+      "type": "refactor",
+      "module": "Engineering",
+      "additions": 47,
+      "deletions": 79,
+      "filesChanged": 27,
+      "files": [
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 10,
+          "deletions": 10,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/cpp_framework_python_model_architecture.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/generative_recommendation_design.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/design/graph_mode_design.md",
+          "additions": 2,
+          "deletions": 4,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/accuracy_testing.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/ai_coding_workflow.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/auto_config_dev.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/code_arch.md",
+          "additions": 3,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/online_profiling.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/performance_testing.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/graph_mode.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/nvidia_gpu.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/cpp_framework_python_model_architecture.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/generative_recommendation_design.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/design/graph_mode_design.md",
+          "additions": 2,
+          "deletions": 4,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/accuracy_testing.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/ai_coding_workflow.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/auto_config_dev.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/code_arch.md",
+          "additions": 3,
+          "deletions": 5,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/online_profiling.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/performance_testing.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/tilelang_ascend_kernel_dev.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/graph_mode.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/nvidia_gpu.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "engineering",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9cb007246fde484069741e55ffecff19ca6af410"
+    },
+    {
+      "sha": "2eb294f1cf04e5e1e2df21994d9a904ccbc0cfcd",
+      "parents": [
+        "cb88b2777e3f33bf81b6f7bc899edeb7e28b9d56"
+      ],
+      "pr": "2498",
+      "date": "2026-10-17T14:11:47+08:00",
+      "dateKey": "2026-10-17",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: move speculative verification sampling into the rejection sampler. (#2498)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 378,
+      "deletions": 763,
+      "filesChanged": 25,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_test.cpp",
+          "additions": 6,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/rejection_sampler_test.cpp",
+          "additions": 63,
+          "deletions": 65,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/spec_metrics_test.cpp",
+          "additions": 50,
+          "deletions": 21,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/draft_proposal.h",
+          "additions": 2,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.cpp",
+          "additions": 75,
+          "deletions": 68,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.h",
+          "additions": 2,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampler.cpp",
+          "additions": 38,
+          "deletions": 20,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampler.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.cpp",
+          "additions": 5,
+          "deletions": 163,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.h",
+          "additions": 10,
+          "deletions": 43,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_verify.cpp",
+          "additions": 2,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/spec_verify.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 10,
+          "deletions": 70,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 2,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 8,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 6,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 37,
+          "deletions": 174,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/suffix_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 28,
+          "deletions": 49,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_forward_params.h",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_worker_impl.cpp",
+          "additions": 11,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2eb294f1cf04e5e1e2df21994d9a904ccbc0cfcd"
+    },
+    {
+      "sha": "cb88b2777e3f33bf81b6f7bc899edeb7e28b9d56",
+      "parents": [
+        "2d858d88235a941d2a7c8d59303acc21aa20fb11"
+      ],
+      "pr": "",
+      "date": "2026-10-17T08:24:41+08:00",
+      "dateKey": "2026-10-17",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "test: fix data race on the blocking counter call count.",
+      "type": "bugfix",
+      "module": "Testing",
+      "additions": 7,
+      "deletions": 6,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/core/util/blocking_counter_test.cpp",
+          "additions": 7,
+          "deletions": 6,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cb88b2777e3f33bf81b6f7bc899edeb7e28b9d56"
+    },
+    {
+      "sha": "2d858d88235a941d2a7c8d59303acc21aa20fb11",
+      "parents": [
+        "7e996779eea2606aa2a88cbd5c6062e13eb498a9"
+      ],
+      "pr": "",
+      "date": "2026-10-17T08:24:41+08:00",
+      "dateKey": "2026-10-17",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "test: use threadsafe death test style for packed sample count checks.",
+      "type": "refactor",
+      "module": "Testing",
+      "additions": 15,
+      "deletions": 11,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/framework/batch/batch_packed_input_test.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/blocking_counter_test.cpp",
+          "additions": 13,
+          "deletions": 11,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2d858d88235a941d2a7c8d59303acc21aa20fb11"
+    },
     {
       "sha": "7e996779eea2606aa2a88cbd5c6062e13eb498a9",
       "parents": [
