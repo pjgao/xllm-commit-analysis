@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T20:58:49.246Z",
+  "generatedAt": "2026-10-22T20:57:04.176Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 1988,
+    "commits": 1999,
     "contributors": 130,
-    "additions": 1119174,
-    "deletions": 316115,
-    "filesChanged": 31088,
+    "additions": 1128500,
+    "deletions": 320126,
+    "filesChanged": 31300,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-10-21",
+    "latestDate": "2026-10-22",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 207,
-        "additions": 101831,
-        "deletions": 48792,
-        "files": 3902
+        "commits": 212,
+        "additions": 104341,
+        "deletions": 49023,
+        "files": 3966
       },
       {
         "name": "xllm-org",
@@ -32,10 +32,10 @@
       },
       {
         "name": "Xu Zhang",
-        "commits": 147,
-        "additions": 84183,
-        "deletions": 35854,
-        "files": 2448
+        "commits": 148,
+        "additions": 85428,
+        "deletions": 36615,
+        "files": 2472
       },
       {
         "name": "phantomlei",
@@ -73,18 +73,18 @@
         "files": 567
       },
       {
+        "name": "PixelFlat",
+        "commits": 60,
+        "additions": 34723,
+        "deletions": 6561,
+        "files": 614
+      },
+      {
         "name": "yq33victor",
         "commits": 60,
         "additions": 11351,
         "deletions": 8847,
         "files": 669
-      },
-      {
-        "name": "PixelFlat",
-        "commits": 56,
-        "additions": 30898,
-        "deletions": 3551,
-        "files": 500
       },
       {
         "name": "Zhang Minchao",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 651
+        "count": 654
       },
       {
         "key": "Inference Engine",
-        "count": 206
+        "count": 208
       },
       {
         "key": "NPU Backend",
@@ -116,11 +116,11 @@
       },
       {
         "key": "Spec Decode",
-        "count": 184
+        "count": 186
       },
       {
         "key": "Model Support",
-        "count": 145
+        "count": 146
       },
       {
         "key": "xllm/core",
@@ -132,7 +132,7 @@
       },
       {
         "key": "Device Backend",
-        "count": 83
+        "count": 85
       },
       {
         "key": "xllm/api_service",
@@ -148,25 +148,25 @@
       },
       {
         "key": "tests/core",
-        "count": 35
+        "count": 36
       }
     ],
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 625
+        "count": 627
       },
       {
         "key": "bugfix",
-        "count": 580
+        "count": 583
       },
       {
         "key": "refactor",
-        "count": 345
+        "count": 347
       },
       {
         "key": "performance",
-        "count": 314
+        "count": 317
       },
       {
         "key": "other",
@@ -178,7 +178,7 @@
       },
       {
         "key": "docs",
-        "count": 25
+        "count": 26
       },
       {
         "key": "chore",
@@ -514,7 +514,8 @@
     "2026-10-18",
     "2026-10-19",
     "2026-10-20",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-10-22"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1423,6 +1424,1579 @@
     }
   },
   "commits": [
+    {
+      "sha": "e0ef96fb0f40191db397fe5497c62a1226723764",
+      "parents": [
+        "e018cabce2487fae5c8461cadcad368dbbce7410"
+      ],
+      "pr": "",
+      "date": "2026-10-22T20:45:50+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "docs: refactor bilingual hardware deployment guides.",
+      "type": "refactor",
+      "module": "Device Backend",
+      "additions": 1245,
+      "deletions": 761,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 6,
+          "deletions": 6,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/launch_xllm.md",
+          "additions": 23,
+          "deletions": 10,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/getting_started/quick_start.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/ascend_npu.md",
+          "additions": 117,
+          "deletions": 71,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/cambricon_mlu.md",
+          "additions": 80,
+          "deletions": 59,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/dcu.md",
+          "additions": 0,
+          "deletions": 78,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/hygon_dcu.md",
+          "additions": 120,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/metax_maca.md",
+          "additions": 93,
+          "deletions": 53,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/musa.md",
+          "additions": 82,
+          "deletions": 40,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/nvidia_gpu.md",
+          "additions": 88,
+          "deletions": 48,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/hardware/overview.md",
+          "additions": 11,
+          "deletions": 14,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/launch_xllm.md",
+          "additions": 23,
+          "deletions": 10,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/getting_started/quick_start.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/ascend_npu.md",
+          "additions": 117,
+          "deletions": 71,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/cambricon_mlu.md",
+          "additions": 80,
+          "deletions": 55,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/dcu.md",
+          "additions": 0,
+          "deletions": 78,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/hygon_dcu.md",
+          "additions": 120,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/metax_maca.md",
+          "additions": 93,
+          "deletions": 53,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/musa.md",
+          "additions": 82,
+          "deletions": 40,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/nvidia_gpu.md",
+          "additions": 91,
+          "deletions": 49,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/hardware/overview.md",
+          "additions": 11,
+          "deletions": 14,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/data/hardware.ts",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "device-backend",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e0ef96fb0f40191db397fe5497c62a1226723764"
+    },
+    {
+      "sha": "e018cabce2487fae5c8461cadcad368dbbce7410",
+      "parents": [
+        "a0cccf3a366ce1411be6e157755fc42163447f26"
+      ],
+      "pr": "2547",
+      "date": "2026-10-22T20:43:11+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "docs: add bilingual xLLM Service user guide. (#2547)",
+      "type": "docs",
+      "module": "Model Support",
+      "additions": 753,
+      "deletions": 110,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "docs/astro.config.mjs",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/astro.config.mjs"
+        },
+        {
+          "filename": "docs/src/content/docs/en/cookbook/autoregressive_models/glm/glm_5.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/disagg_pd.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/xllm_service_overview.md",
+          "additions": 0,
+          "deletions": 54,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/xllm_service/getting_started.md",
+          "additions": 120,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/xllm_service/kv_events.md",
+          "additions": 177,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/xllm_service/overview.md",
+          "additions": 31,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cookbook/autoregressive_models/glm/glm_5.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/disagg_pd.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/xllm_service_overview.md",
+          "additions": 0,
+          "deletions": 50,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/xllm_service/getting_started.md",
+          "additions": 120,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/xllm_service/kv_events.md",
+          "additions": 260,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/xllm_service/overview.md",
+          "additions": 31,
+          "deletions": 0,
+          "module": "docs/src"
+        }
+      ],
+      "tags": [
+        "docs",
+        "model-support",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e018cabce2487fae5c8461cadcad368dbbce7410"
+    },
+    {
+      "sha": "a0cccf3a366ce1411be6e157755fc42163447f26",
+      "parents": [
+        "fddf84eaf4dd53ef8ed5712dccd4b9f033e7a533"
+      ],
+      "pr": "",
+      "date": "2026-10-22T18:46:50+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "refactor: remove legacy adaptive speculation and rename pruning option.",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 306,
+      "deletions": 2788,
+      "filesChanged": 67,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/adaptive_dspark.md",
+          "additions": 5,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/adaptive_dspark.md",
+          "additions": 5,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/distributed_worker_manager_test.cpp",
+          "additions": 0,
+          "deletions": 42,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 64,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 25,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/adaptive_speculative_controller_test.cpp",
+          "additions": 0,
+          "deletions": 106,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_input_builder_test.cpp",
+          "additions": 9,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/speculative_profile_registry_test.cpp",
+          "additions": 0,
+          "deletions": 70,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_decode_metadata_test.cpp",
+          "additions": 38,
+          "deletions": 41,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/profile/profile_graph_warmup_test.cpp",
+          "additions": 4,
+          "deletions": 82,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 0,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.h",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_worker_manager.cpp",
+          "additions": 0,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_worker_manager.h",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 30,
+          "deletions": 31,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.h",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 0,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.h",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.cpp",
+          "additions": 20,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/speculative_config.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/dflash2_sampling.cpp",
+          "additions": 1,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/dflash2_sampling.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/logits_utils.h",
+          "additions": 0,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampling_params.h",
+          "additions": 0,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.cpp",
+          "additions": 0,
+          "deletions": 251,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_pruning_helpers.h",
+          "additions": 0,
+          "deletions": 80,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.cpp",
+          "additions": 0,
+          "deletions": 206,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/adaptive_speculative_controller.h",
+          "additions": 0,
+          "deletions": 48,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/speculative_profile_registry.cpp",
+          "additions": 0,
+          "deletions": 70,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/speculative_profile_registry.h",
+          "additions": 0,
+          "deletions": 51,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash2_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.cpp",
+          "additions": 20,
+          "deletions": 292,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dflash_worker_impl.h",
+          "additions": 4,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 60,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.h",
+          "additions": 0,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 62,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/eagle3_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 49,
+          "deletions": 565,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 12,
+          "deletions": 53,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/options.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 2,
+          "deletions": 119,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 0,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/suffix_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/unified_mtp_worker_impl.cpp",
+          "additions": 10,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/unified_mtp_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 10,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.h",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.h",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 1,
+          "deletions": 172,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.h",
+          "additions": 0,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/time_predictor.cpp",
+          "additions": 0,
+          "deletions": 54,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/time_predictor.h",
+          "additions": 0,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4_dspark.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/npu/qwen3_dspark.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 0,
+          "deletions": 9,
+          "module": "xllm/proto"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a0cccf3a366ce1411be6e157755fc42163447f26"
+    },
+    {
+      "sha": "fddf84eaf4dd53ef8ed5712dccd4b9f033e7a533",
+      "parents": [
+        "9aaac09ea3f24c747c0e74f44d1250dc94c78d26"
+      ],
+      "pr": "",
+      "date": "2026-10-22T17:45:09+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "feat: support adaptive dspark unified graph execution.",
+      "type": "feature",
+      "module": "Spec Decode",
+      "additions": 2359,
+      "deletions": 80,
+      "filesChanged": 24,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/features/adaptive_dspark.md",
+          "additions": 16,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/adaptive_dspark.md",
+          "additions": 13,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/framework/speculative/dspark/dspark_budget_planner_test.cpp",
+          "additions": 106,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/speculative/dspark/dspark_startup_calibration_test.cpp",
+          "additions": 65,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 394,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_pipeline_test_peer.h",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_adaptive_unified_block_acl_graph.py",
+          "additions": 514,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_prepared_acl_graph.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_unified_block_acl_graph.py",
+          "additions": 160,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/dspark/dspark_budget_planner.cpp",
+          "additions": 55,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/dspark/dspark_budget_planner.h",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/dspark/dspark_startup_calibration.cpp",
+          "additions": 33,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/dspark/dspark_startup_calibration.h",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_startup_calibration.cpp",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.cpp",
+          "additions": 20,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor.h",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/executor_impl.h",
+          "additions": 31,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 108,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.h",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 319,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/dspark_startup_calibration.cpp",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/unified_block_acl_graph.py",
+          "additions": 445,
+          "deletions": 53,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fddf84eaf4dd53ef8ed5712dccd4b9f033e7a533"
+    },
+    {
+      "sha": "9aaac09ea3f24c747c0e74f44d1250dc94c78d26",
+      "parents": [
+        "60bea5eb6138653db00719a4786f290364b997c9"
+      ],
+      "pr": "",
+      "date": "2026-10-22T17:45:09+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "PixelFlat",
+        "email": "329975279+PixelFlat@users.noreply.github.com"
+      },
+      "title": "feat: support stochastic targets in adaptive dspark verification.",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 407,
+      "deletions": 32,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/adaptive_dspark.md",
+          "additions": 26,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/adaptive_dspark.md",
+          "additions": 19,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/framework/sampling/sampler_controls_test.cpp",
+          "additions": 157,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 87,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.cpp",
+          "additions": 60,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/rejection_sampler.h",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 41,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/profile/profile_manager.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9aaac09ea3f24c747c0e74f44d1250dc94c78d26"
+    },
+    {
+      "sha": "60bea5eb6138653db00719a4786f290364b997c9",
+      "parents": [
+        "fc58e6ac129b1dd13e8b298a392d75f325c808fa"
+      ],
+      "pr": "2544",
+      "date": "2026-10-22T17:24:14+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "AII",
+        "email": "aii1275438796@gmail.com"
+      },
+      "title": "perf: accelerate CUDA logits filtering with exact radix selection. (#2544)",
+      "type": "performance",
+      "module": "Device Backend",
+      "additions": 1746,
+      "deletions": 9,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/framework/sampling/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/sampling/cuda_logits_transform_test.cpp",
+          "additions": 627,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/sampler.cpp",
+          "additions": 38,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/CMakeLists.txt",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fused_logits_transform.cu",
+          "additions": 948,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fused_logits_transform.h",
+          "additions": 34,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/dcu/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 56,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.h",
+          "additions": 7,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "device-backend",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/60bea5eb6138653db00719a4786f290364b997c9"
+    },
+    {
+      "sha": "fc58e6ac129b1dd13e8b298a392d75f325c808fa",
+      "parents": [
+        "b453092e18bc108d59fed0b8a9f1583a7697acf9"
+      ],
+      "pr": "",
+      "date": "2026-10-22T16:03:35+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: drain worker execution before releasing cache storage.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 423,
+      "deletions": 47,
+      "filesChanged": 25,
+      "files": [
+        {
+          "filename": "tests/core/runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 0,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/worker_shutdown_test.cpp",
+          "additions": 264,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/profile/profile_graph_warmup_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 11,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_state.cpp",
+          "additions": 0,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/batch/batch_state.h",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/transfer/kv_cache_transfer.cpp",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/transfer/kv_cache_transfer.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 1,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/speculative_worker_impl.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 17,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 59,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/server/xllm_server.cpp",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/server"
+        },
+        {
+          "filename": "xllm/server/xllm_server.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/server"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fc58e6ac129b1dd13e8b298a392d75f325c808fa"
+    },
+    {
+      "sha": "b453092e18bc108d59fed0b8a9f1583a7697acf9",
+      "parents": [
+        "87a538cb7298d8c0b12568226d394a7d5ec7d9af"
+      ],
+      "pr": "",
+      "date": "2026-10-22T16:03:35+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: harden VMM page allocation and teardown.",
+      "type": "bugfix",
+      "module": "tests/core",
+      "additions": 570,
+      "deletions": 43,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/kv_cache/storage/vmm_kv_page_allocator_impl_test.cpp",
+          "additions": 403,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/kv_cache_page_backend.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/vmm_kv_page_allocator_impl.cpp",
+          "additions": 133,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/vmm_kv_page_allocator_impl.h",
+          "additions": 23,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "tests-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b453092e18bc108d59fed0b8a9f1583a7697acf9"
+    },
+    {
+      "sha": "87a538cb7298d8c0b12568226d394a7d5ec7d9af",
+      "parents": [
+        "8786eeca899f9a5a58353938f29cc58cf4884873"
+      ],
+      "pr": "",
+      "date": "2026-10-22T16:03:35+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: validate VMM block releases and shorten lock scopes.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 395,
+      "deletions": 42,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/composite_block_manager_test.cpp",
+          "additions": 124,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kv_cache/block/virtual_kv_cache_page_state_test.cpp",
+          "additions": 160,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/vmm_kv_block_manager.cpp",
+          "additions": 47,
+          "deletions": 35,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/vmm_kv_block_manager.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/virtual_kv_cache_page_state.cpp",
+          "additions": 60,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/virtual_kv_cache_page_state.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/87a538cb7298d8c0b12568226d394a7d5ec7d9af"
+    },
+    {
+      "sha": "8786eeca899f9a5a58353938f29cc58cf4884873",
+      "parents": [
+        "f4f7bf8ba14d5362c805772c36739b25f9710e8e"
+      ],
+      "pr": "",
+      "date": "2026-10-22T16:03:35+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: validate supported VMM cache configurations and offsets.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 78,
+      "deletions": 4,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/block_manager_test.cpp",
+          "additions": 33,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kv_cache/storage/virtual_kv_cache_memory_registry_test.cpp",
+          "additions": 24,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/kv_cache_manager_factory.cpp",
+          "additions": 11,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/virtual_kv_cache_memory_regions.cpp",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8786eeca899f9a5a58353938f29cc58cf4884873"
+    },
+    {
+      "sha": "f4f7bf8ba14d5362c805772c36739b25f9710e8e",
+      "parents": [
+        "e0e7af2a0d735036dcc402fd2362636d1495f468"
+      ],
+      "pr": "",
+      "date": "2026-10-22T16:03:35+08:00",
+      "dateKey": "2026-10-22",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: preserve VMM residency state across worker retries.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 1044,
+      "deletions": 95,
+      "filesChanged": 23,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/comm_channel_test.cpp",
+          "additions": 36,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/model_residency_coordinator_test.cpp",
+          "additions": 300,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 266,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/types.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master_manager.cpp",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/model_residency_coordinator.cpp",
+          "additions": 192,
+          "deletions": 59,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/model_residency_coordinator.h",
+          "additions": 21,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 13,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 3,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 23,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_residency_state.h",
+          "additions": 143,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f4f7bf8ba14d5362c805772c36739b25f9710e8e"
+    },
     {
       "sha": "e0e7af2a0d735036dcc402fd2362636d1495f468",
       "parents": [
