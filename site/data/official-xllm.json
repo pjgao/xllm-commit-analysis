@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T20:45:08.251Z",
+  "generatedAt": "2026-11-01T21:26:59.352Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2139,
+    "commits": 2148,
     "contributors": 131,
-    "additions": 1203625,
-    "deletions": 344578,
-    "filesChanged": 33202,
+    "additions": 1204373,
+    "deletions": 345101,
+    "filesChanged": 33272,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-10-31",
+    "latestDate": "2026-11-01",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 286,
-        "additions": 129195,
-        "deletions": 57744,
-        "files": 4690
+        "commits": 294,
+        "additions": 129857,
+        "deletions": 58266,
+        "files": 4758
       },
       {
         "name": "xllm-org",
@@ -32,10 +32,10 @@
       },
       {
         "name": "Xu Zhang",
-        "commits": 163,
-        "additions": 88938,
-        "deletions": 36985,
-        "files": 2590
+        "commits": 164,
+        "additions": 89024,
+        "deletions": 36986,
+        "files": 2592
       },
       {
         "name": "phantomlei",
@@ -104,19 +104,19 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 697
+        "count": 698
       },
       {
         "key": "Inference Engine",
-        "count": 219
+        "count": 225
       },
       {
         "key": "Spec Decode",
-        "count": 216
+        "count": 217
       },
       {
         "key": "NPU Backend",
-        "count": 214
+        "count": 215
       },
       {
         "key": "Model Support",
@@ -158,15 +158,15 @@
       },
       {
         "key": "bugfix",
-        "count": 617
+        "count": 618
       },
       {
         "key": "refactor",
-        "count": 384
+        "count": 387
       },
       {
         "key": "performance",
-        "count": 342
+        "count": 347
       },
       {
         "key": "other",
@@ -524,7 +524,8 @@
     "2026-10-28",
     "2026-10-29",
     "2026-10-30",
-    "2026-10-31"
+    "2026-10-31",
+    "2026-11-01"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1433,6 +1434,666 @@
     }
   },
   "commits": [
+    {
+      "sha": "c77a313bfdd59c0f6e312558808c0de7d2a8d019",
+      "parents": [
+        "303b87a2ecb10b35f56455cd2a5858fbc6ae2f8b"
+      ],
+      "pr": "",
+      "date": "2026-11-01T20:02:13+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: deduplicate block manager and runtime validation.",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 30,
+      "deletions": 89,
+      "filesChanged": 17,
+      "files": [
+        {
+          "filename": "xllm/core/common/flash_comm1_context.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/master.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/block_manager_pool.cpp",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/hierarchy_block_manager_pool.cpp",
+          "additions": 0,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/parallel_state/rank_generator.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/tilelang/greedy_prefix_verify_wrapper.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/block_manager_impl.cpp",
+          "additions": 13,
+          "deletions": 18,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/block_manager_impl.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/linear_state_block_manager.cpp",
+          "additions": 6,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/block/sliding_window_block_manager.cpp",
+          "additions": 3,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/cuda/flashinfer_attention.cpp",
+          "additions": 5,
+          "deletions": 9,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/deepseek_v2_decoder_layer_impl.cpp",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/cuda_graph_executor_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/mtp_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/musa_graph_executor_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/rec_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/c77a313bfdd59c0f6e312558808c0de7d2a8d019"
+    },
+    {
+      "sha": "303b87a2ecb10b35f56455cd2a5858fbc6ae2f8b",
+      "parents": [
+        "722ec21d8de7568b9156993ab06bf0a69ee7d59d"
+      ],
+      "pr": "",
+      "date": "2026-11-01T20:02:13+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: remove redundant checks in API and model processing.",
+      "type": "refactor",
+      "module": "NPU Backend",
+      "additions": 21,
+      "deletions": 74,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "xllm/api_service/anthropic_service_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/chat_service_impl.cpp",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/response_usage.h",
+          "additions": 0,
+          "deletions": 3,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/api_service/sample_service_impl.cpp",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/api_service"
+        },
+        {
+          "filename": "xllm/c_api/internal/helper.cpp",
+          "additions": 16,
+          "deletions": 44,
+          "module": "xllm/c_api"
+        },
+        {
+          "filename": "xllm/c_api/internal/llm.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/c_api"
+        },
+        {
+          "filename": "xllm/c_api/internal/rec.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/c_api"
+        },
+        {
+          "filename": "xllm/compiler/tilelang/common/spec.py",
+          "additions": 0,
+          "deletions": 4,
+          "module": "xllm/compiler"
+        },
+        {
+          "filename": "xllm/models/dit/utils/dit_parallel_linear.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4_dspark.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/rec/npu/onerec_npu_impl.h",
+          "additions": 1,
+          "deletions": 4,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/processors/cacheable_multimodal_processor.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/kimi25_image_processor.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/multimodal_processor.h",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/processors"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/303b87a2ecb10b35f56455cd2a5858fbc6ae2f8b"
+    },
+    {
+      "sha": "722ec21d8de7568b9156993ab06bf0a69ee7d59d",
+      "parents": [
+        "3da3ec4478e11ed11f7a8318ba2a70377cacd6c6"
+      ],
+      "pr": "2636",
+      "date": "2026-11-01T13:39:24+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "bugfix: preserve draft graph kv capacity during replay. (#2636)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 86,
+      "deletions": 1,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/python/test_npu_paged_attention_numerics.py",
+          "additions": 82,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/722ec21d8de7568b9156993ab06bf0a69ee7d59d"
+    },
+    {
+      "sha": "3da3ec4478e11ed11f7a8318ba2a70377cacd6c6",
+      "parents": [
+        "f329c59e34465c02a462471dc59e4226e6929c7a"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: skip idle KVCachePrefetcher work and batch wakeups.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 76,
+      "deletions": 46,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 47,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/fixed_steps_scheduler_test.cpp",
+          "additions": 8,
+          "deletions": 31,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/kv_cache_prefetcher.cpp",
+          "additions": 18,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/kv_cache_prefetcher.h",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3da3ec4478e11ed11f7a8318ba2a70377cacd6c6"
+    },
+    {
+      "sha": "f329c59e34465c02a462471dc59e4226e6929c7a",
+      "parents": [
+        "18ea92503e67d2076b3aa1e9766a71485438a092"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "style: label arguments in scheduler lifecycle test.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 8,
+      "deletions": 2,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 8,
+          "deletions": 2,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f329c59e34465c02a462471dc59e4226e6929c7a"
+    },
+    {
+      "sha": "18ea92503e67d2076b3aa1e9766a71485438a092",
+      "parents": [
+        "887bb145dc2637dc19f4fc906174426a2640e8b2"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: remove redundant scheduler prefetch drain wrappers.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 16,
+      "deletions": 18,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 6,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 5,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 2,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.cpp",
+          "additions": 3,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/18ea92503e67d2076b3aa1e9766a71485438a092"
+    },
+    {
+      "sha": "887bb145dc2637dc19f4fc906174426a2640e8b2",
+      "parents": [
+        "475366ba063af5221246cc9964005db41ca1bf6c"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: rename scheduler prefetch stage to KVCachePrefetcher.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 44,
+      "deletions": 42,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "xllm/core/scheduler/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 8,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 5,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.cpp",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 5,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/{storage_prefetch_stage.cpp => kv_cache_prefetcher.cpp}",
+          "additions": 11,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/{storage_prefetch_stage.h => kv_cache_prefetcher.h}",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/887bb145dc2637dc19f4fc906174426a2640e8b2"
+    },
+    {
+      "sha": "475366ba063af5221246cc9964005db41ca1bf6c",
+      "parents": [
+        "8b864aa8f17b5b7fd1885b4b630c134150aae4c9"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: name storage prefetch as a scheduler stage.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 42,
+      "deletions": 44,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "xllm/core/scheduler/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 8,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.cpp",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/{storage_prefetch_admission.cpp => storage_prefetch_stage.cpp}",
+          "additions": 11,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/{storage_prefetch_admission.h => storage_prefetch_stage.h}",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/475366ba063af5221246cc9964005db41ca1bf6c"
+    },
+    {
+      "sha": "8b864aa8f17b5b7fd1885b4b630c134150aae4c9",
+      "parents": [
+        "78892a26e87b6ac0b49eae9431ab56c65a0d63e2"
+      ],
+      "pr": "",
+      "date": "2026-11-01T11:16:40+08:00",
+      "dateKey": "2026-11-01",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: bypass scheduler prefetch admission when disabled.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 425,
+      "deletions": 207,
+      "filesChanged": 12,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 48,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 49,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/fixed_steps_scheduler_test.cpp",
+          "additions": 46,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.cpp",
+          "additions": 26,
+          "deletions": 88,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/continuous_scheduler.h",
+          "additions": 12,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/disagg_pd_scheduler.h",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.cpp",
+          "additions": 24,
+          "deletions": 90,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/fixed_steps_scheduler.h",
+          "additions": 12,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/storage_prefetch_admission.cpp",
+          "additions": 133,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/storage_prefetch_admission.h",
+          "additions": 69,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8b864aa8f17b5b7fd1885b4b630c134150aae4c9"
+    },
     {
       "sha": "78892a26e87b6ac0b49eae9431ab56c65a0d63e2",
       "parents": [
