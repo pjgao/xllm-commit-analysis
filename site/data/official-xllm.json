@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T00:09:12.479Z",
+  "generatedAt": "2026-11-03T22:39:49.500Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2166,
+    "commits": 2174,
     "contributors": 131,
-    "additions": 1212803,
-    "deletions": 349328,
-    "filesChanged": 33604,
+    "additions": 1216372,
+    "deletions": 350532,
+    "filesChanged": 33702,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-02",
+    "latestDate": "2026-11-03",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 295,
-        "additions": 130290,
-        "deletions": 58358,
-        "files": 4773
+        "commits": 300,
+        "additions": 133011,
+        "deletions": 58885,
+        "files": 4826
       },
       {
         "name": "xllm-org",
@@ -32,10 +32,10 @@
       },
       {
         "name": "Xu Zhang",
-        "commits": 166,
-        "additions": 90781,
-        "deletions": 38718,
-        "files": 2651
+        "commits": 168,
+        "additions": 91578,
+        "deletions": 39299,
+        "files": 2677
       },
       {
         "name": "phantomlei",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 706
+        "count": 709
       },
       {
         "key": "Inference Engine",
-        "count": 226
+        "count": 229
       },
       {
         "key": "Spec Decode",
@@ -120,7 +120,7 @@
       },
       {
         "key": "Model Support",
-        "count": 159
+        "count": 160
       },
       {
         "key": "xllm/core",
@@ -128,7 +128,7 @@
       },
       {
         "key": "Engineering",
-        "count": 111
+        "count": 112
       },
       {
         "key": "Device Backend",
@@ -158,15 +158,15 @@
       },
       {
         "key": "bugfix",
-        "count": 619
+        "count": 625
       },
       {
         "key": "refactor",
-        "count": 391
+        "count": 392
       },
       {
         "key": "performance",
-        "count": 352
+        "count": 353
       },
       {
         "key": "other",
@@ -526,7 +526,8 @@
     "2026-10-30",
     "2026-10-31",
     "2026-11-01",
-    "2026-11-02"
+    "2026-11-02",
+    "2026-11-03"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1435,6 +1436,810 @@
     }
   },
   "commits": [
+    {
+      "sha": "55191a2211ab4777bf73875c439a50c1d5551c5d",
+      "parents": [
+        "3ce20968d74dded9fdc8dc167acde77dd358bdc0"
+      ],
+      "pr": "",
+      "date": "2026-11-03T21:32:33+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: bound VMM admission retries under pressure.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 257,
+      "deletions": 33,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/kv_cache/storage/vmm_kv_page_allocator_impl_test.cpp",
+          "additions": 65,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/scheduler_policy_test.cpp",
+          "additions": 127,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 9,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/vmm_kv_block_manager.cpp",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/vmm_kv_page_allocator_impl.cpp",
+          "additions": 19,
+          "deletions": 22,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 26,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/55191a2211ab4777bf73875c439a50c1d5551c5d"
+    },
+    {
+      "sha": "3ce20968d74dded9fdc8dc167acde77dd358bdc0",
+      "parents": [
+        "82ca08aaa567f9bd9c95b2b32bb1337f496ccb2d"
+      ],
+      "pr": "",
+      "date": "2026-11-03T21:32:33+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: reclaim stalled unified chunks under pressure.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 134,
+      "deletions": 9,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/scheduler_policy_test.cpp",
+          "additions": 106,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/unified_policy.cpp",
+          "additions": 28,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3ce20968d74dded9fdc8dc167acde77dd358bdc0"
+    },
+    {
+      "sha": "82ca08aaa567f9bd9c95b2b32bb1337f496ccb2d",
+      "parents": [
+        "acb043794d78fbecd95893decbbbadb98f768e53"
+      ],
+      "pr": "",
+      "date": "2026-11-03T21:32:33+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: defer VMM growth when KV allocation fails.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 1407,
+      "deletions": 125,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/distributed_virtual_memory_coordinator_test.cpp",
+          "additions": 190,
+          "deletions": 10,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/worker_memory_rpc_client_test.cpp",
+          "additions": 16,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/allocator/physical_page_pool_test.cpp",
+          "additions": 160,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/scheduler_policy_test.cpp",
+          "additions": 802,
+          "deletions": 39,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 58,
+          "deletions": 26,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.h",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_memory_rpc_client.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/physical_page_pool.cpp",
+          "additions": 41,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/physical_page_pool.h",
+          "additions": 12,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/decode_first_policy.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 86,
+          "deletions": 27,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/unified_policy.cpp",
+          "additions": 30,
+          "deletions": 19,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine",
+        "high-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/82ca08aaa567f9bd9c95b2b32bb1337f496ccb2d"
+    },
+    {
+      "sha": "acb043794d78fbecd95893decbbbadb98f768e53",
+      "parents": [
+        "fe76e15b3087e31cfc38bdc331fc4b254d823772"
+      ],
+      "pr": "",
+      "date": "2026-11-03T21:32:33+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: size elastic VMM from live memory.",
+      "type": "bugfix",
+      "module": "Engineering",
+      "additions": 234,
+      "deletions": 263,
+      "filesChanged": 17,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/code_arch.md",
+          "additions": 29,
+          "deletions": 15,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/virtual_memory.md",
+          "additions": 4,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/code_arch.md",
+          "additions": 19,
+          "deletions": 10,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/virtual_memory.md",
+          "additions": 4,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/distributed_virtual_memory_coordinator_test.cpp",
+          "additions": 47,
+          "deletions": 48,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/allocator/physical_page_pool_test.cpp",
+          "additions": 48,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/allocator/vmm_arena_capacity_test.cpp",
+          "additions": 52,
+          "deletions": 66,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 4,
+          "deletions": 51,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 6,
+          "deletions": 12,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.h",
+          "additions": 4,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/kv_cache_capacity_planner.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/vmm_arena_capacity.h",
+          "additions": 8,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/kv_cache_config.cpp",
+          "additions": 5,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/kv_cache_config.h",
+          "additions": 1,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "engineering",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/acb043794d78fbecd95893decbbbadb98f768e53"
+    },
+    {
+      "sha": "fe76e15b3087e31cfc38bdc331fc4b254d823772",
+      "parents": [
+        "bbbf2aef1842c033a401a1f141d67498b20b42d8"
+      ],
+      "pr": "",
+      "date": "2026-11-03T21:32:33+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: report VMM allocation failures with context.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 689,
+      "deletions": 97,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": "tests/core/framework/allocator/physical_page_pool_test.cpp",
+          "additions": 91,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/allocator/virtual_memory_test.cpp",
+          "additions": 3,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 15,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/mapped_virtual_memory_region.cpp",
+          "additions": 22,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/physical_page_pool.cpp",
+          "additions": 285,
+          "deletions": 39,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/physical_page_pool.h",
+          "additions": 28,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/allocator/virtual_memory/shared_physical_page_mapping.cpp",
+          "additions": 50,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/vmm_kv_page_allocator_impl.cpp",
+          "additions": 62,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/storage/vmm_kv_page_allocator_impl.h",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/allocator_memory_stats.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/device.cpp",
+          "additions": 61,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/device.h",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/vmm_api.cpp",
+          "additions": 57,
+          "deletions": 19,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fe76e15b3087e31cfc38bdc331fc4b254d823772"
+    },
+    {
+      "sha": "bbbf2aef1842c033a401a1f141d67498b20b42d8",
+      "parents": [
+        "179d7a1ff168faae980a3bd733237ff449900eb7"
+      ],
+      "pr": "2661",
+      "date": "2026-11-03T21:25:20+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "bugfix: use tensor-parallel fia for qwen vision attention. (#2661)",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 80,
+      "deletions": 47,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/kernels_npu/attention.py",
+          "additions": 32,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_5_vl.py",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_vl.py",
+          "additions": 44,
+          "deletions": 42,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/bbbf2aef1842c033a401a1f141d67498b20b42d8"
+    },
+    {
+      "sha": "179d7a1ff168faae980a3bd733237ff449900eb7",
+      "parents": [
+        "e566da12e1f3d244ef81260382c0d18bb988beda"
+      ],
+      "pr": "2659",
+      "date": "2026-11-03T18:24:31+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "refactor: move platform detection into xllm-kernel. (#2659)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 717,
+      "deletions": 534,
+      "filesChanged": 23,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/xllm_kernel_dev.md",
+          "additions": 18,
+          "deletions": 15,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/xllm_kernel_dev.md",
+          "additions": 18,
+          "deletions": 15,
+          "module": "docs/src"
+        },
+        {
+          "filename": "xllm-kernel/README.md",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm-kernel/README.md"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/__init__.py",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/catalog.py",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/numerics/verify.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/ops/activation/__init__.py",
+          "additions": 9,
+          "deletions": 1,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/ops/activation/torch.py",
+          "additions": 18,
+          "deletions": 17,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/ops/normalization/__init__.py",
+          "additions": 25,
+          "deletions": 3,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/ops/normalization/torch.py",
+          "additions": 48,
+          "deletions": 48,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/platform.py",
+          "additions": 348,
+          "deletions": 0,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/registry.py",
+          "additions": 12,
+          "deletions": 4,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/runtime.py",
+          "additions": 13,
+          "deletions": 4,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/test/test_kernel_cli.py",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm-kernel/test/test_kernel_package.py",
+          "additions": 48,
+          "deletions": 10,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm-kernel/test/test_kernel_selection.py",
+          "additions": 59,
+          "deletions": 9,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm-kernel/test/test_operator_preparation.py",
+          "additions": 32,
+          "deletions": 0,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "{tests/python => xllm-kernel/test}/test_platform.py",
+          "additions": 22,
+          "deletions": 6,
+          "module": "{tests/python => xllm-kernel"
+        },
+        {
+          "filename": "xllm-kernel/test/test_tensor_comparison.py",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm/auto_config/utils.py",
+          "additions": 9,
+          "deletions": 39,
+          "module": "xllm/auto_config"
+        },
+        {
+          "filename": "xllm/python/README.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/README_zh.md",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/platform.py",
+          "additions": 11,
+          "deletions": 355,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/179d7a1ff168faae980a3bd733237ff449900eb7"
+    },
+    {
+      "sha": "e566da12e1f3d244ef81260382c0d18bb988beda",
+      "parents": [
+        "261274e5f45449e98d7740144c3a958a29f1fd3e"
+      ],
+      "pr": "2658",
+      "date": "2026-11-03T16:33:34+08:00",
+      "dateKey": "2026-11-03",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: move linear state restore into cache storage domain. (#2658)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 51,
+      "deletions": 96,
+      "filesChanged": 19,
+      "files": [
+        {
+          "filename": "tests/core/framework/block/block_manager_test.cpp",
+          "additions": 22,
+          "deletions": 28,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kv_cache/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 15,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kv_cache/storage/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kv_cache/{ => storage}/linear_state_restore_test.cpp",
+          "additions": 1,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/layers/attention_metadata_builder_test.cpp",
+          "additions": 1,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_task_update_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/llm_model_params.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_input_types.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/model_params_view.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/rec_model_params.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model/vlm_model_params.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/linear_state_types.h",
+          "additions": 0,
+          "deletions": 28,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/{ => storage}/linear_state_restore.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kv_cache/{ => storage}/linear_state_restore.h",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/llm_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline_speculative.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e566da12e1f3d244ef81260382c0d18bb988beda"
+    },
     {
       "sha": "261274e5f45449e98d7740144c3a958a29f1fd3e",
       "parents": [
