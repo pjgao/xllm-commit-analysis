@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T22:59:17.699Z",
+  "generatedAt": "2026-11-06T22:29:08.408Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2194,
+    "commits": 2202,
     "contributors": 131,
-    "additions": 1225774,
-    "deletions": 353756,
-    "filesChanged": 34000,
+    "additions": 1226642,
+    "deletions": 355455,
+    "filesChanged": 34065,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-05",
+    "latestDate": "2026-11-06",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 310,
-        "additions": 136047,
-        "deletions": 60337,
-        "files": 4951
+        "commits": 315,
+        "additions": 136838,
+        "deletions": 61967,
+        "files": 5006
       },
       {
         "name": "xllm-org",
@@ -104,19 +104,19 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 713
+        "count": 715
       },
       {
         "key": "Inference Engine",
-        "count": 238
+        "count": 241
       },
       {
         "key": "Spec Decode",
-        "count": 222
+        "count": 223
       },
       {
         "key": "NPU Backend",
-        "count": 217
+        "count": 218
       },
       {
         "key": "Model Support",
@@ -136,7 +136,7 @@
       },
       {
         "key": "tests/core",
-        "count": 46
+        "count": 47
       },
       {
         "key": "Testing",
@@ -158,11 +158,11 @@
       },
       {
         "key": "bugfix",
-        "count": 631
+        "count": 633
       },
       {
         "key": "refactor",
-        "count": 398
+        "count": 404
       },
       {
         "key": "performance",
@@ -529,7 +529,8 @@
     "2026-11-02",
     "2026-11-03",
     "2026-11-04",
-    "2026-11-05"
+    "2026-11-05",
+    "2026-11-06"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1438,6 +1439,613 @@
     }
   },
   "commits": [
+    {
+      "sha": "f7938a0f130d09d5ec3da6332b6dd065ba3c79b8",
+      "parents": [
+        "6c5549a0980404a46ff3ad3aafc892e7e46b633f"
+      ],
+      "pr": "2684",
+      "date": "2026-11-06T19:46:13+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: remove redundant RPC prefixes from worker memory types. (#2684)",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 174,
+      "deletions": 180,
+      "filesChanged": 17,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/code_arch.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/code_arch.md",
+          "additions": 3,
+          "deletions": 3,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/distributed_vmm_coordinator_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/{worker_memory_rpc_bootstrap_test.cpp => worker_memory_bootstrap_test.cpp}",
+          "additions": 11,
+          "deletions": 12,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/{worker_memory_rpc_client_test.cpp => worker_memory_client_test.cpp}",
+          "additions": 31,
+          "deletions": 31,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_vmm_coordinator.cpp",
+          "additions": 14,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_vmm_coordinator.h",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_client.cpp => worker_memory_client.cpp}",
+          "additions": 23,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_client.h => worker_memory_client.h}",
+          "additions": 8,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_options.h => worker_memory_options.h}",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_server.cpp => worker_memory_server.cpp}",
+          "additions": 21,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_server.h => worker_memory_server.h}",
+          "additions": 8,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_service.cpp => worker_memory_service.cpp}",
+          "additions": 22,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_memory_rpc_service.h => worker_memory_service.h}",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/f7938a0f130d09d5ec3da6332b6dd065ba3c79b8"
+    },
+    {
+      "sha": "6c5549a0980404a46ff3ad3aafc892e7e46b633f",
+      "parents": [
+        "e0a43035e5809e70e5420519a44018b69dbdb00a"
+      ],
+      "pr": "",
+      "date": "2026-11-06T18:37:33+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: rename the coordinator to distributed vmm coordinator.",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 259,
+      "deletions": 285,
+      "filesChanged": 21,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/dev_guide/code_arch.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/dev_guide/code_arch.md",
+          "additions": 2,
+          "deletions": 2,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/{distributed_virtual_memory_coordinator_test.cpp => distributed_vmm_coordinator_test.cpp}",
+          "additions": 83,
+          "deletions": 90,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/model_residency_coordinator_test.cpp",
+          "additions": 55,
+          "deletions": 59,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/worker_memory_rpc_bootstrap_test.cpp",
+          "additions": 13,
+          "deletions": 13,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/CMakeLists.txt"
+        },
+        {
+          "filename": "xllm/core/disaggregation/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/disagg_pd_scheduler.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/disagg_pd_service_impl.cpp",
+          "additions": 3,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{distributed_virtual_memory_coordinator.cpp => distributed_vmm_coordinator.cpp}",
+          "additions": 60,
+          "deletions": 71,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{distributed_virtual_memory_coordinator.h => distributed_vmm_coordinator.h}",
+          "additions": 9,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/kv_cache_capacity_planner.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_engine.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/model_residency_coordinator.cpp",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/block/kv_cache_manager_factory.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_memory_resources.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 2,
+          "deletions": 3,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/6c5549a0980404a46ff3ad3aafc892e7e46b633f"
+    },
+    {
+      "sha": "e0a43035e5809e70e5420519a44018b69dbdb00a",
+      "parents": [
+        "b44cfd53397bf71e05ac0af776cf1d18b4f1e512"
+      ],
+      "pr": "",
+      "date": "2026-11-06T18:37:33+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: centralize distributed memory transaction coordination.",
+      "type": "refactor",
+      "module": "tests/core",
+      "additions": 205,
+      "deletions": 131,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/distributed_virtual_memory_coordinator_test.cpp",
+          "additions": 88,
+          "deletions": 13,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.cpp",
+          "additions": 82,
+          "deletions": 78,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_virtual_memory_coordinator.h",
+          "additions": 7,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_memory_rpc_client.cpp",
+          "additions": 24,
+          "deletions": 35,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_memory_rpc_client.h",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "tests-core",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e0a43035e5809e70e5420519a44018b69dbdb00a"
+    },
+    {
+      "sha": "b44cfd53397bf71e05ac0af776cf1d18b4f1e512",
+      "parents": [
+        "27c0145ecdd2572e1eead9144505412baab39ad9"
+      ],
+      "pr": "2679",
+      "date": "2026-11-06T16:44:44+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "bugfix: align exported MTP top-k sharing policies. (#2679)",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tools/export_mtp.py",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tools/export_mtp.py"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/b44cfd53397bf71e05ac0af776cf1d18b4f1e512"
+    },
+    {
+      "sha": "27c0145ecdd2572e1eead9144505412baab39ad9",
+      "parents": [
+        "a1bf875e5b9f265e32e19549a9ba298247353cb7"
+      ],
+      "pr": "",
+      "date": "2026-11-06T16:35:44+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: share worker token response serialization.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 105,
+      "deletions": 758,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec_rec.cpp",
+          "additions": 0,
+          "deletions": 348,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/{worker_model_codec_llm.cpp => worker_model_codec_token.cpp}",
+          "additions": 104,
+          "deletions": 59,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec_vlm.cpp",
+          "additions": 0,
+          "deletions": 348,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/27c0145ecdd2572e1eead9144505412baab39ad9"
+    },
+    {
+      "sha": "a1bf875e5b9f265e32e19549a9ba298247353cb7",
+      "parents": [
+        "80e1bc37139b2fdfd07bec07e706de18ff07a5ae"
+      ],
+      "pr": "2677",
+      "date": "2026-11-06T15:40:49+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: route local rec execution through worker clients. (#2677)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 48,
+      "deletions": 276,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 0,
+          "deletions": 33,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.h",
+          "additions": 0,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.cpp",
+          "additions": 43,
+          "deletions": 37,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/rec_engine.h",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.cpp",
+          "additions": 0,
+          "deletions": 83,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/remote_worker.h",
+          "additions": 0,
+          "deletions": 26,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.cpp",
+          "additions": 0,
+          "deletions": 54,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_client.h",
+          "additions": 2,
+          "deletions": 34,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a1bf875e5b9f265e32e19549a9ba298247353cb7"
+    },
+    {
+      "sha": "80e1bc37139b2fdfd07bec07e706de18ff07a5ae",
+      "parents": [
+        "8d908028e3a28eadae0ba199ac46f89dbeefad54"
+      ],
+      "pr": "",
+      "date": "2026-11-06T10:37:06+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: split process_logits into constraint and transform stages.",
+      "type": "refactor",
+      "module": "NPU Backend",
+      "additions": 72,
+      "deletions": 63,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/framework/sampling/cuda_logits_transform_test.cpp",
+          "additions": 9,
+          "deletions": 22,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/logits_processor.cpp",
+          "additions": 33,
+          "deletions": 23,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/sampling/logits_processor.h",
+          "additions": 16,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/cuda/fused_logits_transform.cu",
+          "additions": 3,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/npu/xllm_ops/top_k_top_p.cpp",
+          "additions": 5,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 4,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "npu-backend",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/80e1bc37139b2fdfd07bec07e706de18ff07a5ae"
+    },
+    {
+      "sha": "8d908028e3a28eadae0ba199ac46f89dbeefad54",
+      "parents": [
+        "7ec54776fcda06cc9a5ba1f49681c7207e41799e"
+      ],
+      "pr": "",
+      "date": "2026-11-06T10:34:27+08:00",
+      "dateKey": "2026-11-06",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "bugfix: avoid blocking successful PD handoffs on retirement.",
+      "type": "bugfix",
+      "module": "Inference Engine",
+      "additions": 4,
+      "deletions": 5,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/disagg_pd_scheduler_test.cpp",
+          "additions": 3,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/disagg_pd_scheduler.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "inference-engine"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8d908028e3a28eadae0ba199ac46f89dbeefad54"
+    },
     {
       "sha": "7ec54776fcda06cc9a5ba1f49681c7207e41799e",
       "parents": [
