@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T22:29:08.408Z",
+  "generatedAt": "2026-11-07T21:11:01.173Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2202,
+    "commits": 2212,
     "contributors": 131,
-    "additions": 1226642,
-    "deletions": 355455,
-    "filesChanged": 34065,
+    "additions": 1228445,
+    "deletions": 356652,
+    "filesChanged": 34126,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-06",
+    "latestDate": "2026-11-07",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 315,
-        "additions": 136838,
-        "deletions": 61967,
-        "files": 5006
+        "commits": 324,
+        "additions": 138639,
+        "deletions": 63164,
+        "files": 5066
       },
       {
         "name": "xllm-org",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 715
+        "count": 720
       },
       {
         "key": "Inference Engine",
-        "count": 241
+        "count": 242
       },
       {
         "key": "Spec Decode",
@@ -120,7 +120,7 @@
       },
       {
         "key": "Model Support",
-        "count": 162
+        "count": 163
       },
       {
         "key": "xllm/core",
@@ -140,11 +140,11 @@
       },
       {
         "key": "Testing",
-        "count": 43
+        "count": 44
       },
       {
         "key": "MoE",
-        "count": 38
+        "count": 39
       },
       {
         "key": "xllm/api_service",
@@ -158,15 +158,15 @@
       },
       {
         "key": "bugfix",
-        "count": 633
+        "count": 636
       },
       {
         "key": "refactor",
-        "count": 404
+        "count": 407
       },
       {
         "key": "performance",
-        "count": 355
+        "count": 357
       },
       {
         "key": "other",
@@ -174,7 +174,7 @@
       },
       {
         "key": "test",
-        "count": 42
+        "count": 44
       },
       {
         "key": "chore",
@@ -530,7 +530,8 @@
     "2026-11-03",
     "2026-11-04",
     "2026-11-05",
-    "2026-11-06"
+    "2026-11-06",
+    "2026-11-07"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1439,6 +1440,642 @@
     }
   },
   "commits": [
+    {
+      "sha": "52b527acbe3b1118738f189d6deab2b8953fb27f",
+      "parents": [
+        "9e4621707bfe266d05327775a8e375e330b85ebe"
+      ],
+      "pr": "2690",
+      "date": "2026-11-07T22:49:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "bugfix: warm up tokenizer on vlm request workers. (#2690)",
+      "type": "bugfix",
+      "module": "Model Support",
+      "additions": 2,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/52b527acbe3b1118738f189d6deab2b8953fb27f"
+    },
+    {
+      "sha": "9e4621707bfe266d05327775a8e375e330b85ebe",
+      "parents": [
+        "68f32aae416ffc0f192331daeab6547d25edf0c0"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: initialize input metadata capability in EPLB fixture.",
+      "type": "test",
+      "module": "Testing",
+      "additions": 1,
+      "deletions": 0,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/python/test_eplb_runtime_bridge.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        }
+      ],
+      "tags": [
+        "test",
+        "testing"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9e4621707bfe266d05327775a8e375e330b85ebe"
+    },
+    {
+      "sha": "68f32aae416ffc0f192331daeab6547d25edf0c0",
+      "parents": [
+        "253567b021e3227f3f64d7c5321ef1efb75018b6"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: retain asynchronous scheduler owners through completion.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 125,
+      "deletions": 178,
+      "filesChanged": 5,
+      "files": [
+        {
+          "filename": "tests/core/runtime/schedule_overlap_test.cpp",
+          "additions": 90,
+          "deletions": 168,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 25,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 7,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/68f32aae416ffc0f192331daeab6547d25edf0c0"
+    },
+    {
+      "sha": "253567b021e3227f3f64d7c5321ef1efb75018b6",
+      "parents": [
+        "ba1f2c0d28c04ee5041430fe428ef62eb19925f7"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "bugfix: honor output readiness and graph KV capacity.",
+      "type": "bugfix",
+      "module": "Graph / Runtime",
+      "additions": 124,
+      "deletions": 40,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/worker_service_test.cpp",
+          "additions": 57,
+          "deletions": 3,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_npu_fia_capacity_numerics.py",
+          "additions": 23,
+          "deletions": 8,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 27,
+          "deletions": 24,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 7,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/253567b021e3227f3f64d7c5321ef1efb75018b6"
+    },
+    {
+      "sha": "ba1f2c0d28c04ee5041430fe428ef62eb19925f7",
+      "parents": [
+        "cb1f51eca587d7c340e6131dbff7da5e94d3b23d"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: bound graph decode attention to live KV lengths.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 107,
+      "deletions": 40,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/python/test_npu_fia_capacity_numerics.py",
+          "additions": 17,
+          "deletions": 2,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/python/attention/npu_paged_attention.py",
+          "additions": 77,
+          "deletions": 38,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/forward_context.py",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ba1f2c0d28c04ee5041430fe428ef62eb19925f7"
+    },
+    {
+      "sha": "cb1f51eca587d7c340e6131dbff7da5e94d3b23d",
+      "parents": [
+        "d703cdebe699cf2a5001d8a8a275ac64a3949b5c"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: extract single-request prefill admission from scheduling.",
+      "type": "refactor",
+      "module": "Inference Engine",
+      "additions": 262,
+      "deletions": 222,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.cpp",
+          "additions": 246,
+          "deletions": 222,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_policy.h",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cb1f51eca587d7c340e6131dbff7da5e94d3b23d"
+    },
+    {
+      "sha": "d703cdebe699cf2a5001d8a8a275ac64a3949b5c",
+      "parents": [
+        "d93a50ea2db4f83602a9aad138d846411dfd6a74"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: cover deferred scheduler input lifetimes.",
+      "type": "test",
+      "module": "Graph / Runtime",
+      "additions": 234,
+      "deletions": 41,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/runtime/schedule_overlap_test.cpp",
+          "additions": 97,
+          "deletions": 12,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/task_execution_pipeline_speculative_test.cpp",
+          "additions": 137,
+          "deletions": 29,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d703cdebe699cf2a5001d8a8a275ac64a3949b5c"
+    },
+    {
+      "sha": "d93a50ea2db4f83602a9aad138d846411dfd6a74",
+      "parents": [
+        "9e021129cacfceb2eb109833fc0ace58e41e5783"
+      ],
+      "pr": "",
+      "date": "2026-11-07T18:16:51+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: defer asynchronous input reclamation after forward.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 299,
+      "deletions": 44,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/runtime/schedule_overlap_test.cpp",
+          "additions": 88,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream.cpp",
+          "additions": 14,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/stream_event.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/schedule_overlap.cpp",
+          "additions": 20,
+          "deletions": 10,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/schedule_overlap_state.cpp",
+          "additions": 58,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/schedule_overlap_state.h",
+          "additions": 12,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.cpp",
+          "additions": 82,
+          "deletions": 14,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/task_execution_pipeline.h",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/d93a50ea2db4f83602a9aad138d846411dfd6a74"
+    },
+    {
+      "sha": "9e021129cacfceb2eb109833fc0ace58e41e5783",
+      "parents": [
+        "65e10400f076b50f2fdf6f493e172a81e87588a1"
+      ],
+      "pr": "",
+      "date": "2026-11-07T14:41:22+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: align remaining PD implementation names.",
+      "type": "refactor",
+      "module": "tests/api_service",
+      "additions": 69,
+      "deletions": 74,
+      "filesChanged": 15,
+      "files": [
+        {
+          "filename": "tests/api_service/pd_http_response_test.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/api_service"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/CMakeLists.txt",
+          "additions": 5,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/{disagg_pd_kv_response_test.cpp => pd_kv_response_test.cpp}",
+          "additions": 18,
+          "deletions": 19,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/distributed_runtime/{disagg_pd_request_converter_test.cpp => pd_request_converter_test.cpp}",
+          "additions": 19,
+          "deletions": 20,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{distributed_runtime/disagg_pd_kv_response.cpp => disaggregation/pd_kv_response.cpp}",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/{distributed_runtime/disagg_pd_kv_response.h => disaggregation/pd_kv_response.h}",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_request_converter.cpp => pd_request_converter.cpp}",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_request_converter.h => pd_request_converter.h}",
+          "additions": 3,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_response.cpp => pd_response.cpp}",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_response.h => pd_response.h}",
+          "additions": 0,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_scheduler.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_service_impl.cpp",
+          "additions": 7,
+          "deletions": 7,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_service_impl.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "tests-api-service",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/9e021129cacfceb2eb109833fc0ace58e41e5783"
+    },
+    {
+      "sha": "65e10400f076b50f2fdf6f493e172a81e87588a1",
+      "parents": [
+        "f7938a0f130d09d5ec3da6332b6dd065ba3c79b8"
+      ],
+      "pr": "2686",
+      "date": "2026-11-07T13:50:17+08:00",
+      "dateKey": "2026-11-07",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: simplify PD dispatch and callback ownership. (#2686)",
+      "type": "refactor",
+      "module": "MoE",
+      "additions": 580,
+      "deletions": 558,
+      "filesChanged": 16,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/continuous_scheduler_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/{disagg_pd_scheduler_test.cpp => pd_scheduler_test.cpp}",
+          "additions": 230,
+          "deletions": 150,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_scheduler.cpp => pd_scheduler.cpp}",
+          "additions": 232,
+          "deletions": 282,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_scheduler.h => pd_scheduler.h}",
+          "additions": 22,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_service.cpp => pd_service.cpp}",
+          "additions": 24,
+          "deletions": 25,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_service.h => pd_service.h}",
+          "additions": 9,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_service_impl.cpp => pd_service_impl.cpp}",
+          "additions": 28,
+          "deletions": 29,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{disagg_pd_service_impl.h => pd_service_impl.h}",
+          "additions": 10,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/distributed_worker_manager.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/llm_master.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_factory.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/scheduler/scheduler_factory.h",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/server/xllm_server.cpp",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/server"
+        },
+        {
+          "filename": "xllm/server/xllm_server.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/server"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "moe",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/65e10400f076b50f2fdf6f493e172a81e87588a1"
+    },
     {
       "sha": "f7938a0f130d09d5ec3da6332b6dd065ba3c79b8",
       "parents": [
