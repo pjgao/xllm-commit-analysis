@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T21:46:23.253Z",
+  "generatedAt": "2026-11-15T22:14:26.879Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2284,
-    "contributors": 132,
-    "additions": 1285138,
-    "deletions": 540427,
-    "filesChanged": 36797,
+    "commits": 2292,
+    "contributors": 133,
+    "additions": 1286090,
+    "deletions": 540767,
+    "filesChanged": 36836,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-14",
+    "latestDate": "2026-11-15",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 371,
-        "additions": 179881,
-        "deletions": 119260,
-        "files": 6328
+        "commits": 378,
+        "additions": 180711,
+        "deletions": 119589,
+        "files": 6360
       },
       {
         "name": "xllm-org",
@@ -104,11 +104,11 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 742
+        "count": 743
       },
       {
         "key": "Inference Engine",
-        "count": 249
+        "count": 251
       },
       {
         "key": "Spec Decode",
@@ -136,7 +136,7 @@
       },
       {
         "key": "tests/core",
-        "count": 48
+        "count": 50
       },
       {
         "key": "Testing",
@@ -144,7 +144,7 @@
       },
       {
         "key": "MoE",
-        "count": 39
+        "count": 40
       },
       {
         "key": "xllm/api_service",
@@ -162,11 +162,11 @@
       },
       {
         "key": "refactor",
-        "count": 431
+        "count": 434
       },
       {
         "key": "performance",
-        "count": 372
+        "count": 377
       },
       {
         "key": "test",
@@ -538,7 +538,8 @@
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1447,6 +1448,451 @@
     }
   },
   "commits": [
+    {
+      "sha": "34650aaebfec4b3ee4c61de32db9f51466b4728c",
+      "parents": [
+        "cbd6d8559942b73247dfa52da2a00a8116fa664f"
+      ],
+      "pr": "",
+      "date": "2026-11-15T22:25:20+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: defer multimodal aggregation until tensor consumption.",
+      "type": "performance",
+      "module": "tests/core",
+      "additions": 123,
+      "deletions": 35,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/core/framework/multimodal/mm_batch_data_test.cpp",
+          "additions": 53,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_batch_data.cpp",
+          "additions": 59,
+          "deletions": 29,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_batch_data.h",
+          "additions": 11,
+          "deletions": 6,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "tests-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/34650aaebfec4b3ee4c61de32db9f51466b4728c"
+    },
+    {
+      "sha": "cbd6d8559942b73247dfa52da2a00a8116fa664f",
+      "parents": [
+        "daa22123c54492273a92355cd884beae47b376b8"
+      ],
+      "pr": "",
+      "date": "2026-11-15T22:25:20+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: reuse single contiguous multimodal batch tensors.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 177,
+      "deletions": 2,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/framework/multimodal/CMakeLists.txt",
+          "additions": 11,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/framework/multimodal/mm_batch_data_test.cpp",
+          "additions": 100,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/forward_shared_memory_input_test.cpp",
+          "additions": 57,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_batch_data.cpp",
+          "additions": 9,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cbd6d8559942b73247dfa52da2a00a8116fa664f"
+    },
+    {
+      "sha": "daa22123c54492273a92355cd884beae47b376b8",
+      "parents": [
+        "86db18bdfa4c8e9d98f6ce655d4512cede905cef"
+      ],
+      "pr": "",
+      "date": "2026-11-15T22:21:16+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: make image grouping a processor instance operation.",
+      "type": "refactor",
+      "module": "xllm/processors",
+      "additions": 1,
+      "deletions": 1,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "xllm/processors/multimodal_processor_pipeline.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/processors"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-processors"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/daa22123c54492273a92355cd884beae47b376b8"
+    },
+    {
+      "sha": "86db18bdfa4c8e9d98f6ce655d4512cede905cef",
+      "parents": [
+        "5ae51913d9a7daa5da7ba01d6718e54518399201"
+      ],
+      "pr": "",
+      "date": "2026-11-15T22:21:16+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: keep image batching private to multimodal processor.",
+      "type": "refactor",
+      "module": "xllm/processors",
+      "additions": 22,
+      "deletions": 51,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/processors/CMakeLists.txt",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/multimodal_processor_pipeline.h",
+          "additions": 22,
+          "deletions": 1,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/processor_util.h",
+          "additions": 0,
+          "deletions": 49,
+          "module": "xllm/processors"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "xllm-processors"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/86db18bdfa4c8e9d98f6ce655d4512cede905cef"
+    },
+    {
+      "sha": "5ae51913d9a7daa5da7ba01d6718e54518399201",
+      "parents": [
+        "0e3ab905a703334e2b5225948e2a33ba3d6ed818"
+      ],
+      "pr": "2746",
+      "date": "2026-11-15T21:42:18+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "lepam",
+        "email": "69680504+lhzds@users.noreply.github.com"
+      },
+      "title": "perf: remove extra allocation and copy from MLU MoE dispatch. (#2746)",
+      "type": "performance",
+      "module": "MoE",
+      "additions": 122,
+      "deletions": 11,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/kernels/mlu/CMakeLists.txt",
+          "additions": 12,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/mlu/moe_expand_input_test.cpp",
+          "additions": 88,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/fused_moe.cpp",
+          "additions": 11,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/mlu/mlu_ops_api.h",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/ops_api.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/kernels/param.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/layers/mlu/fused_moe_all2all.cpp",
+          "additions": 4,
+          "deletions": 8,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "moe"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/5ae51913d9a7daa5da7ba01d6718e54518399201"
+    },
+    {
+      "sha": "0e3ab905a703334e2b5225948e2a33ba3d6ed818",
+      "parents": [
+        "efd4e34b1cb05f4df26af5109f96d6f63503c61c"
+      ],
+      "pr": "",
+      "date": "2026-11-15T11:51:36+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: centralize option validation in property macros.",
+      "type": "refactor",
+      "module": "tests/core",
+      "additions": 138,
+      "deletions": 41,
+      "filesChanged": 6,
+      "files": [
+        {
+          "filename": "tests/core/common/CMakeLists.txt",
+          "additions": 7,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/common/options_test.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/common/validated_property_test.cpp",
+          "additions": 65,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/macros.h",
+          "additions": 52,
+          "deletions": 28,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.cpp",
+          "additions": 1,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/common/options.h",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "tests-core"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/0e3ab905a703334e2b5225948e2a33ba3d6ed818"
+    },
+    {
+      "sha": "efd4e34b1cb05f4df26af5109f96d6f63503c61c",
+      "parents": [
+        "e7f2b6872cd0b49860ad2c001960184e994989ca"
+      ],
+      "pr": "",
+      "date": "2026-11-15T11:51:18+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: pace decode allocation retries under cache pressure.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 104,
+      "deletions": 97,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/CMakeLists.txt",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/cancelled_pd_reservations_test.cpp",
+          "additions": 80,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/pd_reservation_releases_test.cpp",
+          "additions": 0,
+          "deletions": 79,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/{pd_reservation_releases.h => cancelled_pd_reservations.h}",
+          "additions": 12,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_scheduler.cpp",
+          "additions": 7,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_scheduler.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/efd4e34b1cb05f4df26af5109f96d6f63503c61c"
+    },
+    {
+      "sha": "e7f2b6872cd0b49860ad2c001960184e994989ca",
+      "parents": [
+        "c798a5d0831c17f3b51caec763d82412c207e4ac"
+      ],
+      "pr": "",
+      "date": "2026-11-15T11:51:18+08:00",
+      "dateKey": "2026-11-15",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: avoid full scans when releasing PD reservations.",
+      "type": "performance",
+      "module": "Inference Engine",
+      "additions": 265,
+      "deletions": 102,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/scheduler/CMakeLists.txt",
+          "additions": 12,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/scheduler/pd_reservation_releases_test.cpp",
+          "additions": 79,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_request_converter.cpp",
+          "additions": 78,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_request_converter.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_reservation_releases.h",
+          "additions": 85,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_scheduler.cpp",
+          "additions": 4,
+          "deletions": 95,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/disaggregation/pd_scheduler.h",
+          "additions": 2,
+          "deletions": 7,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "inference-engine",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e7f2b6872cd0b49860ad2c001960184e994989ca"
+    },
     {
       "sha": "c798a5d0831c17f3b51caec763d82412c207e4ac",
       "parents": [
