@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T22:14:26.879Z",
+  "generatedAt": "2026-11-17T01:14:30.237Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,20 +8,20 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2292,
-    "contributors": 133,
-    "additions": 1286090,
-    "deletions": 540767,
-    "filesChanged": 36836,
+    "commits": 2303,
+    "contributors": 134,
+    "additions": 1289493,
+    "deletions": 541093,
+    "filesChanged": 36948,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-15",
+    "latestDate": "2026-11-16",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 378,
-        "additions": 180711,
-        "deletions": 119589,
-        "files": 6360
+        "commits": 384,
+        "additions": 181461,
+        "deletions": 119679,
+        "files": 6385
       },
       {
         "name": "xllm-org",
@@ -32,10 +32,10 @@
       },
       {
         "name": "Xu Zhang",
-        "commits": 181,
-        "additions": 95121,
-        "deletions": 150209,
-        "files": 3554
+        "commits": 183,
+        "additions": 95736,
+        "deletions": 150436,
+        "files": 3601
       },
       {
         "name": "phantomlei",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 743
+        "count": 751
       },
       {
         "key": "Inference Engine",
@@ -112,15 +112,15 @@
       },
       {
         "key": "Spec Decode",
-        "count": 241
+        "count": 242
       },
       {
         "key": "NPU Backend",
-        "count": 230
+        "count": 231
       },
       {
         "key": "Model Support",
-        "count": 165
+        "count": 166
       },
       {
         "key": "xllm/core",
@@ -154,11 +154,11 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 680
+        "count": 683
       },
       {
         "key": "bugfix",
-        "count": 649
+        "count": 650
       },
       {
         "key": "refactor",
@@ -166,11 +166,11 @@
       },
       {
         "key": "performance",
-        "count": 377
+        "count": 383
       },
       {
         "key": "test",
-        "count": 51
+        "count": 52
       },
       {
         "key": "other",
@@ -539,7 +539,8 @@
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1448,6 +1449,980 @@
     }
   },
   "commits": [
+    {
+      "sha": "dbe067854e206ec146a6f5bd941599a3cd3aad6d",
+      "parents": [
+        "8d42faa0084e074edd3c4cc0741c903e8d329c08"
+      ],
+      "pr": "2752",
+      "date": "2026-11-16T23:23:54+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "rhythm-agent-team",
+        "email": "bryanfreeman507@gmail.com"
+      },
+      "title": "feat: add startup cpu affinity for serving processes. (#2752)",
+      "type": "feature",
+      "module": "NPU Backend",
+      "additions": 354,
+      "deletions": 1,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 2,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 2,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/core/framework/config/config_json_test.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/CMakeLists.txt",
+          "additions": 14,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/util/cpu_affinity_test.cpp",
+          "additions": 110,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/common/global_flags.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/service_config.cpp",
+          "additions": 47,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/service_config.h",
+          "additions": 10,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/startup.cpp",
+          "additions": 96,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/startup.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/cpu_affinity.cpp",
+          "additions": 26,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/cpu_affinity.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/xllm.cpp",
+          "additions": 21,
+          "deletions": 1,
+          "module": "xllm/xllm.cpp"
+        }
+      ],
+      "tags": [
+        "feature",
+        "npu-backend",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/dbe067854e206ec146a6f5bd941599a3cd3aad6d"
+    },
+    {
+      "sha": "8d42faa0084e074edd3c4cc0741c903e8d329c08",
+      "parents": [
+        "ea4c5d6fb1339508d578dcff2ebe2f8f35713647"
+      ],
+      "pr": "",
+      "date": "2026-11-16T21:55:50+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "feat: expand python vlm execution capabilities.",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 493,
+      "deletions": 91,
+      "filesChanged": 19,
+      "files": [
+        {
+          "filename": "tests/processors/multimodal_processor_test.cpp",
+          "additions": 17,
+          "deletions": 2,
+          "module": "tests/processors"
+        },
+        {
+          "filename": "tests/python/test_decode_acl_graph.py",
+          "additions": 67,
+          "deletions": 7,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 66,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_vl.py",
+          "additions": 50,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/speculative_engine.cpp",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.cpp",
+          "additions": 92,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_engine.h",
+          "additions": 13,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/vlm_master.cpp",
+          "additions": 20,
+          "deletions": 17,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 25,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_worker_impl.cpp",
+          "additions": 4,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 9,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/processors/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/processors/text_prompt_processor.h",
+          "additions": 42,
+          "deletions": 0,
+          "module": "xllm/processors"
+        },
+        {
+          "filename": "xllm/python/model_executor/executor.py",
+          "additions": 20,
+          "deletions": 6,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/decode_acl_graph.py",
+          "additions": 44,
+          "deletions": 12,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/eager.py",
+          "additions": 6,
+          "deletions": 1,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_5_vl.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_vl.py",
+          "additions": 13,
+          "deletions": 30,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8d42faa0084e074edd3c4cc0741c903e8d329c08"
+    },
+    {
+      "sha": "ea4c5d6fb1339508d578dcff2ebe2f8f35713647",
+      "parents": [
+        "1519c1bc44cd7ed0c00c20f9f2272e3a74b81bbe"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "test: validate routed model inputs in brpc attachments.",
+      "type": "test",
+      "module": "Model Support",
+      "additions": 15,
+      "deletions": 4,
+      "filesChanged": 1,
+      "files": [
+        {
+          "filename": "tests/core/distributed_runtime/comm_channel_test.cpp",
+          "additions": 15,
+          "deletions": 4,
+          "module": "tests/core"
+        }
+      ],
+      "tags": [
+        "test",
+        "model-support"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/ea4c5d6fb1339508d578dcff2ebe2f8f35713647"
+    },
+    {
+      "sha": "1519c1bc44cd7ed0c00c20f9f2272e3a74b81bbe",
+      "parents": [
+        "62c2ca17b6451d640a50c1d1eb4abcaed94a6c18"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: retain embedding batches in one brpc attachment block.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 100,
+      "deletions": 5,
+      "filesChanged": 2,
+      "files": [
+        {
+          "filename": "tests/core/runtime/transport_codec_test.cpp",
+          "additions": 68,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec_token.cpp",
+          "additions": 32,
+          "deletions": 5,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/1519c1bc44cd7ed0c00c20f9f2272e3a74b81bbe"
+    },
+    {
+      "sha": "62c2ca17b6451d640a50c1d1eb4abcaed94a6c18",
+      "parents": [
+        "cd5a0c4a3318032c1eb0e524747edc4b8c33f7f5"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: transmit large token embeddings through brpc attachments.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 143,
+      "deletions": 6,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "tests/core/runtime/transport_codec_test.cpp",
+          "additions": 87,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec_token.cpp",
+          "additions": 50,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/62c2ca17b6451d640a50c1d1eb4abcaed94a6c18"
+    },
+    {
+      "sha": "cd5a0c4a3318032c1eb0e524747edc4b8c33f7f5",
+      "parents": [
+        "e744fef3d79d9b214b20c231c00863b3e3bbf0de"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: transmit multimodal output tensors in brpc attachments.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 199,
+      "deletions": 35,
+      "filesChanged": 7,
+      "files": [
+        {
+          "filename": "tests/core/runtime/transport_codec_test.cpp",
+          "additions": 82,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 8,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec.h",
+          "additions": 9,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_model_codec_token.cpp",
+          "additions": 36,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 20,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/tensor_codec.cpp",
+          "additions": 38,
+          "deletions": 8,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/util/tensor_codec.h",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/cd5a0c4a3318032c1eb0e524747edc4b8c33f7f5"
+    },
+    {
+      "sha": "e744fef3d79d9b214b20c231c00863b3e3bbf0de",
+      "parents": [
+        "31c94b8339df4d139ca5a52bf10603939277a0b4"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: retain large tensor storage in forward attachments.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 120,
+      "deletions": 13,
+      "filesChanged": 4,
+      "files": [
+        {
+          "filename": "tests/core/runtime/forward_shared_memory_input_test.cpp",
+          "additions": 55,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_transport.cpp",
+          "additions": 61,
+          "deletions": 13,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_forward_params.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/e744fef3d79d9b214b20c231c00863b3e3bbf0de"
+    },
+    {
+      "sha": "31c94b8339df4d139ca5a52bf10603939277a0b4",
+      "parents": [
+        "8ee07965b5d7673f4e08ff36e6fc23fce0b29f68"
+      ],
+      "pr": "",
+      "date": "2026-11-16T13:51:59+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "perf: carry forward input payloads in brpc attachments.",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 173,
+      "deletions": 27,
+      "filesChanged": 8,
+      "files": [
+        {
+          "filename": "tests/core/runtime/forward_shared_memory_input_test.cpp",
+          "additions": 55,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/comm_channel.cpp",
+          "additions": 12,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_service.cpp",
+          "additions": 14,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_params.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/forward_shared_memory_transport.cpp",
+          "additions": 77,
+          "deletions": 19,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/vlm_forward_params.h",
+          "additions": 4,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/proto/worker.proto",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/proto"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/31c94b8339df4d139ca5a52bf10603939277a0b4"
+    },
+    {
+      "sha": "8ee07965b5d7673f4e08ff36e6fc23fce0b29f68",
+      "parents": [
+        "de667ed58e1bee0557fddabe62f77abb7f736f34"
+      ],
+      "pr": "2737",
+      "date": "2026-11-16T12:54:06+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "9wutong",
+        "email": "112637507+9wutong@users.noreply.github.com"
+      },
+      "title": "perf: capture the qwen3-vl vision encoder in an acl graph. (#2737)",
+      "type": "performance",
+      "module": "Graph / Runtime",
+      "additions": 567,
+      "deletions": 8,
+      "filesChanged": 13,
+      "files": [
+        {
+          "filename": "docs/src/content/docs/en/cli_reference.md",
+          "additions": 2,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/en/features/graph_mode.md",
+          "additions": 11,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/cli_reference.md",
+          "additions": 2,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "docs/src/content/docs/zh/features/graph_mode.md",
+          "additions": 8,
+          "deletions": 0,
+          "module": "docs/src"
+        },
+        {
+          "filename": "tests/python/test_vision_acl_graph.py",
+          "additions": 147,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.cpp",
+          "additions": 24,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/config/execution_config.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/CMakeLists.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/platform/npu/py_device_capture_guard.h",
+          "additions": 57,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/model_executor/runners/vision_acl_graph.py",
+          "additions": 238,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_vl.py",
+          "additions": 45,
+          "deletions": 7,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "performance",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/8ee07965b5d7673f4e08ff36e6fc23fce0b29f68"
+    },
+    {
+      "sha": "de667ed58e1bee0557fddabe62f77abb7f736f34",
+      "parents": [
+        "2a00e0ef9620cf8c68077cf417feff12e4bb4448"
+      ],
+      "pr": "",
+      "date": "2026-11-16T11:44:45+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "XuZhang99",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "docker: add ascend runtime and development dockerfile.- #2742",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1117,
+      "deletions": 0,
+      "filesChanged": 14,
+      "files": [
+        {
+          "filename": ".dockerignore",
+          "additions": 32,
+          "deletions": 0,
+          "module": ".dockerignore"
+        },
+        {
+          "filename": "docker/Dockerfile.a2",
+          "additions": 182,
+          "deletions": 0,
+          "module": "docker/Dockerfile.a2"
+        },
+        {
+          "filename": "docker/Dockerfile.a3",
+          "additions": 182,
+          "deletions": 0,
+          "module": "docker/Dockerfile.a3"
+        },
+        {
+          "filename": "docker/Dockerfile.cuda",
+          "additions": 11,
+          "deletions": 0,
+          "module": "docker/Dockerfile.cuda"
+        },
+        {
+          "filename": "docker/README.md",
+          "additions": 140,
+          "deletions": 0,
+          "module": "docker/README.md"
+        },
+        {
+          "filename": "docker/ascend/entrypoint.sh",
+          "additions": 32,
+          "deletions": 0,
+          "module": "docker/ascend"
+        },
+        {
+          "filename": "docker/ascend/install_runtime.sh",
+          "additions": 34,
+          "deletions": 0,
+          "module": "docker/ascend"
+        },
+        {
+          "filename": "docker/ascend/requirements-dev.txt",
+          "additions": 22,
+          "deletions": 0,
+          "module": "docker/ascend"
+        },
+        {
+          "filename": "docker/ascend/requirements.txt",
+          "additions": 20,
+          "deletions": 0,
+          "module": "docker/ascend"
+        },
+        {
+          "filename": "docker/install_development.sh",
+          "additions": 155,
+          "deletions": 0,
+          "module": "docker/install_development.sh"
+        },
+        {
+          "filename": "docker/install_mooncake_dependencies.sh",
+          "additions": 181,
+          "deletions": 0,
+          "module": "docker/install_mooncake_dependencies.sh"
+        },
+        {
+          "filename": "docker/install_runtime.sh",
+          "additions": 51,
+          "deletions": 0,
+          "module": "docker/install_runtime.sh"
+        },
+        {
+          "filename": "docker/requirements-dev.txt",
+          "additions": 30,
+          "deletions": 0,
+          "module": "docker/requirements-dev.txt"
+        },
+        {
+          "filename": "docker/requirements.txt",
+          "additions": 45,
+          "deletions": 0,
+          "module": "docker/requirements.txt"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/de667ed58e1bee0557fddabe62f77abb7f736f34"
+    },
+    {
+      "sha": "2a00e0ef9620cf8c68077cf417feff12e4bb4448",
+      "parents": [
+        "34650aaebfec4b3ee4c61de32db9f51466b4728c"
+      ],
+      "pr": "",
+      "date": "2026-11-16T11:42:04+08:00",
+      "dateKey": "2026-11-16",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "zhangxu1621@gmail.com"
+      },
+      "title": "bugfix: fix npu unit tests with cann9.",
+      "type": "bugfix",
+      "module": "Spec Decode",
+      "additions": 122,
+      "deletions": 136,
+      "filesChanged": 28,
+      "files": [
+        {
+          "filename": "cmake/cc_test.cmake",
+          "additions": 11,
+          "deletions": 4,
+          "module": "cmake/cc_test.cmake"
+        },
+        {
+          "filename": "setup.py",
+          "additions": 5,
+          "deletions": 1,
+          "module": "setup.py"
+        },
+        {
+          "filename": "tests/core/framework/speculative/mtp_async_input_builder_test.cpp",
+          "additions": 1,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/CMakeLists.txt",
+          "additions": 6,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/dsv4_scatter_cache_write_test.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/glm5_next_moe_test.cpp",
+          "additions": 3,
+          "deletions": 10,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/mtp_prepare_next_draft_test.cpp",
+          "additions": 1,
+          "deletions": 8,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/CMakeLists.txt",
+          "additions": 4,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/apply_token_bitmask_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/causal_conv1d_decode_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/fused_gdn_gating_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/fused_sigmoid_gating_delta_rule_wrapper_test.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/rope_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 11,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/sfa_dcp_remap_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/spec_verify_attention_tiling_update_wrapper_test.cpp",
+          "additions": 1,
+          "deletions": 6,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/kernels/npu/tilelang/spec_verify_token_update_wrapper_test.cpp",
+          "additions": 0,
+          "deletions": 4,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/platform/shared_vmm_allocator_test.cpp",
+          "additions": 0,
+          "deletions": 7,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_executor_test.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/acl_graph_task_update_test.cpp",
+          "additions": 1,
+          "deletions": 5,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/mtp_host_offload_test.cpp",
+          "additions": 35,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/npu_linear_state_lifecycle_test.cpp",
+          "additions": 2,
+          "deletions": 2,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/processors/multimodal_processor_test.cpp",
+          "additions": 4,
+          "deletions": 0,
+          "module": "tests/processors"
+        },
+        {
+          "filename": "tests/python/test_mla_preprocess_v2_npu.py",
+          "additions": 11,
+          "deletions": 8,
+          "module": "tests/python"
+        },
+        {
+          "filename": "third_party/torch_npu_ops",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/torch_npu_ops"
+        },
+        {
+          "filename": "third_party/xllm_ops",
+          "additions": 1,
+          "deletions": 1,
+          "module": "third_party/xllm_ops"
+        },
+        {
+          "filename": "xllm/core/platform/npu/npu_runtime.cpp",
+          "additions": 6,
+          "deletions": 4,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.cpp",
+          "additions": 20,
+          "deletions": 11,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/acl_graph_persistent_param.h",
+          "additions": 3,
+          "deletions": 0,
+          "module": "xllm/core"
+        }
+      ],
+      "tags": [
+        "bugfix",
+        "spec-decode",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/2a00e0ef9620cf8c68077cf417feff12e4bb4448"
+    },
     {
       "sha": "34650aaebfec4b3ee4c61de32db9f51466b4728c",
       "parents": [
