@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T23:28:03.932Z",
+  "generatedAt": "2026-11-21T22:31:41.350Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,13 +8,13 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2352,
+    "commits": 2354,
     "contributors": 134,
-    "additions": 1527681,
-    "deletions": 562519,
-    "filesChanged": 38445,
+    "additions": 1528282,
+    "deletions": 562660,
+    "filesChanged": 38466,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-20",
+    "latestDate": "2026-11-21",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
@@ -25,10 +25,10 @@
       },
       {
         "name": "Xu Zhang",
-        "commits": 208,
-        "additions": 314568,
-        "deletions": 159184,
-        "files": 4513
+        "commits": 209,
+        "additions": 315104,
+        "deletions": 159206,
+        "files": 4524
       },
       {
         "name": "xllm-org",
@@ -95,16 +95,16 @@
       },
       {
         "name": "wai-bao",
-        "commits": 45,
-        "additions": 14222,
-        "deletions": 28243,
-        "files": 1395
+        "commits": 46,
+        "additions": 14287,
+        "deletions": 28362,
+        "files": 1405
       }
     ],
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 780
+        "count": 781
       },
       {
         "key": "Inference Engine",
@@ -112,7 +112,7 @@
       },
       {
         "key": "Spec Decode",
-        "count": 247
+        "count": 248
       },
       {
         "key": "NPU Backend",
@@ -162,7 +162,7 @@
       },
       {
         "key": "refactor",
-        "count": 464
+        "count": 466
       },
       {
         "key": "performance",
@@ -544,7 +544,8 @@
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-21"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1453,6 +1454,188 @@
     }
   },
   "commits": [
+    {
+      "sha": "3e98c91083ac27582938043ff488b26c26f1e33b",
+      "parents": [
+        "01c9775af40fc420282a794d5dc772114081b8d2"
+      ],
+      "pr": "2806",
+      "date": "2026-11-21T21:00:52+08:00",
+      "dateKey": "2026-11-21",
+      "author": {
+        "name": "wai-bao",
+        "email": "325023965+wai-bao@users.noreply.github.com"
+      },
+      "title": "refactor: load draft vocabulary mapping with model weights. (#2806)",
+      "type": "refactor",
+      "module": "Spec Decode",
+      "additions": 65,
+      "deletions": 119,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/core/runtime/dspark_sampler_test.cpp",
+          "additions": 18,
+          "deletions": 19,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/python/test_qwen3_dspark.py",
+          "additions": 2,
+          "deletions": 27,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/framework/model/causal_lm.h",
+          "additions": 18,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/draft_vocab_mapping.cpp",
+          "additions": 15,
+          "deletions": 16,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/speculative/draft_vocab_mapping.h",
+          "additions": 1,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.cpp",
+          "additions": 9,
+          "deletions": 29,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/draft_model_spec_worker_impl.h",
+          "additions": 0,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dspark_worker_impl.cpp",
+          "additions": 0,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 2,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_dspark.py",
+          "additions": 0,
+          "deletions": 20,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "spec-decode",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3e98c91083ac27582938043ff488b26c26f1e33b"
+    },
+    {
+      "sha": "01c9775af40fc420282a794d5dc772114081b8d2",
+      "parents": [
+        "c07a39d25b730c5a92b8300f370cea5908350b00"
+      ],
+      "pr": "2805",
+      "date": "2026-11-21T13:07:47+08:00",
+      "dateKey": "2026-11-21",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "refactor: package Ascend950 paged KV writes. (#2805)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 536,
+      "deletions": 22,
+      "filesChanged": 11,
+      "files": [
+        {
+          "filename": "xllm-kernel/csrc/ascendc/CMakeLists.txt",
+          "additions": 18,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/ascendc/reshape_and_cache_a5/op_host/reshape_and_cache_a5_def.cpp",
+          "additions": 77,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/ascendc/reshape_and_cache_a5/op_host/reshape_and_cache_a5_proto.cpp",
+          "additions": 34,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/ascendc/reshape_and_cache_a5/op_host/reshape_and_cache_a5_tiling.cpp",
+          "additions": 116,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/ascendc/reshape_and_cache_a5/op_host/reshape_and_cache_a5_tiling.h",
+          "additions": 30,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/ascendc/reshape_and_cache_a5/op_kernel/reshape_and_cache_a5.cpp",
+          "additions": 138,
+          "deletions": 0,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/csrc/npu/reshape_paged_cache.cpp",
+          "additions": 22,
+          "deletions": 1,
+          "module": "xllm-kernel/csrc"
+        },
+        {
+          "filename": "xllm-kernel/python/xllm_kernel/ops/kv_cache/npu.py",
+          "additions": 20,
+          "deletions": 19,
+          "module": "xllm-kernel/python"
+        },
+        {
+          "filename": "xllm-kernel/test/npu/conftest.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm-kernel/test/npu/test_reshape_paged_cache_npu.py",
+          "additions": 72,
+          "deletions": 0,
+          "module": "xllm-kernel/test"
+        },
+        {
+          "filename": "xllm-kernel/test/test_operator_preparation.py",
+          "additions": 8,
+          "deletions": 2,
+          "module": "xllm-kernel/test"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/01c9775af40fc420282a794d5dc772114081b8d2"
+    },
     {
       "sha": "c07a39d25b730c5a92b8300f370cea5908350b00",
       "parents": [
