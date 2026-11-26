@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T01:43:02.568Z",
+  "generatedAt": "2026-11-26T01:16:12.882Z",
   "repo": {
     "id": "xllm",
     "name": "xllm",
@@ -8,27 +8,27 @@
     "ref": "main"
   },
   "summary": {
-    "commits": 2369,
+    "commits": 2373,
     "contributors": 134,
-    "additions": 1570436,
-    "deletions": 572405,
-    "filesChanged": 39040,
+    "additions": 1572366,
+    "deletions": 572521,
+    "filesChanged": 39091,
     "firstDate": "2025-08-23",
-    "latestDate": "2026-11-24",
+    "latestDate": "2026-11-25",
     "topAuthors": [
       {
         "name": "Tongxuan Liu",
-        "commits": 405,
-        "additions": 192634,
-        "deletions": 127878,
-        "files": 6789
+        "commits": 406,
+        "additions": 192778,
+        "deletions": 127906,
+        "files": 6798
       },
       {
         "name": "Xu Zhang",
-        "commits": 215,
-        "additions": 352054,
-        "deletions": 161701,
-        "files": 4770
+        "commits": 217,
+        "additions": 353499,
+        "deletions": 161789,
+        "files": 4809
       },
       {
         "name": "xllm-org",
@@ -104,7 +104,7 @@
     "topModules": [
       {
         "key": "Graph / Runtime",
-        "count": 791
+        "count": 794
       },
       {
         "key": "Inference Engine",
@@ -144,7 +144,7 @@
       },
       {
         "key": "MoE",
-        "count": 41
+        "count": 42
       },
       {
         "key": "xllm/api_service",
@@ -154,7 +154,7 @@
     "typeBreakdown": [
       {
         "key": "feature",
-        "count": 686
+        "count": 688
       },
       {
         "key": "bugfix",
@@ -162,7 +162,7 @@
       },
       {
         "key": "refactor",
-        "count": 479
+        "count": 481
       },
       {
         "key": "performance",
@@ -548,7 +548,8 @@
     "2026-11-21",
     "2026-11-22",
     "2026-11-23",
-    "2026-11-24"
+    "2026-11-24",
+    "2026-11-25"
   ],
   "dailySummaries": {
     "2026-06-24": {
@@ -1457,6 +1458,423 @@
     }
   },
   "commits": [
+    {
+      "sha": "a0a8f7887636a63fd3d5f2de4e338789ba2cc90b",
+      "parents": [
+        "3fde5a469f6f8e611cfe23912517cb571261bdd3"
+      ],
+      "pr": "2835",
+      "date": "2026-11-25T18:09:43+08:00",
+      "dateKey": "2026-11-25",
+      "author": {
+        "name": "9wutong",
+        "email": "112637507+9wutong@users.noreply.github.com"
+      },
+      "title": "feat: add qwen3-moe to the python model path. (#2835)",
+      "type": "feature",
+      "module": "MoE",
+      "additions": 341,
+      "deletions": 0,
+      "filesChanged": 3,
+      "files": [
+        {
+          "filename": "xllm/python/model_platform_support.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_moe.py",
+          "additions": 334,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/registry.py",
+          "additions": 6,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "moe",
+        "medium-risk"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a0a8f7887636a63fd3d5f2de4e338789ba2cc90b"
+    },
+    {
+      "sha": "3fde5a469f6f8e611cfe23912517cb571261bdd3",
+      "parents": [
+        "a9c32d478598bff697403af577f0c57007358b1d"
+      ],
+      "pr": "2826",
+      "date": "2026-11-25T14:40:14+08:00",
+      "dateKey": "2026-11-25",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "feat: add the Python DiT path for MiniMax-H3. (#2826)",
+      "type": "feature",
+      "module": "Graph / Runtime",
+      "additions": 1354,
+      "deletions": 37,
+      "filesChanged": 29,
+      "files": [
+        {
+          "filename": "docker/Dockerfile.a2",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docker/Dockerfile.a2"
+        },
+        {
+          "filename": "docker/Dockerfile.a3",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docker/Dockerfile.a3"
+        },
+        {
+          "filename": "docker/requirements.txt",
+          "additions": 1,
+          "deletions": 0,
+          "module": "docker/requirements.txt"
+        },
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 0,
+          "deletions": 1,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dit_master.cpp",
+          "additions": 16,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/dit_master.h",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_protocol.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.cpp",
+          "additions": 2,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server.h",
+          "additions": 1,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/spawn_worker_server/spawn_worker_server_process.cpp",
+          "additions": 8,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/distributed_runtime/worker_server.cpp",
+          "additions": 10,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model_context/dit_model_context.h",
+          "additions": 8,
+          "deletions": 0,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_codec.cpp",
+          "additions": 30,
+          "deletions": 15,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/multimodal/mm_codec.h",
+          "additions": 2,
+          "deletions": 2,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/request/dit_request.cpp",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dit_worker_impl.cpp",
+          "additions": 8,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/CMakeLists.txt",
+          "additions": 5,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/dit_model_policy.cpp",
+          "additions": 96,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/dit_model_policy.h",
+          "additions": 40,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/py_dit_model.cpp",
+          "additions": 202,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/dit/py_dit_model.h",
+          "additions": 42,
+          "deletions": 0,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/model_registry.cpp",
+          "additions": 37,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/py_model_helper.cpp",
+          "additions": 15,
+          "deletions": 4,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/py_model_helper.h",
+          "additions": 4,
+          "deletions": 1,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/python/dit/__init__.py",
+          "additions": 22,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/dit/minimax_h3.py",
+          "additions": 323,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/dit/minimax_h3_model.py",
+          "additions": 330,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/dit/minimax_h3_vae.py",
+          "additions": 115,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/dit/registry.py",
+          "additions": 27,
+          "deletions": 0,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "feature",
+        "graph-runtime",
+        "high-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/3fde5a469f6f8e611cfe23912517cb571261bdd3"
+    },
+    {
+      "sha": "a9c32d478598bff697403af577f0c57007358b1d",
+      "parents": [
+        "fd978f3505a34fa530de1e3e9f69e3d70214a127"
+      ],
+      "pr": "2829",
+      "date": "2026-11-25T14:28:26+08:00",
+      "dateKey": "2026-11-25",
+      "author": {
+        "name": "Tongxuan Liu",
+        "email": "tongxuan.ltx@mail.ustc.edu.cn"
+      },
+      "title": "refactor: inject model batch limits from worker options. (#2829)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 144,
+      "deletions": 28,
+      "filesChanged": 9,
+      "files": [
+        {
+          "filename": "tests/core/runtime/dcu_graph_executor_test.cpp",
+          "additions": 30,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "tests/core/runtime/eplb_worker_options_test.cpp",
+          "additions": 75,
+          "deletions": 0,
+          "module": "tests/core"
+        },
+        {
+          "filename": "xllm/core/framework/model_context/model_context.cpp",
+          "additions": 5,
+          "deletions": 3,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/framework/model_context/model_context.h",
+          "additions": 13,
+          "deletions": 1,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/dcu_graph_executor_impl.cpp",
+          "additions": 4,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/core/runtime/worker_impl.cpp",
+          "additions": 9,
+          "deletions": 6,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/models/llm/deepseek_v4.h",
+          "additions": 3,
+          "deletions": 5,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/py_causal_lm.cpp",
+          "additions": 4,
+          "deletions": 5,
+          "module": "xllm/models"
+        },
+        {
+          "filename": "xllm/models/llm/qwen3_next_hybrid_base.h",
+          "additions": 1,
+          "deletions": 2,
+          "module": "xllm/models"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/a9c32d478598bff697403af577f0c57007358b1d"
+    },
+    {
+      "sha": "fd978f3505a34fa530de1e3e9f69e3d70214a127",
+      "parents": [
+        "90f6f13ea3d94334d4b5bd73d9fb23fc66bef1e4"
+      ],
+      "pr": "2822",
+      "date": "2026-11-25T11:21:22+08:00",
+      "dateKey": "2026-11-25",
+      "author": {
+        "name": "Xu Zhang",
+        "email": "45782417+XuZhang99@users.noreply.github.com"
+      },
+      "title": "refactor: unify python multimodal decoder inputs. (#2822)",
+      "type": "refactor",
+      "module": "Graph / Runtime",
+      "additions": 91,
+      "deletions": 51,
+      "filesChanged": 10,
+      "files": [
+        {
+          "filename": "tests/python/test_model_executor.py",
+          "additions": 1,
+          "deletions": 0,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_qwen3_5_vl.py",
+          "additions": 15,
+          "deletions": 10,
+          "module": "tests/python"
+        },
+        {
+          "filename": "tests/python/test_vlm_input_embeddings.py",
+          "additions": 30,
+          "deletions": 4,
+          "module": "tests/python"
+        },
+        {
+          "filename": "xllm/core/runtime/py_executor_impl.cpp",
+          "additions": 14,
+          "deletions": 21,
+          "module": "xllm/core"
+        },
+        {
+          "filename": "xllm/python/models/base.py",
+          "additions": 13,
+          "deletions": 0,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/deepseek_ocr.py",
+          "additions": 3,
+          "deletions": 3,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/glm5_next_vl.py",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/joyai_asr.py",
+          "additions": 5,
+          "deletions": 5,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_5_vl.py",
+          "additions": 3,
+          "deletions": 2,
+          "module": "xllm/python"
+        },
+        {
+          "filename": "xllm/python/models/qwen3_vl.py",
+          "additions": 4,
+          "deletions": 4,
+          "module": "xllm/python"
+        }
+      ],
+      "tags": [
+        "refactor",
+        "graph-runtime",
+        "medium-risk",
+        "affects-ascend"
+      ],
+      "url": "https://github.com/jd-opensource/xllm/commit/fd978f3505a34fa530de1e3e9f69e3d70214a127"
+    },
     {
       "sha": "90f6f13ea3d94334d4b5bd73d9fb23fc66bef1e4",
       "parents": [
